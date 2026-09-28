@@ -72,7 +72,7 @@ Eligible players receive one air jump after leaving the ground. Vanilla command 
 2. While airborne, tap sneak once.
 3. Land before using another air jump.
 
-The input uses the shared `zombies:is_sneaking` predicate and a press-edge tag, so holding sneak does not repeatedly trigger boosts. The boost is a six-tick, hidden level-7 Levitation pulse. Room exit, 115 suppression, deactivation, reset, and map cleanup clear the pulse and its availability.
+The input uses the shared `zbk:is_sneaking` predicate and a press-edge tag, so holding sneak does not repeatedly trigger boosts. The boost is a six-tick, hidden level-7 Levitation pulse. Room exit, 115 suppression, deactivation, reset, and map cleanup clear the pulse and its availability.
 
 Sneak is also the normal reload and barrier-repair input. While an eligible player is airborne with an unused air jump, the fresh press is reserved for the air jump and manual reload is skipped. Barrier repairs require the player to be on the ground. After consuming the air jump, a later fresh sneak press may reload normally while airborne.
 

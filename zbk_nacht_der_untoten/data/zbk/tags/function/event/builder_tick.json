@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "zbk_nacht_der_untoten:builder_tick"
+    "zbk_nacht_der_untoten:event/builder_tick"
   ]
 }

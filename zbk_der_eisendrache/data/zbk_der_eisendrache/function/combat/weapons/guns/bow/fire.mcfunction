@@ -39,6 +39,6 @@ execute if score @s active_weapon matches 2 if score @s ammo_3 matches 1.. run f
 scoreboard players set @s bow_charge_time 0
 
 # No-ammo voice callout (only triggers when both clip and reserve are empty)
-function zbk:api/sounds/voice/try_no_ammo with storage zombies:config
+function zbk:api/sounds/voice/try_no_ammo with storage zbk:config
 
 function zbk_der_eisendrache:events/bow_shot_finished

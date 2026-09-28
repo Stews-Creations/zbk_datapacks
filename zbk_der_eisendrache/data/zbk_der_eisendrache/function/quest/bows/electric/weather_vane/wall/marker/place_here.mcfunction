@@ -8,7 +8,7 @@ execute if data block ~ ~ ~ {} run return run tellraw @s {"text":"[Electric Bow]
 execute if block ~ ~ ~ minecraft:air run return 0
 execute if block ~ ~ ~ minecraft:cave_air run return 0
 execute if block ~ ~ ~ minecraft:void_air run return 0
-execute in zombies:door_storage unless loaded 0 64 -1024 run return run tellraw @s {"text":"[Electric Bow] Wall storage is loading. Retry in a moment.","color":"yellow"}
+execute in zbk:door_storage unless loaded 0 64 -1024 run return run tellraw @s {"text":"[Electric Bow] Wall storage is loading. Retry in a moment.","color":"yellow"}
 scoreboard players set #de_el_count temp 0
 execute store result score #de_el_count temp if entity @e[type=marker,tag=de_el_wall_marker]
 execute if score #de_el_count temp matches 64.. run return run tellraw @s {"text":"[Electric Bow] The breakable wall supports up to 64 marked blocks.","color":"red"}

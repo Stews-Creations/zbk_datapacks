@@ -11,8 +11,8 @@ scoreboard players operation #current de_storm_link = @s de_storm_link
 scoreboard players operation #de_breeze_yaw stats = @s de_storm_life
 scoreboard players set #de_breeze_step stats -6
 scoreboard players operation #de_breeze_yaw stats *= #de_breeze_step stats
-execute store result storage zombies:temp electric_storm_yaw.yaw int 1 run scoreboard players get #de_breeze_yaw stats
-function zbk_der_eisendrache:quest/bows/electric/storm/animations/orbit with storage zombies:temp electric_storm_yaw
+execute store result storage zbk:temp electric_storm_yaw.yaw int 1 run scoreboard players get #de_breeze_yaw stats
+function zbk_der_eisendrache:quest/bows/electric/storm/animations/orbit with storage zbk:temp electric_storm_yaw
 
 # Blue-white spiral and wind. Visual lightning never creates damaging bolt entities.
 tp @s ~ ~ ~ ~18 0

@@ -5,7 +5,7 @@ scoreboard players set #de_el_count temp 0
 execute store result score #de_el_count temp if entity @e[type=marker,tag=de_el_wall_marker]
 execute unless score #de_el_count temp matches 1.. run return run function zbk_der_eisendrache:quest/bows/electric/weather_vane/interactions/not_ready
 execute unless score #de_el_count temp = @e[type=marker,tag=de_el_vane_marker,limit=1] de_el_walls run return run function zbk_der_eisendrache:quest/bows/electric/weather_vane/interactions/not_ready
-execute in zombies:door_storage unless loaded 0 64 -1024 run return run function zbk_der_eisendrache:quest/bows/electric/weather_vane/interactions/not_ready
+execute in zbk:door_storage unless loaded 0 64 -1024 run return run function zbk_der_eisendrache:quest/bows/electric/weather_vane/interactions/not_ready
 scoreboard players set @e[type=marker,tag=de_el_vane_marker,limit=1] de_el_stage 1
 scoreboard players set @e[type=marker,tag=de_el_vane_marker,limit=1] de_el_timer 41
 tag @e[type=item_display,tag=de_el_vane_head] add de_el_vane_spinning

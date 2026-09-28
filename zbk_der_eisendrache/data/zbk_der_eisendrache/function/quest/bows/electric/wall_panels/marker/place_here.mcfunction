@@ -1,5 +1,5 @@
 # Keep the authored wall-facing yaw; runtime creation turns the decorated display face outward.
-execute unless block ~ ~ ~ #zombies:raycast_pass run return run tellraw @s {"text":"The selected wall face must have clear space in front of it.","color":"yellow"}
+execute unless block ~ ~ ~ #zbk:raycast_pass run return run tellraw @s {"text":"The selected wall face must have clear space in front of it.","color":"yellow"}
 $kill @e[type=marker,tag=de_el_panel_marker,nbt={data:{id:$(id)}}]
 function zbk_der_eisendrache:quest/bows/electric/wall_panels/route/reset
 $kill @e[tag=de_el_panel_$(id)_runtime]

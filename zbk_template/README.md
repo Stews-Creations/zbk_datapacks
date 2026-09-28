@@ -11,7 +11,34 @@ An executable developer reference for map add-ons targeting ZBK Core API 1.0.0. 
 
 The dialog also exposes examples of public power activation and zone unlocking calls. Those buttons intentionally invoke the examples only when clicked.
 
+To see event diagnostics, run `/tag @s add debug` before `/reload`, then use the dialog, kill a hostile entity, or start a round. Messages prefixed `[ZBK Template]` go only to players with the `debug` tag. Use `/tag @s remove debug` when finished. The per-tick handlers do not send chat messages. For the start examples, toggle one flag in the dialog, then call `/function zbk:api/game/start`; toggle it again to turn it off. A deferred start reports its accepted callback and scheduled resume. The dialog buttons themselves show their on/off state to the player who clicked them.
+
 The function namespace root contains only `on_load` and `initialize` lifecycle hooks. Core event handlers, including registration, player authoring, and the demo trigger tick, live in `function/event/`.
+
+## File guide
+
+Every `.mcfunction` begins with a comment explaining its caller and purpose. Follow the function calls from `on_load` through `event/core_ready` and `initialize` for setup, or from an event handler into `authoring/`, `demo/`, `game/`, or `marker/` for examples. JSON and metadata files cannot contain Minecraft comments, so their roles are listed here:
+
+| File | Purpose |
+| --- | --- |
+| `pack.mcmeta` | Declares Minecraft 26.2 pack compatibility and the template release version. |
+| `VERSION` | Plain-text release version; keep it aligned with `pack.mcmeta`. |
+| `data/minecraft/tags/function/load.json` | Calls `zbk_template:on_load` on datapack load and `/reload`. |
+| `data/zbk_template/dialog/map_tools.json` | Defines the builder dialog and its opt-in sample buttons. |
+| `data/zbk/tags/function/event/register.json` | Subscribes the provider registration handler. |
+| `data/zbk/tags/function/event/core_ready.json` | Subscribes setup after Core selects the active provider. |
+| `data/zbk/tags/function/event/authoring_open.json` | Opens the builder dialog through Core's authoring hook. |
+| `data/zbk/tags/function/event/builder_tick.json` | Enables the demo trigger for each builder. |
+| `data/zbk/tags/function/event/tick.json` | Checks the demo trigger once per global tick. |
+| `data/zbk/tags/function/event/before_game_start.json` | Subscribes the optional start block and defer requests. |
+| `data/zbk/tags/function/event/game_start_deferred.json` | Receives Core's accepted deferral and schedules resume. |
+| `data/zbk/tags/function/event/before_game_reset.json` | Cancels a pending resume before reset. |
+| `data/zbk/tags/function/event/game_reset.json` | Rebuilds displays after reset. |
+| `data/zbk/tags/function/event/before_jump_pad_purchase.json` | Demonstrates a conditional purchase veto for pad 99. |
+| `data/zbk/tags/function/event/enemy_killed.json` | Demonstrates a kill notification. |
+| `data/zbk/tags/function/event/round_start.json` | Demonstrates round context and a round-10 actionbar. |
+
+Each event tag uses `replace: false` and names its matching `zbk_template:event/*` handler. When adapting the pack, keep the tag path in Core's `zbk` namespace and change the handler value to your own namespace. The files in `LICENSES/` contain the project terms and notices; keep them with distributed copies.
 
 ## Events and state
 

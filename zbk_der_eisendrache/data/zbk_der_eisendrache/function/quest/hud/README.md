@@ -18,7 +18,7 @@ The board reserves its slots only in Adventure on Map 2, or during an explicit c
 
 ## Player portraits
 
-Owner IDs come from `#1` through `#4` in `de_bow_owner`. They are compared with each player's stable `id`; holding a bow does not establish ownership. An unassigned bow displays a silhouette. On the first update after an ownership change, `inventory/owners/capture` runs the existing `zombies:player_head` loot table as the owner into a temporary item entity, copies its profile, then removes that entity. It never borrows a player inventory slot.
+Owner IDs come from `#1` through `#4` in `de_bow_owner`. They are compared with each player's stable `id`; holding a bow does not establish ownership. An unassigned bow displays a silhouette. On the first update after an ownership change, `inventory/owners/capture` runs the existing `zbk:player_head` loot table as the owner into a temporary item entity, copies its profile, then removes that entity. It never borrows a player inventory slot.
 
 Profiles are cached in `zombies:quest_inventory owners` and indexed by the corresponding `de_ui_owner` score. All viewers reuse them, including after that owner disconnects. If a reserved owner is offline before a profile has been captured, a silhouette explicitly says the profile is unavailable; it does not claim the bow is unassigned. Reload/reset clears the profile cache. Hovering a real head shows only the exact player profile username as its title (without the possessive or "Head" suffix), plus an assignment description. Ownership, quest progress and rewards remain authoritative in their existing modules.
 

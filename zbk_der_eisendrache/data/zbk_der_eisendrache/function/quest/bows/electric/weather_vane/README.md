@@ -109,7 +109,7 @@ function zbk_der_eisendrache:quest/bows/electric/weather_vane/management/stop
 | `#1 de_bow_owner` / `#1 de_bow_ready` | Electric reservation and availability, owned by shared bow binding |
 | `de_el_vane_runtime` / `de_bow_1_runtime` | Derived displays, label and interactions, removed on reset/map cleanup |
 
-`on_load` creates objectives and forceloads the snapshot chunk in the existing `zombies:door_storage` dimension. This module reserves X `0..15`, Y `64`, Z `-1024..-1021` for its 64 exact block snapshots. Custom doors allocate their saved zones at Z `0` and above, so these regions do not overlap. Save the storage dimension along with the map world; the snapshots are world data, not resource-pack assets. No new dimension or server restart is required.
+`on_load` creates objectives and forceloads the snapshot chunk in the existing `zbk:door_storage` dimension. This module reserves X `0..15`, Y `64`, Z `-1024..-1021` for its 64 exact block snapshots. Custom doors allocate their saved zones at Z `0` and above, so these regions do not overlap. Save the storage dimension along with the map world; the snapshots are world data, not resource-pack assets. No new dimension or server restart is required.
 
 `initialize` restores broken wall blocks, clears electric ownership, availability and progress (including the three fires and their ring segment), removes derived runtime, and rebuilds the vane on Map 2. It is invoked by quest/game initialization and reload. `management/cleanup` also restores loaded wall blocks and clears transient state after map deselection while retaining all authoring markers. If storage is still loading, restoration retains `de_el_broken = 1` and retries on Map 2 ticks. Do not delete a marker whose restore is pending.
 

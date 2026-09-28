@@ -1,2 +1,6 @@
+# Request hook: use Core's block/defer API while this synchronous event frame is live.
+# The demo flags are opt-in. Never veto a resuming request, and skip the example cutscene when requested.
+execute if score #active zbk.template matches 1 if score #block_start zbk.template matches 1 unless data storage zbk:events stack[-1].context{resuming:1} run tellraw @a[tag=debug] {"text":"[ZBK Template] before_game_start: requesting a start block.","color":"gray"}
 execute if score #active zbk.template matches 1 if score #block_start zbk.template matches 1 unless data storage zbk:events stack[-1].context{resuming:1} run function zbk:api/request/block
+execute if score #active zbk.template matches 1 if score #defer_start zbk.template matches 1 unless data storage zbk:events stack[-1].context{resuming:1} unless data storage zbk:events stack[-1].context{skip_cutscene:1} run tellraw @a[tag=debug] {"text":"[ZBK Template] before_game_start: requesting a deferred start.","color":"gray"}
 execute if score #active zbk.template matches 1 if score #defer_start zbk.template matches 1 unless data storage zbk:events stack[-1].context{resuming:1} unless data storage zbk:events stack[-1].context{skip_cutscene:1} run function zbk:api/request/defer {owner:"zbk_template"}

@@ -9,8 +9,8 @@ execute at @s if score @s tier_2 matches 1.. run playsound zbk_der_eisendrache:b
 execute anchored eyes run particle minecraft:crit ^0.25 ^-0.1 ^0.5 0 0 0 0 1 force
 
 # Start raycast with bow stats (quick or charged)
-execute if score @s bow_is_charged matches 0 run function zbk:api/combat/weapons/mechanics/raycast/start with storage zombies:weapons guns.bow
-execute if score @s bow_is_charged matches 1 run function zbk:api/combat/weapons/mechanics/raycast/start with storage zombies:weapons guns.bow_charged
+execute if score @s bow_is_charged matches 0 run function zbk:api/combat/weapons/mechanics/raycast/start with storage zbk:weapons guns.bow
+execute if score @s bow_is_charged matches 1 run function zbk:api/combat/weapons/mechanics/raycast/start with storage zbk:weapons guns.bow_charged
 
 # Decrease ammo (1 for quick shot, 2 for charged shot)
 scoreboard players remove @s ammo_2 1

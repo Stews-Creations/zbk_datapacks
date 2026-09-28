@@ -9,5 +9,5 @@ execute if score #de_held_center temp matches 0 run return run function zbk_der_
 # Rise at most 1 block over 20 ticks, then hover until the linked storm ends.
 # Conservative headroom also accommodates the taller Panzer controller.
 data merge entity @s {NoAI:1b,NoGravity:1b,Motion:[0.0d,0.0d,0.0d],fall_distance:0.0f}
-execute if score @s de_storm_life matches 1.. if block ~ ~1 ~ #zombies:raycast_pass if block ~ ~2 ~ #zombies:raycast_pass if block ~ ~3 ~ #zombies:raycast_pass run tp @s ~ ~0.05 ~
+execute if score @s de_storm_life matches 1.. if block ~ ~1 ~ #zbk:raycast_pass if block ~ ~2 ~ #zbk:raycast_pass if block ~ ~3 ~ #zbk:raycast_pass run tp @s ~ ~0.05 ~
 execute if score @s de_storm_life matches 1.. run scoreboard players remove @s de_storm_life 1
