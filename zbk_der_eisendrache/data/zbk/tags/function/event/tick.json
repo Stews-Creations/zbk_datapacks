@@ -1,6 +1,6 @@
 {
   "values": [
-    "zbk_der_eisendrache:events/tick"
+    "zbk_der_eisendrache:on_tick"
   ],
   "replace": false
 }

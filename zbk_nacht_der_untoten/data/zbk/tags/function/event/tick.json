@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "zbk_nacht_der_untoten:event/tick"
+    "zbk_nacht_der_untoten:on_tick"
   ]
 }

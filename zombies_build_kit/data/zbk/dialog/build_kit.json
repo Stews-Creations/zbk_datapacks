@@ -92,7 +92,7 @@
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk:api/authoring/open"
+        "command": "function zbk:api/map_tools_open"
       }
     }
   ]

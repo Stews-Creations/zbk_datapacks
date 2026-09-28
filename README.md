@@ -108,7 +108,7 @@ Resume validates the owner and ticket, reruns readiness with `resuming:1`, then 
 | `zbk:api/enemy/unregister` | As that entity, remove its round membership without awarding a kill |
 | `zbk:api/enemy/reserve` | As a pending-spawn marker, hold round completion until released |
 | `zbk:api/enemy/release` | Release that marker's round hold |
-| `zbk:api/authoring/open` | Dispatch `map_tools_open` as the requesting player so the active provider can show its Map Tools dialog |
+| `zbk:api/map_tools_open` | Dispatch `map_tools_open` as the requesting player so the active provider can show its Map Tools dialog |
 
 Game start/end/reset/resume calls are rejected during event dispatch. Schedule an intentional transition after the callback instead of recursively resetting the world. Power and zone calls support nested notification dispatch. Add-ons must not write match/round progression directly.
 

@@ -13,11 +13,11 @@ The dialog also exposes examples of public power activation and zone unlocking c
 
 To see event diagnostics, run `/tag @s add debug` before `/reload`, then use the dialog, kill a hostile entity, or start a round. Messages prefixed `[ZBK Template]` go only to players with the `debug` tag. Use `/tag @s remove debug` when finished. The per-tick handlers do not send chat messages. For the start examples, toggle one flag in the dialog, then call `/function zbk:api/game/start`; toggle it again to turn it off. A deferred start reports its accepted callback and scheduled resume. The dialog buttons themselves show their on/off state to the player who clicked them.
 
-The function namespace root contains only `on_load` and `initialize` lifecycle hooks. Core event handlers, including registration, player authoring, and the demo trigger tick, live in `function/event/`.
+The function namespace root contains only `on_load`, `initialize`, and `on_tick` lifecycle hooks. Core event handlers, including registration and the Map Tools listener, live in `function/event/`.
 
 ## File guide
 
-Every `.mcfunction` begins with a comment explaining its caller and purpose. Follow the function calls from `on_load` through `event/core_ready` and `initialize` for setup, or from an event handler into `authoring/`, `demo/`, `game/`, or `marker/` for examples. JSON and metadata files cannot contain Minecraft comments, so their roles are listed here:
+Every `.mcfunction` begins with a comment explaining its caller and purpose. Follow setup from `on_load` through `event/core_ready` and `initialize`; `on_tick` handles the demo trigger through `map_tools_open/trigger`. Other examples live in `demo/`, `game/`, and `marker/`. JSON and metadata files cannot contain Minecraft comments, so their roles are listed here:
 
 | File | Purpose |
 | --- | --- |
@@ -29,7 +29,7 @@ Every `.mcfunction` begins with a comment explaining its caller and purpose. Fol
 | `data/zbk/tags/function/event/core_ready.json` | Subscribes setup after Core selects the active provider. |
 | `data/zbk/tags/function/event/map_tools_open.json` | Opens the builder dialog when a player selects Map Tools. |
 | `data/zbk/tags/function/event/builder_tick.json` | Enables the demo trigger for each builder. |
-| `data/zbk/tags/function/event/tick.json` | Checks the demo trigger once per global tick. |
+| `data/zbk/tags/function/event/tick.json` | Calls the root `on_tick` hook to check the demo trigger once per global tick. |
 | `data/zbk/tags/function/event/before_game_start.json` | Subscribes the optional start block and defer requests. |
 | `data/zbk/tags/function/event/game_start_deferred.json` | Receives Core's accepted deferral and schedules resume. |
 | `data/zbk/tags/function/event/before_game_reset.json` | Cancels a pending resume before reset. |

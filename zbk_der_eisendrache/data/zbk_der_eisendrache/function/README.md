@@ -23,7 +23,7 @@ Owns gameplay and set pieces exclusive to Der Eisendrache. Core API 1.0.0 regist
 Core dispatches lifecycle and gameplay events to this provider only when its registration is active. Core also owns sound event selection and routing. The namespace root contains only lifecycle entry points; Minecraft's load tag calls `events/load` to reset registration state before Core bootstrap, and `events/maintenance` calls `quest/maintenance` for quest presentation.
 
 - `on_load` loads every feature regardless of the current selection, including anti-gravity plate, cycle, and movement objectives plus quest objectives and triggers.
-- `on_tick` delegates active runtime to the rocket effects, rocket test launch timer, anti-gravity activation cycle, boundaries, player gravity, authored wall-run paths, 115 launch, Pack-a-Punch, tram, and quests.
+- `on_tick` is called directly by `#zbk:event/tick`. It guards inactive providers, delegates the rocket effects, rocket test launch timer, anti-gravity activation cycle, boundaries, player gravity, authored wall-run paths, 115 launch, Pack-a-Punch, tram, and quests, then cleans up Fuse powerup state.
 - `initialize` resets anti-gravity plate progression, cycling, player, mob, and wall-platform state, Pack-a-Punch, quests, and the rocket test launch state, rebuilds configured rocket-test doors open, and rebuilds trams from their Start markers. The game-start preservation flag applies only to the prebuilt rocket.
 - Dragon-head quest displays use an explicit half-turn skull rotation for Minecraft 26.2 rendering; initialization also corrects existing large and mini heads.
 - `enable_triggers` enables selected-map quest triggers for the current player.
