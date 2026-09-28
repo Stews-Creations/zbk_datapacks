@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{special_equipment:true,trip_mine:true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zbk:combat/weapons/special_equipment/trip_mine/place_trip_mine"
+  }
+}

@@ -1,0 +1,2 @@
+data merge entity @s {Team:"spawner_mannequins",Tags:["wall_zombie","wave_enemy","wz_created","wall_dir_south"],profile:{texture:"entity/zombie/zombie",model:"wide"},pose:"standing",NoAI:1b,NoGravity:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,DeathLootTable:"minecraft:empty",Health:20f,Rotation:[0f,0f],attributes:[{id:"minecraft:max_health",base:20}]}
+return run function zbk:waves/spawning/zombie/wall/init_mannequin

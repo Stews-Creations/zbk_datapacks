@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Build Kit",
+  "external_title": "Build Kit",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Welcome to the Zombies Build Kit!\n\nSelect a category below to manage your zombie map:\n\nTip: We recommend using Axiom to see markers while building. Right-click near markers with the Build Stick to configure them."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Map Elements \u2192",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:map_elements"
+      }
+    },
+    {
+      "label": {
+        "text": "Buildables ->",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:buildables"
+      }
+    },
+    {
+      "label": {
+        "text": "Zone Highlight \u2192",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_manager"
+      }
+    },
+    {
+      "label": {
+        "text": "Cutscenes \u2192",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:cutscenes"
+      }
+    },
+    {
+      "label": {
+        "text": "Gamerules \u2192",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:recommended_gamerules"
+      }
+    },
+    {
+      "label": " ",
+      "action": {
+        "type": "run_command",
+        "command": ""
+      }
+    },
+    {
+      "label": {
+        "text": "\u2190 Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:zombies"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false,
+  "buttons": [
+    {
+      "label": {
+        "text": "Map Tools"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:api/authoring/open"
+      }
+    }
+  ]
+}

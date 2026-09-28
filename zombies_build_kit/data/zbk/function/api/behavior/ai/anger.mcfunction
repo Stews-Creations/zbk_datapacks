@@ -1,1 +1,1 @@
-return run function zombies:behavior/ai/anger
+return run function zbk:behavior/ai/anger

@@ -156,10 +156,10 @@ data merge entity @e[type=item_display,tag=mystery_box_149,distance=..60,limit=1
 tag @s remove anim_empty_north
 
 # Force reset all entities to clear any lingering interpolation issues
-execute at @s run function zombies:map_elements/mystery_box/animation/state/empty_force_reset
+execute at @s run function zbk:map_elements/mystery_box/animation/state/empty_force_reset
 
 # Check fire sale state after empty animation completes
-execute at @s run function zombies:map_elements/mystery_box/animation/state/check_fire_sale_state
+execute at @s run function zbk:map_elements/mystery_box/animation/state/check_fire_sale_state
 
 scoreboard players set @s mystery_box_frame 0
 schedule function mystery_box:k/empty_north/check_loop 0.1s

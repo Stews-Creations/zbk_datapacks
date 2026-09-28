@@ -16,12 +16,12 @@ Directional animations are generated for east, north, south, and west variants. 
 
 ## Ownership
 
-Gameplay state, purchases, gun selection, location management, and validation belong to `zombies:map_elements/mystery_box`. This namespace only owns generated model animation playback.
+Gameplay state, purchases, gun selection, location management, and validation belong to `zbk:map_elements/mystery_box`. This namespace only owns generated model animation playback.
 
 ## Editing Rules
 
 - Do not hand-edit generated keyframes or pause checks.
-- Put custom gameplay logic in the `zombies` namespace.
+- Put custom gameplay logic in the `zbk` namespace.
 - Re-export the animation source when generated playback needs to change.
 - After regeneration, verify that gameplay trigger functions still call valid animation entry points.
 

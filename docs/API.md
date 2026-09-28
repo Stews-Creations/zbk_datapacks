@@ -1,6 +1,6 @@
 # ZBK Core API 1.0.0
 
-ZBK Core owns match progression, shared weapons, players, purchases, and reusable placed systems. Map datapacks subscribe to vanilla function tags and call public `zbk:api/` functions. Core contains no map-name dispatch. The Core implementation remains in `zombies:`; that namespace's functions are private to Core.
+ZBK Core owns match progression, shared weapons, players, purchases, and reusable placed systems. Map datapacks subscribe to vanilla function tags and call public `zbk:api/` functions. Core contains no map-name dispatch. Other functions in the `zbk:` namespace are private to Core.
 
 The datapack release version is `1.0.0`; its API compatibility number is `10000`. Minecraft Java 26.2 uses datapack format 107.1. Release versions and Minecraft pack formats are different values.
 

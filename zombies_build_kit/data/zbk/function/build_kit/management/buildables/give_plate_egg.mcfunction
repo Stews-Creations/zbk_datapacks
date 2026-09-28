@@ -1,0 +1,1 @@
+function zbk:map_elements/rocket_shield/spawning/give_plate_egg

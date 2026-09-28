@@ -1,0 +1,71 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Wall Buy - Equipment & Melee",
+  "external_title": "Wall Buy - Equipment & Melee",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Select an item to set this wall buy."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Grenades",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:build_kit/management/wall_gun/apply_gun_id {gun_id:13}"
+      }
+    },
+    {
+      "label": {
+        "text": "Monkey Bombs",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:build_kit/management/wall_gun/apply_gun_id {gun_id:14}"
+      }
+    },
+    {
+      "label": {
+        "text": "Trip Mines",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:build_kit/management/wall_gun/apply_gun_id {gun_id:15}"
+      }
+    },
+    {
+      "label": {
+        "text": "Bowie Knife",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:build_kit/management/wall_gun/apply_gun_id {gun_id:16}"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:wall_gun/weapons"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

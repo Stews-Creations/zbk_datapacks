@@ -1,0 +1,122 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Spawner Immunity Tools",
+  "external_title": "Spawner Immunity",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Toggle immunity settings on existing zombie and dog spawners near you. If any spawner in range can still be hit by that type, the button applies immunity to the group; clicking again clears it."
+    }
+  ],
+  "inputs": [
+    {
+      "type": "minecraft:number_range",
+      "key": "radius",
+      "label": "Nearby Radius",
+      "start": 5,
+      "end": 128,
+      "initial": 24,
+      "step": 1
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Toggle Nearby: Guns",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "dynamic/run_command",
+        "template": "function zbk:build_kit/management/spawner/batch/nearby_guns {radius:\u0024(radius)}"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle Nearby: Explosives",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "dynamic/run_command",
+        "template": "function zbk:build_kit/management/spawner/batch/nearby_explosives {radius:\u0024(radius)}"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle Nearby: Elements",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "dynamic/run_command",
+        "template": "function zbk:build_kit/management/spawner/batch/nearby_elements {radius:\u0024(radius)}"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle Nearby: Nuke",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "dynamic/run_command",
+        "template": "function zbk:build_kit/management/spawner/batch/nearby_nuke {radius:\u0024(radius)}"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle Nearby: Melee",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "dynamic/run_command",
+        "template": "function zbk:build_kit/management/spawner/batch/nearby_melee {radius:\u0024(radius)}"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle Nearby: All",
+        "color": "green"
+      },
+      "action": {
+        "type": "dynamic/run_command",
+        "template": "function zbk:build_kit/management/spawner/batch/nearby_all {radius:\u0024(radius)}"
+      }
+    },
+    {
+      "label": {
+        "text": "Nearby: Clear",
+        "color": "red"
+      },
+      "action": {
+        "type": "dynamic/run_command",
+        "template": "function zbk:build_kit/management/spawner/batch/nearby_clear {radius:\u0024(radius)}"
+      }
+    },
+    {
+      "label": {
+        "text": "Clear All Map Spawners",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:build_kit/management/spawner/batch/clear_all"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:zombie_control"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

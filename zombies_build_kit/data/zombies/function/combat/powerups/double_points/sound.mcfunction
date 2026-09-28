@@ -1,1 +1,0 @@
-function zombies:sounds/play/drops_double_points

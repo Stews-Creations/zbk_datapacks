@@ -1,1 +1,1 @@
-return run function zombies:combat/weapons/force_fire
+return run function zbk:combat/weapons/force_fire

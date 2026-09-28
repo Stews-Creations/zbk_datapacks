@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "zombies:sounds/voice/try_take_damage"
+    "zbk:sounds/voice/try_take_damage"
   ]
 }

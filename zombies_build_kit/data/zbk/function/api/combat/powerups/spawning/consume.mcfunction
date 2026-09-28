@@ -1,1 +1,1 @@
-$return run function zombies:combat/powerups/spawning/consume {kind:"$(kind)",label:"$(label)"}
+$return run function zbk:combat/powerups/spawning/consume {kind:"$(kind)",label:"$(label)"}

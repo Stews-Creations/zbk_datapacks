@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "minecraft:entity_type": "minecraft:interaction",
+          "nbt": "{Tags:[\"yt_interaction\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zbk:build_kit/spawn_menu/on_yt_click"
+  }
+}

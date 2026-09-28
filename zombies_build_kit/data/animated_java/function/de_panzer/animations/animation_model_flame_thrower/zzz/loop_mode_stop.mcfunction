@@ -1,2 +1,2 @@
 # Repaired after Animated Java export for custom Panzer gameplay glue.
-function zombies:bosses/panzer/model/animated_java/stop_flame_thrower
+function zbk:bosses/panzer/model/animated_java/stop_flame_thrower

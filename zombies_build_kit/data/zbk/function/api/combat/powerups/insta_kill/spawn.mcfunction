@@ -1,1 +1,1 @@
-return run function zombies:combat/powerups/insta_kill/spawn
+return run function zbk:combat/powerups/insta_kill/spawn

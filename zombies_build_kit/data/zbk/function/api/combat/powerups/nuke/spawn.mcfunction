@@ -1,1 +1,1 @@
-return run function zombies:combat/powerups/nuke/spawn
+return run function zbk:combat/powerups/nuke/spawn

@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{bo3:true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zbk:combat/weapons/guns/bo3/input/use"
+  }
+}

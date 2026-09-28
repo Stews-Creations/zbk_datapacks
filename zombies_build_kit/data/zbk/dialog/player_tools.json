@@ -1,0 +1,151 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Player Tools",
+  "external_title": "Player Tools",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Manage player points, powerups, weapons, and tools"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Points →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:points"
+      }
+    },
+    {
+      "label": {
+        "text": "Perks →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:perks_grant"
+      }
+    },
+    {
+      "label": {
+        "text": "Powerups →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:powerups"
+      }
+    },
+    {
+      "label": {
+        "text": "Special Equipment →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:special_equipment"
+      }
+    },
+    {
+      "label": {
+        "text": "Weapons →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:weapons"
+      }
+    },
+    {
+      "label": {
+        "text": "Pack a Punch →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:pack_a_punch"
+      }
+    },
+    {
+      "label": {
+        "text": "Debug Settings →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:debug_settings"
+      }
+    },
+    {
+      "label": {
+        "text": "TP to Lobby",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger tp_worldspawn set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle Gun",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger toggle_gun set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle End Cutscene",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:build_kit/management/build_mode/disable_lobby_tp"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle TP",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:build_kit/management/build_mode/toggle_tp"
+      }
+    },
+    {
+      "label": {
+        "text": "Show Player Settings",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:build_kit/management/build_mode/show_player_settings"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:zombies"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

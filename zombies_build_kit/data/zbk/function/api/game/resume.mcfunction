@@ -9,5 +9,5 @@ scoreboard players set #resuming zbk.api 0
 execute if data storage zbk:events result{blocked:1b} run return 0
 data remove storage zbk:state pending
 scoreboard players set #continuing zbk.api 1
-function zombies:game/management/start
+function zbk:game/management/start
 scoreboard players set #continuing zbk.api 0

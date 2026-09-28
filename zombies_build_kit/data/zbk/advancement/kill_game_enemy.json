@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "kill_game_enemy": {
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "rewards": {
+    "function": "zbk:player/points/add_melee_kill_points"
+  }
+}

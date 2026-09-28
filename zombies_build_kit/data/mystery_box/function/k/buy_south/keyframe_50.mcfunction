@@ -2,7 +2,7 @@
 
 tag @e[tag=mystery_box_gun, sort=nearest, limit=1] remove spin
 tag @e[tag=mystery_box_gun, sort=nearest, limit=1] remove speed_slow
-function zombies:map_elements/mystery_box/buy/check_bear
+function zbk:map_elements/mystery_box/buy/check_bear
 
 # Enable claiming if gun was selected (not teddy bear)
 execute unless score #teddy_bear_roll temp matches 1 run scoreboard players set @e[tag=mystery_box_location,type=marker,distance=..5,limit=1,sort=nearest] mystery_box_can_claim 1

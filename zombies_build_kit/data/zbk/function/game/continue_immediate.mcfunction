@@ -1,3 +1,3 @@
 scoreboard players set #continuing zbk.api 1
-function zombies:game/management/start
+function zbk:game/management/start
 scoreboard players set #continuing zbk.api 0

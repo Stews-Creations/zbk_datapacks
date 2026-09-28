@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "zombies:sounds/voice/on_tick"
+    "zbk:sounds/voice/on_tick"
   ]
 }

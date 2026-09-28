@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Wonder Weapons",
+  "external_title": "Wonder Weapons",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Choose a wonder weapon to equip."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Ray Gun",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_ray_gun set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:weapons"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

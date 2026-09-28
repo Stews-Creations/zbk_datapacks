@@ -1,1 +1,1 @@
-return run function zombies:combat/weapons/guns/ray_gun/give/main
+return run function zbk:combat/weapons/guns/ray_gun/give/main

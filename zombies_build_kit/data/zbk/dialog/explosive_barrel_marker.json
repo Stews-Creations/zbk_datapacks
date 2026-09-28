@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Explosive Barrel",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Prop Type: Explosive Barrel\n\nAn explosive barrel that can be detonated by weapons.\nGun shots reduce health (100 HP total).\nExplosive weapons (grenades, ray gun) detonate instantly.\nBarrels respawn on game start and /reload."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Reset Barrel",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "/function zbk:build_kit/management/explosive_barrel/reset_barrel"
+      }
+    },
+    {
+      "label": {
+        "text": "Delete Barrel",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "/function zbk:build_kit/management/explosive_barrel/delete_barrel"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "pause": false
+}

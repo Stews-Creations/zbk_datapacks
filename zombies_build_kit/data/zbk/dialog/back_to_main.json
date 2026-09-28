@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:notice",
+  "title": "Back",
+  "external_title": "← Back",
+  "body": [],
+  "action": {
+    "label": {"text": "OK", "color": "gold"},
+    "action": {
+      "type": "show_dialog",
+      "dialog": "zbk:zombies"
+    }
+  }
+}

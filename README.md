@@ -19,7 +19,7 @@ Install Core with at most one map provider. The template is itself a provider: u
 
 1. Archive the contents of `zombies_build_kit/` with `pack.mcmeta` at the ZIP root, excluding development documentation from Minecraft resource directories. Copy the ZIP into `<WORLD>/datapacks/`.
 2. Enable the matching `zombies_build_kit` resource pack from [zbk_resourcepacks](https://github.com/Stews-Creations/zbk_resourcepacks). Install [zbk_structures](https://github.com/Stews-Creations/zbk_structures) into the world's generated structure directory for Build Kit placement and runtime templates.
-3. Run `/reload`, confirm the pack with `/datapack list`, then use `/function zombies:build_kit/management/give_zbk_book` to open the Build Kit workflow.
+3. Run `/reload`, confirm the pack with `/datapack list`, then use `/function zbk:build_kit/management/give_zbk_book` to open the Build Kit workflow.
 
 For a map, archive its matching pack directory the same way, copy its ZIP into the world, and enable its matching resource pack above Core. Installing a map datapack does not supply a finished world or create its required map geometry and configured markers.
 
@@ -27,7 +27,7 @@ The optional Vivecraft resource overlay and VR companion mod are client addition
 
 ## Runtime and development
 
-The installed datapack folder is `zombies_build_kit`; command identifiers retain the `zombies:` namespace. See the [pack guide](zombies_build_kit/README.md) for entry points and [function architecture](zombies_build_kit/data/zombies/function/README.md) for module ownership.
+The installed datapack folder is `zombies_build_kit`; command identifiers retain the `zbk:` namespace. See the [pack guide](zombies_build_kit/README.md) for entry points and [function architecture](zombies_build_kit/data/zbk/function/README.md) for module ownership.
 
 Before publishing, parse functions with Mecha against Minecraft 26.2, parse JSON, check function and dialog references, and run `git diff --check`. Test Core alone and each map separately. Macro-generated paths and gameplay require isolated Minecraft 26.2 tests. Verify a fresh world, placement, start/reset/reload, combat, purchases, and multiplayer before publishing a playable map.
 

@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "zbk:build_kit/management/mob_immunity_tool/cooldown"
+  }
+}

@@ -1,1 +1,1 @@
-return run function zombies:player/inventory/weapons
+return run function zbk:player/inventory/weapons

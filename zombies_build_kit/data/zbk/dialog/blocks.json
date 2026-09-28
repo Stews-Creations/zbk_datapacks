@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Blocks",
+  "external_title": "Blocks",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Special blocks for map building\n\nMob Blocker Pane:\nAn invisible magenta stained glass pane. Place on top of fences or iron bars to prevent mobs from jumping over. Blocks both mob pathfinding and physical movement. Bullets pass through it. Connects like fences for aligned collision.\n\nPower Lamp Marker:\nPlaces a marker-driven redstone lamp. This uses item-frame placement and aligns to block center like trap frames."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Mob Blocker Pane",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_mob_blocker set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Power Lamp Marker",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_power_lamp_marker set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:map_elements"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

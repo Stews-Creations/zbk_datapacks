@@ -1,1 +1,1 @@
-function zombies:map_elements/power/management/on
+function zbk:map_elements/power/management/on

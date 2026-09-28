@@ -1,1 +1,1 @@
-$return run function zombies:debug/info {f:"$(f)",m:"$(m)"}
+$return run function zbk:debug/info {f:"$(f)",m:"$(m)"}

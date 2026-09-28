@@ -124,4 +124,4 @@ data merge entity @e[type=block_display,tag=mystery_box_146,distance=..1,limit=1
 data merge entity @e[type=block_display,tag=mystery_box_147,distance=..1,limit=1,sort=nearest] {transformation:[0f,0.0080954937f,-0.0301831987f,0.6244319594f,0f,0.0301831987f,0.0080954937f,1.1759375f,0.03125f,0f,0f,0.4996590377f,0f,0f,0f,1f],interpolation_duration:0,start_interpolation:0}
 data merge entity @e[type=block_display,tag=mystery_box_148,distance=..1,limit=1,sort=nearest] {transformation:[0.0161852374f,-0.0000169644f,-0.0905519053f,0.5644319594f,0.0603679391f,0.0000096572f,0.0242778529f,1.1246875f,0.0000049346f,-0.062499997f,0.0000283299f,0.5809090377f,0f,0f,0f,1f],interpolation_duration:0,start_interpolation:0}
 # Teddy bear animation complete - handle cleanup and location change
-function zombies:map_elements/mystery_box/teddy_bear/teddy_bear_complete
+function zbk:map_elements/mystery_box/teddy_bear/teddy_bear_complete

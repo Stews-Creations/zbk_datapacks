@@ -1,1 +1,1 @@
-return run function zombies:combat/weapons/effects/particles/bullet_trail
+return run function zbk:combat/weapons/effects/particles/bullet_trail

@@ -1,0 +1,7 @@
+execute unless entity @s[gamemode=adventure] unless score @s rs_ui_preview matches 1 run return run clear @s *[custom_data~{rs_part_ui:true}]
+execute if score #plate rs_collected matches 1 run function zbk:player/inventory/rocket_shield/apply {part:"plate",slot:2,collected:1,model:"zbk:rocket_shield/plate",status:"Collected",color:"green"}
+execute unless score #plate rs_collected matches 1 run function zbk:player/inventory/rocket_shield/apply {part:"plate",slot:2,collected:0,model:"zbk:rocket_shield/hud/plate_missing",status:"Missing",color:"gray"}
+execute if score #mechanism rs_collected matches 1 run function zbk:player/inventory/rocket_shield/apply {part:"mechanism",slot:3,collected:1,model:"zbk:rocket_shield/mechanism",status:"Collected",color:"green"}
+execute unless score #mechanism rs_collected matches 1 run function zbk:player/inventory/rocket_shield/apply {part:"mechanism",slot:3,collected:0,model:"zbk:rocket_shield/hud/mechanism_missing",status:"Missing",color:"gray"}
+execute if score #rocket rs_collected matches 1 run function zbk:player/inventory/rocket_shield/apply {part:"rocket",slot:4,collected:1,model:"zbk:rocket_shield/rocket",status:"Collected",color:"green"}
+execute unless score #rocket rs_collected matches 1 run function zbk:player/inventory/rocket_shield/apply {part:"rocket",slot:4,collected:0,model:"zbk:rocket_shield/hud/rocket_missing",status:"Missing",color:"gray"}

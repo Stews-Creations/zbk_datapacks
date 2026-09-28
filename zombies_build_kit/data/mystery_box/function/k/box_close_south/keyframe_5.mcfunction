@@ -20,7 +20,7 @@ data merge entity @e[type=item_display,tag=mystery_box_149,distance=..1,limit=1,
 scoreboard players set @s mystery_box_frame 5
 
 # Complete only this root's location. Gameplay is owned by zombies.
-execute at @s as @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] run function zombies:map_elements/mystery_box/animation/state/close_complete
+execute at @s as @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] run function zbk:map_elements/mystery_box/animation/state/close_complete
 
 tag @s remove anim_box_close_south
 scoreboard players reset @s mystery_box_frame

@@ -1,1 +1,1 @@
-return run function zombies:map_elements/door/management/check_and_unlock_spawner
+return run function zbk:map_elements/door/management/check_and_unlock_spawner

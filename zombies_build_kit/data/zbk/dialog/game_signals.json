@@ -1,0 +1,108 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Game Signals",
+  "external_title": "Game Signals",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Game Signals let your map react to game events using redstone.\n\nPlace a signal marker where you want it. The block will swap between redstone block (active) and concrete (idle) based on game events.\n\nPulse signals act like a stone button press.\nToggle signals act like a lever.\nGame End, Cutscene Start, and Cutscene End only support pulse mode.\n\nUse the Build Manager to configure or delete placed signals."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Game Start Signal",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger give_signal_game_start_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Game End Signal",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger give_signal_game_end_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Round Start Signal",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger give_signal_round_start_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Power On Signal",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger give_signal_power_on_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Zone Unlocked Signal",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger give_signal_zone_unlocked_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Cutscene Start Signal",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger give_signal_cutscene_start_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Cutscene End Signal",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger give_signal_cutscene_end_egg set 1"
+      }
+    },
+    {
+      "label": " ",
+      "action": {
+        "type": "run_command",
+        "command": ""
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:map_elements"
+      }
+    }
+  ],
+  "columns": 2,
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "pause": false
+}

@@ -1,1 +1,1 @@
-return run function zombies:combat/powerups/max_ammo/activate
+return run function zbk:combat/powerups/max_ammo/activate

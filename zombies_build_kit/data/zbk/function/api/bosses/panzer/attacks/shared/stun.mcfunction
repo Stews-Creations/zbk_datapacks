@@ -1,1 +1,1 @@
-return run function zombies:bosses/panzer/attacks/shared/stun
+return run function zbk:bosses/panzer/attacks/shared/stun

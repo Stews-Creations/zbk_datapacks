@@ -1,1 +1,1 @@
-return run function zombies:combat/immunity/apply_from_marker
+return run function zbk:combat/immunity/apply_from_marker

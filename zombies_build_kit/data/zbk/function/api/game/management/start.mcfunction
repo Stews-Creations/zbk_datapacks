@@ -1,1 +1,1 @@
-return run function zombies:game/management/start
+return run function zbk:game/management/start
