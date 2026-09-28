@@ -13,7 +13,32 @@ All packs start at version `1.0.0` and target Minecraft Java 26.2.
 | `zbk_der_eisendrache` | Der Eisendrache map behavior and authoring tools |
 | `zbk_template` | Developer reference and starting point for a custom map |
 
-Install Core with at most one map provider. The template is itself a provider: use it in a development world rather than alongside Nacht or DE. See the [API contract](docs/API.md) for registration, events, and request gates.
+Install Core with at most one map provider. The template is itself a provider: use it in a development world rather than alongside Nacht or DE.
+
+## Extend Core with events
+
+Core runs without a map pack. An add-on can listen to `#zbk:event/*` function tags to react to shared gameplay. For example, add `data/zbk/tags/function/event/round_start.json` to the add-on:
+
+```json
+{
+  "replace": false,
+  "values": ["my_map:events/round_start"]
+}
+```
+
+Core supplies the event tags, so listeners append with `replace: false`. A map provider registers through `#zbk:event/register` by calling `function zbk:api/map/register {id:"my_map",version:10000}`. During `core_ready`, the provider checks `storage zbk:registry active` before enabling its own runtime. API version `10000` corresponds to Core API 1.0.0. Other event listeners can coexist without registering as a map provider.
+
+| Event | Typical use |
+| --- | --- |
+| `core_ready`, `game_reset` | Initialize or rebuild map runtime from persistent markers |
+| `game_start`, `round_start`, `round_end`, `game_end` | React to match and round transitions |
+| `enemy_spawned`, `enemy_killed`, `player_down`, `player_revived` | React to combat and player state |
+| `power_on`, `zone_unlocked` | React to shared world state |
+| `before_game_start`, `before_jump_pad_purchase`, `before_manual_reload` | Block a request before Core commits it |
+
+Callbacks run synchronously. Read `storage zbk:events stack[-1].context` during the callback for the current event, actor, round, or event-specific fields; a nested event restores the outer context afterward. Do not retain the event frame for a scheduled function. Request listeners can call `zbk:api/request/block`; notifications cannot veto an action. Use public `zbk:api/*` functions for shared state changes, such as power activation or game reset, and keep other Core functions private. Game start, end, reset, and resume calls cannot run during event dispatch.
+
+See the [API contract](docs/API.md) for every event, context field, request response, and public function. The [map template](zbk_template/README.md) contains working registration, listener, reset, and deferred-start examples.
 
 ## Install
 
@@ -27,7 +52,7 @@ The optional Vivecraft resource overlay and VR companion mod are client addition
 
 ## Runtime and development
 
-The installed datapack folder is `zombies_build_kit`; command identifiers retain the `zbk:` namespace. See the [pack guide](zombies_build_kit/README.md) for entry points and [function architecture](zombies_build_kit/data/zbk/function/README.md) for module ownership.
+The installed datapack folder is `zombies_build_kit`; Core gameplay functions and dialogs use the `zbk:` namespace. See the [pack guide](zombies_build_kit/README.md) for entry points and [function architecture](zombies_build_kit/data/zbk/function/README.md) for module ownership.
 
 Before publishing, parse functions with Mecha against Minecraft 26.2, parse JSON, check function and dialog references, and run `git diff --check`. Test Core alone and each map separately. Macro-generated paths and gameplay require isolated Minecraft 26.2 tests. Verify a fresh world, placement, start/reset/reload, combat, purchases, and multiplayer before publishing a playable map.
 
