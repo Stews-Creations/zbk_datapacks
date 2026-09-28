@@ -19,4 +19,4 @@ Other weapon, perk, trap, and machine effects are called directly by their ownin
 
 ## Add-on integration
 
-Shared cues offer request events before playing their fallback. The active map may handle a cue and block that fallback. Core assigns four character slots at game start, maintains a shared per-character callout cooldown, and plays the matching voice after `sound_voice_*` requests unless an add-on blocks them. See the [Core API contract](../../../../../docs/API.md).
+Shared cues offer request events before playing their fallback. The active map may handle a cue and block that fallback. Core assigns four character slots at game start, maintains a shared per-character callout cooldown, and plays the matching voice after `sound_voice_*` requests unless an add-on blocks them. See the [Core API contract](../../../../../README.md#core-api-100).

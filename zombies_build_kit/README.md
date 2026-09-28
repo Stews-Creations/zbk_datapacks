@@ -17,7 +17,7 @@ The matching Core resource pack uses `assets/zbk/`. Datapack commands and compon
 
 ## Core boundaries
 
-Reusable placed systems remain under `data/zbk/function/map_elements/`. There is no `maps/` runtime, active map ID, or sound-pack picker. Core audio includes shared rounds, dogs, teleporters, game cues, menu music, and four-character voice callouts. Map sound requests can replace those defaults. Installed folder names do not change namespaced commands. Optional map packs subscribe to the [event API](../docs/API.md); Core never calls their namespaces. Registration runs one tick after load, and only one compatible provider may become active. Add-ons must use `zbk:api/*` rather than private Core function calls.
+Reusable placed systems remain under `data/zbk/function/map_elements/`. There is no `maps/` runtime, active map ID, or sound-pack picker. Core audio includes shared rounds, dogs, teleporters, game cues, menu music, and four-character voice callouts. Map sound requests can replace those defaults. Installed folder names do not change namespaced commands. Optional map packs subscribe to the [event API](../README.md#core-api-100); Core never calls their namespaces. Registration runs one tick after load, and only one compatible provider may become active. Add-ons must use `zbk:api/*` rather than private Core function calls.
 
 Persistent markers and their settings define placed features. Their owning modules recreate runtime models, displays, and interactions during initialization. See the [function architecture](data/zbk/function/README.md) and the nearest module README for public commands and marker contracts.
 

@@ -25,4 +25,4 @@ Crafting Bench recipe flags reset through `map_elements/crafting_bench/managemen
 
 ## Add-on integration
 
-Start, reset, and end publish lifecycle events. Start requests may be blocked or deferred; only the accepted owner can resume a pending start with its current token. Map-specific readiness and intro behavior belong to the registered add-on. See the [Core API contract](../../../../../docs/API.md).
+Start, reset, and end publish lifecycle events. Start requests may be blocked or deferred; only the accepted owner can resume a pending start with its current token. Map-specific readiness and intro behavior belong to the registered add-on. See the [Core API contract](../../../../../README.md#core-api-100).

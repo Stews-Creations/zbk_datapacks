@@ -37,4 +37,4 @@ Players choose Main Hand Left or Main Hand Right in Minecraft's client settings.
 
 ## Add-on integration
 
-Core emits player down, revive, and respawn notifications after the corresponding state transition. Map listeners use the supplied executor and actor ID; shared player lifecycle remains owned here. See the [Core API contract](../../../../../docs/API.md).
+Core emits player down, revive, and respawn notifications after the corresponding state transition. Map listeners use the supplied executor and actor ID; shared player lifecycle remains owned here. See the [Core API contract](../../../../../README.md#core-api-100).

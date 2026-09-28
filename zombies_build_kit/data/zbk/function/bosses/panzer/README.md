@@ -1,6 +1,6 @@
 # Panzer enemy
 
-Core owns the reusable Panzer controller, generated model, attacks, spawner markers, and round schedule. Any map can use this enemy without installing Der Eisendrache. Map quests may react through the [Core event API](../../../../../../docs/API.md).
+Core owns the reusable Panzer controller, generated model, attacks, spawner markers, and round schedule. Any map can use this enemy without installing Der Eisendrache. Map quests may react through the [Core event API](../../../../../../README.md#core-api-100).
 
 ## Placement and round schedule
 

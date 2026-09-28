@@ -45,4 +45,4 @@ Hole animations crawl for 60 ticks (3 seconds). Wall animations use bounded clim
 
 ## Add-on integration
 
-Round start/end notifications publish the current round and round type. Pending custom enemies can reserve round completion through the API. Panzer scheduling belongs to Core and is disabled when no Panzer spawner markers exist. See the [Core API contract](../../../../../docs/API.md).
+Round start/end notifications publish the current round and round type. Pending custom enemies can reserve round completion through the API. Panzer scheduling belongs to Core and is disabled when no Panzer spawner markers exist. See the [Core API contract](../../../../../README.md#core-api-100).

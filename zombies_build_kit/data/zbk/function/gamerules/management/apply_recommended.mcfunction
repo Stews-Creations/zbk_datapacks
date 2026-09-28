@@ -1,4 +1,4 @@
-# Apply all recommended gamerules for this map (matches docs/minecraft gamerules.md).
+# Apply Core's recommended gameplay gamerules.
 gamerule fire_spread_radius_around_player 0
 gamerule command_block_output false
 gamerule advance_time false

@@ -1,6 +1,6 @@
 # Core function architecture
 
-The `zbk` namespace owns shared gameplay, Build Kit authoring, and the public API. External packs use only `zbk:api/` functions and `#zbk:event/` tags; other Core functions are private. See the [API contract](../../../../docs/API.md) for registration, event context, action restrictions, and integration boundaries.
+The `zbk` namespace owns shared gameplay, Build Kit authoring, and the public API. External packs use only `zbk:api/` functions and `#zbk:event/` tags; other Core functions are private. See the [API contract](../../../../README.md#core-api-100) for registration, event context, action restrictions, and integration boundaries.
 
 ## Ownership
 
@@ -33,6 +33,6 @@ Scratch state is synchronous and must be refreshed for each operation or player.
 
 Update all calls, schedules, advancement rewards, dialog actions, and documentation when changing a function path. Run the static and isolated runtime checks described in the [pack guide](../../../../README.md).
 
-Map add-ons use the [public Core API](../../../../docs/API.md). Core emits function-tag events at state transitions and operation gates; add-ons never call private Core functions. Event frames are synchronous and nested; request handlers use the active frame to block or claim an operation.
+Map add-ons use the [public Core API](../../../../README.md#core-api-100). Core emits function-tag events at state transitions and operation gates; add-ons never call private Core functions. Event frames are synchronous and nested; request handlers use the active frame to block or claim an operation.
 
 Generated crawler and Panzer models and Mystery Box animations keep their existing namespaces. Do not mix gameplay into generated transforms or keyframes. Maintain their public callback contracts and verify references after replacing generated output.
