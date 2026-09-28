@@ -27,4 +27,4 @@ Keep gameplay in the owning `zbk` module, not generated model/keyframe functions
 
 ## Licensing
 
-Retain [LICENSE.md](LICENSE.md), [NOTICE](NOTICE), [LICENSES](LICENSES/), and [MEDIA_PERMISSION.md](MEDIA_PERMISSION.md) when redistributing this pack or a world containing it. Third-party material retains its own terms.
+Retain [LICENSES](LICENSES/) (license, notice, and media permission) when redistributing this pack or a world containing it. Third-party material retains its own terms.

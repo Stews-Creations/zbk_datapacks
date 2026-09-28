@@ -11,6 +11,8 @@ An executable developer reference for map add-ons targeting ZBK Core API 1.0.0. 
 
 The dialog also exposes examples of public power activation and zone unlocking calls. Those buttons intentionally invoke the examples only when clicked.
 
+The function namespace root contains only `on_load` and `initialize` lifecycle hooks. Core event handlers, including registration, player authoring, and the demo trigger tick, live in `function/event/`.
+
 ## Events and state
 
 The `#zbk:event/*` tags in this pack use `replace: false`, so handlers append to Core's empty event tags. Notification handlers read the synchronous frame at `storage zbk:events stack[-1].context`. For example, `round_start` checks the current round number and `enemy_killed` runs as the victim; optional credited-player context comes from the Core event frame. Never retain the frame across ticks.
@@ -19,7 +21,7 @@ The opt-in `before_game_start` example blocks the request when `#block_start` is
 
 The sample marker is persistent configuration; the block display is disposable runtime state. `initialize` removes old displays and rebuilds them from markers. The `game_reset` example demonstrates cleanup and reconstruction.
 
-Public calls such as `zbk:api/power/activate`, `zbk:api/zones/unlock {zone:1}`, and `zbk:api/game/reset` are shown as user-invoked dialog actions. Reset, start, and end calls are rejected during synchronous event dispatch; power and zone calls may dispatch nested notifications. The pack never calls private `zombies:` implementation functions.
+Public calls such as `zbk:api/power/activate`, `zbk:api/zones/unlock {zone:1}`, and `zbk:api/game/reset` are shown as user-invoked dialog actions. Reset, start, and end calls are rejected during synchronous event dispatch; power and zone calls may dispatch nested notifications. The pack never calls private Core functions.
 
 ## Adapting the template
 
@@ -35,4 +37,4 @@ Package this folder as `zbk_template.zip`, with `pack.mcmeta` at the archive roo
 
 ## License and credit
 
-Use, modification, and redistribution follow [the project license](LICENSE.md), [the media permission](MEDIA_PERMISSION.md), and the included [notice](NOTICE). Required third-party terms are in [LICENSES](LICENSES/).
+Use, modification, and redistribution follow [the project license](LICENSES/LICENSE.md), [the media permission](LICENSES/MEDIA_PERMISSION.md), and the included [notice](LICENSES/NOTICE). Required third-party terms are in [LICENSES](LICENSES/).
