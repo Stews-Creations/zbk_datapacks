@@ -19,6 +19,7 @@ function zombies:global/on_load
 # Call all module load functions to initialize scoreboards and systems
 function zombies:game/on_load
 function zombies:player/on_load
+function zombies:sounds/voice/on_load
 function zombies:combat/on_load
 function zombies:behavior/on_load
 function zombies:waves/on_load
@@ -35,7 +36,7 @@ schedule function zombies:global/tick_1s 20t
 # ===== INITIALIZE ALL GAME SYSTEMS =====
 # Initialize all systems to default state
 stopsound @a
-function zombies:game/initialize
+function zbk:game/initialize
 function zombies:map_elements/blocks/management/reload
 
 # ===== WORLD SPAWN FUNCTIONS =====

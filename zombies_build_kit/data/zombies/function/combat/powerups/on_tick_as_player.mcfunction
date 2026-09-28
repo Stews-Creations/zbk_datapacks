@@ -19,7 +19,7 @@ execute if entity @s[tag=death_machine_active] if score @s dm_timer matches 1.. 
 #  - dm_firing is refreshed to 4 by fire_tick each time a shot lands; decays when RMB is released.
 #    When it hits 1 (about to be 0), force-stop the sound so the long clip doesn't keep playing after release.
 execute if entity @s[tag=death_machine_active] if score @s dm_sound_cooldown matches 1.. run scoreboard players remove @s dm_sound_cooldown 1
-execute if entity @s[tag=death_machine_active] if score @s dm_firing matches 1 at @s run stopsound @a[distance=..64] player zombies:guns.death_machine_a
-execute if entity @s[tag=death_machine_active] if score @s dm_firing matches 1 at @s run stopsound @a[distance=..64] player zombies:guns.death_machine_b
+execute if entity @s[tag=death_machine_active] if score @s dm_firing matches 1 at @s run stopsound @a[distance=..64] player zbk:guns.death_machine_a
+execute if entity @s[tag=death_machine_active] if score @s dm_firing matches 1 at @s run stopsound @a[distance=..64] player zbk:guns.death_machine_b
 execute if entity @s[tag=death_machine_active] if score @s dm_firing matches 1 run scoreboard players set @s dm_sound_cooldown 0
 execute if entity @s[tag=death_machine_active] if score @s dm_firing matches 1.. run scoreboard players remove @s dm_firing 1

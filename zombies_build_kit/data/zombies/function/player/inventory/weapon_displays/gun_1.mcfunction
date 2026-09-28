@@ -9,8 +9,8 @@ execute as @s[scores={gun_1=0}] run item replace entity @s weapon.offhand with m
 
 
 # 7 = ray_gun
-execute as @s[scores={gun_1=7,tier_1=..0}] unless data entity @s Inventory[{Slot:-106b,id:"minecraft:ghast_tear",components:{custom_data:{gun_id:7}}}] run item replace entity @s weapon.offhand with minecraft:ghast_tear[item_model="zombies:ray_gun",custom_name={"text":"Ray Gun","color":"gold","italic":false},custom_data={gun:true,gun_id:7},consumable={consume_seconds:1000000},use_effects={can_sprint:true,speed_multiplier:1.0}]
-execute as @s[scores={gun_1=7}] if score @s tier_1 matches 1.. unless data entity @s Inventory[{Slot:-106b,id:"minecraft:ghast_tear",components:{custom_data:{gun_id:7,pap:1}}}] run item replace entity @s weapon.offhand with minecraft:ghast_tear[item_model="zombies:ray_gun",custom_name={"text":"Porter's X2 Ray Gun","color":"light_purple","italic":false},custom_data={gun:true,gun_id:7,pap:1},consumable={consume_seconds:1000000},enchantment_glint_override=true,use_effects={can_sprint:true,speed_multiplier:1.0}]
+execute as @s[scores={gun_1=7,tier_1=..0}] unless data entity @s Inventory[{Slot:-106b,id:"minecraft:ghast_tear",components:{custom_data:{gun_id:7}}}] run item replace entity @s weapon.offhand with minecraft:ghast_tear[item_model="zbk:ray_gun",custom_name={"text":"Ray Gun","color":"gold","italic":false},custom_data={gun:true,gun_id:7},consumable={consume_seconds:1000000},use_effects={can_sprint:true,speed_multiplier:1.0}]
+execute as @s[scores={gun_1=7}] if score @s tier_1 matches 1.. unless data entity @s Inventory[{Slot:-106b,id:"minecraft:ghast_tear",components:{custom_data:{gun_id:7,pap:1}}}] run item replace entity @s weapon.offhand with minecraft:ghast_tear[item_model="zbk:ray_gun",custom_name={"text":"Porter's X2 Ray Gun","color":"light_purple","italic":false},custom_data={gun:true,gun_id:7,pap:1},consumable={consume_seconds:1000000},enchantment_glint_override=true,use_effects={can_sprint:true,speed_multiplier:1.0}]
 
 
 

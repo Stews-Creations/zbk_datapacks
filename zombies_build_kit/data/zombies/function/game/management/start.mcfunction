@@ -51,6 +51,8 @@ function zombies:player/stats/capture_players
 # Update Quick Revive price display based on game mode
 function zombies:map_elements/perks/quick_revive/update_price_display
 
+function zombies:sounds/voice/assign
+
 # Play start game sound to all players
 function zombies:sounds/play/round_start
 

@@ -17,7 +17,7 @@ scoreboard players set #disco disco_used 1
 scoreboard players set #disco disco_timer 1040
 
 # Play disco music to all players
-execute as @a at @s run playsound zombies:game.disco master @a ~ ~ ~ 0.3 1
+execute as @a at @s run playsound zbk:game.disco master @a ~ ~ ~ 0.3 1
 
 # Notify all players
 tellraw @a[tag=debug] [{"text":"[Disco] ","color":"light_purple","bold":true},{"text":"Let's boogie! Disco activated for 52 seconds!","color":"aqua"}]

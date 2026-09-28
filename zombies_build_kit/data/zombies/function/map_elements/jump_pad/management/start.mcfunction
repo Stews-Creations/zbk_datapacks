@@ -91,5 +91,5 @@ tag @e[tag=jump_arc_new] remove jump_arc_new
 tag @e[tag=jump_arc_vehicle_new] remove jump_arc_vehicle_new
 
 # Play activate sounds
-playsound zombies:jump_pads.flinger_fly master @a ~ ~ ~ 1 1
-playsound zombies:jump_pads.flinger_activate master @a ~ ~ ~ 1 1
+playsound zbk:jump_pads.flinger_fly master @a ~ ~ ~ 1 1
+playsound zbk:jump_pads.flinger_activate master @a ~ ~ ~ 1 1

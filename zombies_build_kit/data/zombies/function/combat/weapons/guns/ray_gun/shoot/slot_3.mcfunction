@@ -7,7 +7,7 @@ execute if score @s is_reloading_3 matches 1 run return fail
 execute if score @s ammo_3 matches ..0 if score @s reserve_ammo_3 matches 1.. run function zombies:combat/weapons/management/reload_slot_3
 execute if score @s ammo_3 matches ..0 run return fail
 
-playsound zombies:guns.raygun ambient @a[distance=..10] ~ ~ ~ 2 1 1
+playsound zbk:guns.raygun ambient @a[distance=..10] ~ ~ ~ 2 1 1
 function zombies:combat/weapons/effects/particles/muzzle_smoke {x:0.3,y:-0.1,z:0.5,mode:"force"}
 
 # Start raycast with ray_gun stats

@@ -60,7 +60,7 @@ function zombies:combat/weapons/guns/kuda/give/main
 function zombies:combat/weapons/guns/xm53/give/main
 ```
 
-Smart assignment fills slots 1 and 2, then slot 3 with Mule Kick, and otherwise replaces the active weapon. Inventory IDs 20-46 are fixed and must not be renumbered. The model resource key is `zombies:bo3/<slug>`; ID 23 is `zombies:bo3/kuda`.
+Smart assignment fills slots 1 and 2, then slot 3 with Mule Kick, and otherwise replaces the active weapon. Inventory IDs 20-46 are fixed and must not be renumbered. The model resource key is `zbk:bo3/<slug>`; ID 23 is `zbk:bo3/kuda`.
 
 | Retired ID | Replacement ID | Replacement |
 | --- | --- | --- |
@@ -78,6 +78,6 @@ Existing public legacy give paths and builder triggers remain acquisition aliase
 
 ## Validation
 
-Run `python tools/validate_core.py` from the datapacks repository for static validation. Minecraft 26.2 runtime testing remains authoritative for game behavior. Test firing, reloads, weapon switching, upgrades, and wall purchases in an isolated world. In-game hand/controller alignment and balance require client review.
+Run the static checks in the repository guide for validation. Minecraft 26.2 runtime testing remains authoritative for game behavior. Test firing, reloads, weapon switching, upgrades, and wall purchases in an isolated world. In-game hand/controller alignment and balance require client review.
 
 MR6 and XM-53 blast victims use the shared [explosive damage contract](../../../README.md#damage-and-recovery), including shooter-owned death credit, loot and immunity. Their splash does not convert survivors to crawlers.

@@ -48,7 +48,7 @@ hitboxes, prices, and marker configuration are unchanged. Run
 `function zombies:map_elements/wall_gun/initialize` to rebuild loaded walls with
 these settings, or use `/reload` outside an active game.
 
-BO3 wall weapons use generated `zombies:wall/bo3/` model variants. They preserve
+BO3 wall weapons use generated `zbk:wall/bo3/` model variants. They preserve
 textures, transforms, and exterior detail while removing faces completely hidden
 by opaque, unrotated cuboids. Rotated pieces are retained conservatively. Held
 weapons continue to use their existing models. Generated model authoring sources are maintained outside this repository. Install the matching resource

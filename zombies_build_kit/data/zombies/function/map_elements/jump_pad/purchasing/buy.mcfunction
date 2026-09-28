@@ -15,7 +15,7 @@ execute at @s unless entity @e[type=marker,tag=jump_pad,tag=jp_start,distance=..
 
 # Check if jump pad is locked (must reach destination first to unlock)
 execute at @s if entity @e[type=marker,tag=jump_pad,tag=jp_start,tag=jp_locked,distance=..1.75] run tellraw @s [{"text":"[JUMP PAD] ","color":"red"},{"text":"Jump pad is locked! Reach the destination first.","color":"gold"}]
-execute at @s if entity @e[type=marker,tag=jump_pad,tag=jp_start,tag=jp_locked,distance=..1.75] run playsound zombies:jump_pads.landing_pad_activation_required master @a ~ ~ ~ 1 1
+execute at @s if entity @e[type=marker,tag=jump_pad,tag=jp_start,tag=jp_locked,distance=..1.75] run playsound zbk:jump_pads.landing_pad_activation_required master @a ~ ~ ~ 1 1
 execute at @s if entity @e[type=marker,tag=jump_pad,tag=jp_start,tag=jp_locked,distance=..1.75] run return fail
 
 # Check if jump pad is linked (has valid ID > 0)

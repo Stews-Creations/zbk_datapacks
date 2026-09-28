@@ -18,7 +18,7 @@ scoreboard players set @e[type=marker,tag=wunderfizz_active] wunderfizz_timer 60
 execute store result score @e[type=marker,tag=wunderfizz_active,limit=1] wunderfizz_perk run random value 0..5
 
 # Play activation sound
-execute at @e[type=marker,tag=wunderfizz_active] run playsound zombies:wonderfizz.rand_perk_mach_start master @a ~ ~ ~ 0.5 1
+execute at @e[type=marker,tag=wunderfizz_active] run playsound zbk:wonderfizz.rand_perk_mach_start master @a ~ ~ ~ 0.5 1
 
 # Start the cycling animation
 execute as @e[type=marker,tag=wunderfizz_active] at @s run function zombies:map_elements/perks/wunderfizz/animation/cycle

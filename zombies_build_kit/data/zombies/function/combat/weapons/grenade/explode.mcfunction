@@ -7,7 +7,7 @@ tag @s add exploded
 # Visual effects
 particle minecraft:explosion ~ ~ ~ 2 2 2 0.1 20 force
 # Shared callers such as Monkey Bombs and Trip Mines keep their own existing blast sound.
-execute if entity @s[tag=hand_grenade] run playsound zombies:grenade.explode hostile @a ~ ~ ~ 2 1
+execute if entity @s[tag=hand_grenade] run playsound zbk:grenade.explode hostile @a ~ ~ ~ 2 1
 execute unless entity @s[tag=hand_grenade] run playsound minecraft:entity.generic.explode hostile @a ~ ~ ~ 2 1
 
 # Check for disco interaction hit (within 1 block)

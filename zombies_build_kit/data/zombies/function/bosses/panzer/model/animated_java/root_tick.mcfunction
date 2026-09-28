@@ -13,5 +13,5 @@ execute if entity @s[tag=panzer_landing_to_walk] run scoreboard players remove @
 execute if entity @s[tag=panzer_landing_to_walk] if score @s panzer_anim_timer matches ..0 run function zombies:bosses/panzer/model/landing/start_walk_after_landing
 execute if entity @s[tag=panzer_landing_to_walk] at @s run function zombies:bosses/panzer/effects/landing_foot_fire
 
-execute if entity @s[tag=aj.de_panzer.animation.animation_model_walk.playing] if score @s aj.animation_model_walk.frame matches 5 at @s run playsound zombies:mob.panzer.footstep hostile @a[distance=..32] ~ ~ ~ 0.85 0.95
-execute if entity @s[tag=aj.de_panzer.animation.animation_model_walk.playing] if score @s aj.animation_model_walk.frame matches 17 at @s run playsound zombies:mob.panzer.footstep hostile @a[distance=..32] ~ ~ ~ 0.85 1.05
+execute if entity @s[tag=aj.de_panzer.animation.animation_model_walk.playing] if score @s aj.animation_model_walk.frame matches 5 at @s run playsound zbk:mob.panzer.footstep hostile @a[distance=..32] ~ ~ ~ 0.85 0.95
+execute if entity @s[tag=aj.de_panzer.animation.animation_model_walk.playing] if score @s aj.animation_model_walk.frame matches 17 at @s run playsound zbk:mob.panzer.footstep hostile @a[distance=..32] ~ ~ ~ 0.85 1.05

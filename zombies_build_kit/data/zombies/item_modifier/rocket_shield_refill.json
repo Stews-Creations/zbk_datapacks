@@ -7,7 +7,7 @@
       "color": "gold",
       "italic": false
     },
-    "minecraft:item_model": "zombies:rocket_shield/shield_3",
+    "minecraft:item_model": "zbk:rocket_shield/shield_3",
     "minecraft:max_damage": 15,
     "minecraft:blocks_attacks": {
       "damage_reductions": [],

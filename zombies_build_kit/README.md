@@ -14,9 +14,11 @@ Reusable gameplay and authoring systems for Minecraft Java 26.2. Package this so
 
 Minecraft's load and tick tags call `zombies:load` and `zombies:tick`, with generated model hooks alongside them. Load defines shared objectives before consumers, resets runtime gameplay, reconstructs placed systems, and starts the shared 20-tick (1 second) maintenance schedule. Tick calls module hooks and then one shared player loop.
 
+The matching Core resource pack uses `assets/zbk/`. Datapack commands and components refer to its item models, fonts, and sound events with `zbk:` IDs; gameplay functions and other datapack identifiers keep their namespaces above.
+
 ## Core boundaries
 
-Reusable placed systems remain under `data/zombies/function/map_elements/`. There is no `maps/` runtime, active map ID, or sound-pack picker. Core audio uses fixed shared events and vanilla fallbacks; no map soundtrack or character voice bank is required. Installed folder names do not change namespaced commands. Optional map packs subscribe to the [event API](../docs/API.md); Core never calls their namespaces. Registration runs one tick after load, and only one compatible provider may become active. Add-ons must use `zbk:api/*` rather than private Core function calls.
+Reusable placed systems remain under `data/zombies/function/map_elements/`. There is no `maps/` runtime, active map ID, or sound-pack picker. Core audio includes shared rounds, dogs, teleporters, game cues, menu music, and four-character voice callouts. Map sound requests can replace those defaults. Installed folder names do not change namespaced commands. Optional map packs subscribe to the [event API](../docs/API.md); Core never calls their namespaces. Registration runs one tick after load, and only one compatible provider may become active. Add-ons must use `zbk:api/*` rather than private Core function calls.
 
 Persistent markers and their settings define placed features. Their owning modules recreate runtime models, displays, and interactions during initialization. See the [function architecture](data/zombies/function/README.md) and the nearest module README for public commands and marker contracts.
 

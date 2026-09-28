@@ -1,7 +1,7 @@
 # mystery_box created via BDEngine
 
 execute as @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] at @s positioned ~ ~1 ~ run function mystery_box:effects/smoke {direction:"west"}
-playsound zombies:mystery_box.laugh master @a[distance=..10] ~ ~ ~ 1 1
+playsound zbk:mystery_box.laugh master @a[distance=..10] ~ ~ ~ 1 1
 
 data merge entity @e[type=item_display,tag=mystery_box_0,distance=..1,limit=1,sort=nearest] {transformation:[0.8660254038f,0f,-0.21875f,0.6875f,0f,0.5f,0f,0.25f,0.5f,0f,0.3788861142f,1.8125f,0f,0f,0f,1f],interpolation_duration:0}
 data merge entity @e[type=item_display,tag=mystery_box_1,distance=..1,limit=1,sort=nearest] {transformation:[0.3609735972f,0f,0.4080020156f,0.7897612812f,0f,0.5f,0f,0.2503125f,-0.9325760356f,0f,0.1579259488f,0.7101628156f,0f,0f,0f,1f],interpolation_duration:0}

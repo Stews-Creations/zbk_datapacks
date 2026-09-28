@@ -21,9 +21,9 @@ execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer 
 execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 4 run function zombies:map_elements/perks/wunderfizz/animation/show_perk
 
 # Play tick sounds during cycle
-execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 56 run playsound zombies:wonderfizz.rand_perk_mach_loop master @a ~ ~ ~ 0.5 1
-execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 40 run playsound zombies:wonderfizz.rand_perk_mach_loop master @a ~ ~ ~ 0.5 1
-execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 30 run playsound zombies:wonderfizz.rand_perk_mach_loop master @a ~ ~ ~ 0.5 1
+execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 56 run playsound zbk:wonderfizz.rand_perk_mach_loop master @a ~ ~ ~ 0.5 1
+execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 40 run playsound zbk:wonderfizz.rand_perk_mach_loop master @a ~ ~ ~ 0.5 1
+execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 30 run playsound zbk:wonderfizz.rand_perk_mach_loop master @a ~ ~ ~ 0.5 1
 
 execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 56 run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 1.5
 execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer matches 52 run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 0.5 1.5
@@ -45,5 +45,5 @@ execute if score @s wunderfizz_timer matches 1..60 if score @s wunderfizz_timer 
 execute if score @s wunderfizz_timer matches 0 run tag @s remove wunderfizz_cycling
 execute if score @s wunderfizz_timer matches 0 run tag @s add wunderfizz_claiming
 execute if score @s wunderfizz_timer matches 0 run function zombies:map_elements/perks/wunderfizz/animation/show_perk_name
-execute if score @s wunderfizz_timer matches 0 run playsound zombies:wonderfizz.rand_perk_mach_stop master @a ~ ~ ~ 0.5 1
+execute if score @s wunderfizz_timer matches 0 run playsound zbk:wonderfizz.rand_perk_mach_stop master @a ~ ~ ~ 0.5 1
 execute if score @s wunderfizz_timer matches 0 run scoreboard players set @s wunderfizz_timer 100

@@ -17,6 +17,7 @@ item replace entity @a armor.head with minecraft:air
 # ===== CALL ALL MODULE INITIALIZE FUNCTIONS =====
 function zombies:map_elements/game_signals/initialize
 function zombies:player/initialize
+function zombies:sounds/voice/initialize
 function zombies:combat/weapons/special_equipment/trip_mine/cleanup
 function zombies:combat/powerups/initialize
 function zombies:map_elements/perks/initialize

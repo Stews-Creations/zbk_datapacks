@@ -15,4 +15,4 @@ execute as @e[type=minecraft:marker,tag=grenade_marker,tag=active_grenade] if sc
 scoreboard players remove @s grenade_ammo 1
 
 # Play throw sound
-playsound zombies:grenade.throw player @a ~ ~ ~ 1 1
+playsound zbk:grenade.throw player @a ~ ~ ~ 1 1

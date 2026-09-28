@@ -18,7 +18,7 @@ scoreboard players set #element stats 0
 execute store result score #player stats run scoreboard players get @s id
 
 # Old per-shot LMG sound (custom death_machine loop is parked for now).
-playsound zombies:guns.light_machine_gun ambient @a[distance=..16] ~ ~ ~ 2 1.5 1
+playsound zbk:guns.light_machine_gun ambient @a[distance=..16] ~ ~ ~ 2 1.5 1
 
 # Firing-state flag (decays in on_tick_as_player when on_use stops being called -> RMB released)
 scoreboard players set @s dm_firing 4

@@ -14,7 +14,7 @@ execute anchored eyes run summon marker ^ ^ ^0.5 {Tags:["new_grenade","grenade_m
 execute as @e[type=marker,tag=new_grenade,limit=1] at @s rotated as @p run function zombies:combat/weapons/grenade/physics/calculate_velocity
 
 # Summon item display for visual representation
-execute anchored eyes run summon item_display ^ ^ ^0.5 {Tags:["grenade_display"],teleport_duration:2,item:{id:"minecraft:snowball",components:{item_model:"zombies:grenade"}},transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[0.5f,0.5f,0.5f]},brightness:{sky:15,block:15}}
+execute anchored eyes run summon item_display ^ ^ ^0.5 {Tags:["grenade_display"],teleport_duration:2,item:{id:"minecraft:snowball",components:{item_model:"zbk:grenade"}},transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[0.5f,0.5f,0.5f]},brightness:{sky:15,block:15}}
 
 # Store thrower ID for damage tracking
 execute store result entity @e[type=marker,tag=new_grenade,limit=1] data.thrower_id int 1 run scoreboard players get @s id

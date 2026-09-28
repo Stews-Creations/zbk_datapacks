@@ -15,7 +15,7 @@ tag @s remove wunderfizz_active
 tag @s remove wunderfizz_claiming
 
 # Play Leave Sound Effect TODO not working
-execute at @e[type=marker,tag=wunderfizz_active] run playsound zombies:wonderfizz.rand_perk_mach_leave master @a ~ ~ ~ 0.5 1
+execute at @e[type=marker,tag=wunderfizz_active] run playsound zbk:wonderfizz.rand_perk_mach_leave master @a ~ ~ ~ 0.5 1
 
 # Reset timer
 scoreboard players set @s wunderfizz_timer 0

@@ -5,4 +5,4 @@ summon minecraft:item_display ~ ~ ~ {Tags:["panzer_electric_projectile","panzer_
 execute as @e[type=minecraft:item_display,tag=panzer_electric_projectile_new,distance=..0.25,sort=nearest,limit=1] run function zombies:bosses/panzer/attacks/range/projectile/setup
 particle minecraft:electric_spark ~ ~ ~ 0.2 0.2 0.2 0.35 18 force
 particle minecraft:dust{color:[0.2,0.85,1.0],scale:0.9} ~ ~ ~ 0.08 0.08 0.08 0 8 force
-playsound zombies:mob.panzer.electric_throw hostile @a[distance=..48] ~ ~ ~ 1 1
+playsound zbk:mob.panzer.electric_throw hostile @a[distance=..48] ~ ~ ~ 1 1

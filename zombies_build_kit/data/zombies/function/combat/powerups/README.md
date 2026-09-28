@@ -10,4 +10,4 @@ Each kind uses one item selection and a native item check for spawning, diagnost
 
 Per-powerup folders own spawning, pickup, activation, sound behavior, timers, and activation-order scores. `spawning/` owns shared candidate gating. The [Player actionbar](../../player/README.md#mirrored-actionbar-hud) reads activation scores for timed-powerup display. Player inventory and ammunition capacities remain owned by Player and Combat. Carpenter delegates barrier reconstruction to the [barrier module](../../map_elements/barrier/README.md).
 
-Powerup drop sounds use shared `zombies:drops.*` events. Max Ammo also refills charges on an existing owned Rocket Shield without repairing durability or granting a replacement.
+Powerup drop sounds use shared `zbk:drops.*` events. Max Ammo also refills charges on an existing owned Rocket Shield without repairing durability or granting a replacement.

@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "zombies:sounds/voice/try_take_damage"
+  ]
 }

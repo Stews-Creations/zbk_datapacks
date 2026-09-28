@@ -1,6 +1,6 @@
 {
   "function": "minecraft:set_components",
   "components": {
-    "minecraft:item_model": "zombies:rocket_shield/shield_1"
+    "minecraft:item_model": "zbk:rocket_shield/shield_1"
   }
 }

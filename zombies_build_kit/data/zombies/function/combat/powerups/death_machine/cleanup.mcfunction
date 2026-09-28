@@ -1,6 +1,6 @@
 # Per-player cleanup (called AS the affected player from: timer expiry, F-cancel, down, death).
-execute at @s run stopsound @a[distance=..64] player zombies:guns.death_machine_a
-execute at @s run stopsound @a[distance=..64] player zombies:guns.death_machine_b
+execute at @s run stopsound @a[distance=..64] player zbk:guns.death_machine_a
+execute at @s run stopsound @a[distance=..64] player zbk:guns.death_machine_b
 item replace entity @s weapon.offhand with minecraft:air
 tag @s remove death_machine_active
 scoreboard players set @s dm_timer 0

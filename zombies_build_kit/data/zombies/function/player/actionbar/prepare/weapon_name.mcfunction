@@ -19,9 +19,9 @@ execute if data storage zbk:events result{handled:1b} run return run data get st
 execute if entity @s[tag=death_machine_active] run data modify storage zombies:temp gun_name set value "DEATH MACHINE"
 data modify storage zombies:hud args.weapon_name set from storage zombies:temp gun_name
 execute store result score #hud_name_width temp run data get storage zombies:hud args.weapon_name
-data modify storage zombies:hud args.weapon_font set value "zombies:hud_label"
+data modify storage zombies:hud args.weapon_font set value "zbk:hud_label"
 scoreboard players set #hud_label_cell temp 3
-execute if score #hud_name_width temp matches 14.. run data modify storage zombies:hud args.weapon_font set value "zombies:hud_label_small"
+execute if score #hud_name_width temp matches 14.. run data modify storage zombies:hud args.weapon_font set value "zbk:hud_label_small"
 execute if score #hud_name_width temp matches 14.. run scoreboard players set #hud_label_cell temp 2
 scoreboard players operation #hud_name_width temp *= #hud_label_cell temp
 scoreboard players operation #hud_name_half temp = #hud_name_width temp

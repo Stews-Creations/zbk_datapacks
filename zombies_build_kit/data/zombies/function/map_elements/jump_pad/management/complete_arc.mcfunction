@@ -24,7 +24,7 @@ execute as @a if score @s id = #complete_player_id arc_calc run tag @s remove ju
 
 # Play landing sound
 execute as @a if score @s id = #complete_player_id arc_calc run function zbk:dispatch/voice_event_jump_pad_land
-execute as @a if score @s id = #complete_player_id arc_calc at @s run playsound zombies:jump_pads.flinger_land master @a ~ ~ ~ 1 1
+execute as @a if score @s id = #complete_player_id arc_calc at @s run playsound zbk:jump_pads.flinger_land master @a ~ ~ ~ 1 1
 
 # Clean up
 tag @e[tag=temp_final_end] remove temp_final_end

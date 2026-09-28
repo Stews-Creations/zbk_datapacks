@@ -2,7 +2,7 @@
 
 # Play effects
 execute as @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] at @s positioned ~ ~2 ~ run function mystery_box:effects/lightning {direction:"north"}
-playsound zombies:mystery_box.poof master @a[distance=..10] ~ ~ ~ 1 1
+playsound zbk:mystery_box.poof master @a[distance=..10] ~ ~ ~ 1 1
 
 data merge entity @e[type=block_display,tag=mystery_box_36,distance=..1,limit=1,sort=nearest] {transformation:[0f,0.2499999996f,-0.0000126429f,0.385625f,0f,0.000014449f,0.2187499996f,93.3931907895f,0.1875f,0f,0f,0.2684375f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
 data merge entity @e[type=block_display,tag=mystery_box_37,distance=..1,limit=1,sort=nearest] {transformation:[0f,0.125f,-0.0000014553f,0.3534375f,0f,0.0000011639f,0.1563f,93.5138157895f,0.09375f,0f,0f,0.2996875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}

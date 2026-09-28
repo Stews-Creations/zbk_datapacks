@@ -1,7 +1,7 @@
 # mystery_box created via BDEngine
 
-playsound zombies:mystery_box.open master @a[distance=..10] ~ ~ ~ 1 1
-playsound zombies:mystery_box.music master @a[distance=..10] ~ ~ ~ 1 1
+playsound zbk:mystery_box.open master @a[distance=..10] ~ ~ ~ 1 1
+playsound zbk:mystery_box.music master @a[distance=..10] ~ ~ ~ 1 1
 tag @e[tag=mystery_box_gun, sort=nearest, limit=1] remove spin
 tag @e[tag=mystery_box_gun, sort=nearest, limit=1] remove speed_fast
 tag @e[tag=mystery_box_gun, sort=nearest, limit=1] remove speed_medium

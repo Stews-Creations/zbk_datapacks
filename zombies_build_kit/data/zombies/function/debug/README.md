@@ -19,7 +19,7 @@ These one-line utility functions intentionally remain at the module root:
 
 Direct developer diagnostics such as `pap_icon_test` may remain at the root because they are manually invoked tools, not runtime subsystem implementation.
 
-`function zombies:debug/pap_icon_test` previews the Pack-a-Punch and element glyphs from the shared `zombies:hud` actionbar font.
+`function zombies:debug/pap_icon_test` previews the Pack-a-Punch and element glyphs from the shared `zbk:hud` actionbar font.
 
 Do not use unconditional `tellraw @a` for routine diagnostics; route messages through this API.
 

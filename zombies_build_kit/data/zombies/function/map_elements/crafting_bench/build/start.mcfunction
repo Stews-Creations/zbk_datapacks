@@ -6,7 +6,7 @@ scoreboard players set @s cb_time 0
 tag @s add cb_building
 function zombies:combat/weapons/guns/bo3/input/cancel
 scoreboard players set @s auto_firing 0
-playsound zombies:zmb_building master @s ~ ~ ~ 1 1
+playsound zbk:zmb_building master @s ~ ~ ~ 1 1
 
 scoreboard players operation #progress_target cb_id = @s cb_target
 execute as @e[type=marker,tag=cb_marker,distance=..8] if score @s cb_id = #progress_target cb_id at @s run function zombies:map_elements/crafting_bench/display/create

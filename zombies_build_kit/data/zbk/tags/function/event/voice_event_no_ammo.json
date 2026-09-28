@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "zombies:sounds/voice/event_no_ammo"
+  ]
 }

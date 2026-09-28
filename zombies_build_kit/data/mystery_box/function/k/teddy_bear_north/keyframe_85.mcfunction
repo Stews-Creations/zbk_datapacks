@@ -1,6 +1,6 @@
 # mystery_box created via BDEngine
 
-playsound zombies:mystery_box.rotate master @a[distance=..10] ~ ~ ~ 0.5 1
+playsound zbk:mystery_box.rotate master @a[distance=..10] ~ ~ ~ 0.5 1
 
 data merge entity @e[type=item_display,tag=mystery_box_11,distance=..1,limit=1,sort=nearest] {transformation:[0f,0f,-1f,0.296875f,0.9975640503f,0.0087195592f,0f,2.2769562104f,0.0697564737f,-0.1246955063f,0f,0.1009156099f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
 data merge entity @e[type=item_display,tag=mystery_box_12,distance=..1,limit=1,sort=nearest] {transformation:[0f,0f,-1f,0.296875f,0.4987820251f,0.0087195592f,0f,2.6510427292f,0.0348782369f,-0.1246955063f,0f,0.1270742876f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}

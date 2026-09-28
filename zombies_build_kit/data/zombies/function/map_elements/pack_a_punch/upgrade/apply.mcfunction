@@ -30,7 +30,7 @@ execute if score #pap_tier stats matches ..0 run scoreboard players set @s pap_p
 execute if score #pap_tier stats matches ..0 run function zombies:map_elements/pack_a_punch/management/lose_gun
 function zbk:dispatch/extension/map_elements/pack_a_punch/upgrade/apply/1
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
-execute if score #pap_tier stats matches ..0 at @s run playsound zombies:pack_a_punch.upgrade ambient @s ~ ~ ~ 0.5 1 1
+execute if score #pap_tier stats matches ..0 at @s run playsound zbk:pack_a_punch.upgrade ambient @s ~ ~ ~ 0.5 1 1
 execute if score #pap_tier stats matches ..0 run function zombies:map_elements/pack_a_punch/cycle/on_buy
 execute if score #pap_tier stats matches ..0 run return 0
 
@@ -44,5 +44,5 @@ execute if score #pap_tier stats matches 1.. run scoreboard players set @s pap_p
 execute if score #pap_tier stats matches 1.. run function zombies:map_elements/pack_a_punch/management/lose_gun
 function zbk:dispatch/extension/map_elements/pack_a_punch/upgrade/apply/2
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
-execute if score #pap_tier stats matches 1.. at @s run playsound zombies:pack_a_punch.upgrade ambient @s ~ ~ ~ 0.5 1 1
+execute if score #pap_tier stats matches 1.. at @s run playsound zbk:pack_a_punch.upgrade ambient @s ~ ~ ~ 0.5 1 1
 execute if score #pap_tier stats matches 1.. run function zombies:map_elements/pack_a_punch/cycle/on_buy

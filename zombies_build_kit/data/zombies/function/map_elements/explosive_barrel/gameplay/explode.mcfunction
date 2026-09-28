@@ -20,7 +20,7 @@ particle minecraft:explosion_emitter ~ ~1 ~ 0 0 0 0 1 force
 particle minecraft:explosion ~ ~1 ~ 2 2 2 0.1 20 force
 particle minecraft:flame ~ ~1 ~ 2 2 2 0.1 40 force
 particle minecraft:large_smoke ~ ~1 ~ 2 2 2 0.1 30 force
-playsound zombies:environment.explode_barrel hostile @a ~ ~ ~ 3 0.9
+playsound zbk:environment.explode_barrel hostile @a ~ ~ ~ 3 0.9
 
 # Damage players in 7 blocks (5 hearts / 10 HP flat damage)
 execute as @a[distance=..7] at @s run function zombies:map_elements/explosive_barrel/gameplay/damage_players

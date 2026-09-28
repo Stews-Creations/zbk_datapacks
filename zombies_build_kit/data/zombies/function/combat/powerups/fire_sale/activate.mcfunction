@@ -12,7 +12,7 @@ function zombies:combat/powerups/fire_sale/activate_boxes
 execute if score fire_sale powerup_order matches 0 run scoreboard players add active_powerups powerup_order 1
 execute if score fire_sale powerup_order matches 0 run scoreboard players operation fire_sale powerup_order = active_powerups powerup_order
 
-stopsound @a ambient zombies:drops.fire_sale
+stopsound @a ambient zbk:drops.fire_sale
 function zombies:combat/powerups/fire_sale/sound
 
 execute as @a run function zbk:dispatch/voice_event_fire_sale

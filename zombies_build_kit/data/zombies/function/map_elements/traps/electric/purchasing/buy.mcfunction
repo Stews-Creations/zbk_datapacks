@@ -37,7 +37,7 @@ scoreboard players operation @s player_points -= @s trap_cost
 execute as @a[tag=debug,scores={debug_level=3..}] run tellraw @s [{"text":"[TRAP] ","color":"aqua"},{"text":"Electric Trap purchased for ","color":"green"},{"score":{"name":"@s","objective":"trap_cost"},"color":"gold"},{"text":" points","color":"green"}]
 
 # Play purchase sounds
-playsound zombies:traps.amb_sparks_r master @a ~ ~ ~ 1 1
+playsound zbk:traps.amb_sparks_r master @a ~ ~ ~ 1 1
 playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 0.5 1.5
 
 # Activate the tagged trap corners

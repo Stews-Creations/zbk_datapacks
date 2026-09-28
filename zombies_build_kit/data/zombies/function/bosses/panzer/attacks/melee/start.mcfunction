@@ -6,4 +6,4 @@ scoreboard players set @s panzer_attack_timer 22
 tag @s add panzer_attacking
 tag @s add panzer_melee_attack
 function zombies:bosses/panzer/model/animations/paired/melee
-playsound zombies:mob.panzer.melee hostile @a[distance=..48] ~ ~ ~ 1 1
+playsound zbk:mob.panzer.melee hostile @a[distance=..48] ~ ~ ~ 1 1

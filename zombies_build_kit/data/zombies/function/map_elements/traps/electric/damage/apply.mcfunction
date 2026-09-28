@@ -50,5 +50,5 @@ tag @a[tag=trap_target] remove trap_target
 scoreboard players operation #trap_mod trap_cost = @s trap_timer
 scoreboard players set #20 trap_cost 20
 scoreboard players operation #trap_mod trap_cost %= #20 trap_cost
-execute if score #trap_mod trap_cost matches 0 run playsound zombies:traps.big master @a ~ ~ ~ 1 1
-execute if score @s trap_timer matches 0 run playsound zombies:traps.start master @a ~ ~ ~ 1 1
+execute if score #trap_mod trap_cost matches 0 run playsound zbk:traps.big master @a ~ ~ ~ 1 1
+execute if score @s trap_timer matches 0 run playsound zbk:traps.start master @a ~ ~ ~ 1 1

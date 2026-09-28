@@ -17,7 +17,7 @@ scoreboard players set #disco disco_active 0
 scoreboard players set #disco disco_timer 0
 scoreboard players reset @a disco_start
 tag @e[tag=disco_active] remove disco_active
-stopsound @a master zombies:game.disco
+stopsound @a master zbk:game.disco
 execute as @e[type=item_display,tag=disco_ball] on passengers run kill @s
 kill @e[type=item_display,tag=disco_ball]
 kill @e[type=interaction,tag=disco_interaction]

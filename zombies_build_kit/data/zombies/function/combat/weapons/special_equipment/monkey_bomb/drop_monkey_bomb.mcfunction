@@ -8,7 +8,7 @@ execute anchored eyes run summon marker ^ ^ ^0.5 {Tags:["new_monkey_bomb","monke
 execute store result entity @e[type=marker,tag=new_monkey_bomb,limit=1,sort=nearest] data.thrower_id int 1 run scoreboard players get @s id
 execute as @e[type=marker,tag=new_monkey_bomb,limit=1,sort=nearest] at @s rotated as @p run function zombies:combat/weapons/special_equipment/monkey_bomb/physics/calculate_velocity
 
-execute at @e[type=marker,tag=new_monkey_bomb,limit=1,sort=nearest] run summon item_display ~ ~0.5 ~ {Tags:["special_equipment_display","monkey_bomb_display","monkey_bomb_new"],teleport_duration:2,brightness:{block:15,sky:15},shadow_radius:0.35f,shadow_strength:0.35f,item:{id:"minecraft:slime_ball",count:1,components:{"minecraft:item_model":"zombies:monkey_bomb"}},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.65f,0.65f,0.65f]}}
+execute at @e[type=marker,tag=new_monkey_bomb,limit=1,sort=nearest] run summon item_display ~ ~0.5 ~ {Tags:["special_equipment_display","monkey_bomb_display","monkey_bomb_new"],teleport_duration:2,brightness:{block:15,sky:15},shadow_radius:0.35f,shadow_strength:0.35f,item:{id:"minecraft:slime_ball",count:1,components:{"minecraft:item_model":"zbk:monkey_bomb"}},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.65f,0.65f,0.65f]}}
 
 # Link marker and display. The display timer starts after landing so the full song plays.
 scoreboard players add #grenade_id_counter grenade_id 1

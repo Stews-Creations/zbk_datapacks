@@ -1,6 +1,6 @@
 # ZBK Nacht der Untoten
 
-An installable map add-on for ZBK Core 1.0.0 and the matching Nacht der Untoten resource pack. It restores the Dr. Monty radio, its Build Kit placement and interactions, Nacht audio and character voice overrides, and the barrel-completion Easter egg. The pack identifies itself as `zbk_nacht_der_untoten` and requires no in-game map or sound selector.
+An installable map add-on for ZBK Core 1.0.0 and the matching Nacht der Untoten resource pack. It restores the Dr. Monty radio, its Build Kit placement and interactions, map theme, and the barrel-completion Easter egg. Shared rounds, dogs, teleporters, and character voices are provided by Core. The pack identifies itself as `zbk_nacht_der_untoten` and requires no in-game map or sound selector.
 
 ## Install
 
@@ -15,7 +15,7 @@ The persistent `zbk_nacht_radio_marker` stores the radio's location. Initializat
 
 The barrel-completion Easter egg belongs to Nacht: after every Core explosive-barrel marker is exploded, the add-on stops radio and music playback and starts the streamed Nacht cue. Core supplies barrel state and dispatches the `barrel_exploded` event; the add-on owns the completion counter and map audio.
 
-Core sound-wrapper events let this provider supply round, game, power, dog-round, drop, teleporter, music-menu, radio, and character voice cues while retaining the original audience and channel behavior. The four playable character choices use the shared Core character selection. Audio playback requires the matching resource pack.
+Core supplies reusable round, game, dog-round, drop, teleporter, menu, and character voice cues. This provider supplies radio tracks and barrel-completion audio through map-owned sound events. Audio playback requires the matching resource packs.
 
 ## Public boundary
 
