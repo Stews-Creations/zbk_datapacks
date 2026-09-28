@@ -114,10 +114,10 @@ The `extension/` tags are low-level, operation-specific contracts for registered
 
 ## Validation
 
-Run `python tools/validate_core.py` for Core alone, or add `--map zbk_template`, `--map zbk_nacht_der_untoten`, or `--map zbk_der_eisendrache` for a supported combination. Use `python tools/package_pack.py --pack all` for independent runtime ZIPs.
+Validate Core alone and with each map provider separately. Package each datapack independently with `pack.mcmeta` at the ZIP root. See the [repository guide](../README.md) for static and runtime checks.
 
-Run `python tools/test_event_api.py --server-jar <26.2-server.jar> --java <java-25>` for disposable-server tests of registration, nested requests, denial, deferred start/resume/cancellation, completed-round snapshots, and lifecycle reentrancy. Test each map separately and with conflicting providers. Client presentation, sounds, multiplayer, and VR require client tests in addition to command validation.
+Use a disposable Minecraft 26.2 server to test registration, nested requests, denial, deferred start/resume/cancellation, completed-round snapshots, and lifecycle reentrancy. Test each map separately and with conflicting providers. Client presentation, sounds, multiplayer, and VR require client tests in addition to command validation.
 
 ### Panzer integration check
 
-`python tools/test_panzer.py --server-jar <server.jar> --java <java>` runs a disposable Core-only server. It checks that absent markers disable the schedule, round 12 starts a spawn, round 13 does not, round 18 repeats it, and reset removes runtime enemies and models while keeping placement markers. Package Core first.
+In a disposable Core-only Minecraft 26.2 server, check that absent markers disable the schedule, round 12 starts a spawn, round 13 does not, round 18 repeats it, and reset removes runtime enemies and models while keeping placement markers. Package Core first.

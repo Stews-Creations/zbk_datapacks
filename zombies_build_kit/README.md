@@ -1,6 +1,6 @@
 # Zombies Build Kit datapack
 
-Reusable gameplay and authoring systems for Minecraft Java 26.2. Package this source as `zombies_build_kit.zip` with `python tools/package_pack.py` from the repository root, then install it with its matching resource pack and shared structure templates. See the [repository guide](../README.md) for installation and validation.
+Reusable gameplay and authoring systems for Minecraft Java 26.2. Archive this pack's contents as `zombies_build_kit.zip` with `pack.mcmeta` at the ZIP root, then install it with its matching resource pack and shared structure templates. See the [repository guide](../README.md) for installation and validation.
 
 ## Namespaces and entry points
 

@@ -52,6 +52,7 @@ logs/
 *.tmp
 
 # Validation environments and build output
+/tools/
 .venv/
 __pycache__/
 *.py[cod]

@@ -56,6 +56,6 @@ function zombies:map_elements/rocket_shield/management/give_all_parts
 
 `management/delete_candidate` runs as a specific candidate marker at its position; builder dialogs call it through a validated selection. HUD behavior and slots are documented in the [Player module](../../player/README.md). [Combat](../../combat/weapons/special_equipment/rocket_shield/README.md) owns give/refill/remove for the equipped shield.
 
-Run `python tools/validate_core.py` from the datapacks repository for static validation. Test candidate selection, collection, reset, deletion, and chunk reload in an isolated Minecraft 26.2 world. Player clicks, proximity rendering, and inventory appearance require client inspection.
+Run the static checks in the repository guide for validation. Test candidate selection, collection, reset, deletion, and chunk reload in an isolated Minecraft 26.2 world. Player clicks, proximity rendering, and inventory appearance require client inspection.
 
 Dimension-dispatched candidate registration, runtime maintenance, prompt updates, and interaction checks restrict their entity selectors to the current dimension with `distance=0..`. Each loaded entity is processed once per intended interval across the three vanilla dimensions. Prompt and interaction handling remain per tick; maintenance remains once per second.
