@@ -1,6 +1,6 @@
 # ZBK Datapacks
 
-The `zombies_build_kit` datapack supplies shared Zombies Build Kit gameplay and map-building tools for Minecraft Java 26.2. It contains no built-in map selection, map quests, or sound-pack selection.
+The `zombies_build_kit` datapack supplies shared Zombies Build Kit gameplay and map-building tools for Minecraft Java 26.2.
 
 ## Packs
 
@@ -53,6 +53,7 @@ The current callback context is `storage zbk:events stack[-1].context`. Nested d
 | Tag suffix | Timing and context |
 | --- | --- |
 | `core_ready` | Definitions and registration are ready; reconstruct accepted add-on runtime |
+| `map_tools_open` | As the player who selected Map Tools; the active provider can show its builder dialog |
 | `before_game_reset` | Before shared runtime cleanup; `reason` identifies the reset; cleanup cannot veto reset |
 | `game_reset` | Shared reset finished; rebuild map runtime from persistent configuration |
 | `game_start` | Match setup finished and the first round is scheduled |
@@ -107,7 +108,7 @@ Resume validates the owner and ticket, reruns readiness with `resuming:1`, then 
 | `zbk:api/enemy/unregister` | As that entity, remove its round membership without awarding a kill |
 | `zbk:api/enemy/reserve` | As a pending-spawn marker, hold round completion until released |
 | `zbk:api/enemy/release` | Release that marker's round hold |
-| `zbk:api/authoring/open` | Open the active provider's builder entry through `authoring_open` |
+| `zbk:api/authoring/open` | Dispatch `map_tools_open` as the requesting player so the active provider can show its Map Tools dialog |
 
 Game start/end/reset/resume calls are rejected during event dispatch. Schedule an intentional transition after the callback instead of recursively resetting the world. Power and zone calls support nested notification dispatch. Add-ons must not write match/round progression directly.
 
@@ -123,7 +124,7 @@ Game start/end/reset/resume calls are rejected during event dispatch. Schedule a
 
 `pack_a_punch_gun_spawn`, `pack_a_punch_gun_slide`, and `pack_a_punch_flag_down` are presentation requests as and at the selected machine. Handle the presentation and block the fallback only for owned machines. Persistent markers with `zbk.custom_presentation` are excluded from default machine display reconstruction. Shared purchase state and payment remain Core-owned.
 
-`sound_<cue>` requests let the active provider replace a Core sound cue. Play the replacement and block the fallback; otherwise Core plays its default. `voice_<operation>` notifications preserve gameplay callout opportunities. Core assigns four character slots and applies the default voice cooldown; add-ons can replace a callout through the corresponding `sound_voice_<cue>` request. Neither mechanism selects a numeric map ID or changes global resource-pack selection.
+`sound_<cue>` requests let the active provider replace a Core sound cue. Play the replacement and block the fallback; otherwise Core plays its default. `voice_<operation>` notifications preserve gameplay callout opportunities. Core assigns four character slots and applies the default voice cooldown; add-ons can replace a callout through the corresponding `sound_voice_<cue>` request.
 
 The `extension/` tags are low-level, operation-specific contracts for registered weapon input, inventory presentation, combat, boss integration, and authoring. Their namespace/path identifies the shared operation; the final stage identifies the precise synchronous insertion point. Their listeners are real consumers, not a catalogue of hypothetical events. Arguments appear in `context.args`; legacy shared combat scratch scores retain their owner/context contract for that operation. Only those callbacks may update their delegated weapon/profile fields. They must not change Core match progression.
 
@@ -151,7 +152,7 @@ The optional Vivecraft resource overlay and VR companion mod are client addition
 
 ## Runtime and development
 
-The installed datapack folder is `zombies_build_kit`; Core gameplay functions and dialogs use the `zbk:` namespace. See the [pack guide](zombies_build_kit/README.md) for entry points and [function architecture](zombies_build_kit/data/zbk/function/README.md) for module ownership.
+The installed datapack folder is `zombies_build_kit`; Core gameplay functions and dialogs use the `zbk:` namespace. See the [pack overview](zombies_build_kit/README.md) for shared systems and [function architecture](zombies_build_kit/data/zbk/function/README.md) for entry points and module ownership.
 
 Before publishing, parse functions with Mecha against Minecraft 26.2, parse JSON, check function and dialog references, and run `git diff --check`. Test Core alone and each map separately. Macro-generated paths and gameplay require isolated Minecraft 26.2 tests. Verify a fresh world, placement, start/reset/reload, combat, purchases, and multiplayer before publishing a playable map.
 

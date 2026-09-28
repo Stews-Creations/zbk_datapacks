@@ -1,1 +1,1 @@
-function zbk:dispatch/authoring_open
+function zbk:dispatch/map_tools_open

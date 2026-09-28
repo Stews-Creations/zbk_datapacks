@@ -27,7 +27,7 @@ Every `.mcfunction` begins with a comment explaining its caller and purpose. Fol
 | `data/zbk_template/dialog/map_tools.json` | Defines the builder dialog and its opt-in sample buttons. |
 | `data/zbk/tags/function/event/register.json` | Subscribes the provider registration handler. |
 | `data/zbk/tags/function/event/core_ready.json` | Subscribes setup after Core selects the active provider. |
-| `data/zbk/tags/function/event/authoring_open.json` | Opens the builder dialog through Core's authoring hook. |
+| `data/zbk/tags/function/event/map_tools_open.json` | Opens the builder dialog when a player selects Map Tools. |
 | `data/zbk/tags/function/event/builder_tick.json` | Enables the demo trigger for each builder. |
 | `data/zbk/tags/function/event/tick.json` | Checks the demo trigger once per global tick. |
 | `data/zbk/tags/function/event/before_game_start.json` | Subscribes the optional start block and defer requests. |

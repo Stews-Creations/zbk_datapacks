@@ -46,4 +46,4 @@ Book delivery is explicit and is not part of load or reload.
 
 ## Add-on integration
 
-The Map Tools entry calls the public authoring event. Registered map packs supply their own tools. Reusable Panzer spawner placement and timing controls belong to Core. See the [Core API contract](../../../../../README.md#core-api-100).
+The Map Tools entry dispatches `map_tools_open` as the selecting player. The active map provider supplies its own dialog. Reusable Panzer spawner placement and timing controls belong to Core. See the [Core API contract](../../../../../README.md#core-api-100).
