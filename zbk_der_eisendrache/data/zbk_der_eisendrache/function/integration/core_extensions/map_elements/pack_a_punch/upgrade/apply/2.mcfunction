@@ -1,0 +1,2 @@
+execute if score #pap_tier stats matches 1.. at @s if entity @e[type=marker,distance=..5,tag=pack_a_punch,tag=de_pack_a_punch_location,limit=1,sort=nearest] run playsound zbk_der_eisendrache:de_pack.buy ambient @s ~ ~ ~ 0.7 1 1
+execute if score #pap_tier stats matches 1.. at @s unless entity @e[type=marker,distance=..5,tag=pack_a_punch,tag=de_pack_a_punch_location,limit=1,sort=nearest] run playsound zombies:pack_a_punch.upgrade ambient @s ~ ~ ~ 0.5 1 1

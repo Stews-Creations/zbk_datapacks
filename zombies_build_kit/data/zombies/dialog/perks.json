@@ -1,0 +1,181 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Perks",
+  "external_title": "Perks",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Grant perks to players or spawn perk machines"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Juggernog - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_juggernog set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Juggernog - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_juggernog_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Speed Cola - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_speed set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Speed Cola - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_speed_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Double Tap - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_double set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Double Tap - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_double_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Stamina Up - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_stamina set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Stamina Up - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_stamina_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Quick Revive - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_revive set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Quick Revive - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_revive_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Mule Kick - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_mule set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Mule Kick - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_mule_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Der Wunderfizz - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_wunderfizz_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Clear All Perks",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger clear_perks set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Reset Perk Bonuses",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger reset_bonus set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:map_elements"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

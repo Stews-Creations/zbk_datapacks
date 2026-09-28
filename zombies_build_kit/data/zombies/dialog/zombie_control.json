@@ -1,0 +1,81 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Mob Spawners",
+  "external_title": "Mob Spawners",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Configure zombie spawning, waves, and spawn zones"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Dog Spawners",
+        "color": "gold"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zombies:build_kit/management/spawner/dialogs/open_dog_dialog"
+      }
+    },
+    {
+      "label": {
+        "text": "Zombie Spawn Marker",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_zombie_marker set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Mob Immunity Tool",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_mob_immunity_tool set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Spawner Immunity Tools",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:spawner_immunity_tools"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:map_elements"
+      }
+    },
+    {
+      "label": {
+        "text": "Panzer Spawners",
+        "color": "gold"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zombies:build_kit/management/spawner/dialogs/open_panzer_dialog"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

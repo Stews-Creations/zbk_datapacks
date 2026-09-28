@@ -1,0 +1,3 @@
+function zbk_nacht_der_untoten:sounds/play/ee_barrel_stop
+function zbk_nacht_der_untoten:sounds/play/radio_stop
+function zbk_nacht_der_untoten:sounds/play/radio

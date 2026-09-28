@@ -1,0 +1,105 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Der Eisendrache Tools",
+  "external_title": "Der Eisendrache Tools",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Place or configure Der Eisendrache map features. Persistent markers rebuild their runtime displays when the map activates."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Give Pack-a-Punch location egg",
+        "color": "light_purple"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_der_eisendrache:map_pack_a_punch/spawning/spawn_egg"
+      }
+    },
+    {
+      "label": {
+        "text": "Place anti-gravity activation plate",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_der_eisendrache:anti_gravity/spawning/plate"
+      }
+    },
+    {
+      "label": {
+        "text": "Place anti-gravity portal",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_der_eisendrache:anti_gravity/spawning/portal"
+      }
+    },
+    {
+      "label": {
+        "text": "Place anti-gravity recovery marker",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_der_eisendrache:anti_gravity/spawning/recovery"
+      }
+    },
+    {
+      "label": {
+        "text": "Place 115 launch start marker",
+        "color": "gold"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_der_eisendrache:115_launch/spawning/spawn_start"
+      }
+    },
+    {
+      "label": {
+        "text": "Place 115 launch peak marker",
+        "color": "gold"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_der_eisendrache:115_launch/spawning/spawn_peak"
+      }
+    },
+    {
+      "label": {
+        "text": "Place 115 launch end marker",
+        "color": "gold"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_der_eisendrache:115_launch/spawning/spawn_end"
+      }
+    },
+    {
+      "label": {
+        "text": "Place fuse-drop marker",
+        "color": "dark_aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_der_eisendrache:fuse_drop/spawning/summon_marker"
+      }
+    },
+    {
+      "label": {
+        "text": "Close",
+        "color": "white"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "dialog clear"
+      }
+    }
+  ],
+  "columns": 2,
+  "pause": false
+}

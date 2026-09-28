@@ -1,0 +1,1 @@
+give @s minecraft:zombie_spawn_egg[entity_data={id:"minecraft:marker",Tags:["rs_part_candidate","rs_mechanism_candidate","rs_candidate_new","rs_placement_pending"]},custom_name={text:"Shield Mechanism Spawn Egg",color:"gold",italic:false},lore=[{text:"Place a possible mechanism spawn",color:"gray",italic:false}],custom_data={zbk_buildable_egg:"mechanism"}] 1

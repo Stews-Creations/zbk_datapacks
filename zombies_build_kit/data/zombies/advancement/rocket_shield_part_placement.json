@@ -1,0 +1,59 @@
+{
+  "criteria": {
+    "plate": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "predicates": {
+                "minecraft:custom_data": "{zbk_buildable_egg:\"plate\"}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mechanism": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "predicates": {
+                "minecraft:custom_data": "{zbk_buildable_egg:\"mechanism\"}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "rocket": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "predicates": {
+                "minecraft:custom_data": "{zbk_buildable_egg:\"rocket\"}"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "plate",
+      "mechanism",
+      "rocket"
+    ]
+  ],
+  "rewards": {
+    "function": "zombies:map_elements/rocket_shield/marker/placed_by_player"
+  }
+}

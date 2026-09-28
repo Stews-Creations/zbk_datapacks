@@ -1,0 +1,4 @@
+# Spawn the fixed, full-bright status text above the black surface with its visible face pointing upward.
+$summon minecraft:text_display ~ ~ ~ {Tags:["tram_call_console_runtime","tram_call_console_model","tram_call_console_status","tram_call_console_status_call","tram_call_console_status_new"],Rotation:[$(yaw),0f],billboard:"fixed",alignment:"center",line_width:200,background:0,shadow:1b,see_through:0b,text_opacity:-1b,view_range:.5f,width:4f,height:2f,brightness:{block:15,sky:15},text:[{"text":"CALL TRAM","color":"gold","bold":true}],transformation:{translation:[0f,0.45f,0.11f],left_rotation:[0f,0.76604444f,0.64278761f,0f],right_rotation:[0f,0f,0f,1f],scale:[0.75f,0.75f,0.75f]}}
+ride @e[type=minecraft:text_display,tag=tram_call_console_status_new,distance=..1,limit=1,sort=nearest] mount @s
+tag @e[type=minecraft:text_display,tag=tram_call_console_status_new,distance=..1,limit=1,sort=nearest] remove tram_call_console_status_new

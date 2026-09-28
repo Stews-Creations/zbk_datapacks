@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Wall Guns",
+  "external_title": "Wall Guns",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Setup Guide:\n1. Place wall gun markers on walls\n2. Use Build Stick to configure weapon, price, and ammo price\n3. Players can purchase guns, equipment, or the Bowie Knife; ammo refills apply where supported"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Wall Gun - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_wall_gun_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:map_elements"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

@@ -1,0 +1,1 @@
+$data modify storage zombies:hud args.ammo_block set value '{"translate":"space.$(ammo_leading)","font":"zombies:space"},{"score":{"name":"@s","objective":"$(ammo_objective)"},"font":"$(magazine_font)","color":"$(ammo_color)","shadow_color":[0,0,0,0]},{"translate":"space.6","font":"zombies:space"},{"translate":"space.16","font":"zombies:space"}'

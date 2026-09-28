@@ -1,0 +1,33 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "flags": {
+          "is_on_ground": true
+        }
+      }
+    },
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "stepping_on": {
+            "block": {
+              "blocks": [
+                "minecraft:barrier",
+                "minecraft:light",
+                "minecraft:lantern",
+                "minecraft:soul_lantern"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

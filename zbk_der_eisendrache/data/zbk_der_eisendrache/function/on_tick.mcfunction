@@ -1,0 +1,8 @@
+# Active Der Eisendrache runtime orchestration.
+function zbk_der_eisendrache:rocket/on_tick
+function zbk_der_eisendrache:rocket_test_launch/on_tick
+function zbk_der_eisendrache:anti_gravity/on_tick
+function zbk_der_eisendrache:115_launch/on_tick
+function zbk_der_eisendrache:map_pack_a_punch/on_tick
+function zbk_der_eisendrache:tram/on_tick
+function zbk_der_eisendrache:quest/on_tick

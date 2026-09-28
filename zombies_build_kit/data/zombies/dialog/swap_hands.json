@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Swap Hands",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "Settings -> Skin Customization -> Main Hand: Left\n\n",
+          "color": "gold"
+        },
+        {
+          "text": "Main Hand: Left = gun RIGHT, knife LEFT.\nMain Hand: Right = gun LEFT, knife RIGHT.\n\nChange this in Minecraft settings yourself; this menu cannot change it. Then select the matching HUD and effect alignment below. The choice is saved for you only. If you change Main Hand again, update this choice too.\n\nLeft-click knives. Right-click shoots. F switches weapons."
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": "HUD + Effects: Gun on Right",
+      "tooltip": "Choose after setting Main Hand to Left. Aligns your HUD and muzzle smoke; does not change Minecraft settings.",
+      "action": {
+        "type": "run_command",
+        "command": "trigger set_gun_side set 2"
+      }
+    },
+    {
+      "label": "HUD + Effects: Gun on Left",
+      "tooltip": "Choose after setting Main Hand to Right. Aligns your HUD and muzzle smoke; does not change Minecraft settings.",
+      "action": {
+        "type": "run_command",
+        "command": "trigger set_gun_side set 1"
+      }
+    },
+    {
+      "label": "Back to Zombies Hub",
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:zombies"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": "Close"
+  },
+  "pause": false
+}

@@ -1,0 +1,12 @@
+execute unless block ~ ~ ~ #zbk_der_eisendrache:de_ag_recovery_clearance run scoreboard players set #bound_clear de_ag_motion 0
+execute unless block ~ ~1 ~ #zbk_der_eisendrache:de_ag_recovery_clearance run scoreboard players set #bound_clear de_ag_motion 0
+execute unless block ~ ~1.8 ~ #zbk_der_eisendrache:de_ag_recovery_clearance run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~ ~ minecraft:light[level=2] run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~ ~ minecraft:light[level=5] run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~ ~ minecraft:light[level=6] run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~1 ~ minecraft:light[level=2] run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~1 ~ minecraft:light[level=5] run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~1 ~ minecraft:light[level=6] run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~1.8 ~ minecraft:light[level=2] run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~1.8 ~ minecraft:light[level=5] run scoreboard players set #bound_clear de_ag_motion 0
+execute if block ~ ~1.8 ~ minecraft:light[level=6] run scoreboard players set #bound_clear de_ag_motion 0

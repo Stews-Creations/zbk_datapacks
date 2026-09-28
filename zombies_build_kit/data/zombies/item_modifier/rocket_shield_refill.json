@@ -1,0 +1,21 @@
+{
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:damage": 0,
+    "minecraft:custom_name": {
+      "text": "Rocket Shield",
+      "color": "gold",
+      "italic": false
+    },
+    "minecraft:item_model": "zombies:rocket_shield/shield_3",
+    "minecraft:max_damage": 15,
+    "minecraft:blocks_attacks": {
+      "damage_reductions": [],
+      "item_damage": {
+        "threshold": 0,
+        "base": 0,
+        "factor": 0
+      }
+    }
+  }
+}

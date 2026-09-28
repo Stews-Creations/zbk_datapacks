@@ -1,0 +1,1 @@
+$item replace entity @s inventory.$(slot) with minecraft:player_head[profile=$(profile),custom_data={de_board_ui:1b,portrait:$(quest),owner:$(owner),available:$(available)},max_stack_size=1,custom_name={text:"$(owner_name)",italic:false},lore=[{text:"Assigned to the bow directly below",color:"gold",italic:false}]]

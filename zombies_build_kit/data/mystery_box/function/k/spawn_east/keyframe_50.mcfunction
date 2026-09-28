@@ -1,0 +1,29 @@
+# mystery_box created via BDEngine
+
+data merge entity @e[type=item_display,tag=mystery_box_11,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2189887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,0.296875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_12,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5939887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,0.296875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_13,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2189887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,0.796875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_14,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5939887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,0.796875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_15,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2189887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,-0.703125f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_16,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5939887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,-0.703125f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_17,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2189887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,-0.203125f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_18,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5939887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,-0.203125f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_19,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2189887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,1.296875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_20,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5939887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,1.296875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_21,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2189887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,1.796875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_22,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5939887188f,0f,-0.125f,0f,2.271171875f,0f,0f,-1f,1.796875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_23,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2192274377f,0f,-1f,0f,2.32f,0f,0f,-1f,0.296875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_24,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5942274377f,0f,-1f,0f,2.32f,0f,0f,-1f,0.296875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_25,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2192274377f,0f,-1f,0f,2.32f,0f,0f,-1f,0.796875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_26,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5942274377f,0f,-1f,0f,2.32f,0f,0f,-1f,0.796875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_27,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2192274377f,0f,-1f,0f,2.32f,0f,0f,-1f,-0.703125f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_28,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5942274377f,0f,-1f,0f,2.32f,0f,0f,-1f,-0.703125f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_29,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2192274377f,0f,-1f,0f,2.32f,0f,0f,-1f,-0.203125f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_30,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5942274377f,0f,-1f,0f,2.32f,0f,0f,-1f,-0.203125f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_31,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2192274377f,0f,-1f,0f,2.32f,0f,0f,-1f,1.296875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_32,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5942274377f,0f,-1f,0f,2.32f,0f,0f,-1f,1.296875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_33,distance=..1,limit=1,sort=nearest] {transformation:[1f,0f,0f,1.2192274377f,0f,-1f,0f,2.32f,0f,0f,-1f,1.796875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+data merge entity @e[type=item_display,tag=mystery_box_34,distance=..1,limit=1,sort=nearest] {transformation:[0.5f,0f,0f,1.5942274377f,0f,-1f,0f,2.32f,0f,0f,-1f,1.796875f,0f,0f,0f,1f],interpolation_duration:2,start_interpolation:0}
+scoreboard players reset @s mystery_box_frame
+scoreboard players set @s mystery_box_frame 50
+schedule function mystery_box:k/spawn_east/check_pause_50 0.1s

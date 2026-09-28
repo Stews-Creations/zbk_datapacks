@@ -1,0 +1,17 @@
+{
+  "pack": {
+    "min_format": [
+      107,
+      1
+    ],
+    "max_format": [
+      107,
+      1
+    ],
+    "description": "Zombies Build Kit 1.0.0 | Minecraft 26.2"
+  },
+  "zbk": {
+    "version": "1.0.0",
+    "api": 10000
+  }
+}

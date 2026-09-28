@@ -1,0 +1,4 @@
+# === SHOW MYSTERY BOX DIALOG (NOT SPAWN LOCATION) ===
+# Shows dialog when this marker is NOT a spawn location
+
+dialog show @s {type:"minecraft:multi_action",title:"Mystery Box Location",body:[{type:"minecraft:plain_message",contents:"Marker Type: Mystery Box Location\n\nThis marker defines where a mystery box can spawn.\nThe mystery box moves between locations after the teddy bear appears.\n\n§cThis is NOT a starter spawn location.§r\nThis box can only become active after the first teddy bear."}],actions:[{label:"Set as Spawn Location",action:{type:"minecraft:run_command",command:"/function zombies:build_kit/management/mystery_box/toggle_spawn_location"}},{label:"Delete",action:{type:"minecraft:run_command",command:"/function zombies:build_kit/management/mystery_box/delete_marker"}},{label:"Back to Map Elements",action:{type:"minecraft:show_dialog",dialog:"zombies:map_elements"}}],exit_action:{label:"Close"}}

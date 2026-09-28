@@ -1,0 +1,2 @@
+scoreboard objectives add give_right_power_painting trigger
+scoreboard objectives add give_left_power_painting trigger

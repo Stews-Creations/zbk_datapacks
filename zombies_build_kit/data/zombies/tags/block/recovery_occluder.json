@@ -1,0 +1,25 @@
+{
+  "values": [
+    "minecraft:stone",
+    "minecraft:cobblestone",
+    "minecraft:stone_bricks",
+    "minecraft:mossy_stone_bricks",
+    "minecraft:cracked_stone_bricks",
+    "minecraft:deepslate",
+    "minecraft:cobbled_deepslate",
+    "minecraft:deepslate_bricks",
+    "minecraft:bricks",
+    "minecraft:polished_andesite",
+    "minecraft:andesite",
+    "minecraft:dirt",
+    "minecraft:grass_block",
+    "minecraft:bedrock",
+    "minecraft:oak_planks",
+    "minecraft:spruce_planks",
+    "minecraft:dark_oak_planks",
+    "minecraft:black_concrete",
+    "minecraft:gray_concrete",
+    "minecraft:light_gray_concrete",
+    "minecraft:white_concrete"
+  ]
+}

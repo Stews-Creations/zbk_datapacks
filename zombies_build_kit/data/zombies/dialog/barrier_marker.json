@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Barrier Marker",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Marker Type: Barrier\n\nThis marker defines a barrier location where boards spawn.\nZombies will attack boards to break through.\nPlayers can repair boards for points."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Delete Marker",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "/function zombies:build_kit/management/barrier/delete_marker"
+      }
+    },
+    {
+      "label": {
+        "text": "Delete All",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "/function zombies:build_kit/management/barrier/delete_all"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back to Barriers",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:barriers"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "pause": false
+}

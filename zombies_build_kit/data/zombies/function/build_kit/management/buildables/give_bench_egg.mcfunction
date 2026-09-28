@@ -1,0 +1,1 @@
+function zombies:map_elements/crafting_bench/spawning/give_egg

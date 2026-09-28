@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "animated_java:block_bench_crawler/root/on_tick",
+    "animated_java:de_panzer/root/on_tick"
+  ]
+}

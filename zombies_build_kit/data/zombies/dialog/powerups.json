@@ -1,0 +1,101 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Powerups",
+  "external_title": "Powerups",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Activate powerups for testing"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Insta Kill (30s)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger activate_insta_kill set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Double Points (30s)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger activate_double_points set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Fire Sale (78s)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger activate_fire_sale set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Max Ammo",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger activate_max_ammo set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Nuke",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger activate_nuke set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Carpenter",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger activate_carpenter set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Death Machine (30s)",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger activate_death_machine set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:player_tools"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

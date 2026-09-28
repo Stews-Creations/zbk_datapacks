@@ -1,0 +1,3 @@
+# Show management actions for the selected v2 spawn-menu marker.
+
+dialog show @s {type:"minecraft:multi_action",title:"Spawn Menu",body:[{type:"minecraft:plain_message",contents:"Marker Type: Spawn Menu V2\n\nPlayer menu with Start Game, Cutscene, Music, and Help Book options.\n\nThe marker stores Cutscene and Music settings. Runtime displays and interactions are recreated on reload."}],actions:[{label:"Delete Spawn Menu",action:{type:"minecraft:run_command",command:"/function zombies:build_kit/management/spawn_menu_v2/delete_marker"}},{label:"Back to Map Elements",action:{type:"minecraft:show_dialog",dialog:"zombies:map_elements"}}],exit_action:{label:"Close"}}

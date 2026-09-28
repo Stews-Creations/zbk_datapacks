@@ -1,0 +1,18 @@
+# mystery_box created via BDEngine
+
+# Debug: Track keyframe execution
+execute as @a[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text":"[KEYFRAME] ","color":"yellow"},{"text":"buy_south:154 - Buy animation complete","color":"white"}]
+
+# Mark box as ready to buy again and disable claiming
+execute as @e[tag=anim_buy_south] at @s run scoreboard players set @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] mystery_box_ready 1
+execute as @e[tag=anim_buy_south] at @s run scoreboard players set @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] mystery_box_can_claim 0
+
+data merge entity @e[type=text_display,tag=mystery_box_10,distance=..1,limit=1,sort=nearest] {transformation:[-1f,0f,0f,0.515625f,0f,1f,0f,0.4371875f,0f,0f,-1f,0.125f,0f,0f,0f,1f],interpolation_duration:0}
+scoreboard players set @s mystery_box_frame 154
+execute as @e[tag=anim_buy_south] at @s if score @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] mystery_box_active matches 0 unless score global fire_sale matches 1 as @a[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text":"[MB-DEBUG] buy_kf154: ","color":"aqua"},{"text":"Trigger A (inactive+no fire_sale) -> empty","color":"red"}]
+execute as @e[tag=anim_buy_south] at @s if score @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] mystery_box_active matches 0 unless score global fire_sale matches 1 run function zombies:map_elements/mystery_box/animation/triggers/empty
+execute as @e[tag=anim_buy_south] at @s if score @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] mystery_box_pending_empty matches 1 as @a[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text":"[MB-DEBUG] buy_kf154: ","color":"aqua"},{"text":"Trigger B (pending_empty) -> empty","color":"red"}]
+execute as @e[tag=anim_buy_south] at @s if score @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] mystery_box_pending_empty matches 1 run function zombies:map_elements/mystery_box/animation/triggers/empty
+scoreboard players reset @s mystery_box_frame
+tag @s remove anim_buy_south
+schedule function mystery_box:k/buy_south/check_loop 0.1s

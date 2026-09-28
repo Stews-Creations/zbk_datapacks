@@ -1,0 +1,1 @@
+function zbk:dispatch/sound_voice_insta_kill

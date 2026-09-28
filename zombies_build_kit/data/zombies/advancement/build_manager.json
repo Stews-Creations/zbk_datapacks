@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{build_manager:true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zombies:build_kit/management/build_manager/build_manager_fire"
+  }
+}

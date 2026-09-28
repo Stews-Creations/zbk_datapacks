@@ -1,0 +1,51 @@
+{
+  "description": "check_bow",
+  "supported_items": "minecraft:bow",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "hand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "requirements": {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "is_direct": false
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "zbk_der_eisendrache:events/electric_bow_hit_entity"
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      }
+    ],
+    "minecraft:hit_block": [
+      {
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#minecraft:arrows"
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "zbk_der_eisendrache:events/electric_bow_hit_block"
+        }
+      }
+    ]
+  }
+}

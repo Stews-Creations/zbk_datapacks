@@ -1,0 +1,24 @@
+{
+  "pack": {
+    "min_format": [
+      107,
+      1
+    ],
+    "max_format": [
+      107,
+      1
+    ],
+    "description": [
+      {
+        "text": "ZBK zbk nacht der untoten\n"
+      },
+      {
+        "text": "26.2",
+        "color": "green"
+      }
+    ]
+  },
+  "zbk": {
+    "version": "1.0.0"
+  }
+}

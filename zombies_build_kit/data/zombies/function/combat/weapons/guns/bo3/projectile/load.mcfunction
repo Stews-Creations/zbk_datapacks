@@ -1,0 +1,14 @@
+scoreboard players set #gun_id stats 46
+$scoreboard players set #damage stats $(damage)
+$scoreboard players set #tier stats $(tier)
+$scoreboard players set #explosive_damage stats $(explosive_damage)
+$scoreboard players set #bo3_min stats $(min_damage)
+$scoreboard players set #bo3_start stats $(range_start)
+$scoreboard players set #bo3_end stats $(range_end)
+scoreboard players set #element stats 0
+scoreboard players set #bo3_pellets stats 1
+scoreboard players set #bo3_head stats 100
+scoreboard players set #is_explosive stats 1
+scoreboard players set #explosive_radius stats 3
+scoreboard players set #is_piercing stats 0
+scoreboard players set #spread_radius stats 0

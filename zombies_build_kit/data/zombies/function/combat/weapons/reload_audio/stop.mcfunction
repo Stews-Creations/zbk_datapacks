@@ -1,0 +1,6 @@
+$stopsound @s player zombies:reload.$(slug).partial.slot$(slot)
+$stopsound @s player zombies:reload.$(slug).empty.slot$(slot)
+$stopsound @s player zombies:reload.$(slug).partial_fast.slot$(slot)
+$stopsound @s player zombies:reload.$(slug).empty_fast.slot$(slot)
+$stopsound @s player zombies:reload.$(slug).shell.slot$(slot)
+$stopsound @s player zombies:reload.$(slug).shell_fast.slot$(slot)

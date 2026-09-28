@@ -1,0 +1,9 @@
+scoreboard players set #shield cb_build 0
+scoreboard players set #shield_bench cb_id 0
+execute in minecraft:overworld run kill @e[type=item_display,tag=cb_shield]
+execute in minecraft:the_nether run kill @e[type=item_display,tag=cb_shield]
+execute in minecraft:the_end run kill @e[type=item_display,tag=cb_shield]
+scoreboard players set #ragnarok cb_build 0
+scoreboard players set #core rag_collected 0
+scoreboard players set #prongs rag_collected 0
+scoreboard players set #grip rag_collected 0

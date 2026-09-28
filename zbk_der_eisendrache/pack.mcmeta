@@ -1,0 +1,25 @@
+{
+  "pack": {
+    "min_format": [
+      107,
+      1
+    ],
+    "max_format": [
+      107,
+      1
+    ],
+    "description": [
+      {
+        "text": "ZBK Der Eisendrache\n"
+      },
+      {
+        "text": "1.0.0 | Minecraft 26.2",
+        "color": "green"
+      }
+    ]
+  },
+  "zbk": {
+    "version": "1.0.0",
+    "api": 10000
+  }
+}

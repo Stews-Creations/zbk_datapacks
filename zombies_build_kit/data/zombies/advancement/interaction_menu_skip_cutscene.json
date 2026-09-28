@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "minecraft:entity_type": "minecraft:interaction",
+          "nbt": "{Tags:[\"menu_interaction_skip_cutscene\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zombies:build_kit/spawn_menu/on_skip_cutscene_click"
+  }
+}

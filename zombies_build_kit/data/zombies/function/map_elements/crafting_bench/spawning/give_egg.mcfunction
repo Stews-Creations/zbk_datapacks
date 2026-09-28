@@ -1,0 +1,1 @@
+give @s minecraft:villager_spawn_egg[entity_data={id:"minecraft:marker",Tags:["cb_marker","cb_new"]},custom_name={text:"Crafting Bench Spawn Egg",color:"gold",italic:false},lore=[{text:"Place a Crafting Bench facing your direction",color:"gray",italic:false}],custom_data={zbk_buildable_egg:"crafting_bench"}] 1

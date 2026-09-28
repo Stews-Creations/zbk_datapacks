@@ -1,0 +1,111 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Zombies Hub",
+  "external_title": "Zombies",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Welcome to the Zombies Game Manager!\n\nUse the buttons below to control your game:"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Start Game",
+        "color": "green"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger start_game set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Custom Start ->",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:custom_start_round"
+      }
+    },
+    {
+      "label": {
+        "text": "Stop / Reset Game",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger reset_game set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Stop (No Cutscene)",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger stop_no_cutscene set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Give 10k Points",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_10k_points set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Build Stick",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_build_manager set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Build Kit ->",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:build_kit"
+      }
+    },
+    {
+      "label": {
+        "text": "Player Tools ->",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:player_tools"
+      }
+    },
+    {
+      "label": {
+        "text": "Swap Hands ->",
+        "color": "gold"
+      },
+      "tooltip": "Settings -> Skin Customization -> Main Hand: Left. Open setup and per-player HUD/effect alignment.",
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:swap_hands"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "pause": false
+}

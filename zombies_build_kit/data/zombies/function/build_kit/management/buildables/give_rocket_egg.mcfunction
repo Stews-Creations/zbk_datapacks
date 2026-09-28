@@ -1,0 +1,1 @@
+function zombies:map_elements/rocket_shield/spawning/give_rocket_egg

@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Power Lamp Marker",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Marker Type: Power Lamp\n\nPlaces a redstone lamp at this marker position.\n- On reload, lamp is lit if map power is not required, otherwise unlit\n- On game reset, lamp is set unlit\n- When power is turned on, all markers are set lit"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Delete Marker",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "/function zombies:build_kit/management/block_power_lamp/delete_marker"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back to Blocks",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:blocks"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "pause": false
+}

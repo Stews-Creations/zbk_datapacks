@@ -1,0 +1,71 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Points & Perks",
+  "external_title": "Points & Perks",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Manage player points and perk systems"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Reset Points",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger reset_points set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Give 5000 Points",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_points set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Clear All Perks",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger clear_perks set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Reset Perk Bonuses",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger reset_bonus set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:build_kit"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

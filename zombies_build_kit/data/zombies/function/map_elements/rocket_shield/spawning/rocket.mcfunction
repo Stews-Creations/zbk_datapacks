@@ -1,0 +1,2 @@
+# Turn the rear-mounted tanks toward the marker facing; rotate the centering offset too.
+summon item_display ~ ~0.5 ~ {Tags:["rs_part_runtime","rs_rocket_runtime","rs_part_new"],item_display:"none",item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"zombies:rocket_shield/rocket"}},transformation:{translation:[0f,0.042474f,-0.192751f],left_rotation:[0f,1f,0f,0f],right_rotation:[0f,0f,0f,1f],scale:[1.218981f,1.218981f,1.218981f]}}

@@ -1,0 +1,1 @@
+scoreboard objectives add bow_trigger_lock dummy

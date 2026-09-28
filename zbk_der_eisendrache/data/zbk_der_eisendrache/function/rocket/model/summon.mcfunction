@@ -1,0 +1,3 @@
+# Generated geometry: blockbench/static_props/source/rocket.json.
+# Keep the original controller origin for movement and booster effects.
+summon minecraft:block_display ~ ~ ~ {Tags:["rocket","rocket_root","rocket_move"],teleport_duration:20,block_state:{Name:"minecraft:air"},Passengers:[{id:"minecraft:item_display",Tags:["rocket","rocket_body"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"zbk_der_eisendrache:props/rocket"}},item_display:"none",view_range:1f,width:0f,height:0f,transformation:{translation:[0f,0f,0f],scale:[32f,32f,32f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,1f,0f,0f]}}]}

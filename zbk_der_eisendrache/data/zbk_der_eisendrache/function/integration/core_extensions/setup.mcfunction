@@ -1,0 +1,6 @@
+function zbk_der_eisendrache:integration/core_extensions/combat/powerups/on_load/1
+function zbk_der_eisendrache:integration/core_extensions/combat/weapons/management/gun_stats/1
+function zbk_der_eisendrache:integration/core_extensions/combat/weapons/on_load/1
+function zbk_der_eisendrache:integration/core_extensions/combat/weapons/on_load/2
+function zbk_der_eisendrache:integration/core_extensions/waves/on_load/1
+function zbk_der_eisendrache:integration/core_extensions/waves/on_load/2

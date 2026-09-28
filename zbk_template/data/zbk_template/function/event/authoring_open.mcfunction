@@ -1,0 +1,1 @@
+function zbk_template:authoring_open

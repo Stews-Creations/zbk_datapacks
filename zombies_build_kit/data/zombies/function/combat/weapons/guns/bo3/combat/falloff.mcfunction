@@ -1,0 +1,11 @@
+scoreboard players operation #falloff stats = #damage stats
+scoreboard players operation #falloff stats -= #bo3_min stats
+scoreboard players operation #falloff stats *= #100 stats
+scoreboard players operation #falloff_distance stats = #shot_distance stats
+scoreboard players operation #falloff_distance stats -= #bo3_start stats
+scoreboard players operation #falloff_span stats = #bo3_end stats
+scoreboard players operation #falloff_span stats -= #bo3_start stats
+execute if score #falloff_distance stats > #falloff_span stats run scoreboard players operation #falloff_distance stats = #falloff_span stats
+scoreboard players operation #falloff stats *= #falloff_distance stats
+scoreboard players operation #falloff stats /= #falloff_span stats
+scoreboard players operation #hit_damage stats -= #falloff stats

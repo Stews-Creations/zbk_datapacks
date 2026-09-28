@@ -1,0 +1,1 @@
+give @s minecraft:blaze_spawn_egg[entity_data={id:"minecraft:marker",Tags:["rs_part_candidate","rs_rocket_candidate","rs_candidate_new","rs_placement_pending"]},custom_name={text:"Shield Rocket Spawn Egg",color:"gold",italic:false},lore=[{text:"Place a possible rocket spawn",color:"gray",italic:false}],custom_data={zbk_buildable_egg:"rocket"}] 1

@@ -1,0 +1,16 @@
+execute at @a[team=downed] run particle minecraft:glow ~3.0 ~1 ~0.0 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~2.77 ~1 ~1.15 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~2.12 ~1 ~2.12 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~1.15 ~1 ~2.77 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~0.0 ~1 ~3.0 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~-1.15 ~1 ~2.77 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~-2.12 ~1 ~2.12 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~-2.77 ~1 ~1.15 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~-3.0 ~1 ~0.0 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~-2.77 ~1 ~-1.15 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~-2.12 ~1 ~-2.12 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~-1.15 ~1 ~-2.77 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~0.0 ~1 ~-3.0 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~1.15 ~1 ~-2.77 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~2.12 ~1 ~-2.12 0 0 0 0 1 force
+execute at @a[team=downed] run particle minecraft:glow ~2.77 ~1 ~-1.15 0 0 0 0 1 force

@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "zbk_template:event/game_start_deferred"
+  ]
+}

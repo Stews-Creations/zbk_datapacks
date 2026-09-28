@@ -1,0 +1,85 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "ZBK Template Tools",
+  "external_title": "ZBK Template Tools",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Executable API examples. All demonstrations are opt-in; ordinary play is unchanged until you enable a sample or place its marker."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Place sample marker here",
+        "color": "gold"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger zbk_template_demo set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle blocked start example",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_template:demo/toggle_start_block"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle deferred start example",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_template:demo/toggle_defer"
+      }
+    },
+    {
+      "label": {
+        "text": "Call public power API",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:api/power/activate"
+      }
+    },
+    {
+      "label": {
+        "text": "Unlock zone 1 with public API",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:api/zones/unlock {zone:1}"
+      }
+    },
+    {
+      "label": {
+        "text": "Reset game with public API",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:api/game/reset"
+      }
+    },
+    {
+      "label": {
+        "text": "Close",
+        "color": "white"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "dialog clear"
+      }
+    }
+  ],
+  "columns": 2,
+  "pause": false
+}

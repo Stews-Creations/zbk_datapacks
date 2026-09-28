@@ -1,0 +1,4 @@
+# Spawn one fixed-color full-bright lamp on the instrument bank.
+$summon minecraft:block_display ~ ~ ~ {Tags:["tram_call_console_runtime","tram_call_console_model","tram_call_console_light","tram_call_console_light_$(side)","tram_call_console_light_new"],Rotation:[$(yaw),0f],view_range:0.5f,width:4f,height:2f,shadow_radius:0f,shadow_strength:0f,brightness:{block:15,sky:15},block_state:{Name:"minecraft:$(block)"},transformation:{translation:[$(x),$(y),$(z)],left_rotation:[-0.08715574f,0f,0f,0.99619470f],right_rotation:[0f,0f,0f,1f],scale:[0.24f,0.07f,0.24f]}}
+ride @e[type=minecraft:block_display,tag=tram_call_console_light_new,distance=..1,limit=1,sort=nearest] mount @s
+tag @e[type=minecraft:block_display,tag=tram_call_console_light_new,distance=..1,limit=1,sort=nearest] remove tram_call_console_light_new

@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "minecraft:entity_type": "minecraft:interaction",
+          "nbt": "{Tags:[\"quest_dragon_bow_interaction\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zbk_der_eisendrache:events/dragon_bow_pickup"
+  }
+}

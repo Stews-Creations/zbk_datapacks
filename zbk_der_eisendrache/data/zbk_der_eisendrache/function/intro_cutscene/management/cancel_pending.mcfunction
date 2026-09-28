@@ -1,0 +1,2 @@
+schedule clear zbk_der_eisendrache:intro_cutscene/management/resume_deferred
+data remove storage zbk_der_eisendrache:state start

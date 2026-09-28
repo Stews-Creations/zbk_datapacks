@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{rocket_shield_prototype:true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zombies:combat/weapons/special_equipment/rocket_shield/interactions/use"
+  }
+}

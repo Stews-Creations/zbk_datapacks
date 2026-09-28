@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{death_machine:true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zombies:combat/powerups/death_machine/on_use"
+  }
+}

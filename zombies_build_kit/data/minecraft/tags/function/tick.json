@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "zombies:tick",
+    "animated_java:global/on_tick"
+  ]
+}

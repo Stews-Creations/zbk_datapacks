@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{mob_immunity_tool:true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zombies:build_kit/management/mob_immunity_tool/right_click"
+  }
+}

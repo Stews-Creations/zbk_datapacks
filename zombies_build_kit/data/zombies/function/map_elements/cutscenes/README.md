@@ -1,0 +1,17 @@
+# Cutscenes Module
+
+Owns reusable opening and ending cutscene orchestration for placed Build Kit cutscene markers.
+
+## Runtime Contract
+
+- `cutscene_start_timed` and reusable pan-camera markers remain the source of truth for generic opening cutscenes.
+- Generic game-over flows set title timing to `10` ticks fade-in, `70` ticks visible, and `20` ticks fade-out (`5 seconds` total), so timing left by another title-based effect cannot keep the game-over title on screen.
+
+## Public Commands
+
+- `function zombies:map_elements/cutscenes/start_game/intercept` starts the cutscene-aware Start Game flow.
+- `function zombies:map_elements/cutscenes/management/stop_active` stops any active reusable cutscene and restores player mode.
+
+## Camera milestone dispatch
+
+End-game title and dialog milestones each check their endpoint once before invoking `end_game/show_title` or `end_game/show_dialog`. All cameras still move before title, dialog, and finish phases. Start-game camera movement and endpoint checks retain their existing behavior. These synchronous helpers add no schedule and do not change the existing stop, skip, reload, or game-initialization paths.

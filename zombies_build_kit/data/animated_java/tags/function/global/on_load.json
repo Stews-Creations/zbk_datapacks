@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "animated_java:block_bench_crawler/on_load",
+    "animated_java:de_panzer/on_load"
+  ]
+}

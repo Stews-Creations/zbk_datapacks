@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Nacht der Untoten",
+  "external_title": "Nacht der Untoten",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Nacht map tools. Place a Dr. Monty radio as a persistent marker; its display and interaction are reconstructed on load."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Get Dr. Monty Radio egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_nacht_radio set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Delete nearest radio marker",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk_nacht_der_untoten:radio/management/delete_radio"
+      }
+    },
+    {
+      "label": {
+        "text": "Close",
+        "color": "white"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "dialog clear"
+      }
+    }
+  ],
+  "columns": 2,
+  "pause": false
+}

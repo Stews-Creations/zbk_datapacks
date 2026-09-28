@@ -1,0 +1,10 @@
+# Show the current Mob Immunity Tool mode.
+
+execute if score @s mob_immunity_tool_mode matches 0 run tellraw @s [{"text":"[Mob Immunity Tool] ","color":"gold"},{"text":"Mode: ","color":"gray"},{"text":"Guns","color":"yellow","bold":true},{"text":" | Left-click mob to apply","color":"gray"}]
+execute if score @s mob_immunity_tool_mode matches 1 run tellraw @s [{"text":"[Mob Immunity Tool] ","color":"gold"},{"text":"Mode: ","color":"gray"},{"text":"Explosives","color":"yellow","bold":true},{"text":" | Left-click mob to apply","color":"gray"}]
+execute if score @s mob_immunity_tool_mode matches 2 run tellraw @s [{"text":"[Mob Immunity Tool] ","color":"gold"},{"text":"Mode: ","color":"gray"},{"text":"Elements","color":"yellow","bold":true},{"text":" | Left-click mob to apply","color":"gray"}]
+execute if score @s mob_immunity_tool_mode matches 3 run tellraw @s [{"text":"[Mob Immunity Tool] ","color":"gold"},{"text":"Mode: ","color":"gray"},{"text":"Nuke","color":"yellow","bold":true},{"text":" | Left-click mob to apply","color":"gray"}]
+execute if score @s mob_immunity_tool_mode matches 4 run tellraw @s [{"text":"[Mob Immunity Tool] ","color":"gold"},{"text":"Mode: ","color":"gray"},{"text":"Melee","color":"yellow","bold":true},{"text":" | Left-click mob to apply","color":"gray"}]
+execute if score @s mob_immunity_tool_mode matches 5 run tellraw @s [{"text":"[Mob Immunity Tool] ","color":"gold"},{"text":"Mode: ","color":"gray"},{"text":"All","color":"green","bold":true},{"text":" | Left-click mob to apply","color":"gray"}]
+execute if score @s mob_immunity_tool_mode matches 6 run tellraw @s [{"text":"[Mob Immunity Tool] ","color":"gold"},{"text":"Mode: ","color":"gray"},{"text":"Clear","color":"red","bold":true},{"text":" | Left-click mob to clear","color":"gray"}]
+execute if score @s mob_immunity_tool_mode matches 7 run tellraw @s [{"text":"[Mob Immunity Tool] ","color":"gold"},{"text":"Mode: ","color":"gray"},{"text":"Check","color":"aqua","bold":true},{"text":" | Left-click mob to list settings","color":"gray"}]

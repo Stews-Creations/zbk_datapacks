@@ -1,0 +1,71 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Shotguns",
+  "external_title": "Shotguns",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Choose a gun to equip."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "KRM-262 (39)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_bo3 set 39"
+      }
+    },
+    {
+      "label": {
+        "text": "205 Brecci (40)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_bo3 set 40"
+      }
+    },
+    {
+      "label": {
+        "text": "Haymaker 12 (41)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_bo3 set 41"
+      }
+    },
+    {
+      "label": {
+        "text": "Argus (42)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_bo3 set 42"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:weapons"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

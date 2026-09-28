@@ -1,0 +1,3 @@
+# mystery_box created via BDEngine
+
+execute as @e[tag=mystery_box_root,scores={mystery_box_frame=35},tag=anim_teddy_bear_east] unless entity @s[tag=animation_pause] at @s run function mystery_box:k/teddy_bear_east/keyframe_36

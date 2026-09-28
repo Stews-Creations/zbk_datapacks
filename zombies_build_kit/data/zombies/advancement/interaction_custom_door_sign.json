@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "minecraft:entity_type": "minecraft:interaction",
+          "nbt": "{Tags:[\"custom_door_sign_interaction\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zombies:map_elements/custom_door/buy/interact"
+  }
+}

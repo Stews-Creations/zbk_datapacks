@@ -1,0 +1,91 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Waves",
+  "external_title": "Waves",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Setup Guide:\n1. Place markers\n2. Toggle particles to see locations\n3. Start game to begin rounds"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Dog Spawners \u2192",
+        "color": "gold"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zombies:build_kit/management/spawner/dialogs/open_dog_dialog"
+      }
+    },
+    {
+      "label": {
+        "text": "Zombie Spawn Marker",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_zombie_marker set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle Spawn Particles",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger toggle_spawn_markers set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Configure Spawner Zone",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger configure_spawner_zone set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Create New Zone",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger create_zone set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "\u2190 Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zombies:zombie_control"
+      }
+    },
+    {
+      "label": {
+        "text": "Panzer Spawners \u2192",
+        "color": "gold"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zombies:build_kit/management/spawner/dialogs/open_panzer_dialog"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}
