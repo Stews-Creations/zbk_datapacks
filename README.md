@@ -176,13 +176,24 @@ The template `data/zbk/structure/barriers/barrier.nbt` is loaded as `zbk:barrier
 
 When upgrading an existing world, close it and back up its former `generated/minecraft/structure/zbk/` folder outside `generated/`, then remove that folder or its old source junction. Check the older plural `generated/minecraft/structures/zbk/` path too. World-installed copies under the same namespace and path can override bundled templates. Update custom commands to the `zbk:<category>/<template>` IDs when upgrading; the old shared namespace and root-level Pack-a-Punch IDs are no longer supplied. Keep unrelated map-specific structures. New worlds need only the datapack. Structure blocks still save edits to the world; copy reviewed `.nbt` exports into the base pack's matching `data/` path to distribute them.
 
-Build the base pack ZIP with `python tools/package_pack.py --pack zombies_build_kit` from this repository. The packager includes `.nbt` files and the existing `LICENSES/` notices. Run `python tools/validate_structures.py` to check bundled NBT files and placement references using the Python standard library. Command, JSON, and gameplay checks remain part of the validation workflow below.
+Download the base pack and template ZIPs from the [releases page](https://github.com/Stews-Creations/zbk_datapacks/releases). Each ZIP includes the bundled `.nbt` templates and the `LICENSES/` notices. See [Releases](#releases) for how they are built.
 
 ## Runtime and development
 
 The installed datapack folder is `zombies_build_kit`; base pack gameplay functions and dialogs use the `zbk:` namespace. See the [pack overview](zombies_build_kit/README.md) for shared systems and [function architecture](zombies_build_kit/data/zbk/function/README.md) for entry points and module ownership.
 
 Before publishing, parse functions with Mecha against Minecraft 26.2, parse JSON, check function and dialog references, and run `git diff --check`. Test the base pack alone and each map separately. Macro-generated paths and gameplay require isolated Minecraft 26.2 tests. Verify a fresh world, placement, start/reset/reload, combat, purchases, and multiplayer before publishing a playable map.
+
+## Releases
+
+| Workflow | Runs | Result |
+| --- | --- | --- |
+| [Build datapacks](.github/workflows/build-datapacks.yml) | On every push, or manually | Packages and inspects `zombies_build_kit` and `zbk_template`, then uploads each ZIP as a workflow artifact. These are development builds. |
+| [Release datapacks](.github/workflows/release-datapacks.yml) | Manually from `main` | Publishes a GitHub release with `zombies_build_kit-<tag>.zip` and `zbk_template-<tag>.zip`. |
+
+To publish a release, set the version in each pack's `VERSION` file and `pack.mcmeta`, merge to `main`, then run **Release datapacks** with the matching tag, such as `v1.0.0`. The workflow stops if the tag and a pack version differ. Running it with an existing tag rebuilds that revision.
+
+Each ZIP has `pack.mcmeta` at its root and installs by copying it into a world's `datapacks/` folder. It contains the pack metadata, the functions, JSON, and structure templates under `data/`, and the `LICENSES/` folder. Documentation and development files are left out.
 
 ## License and credit
 
