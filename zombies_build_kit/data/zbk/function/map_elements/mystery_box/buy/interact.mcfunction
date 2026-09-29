@@ -10,7 +10,7 @@ execute if entity @s[team=downed] run return fail
 
 # Check if player is holding build manager stick - open config dialog instead
 execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run tag @e[type=marker,tag=mystery_box_location,distance=..5,limit=1,sort=nearest] add open_dialog
-execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run function zbk:build_kit/management/mystery_box/dialogs/open_dialog
+execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run function zbk:map_elements/mystery_box/build_kit/dialogs/open_dialog
 execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run return 1
 
 # Store the interacting player's ID in temp

@@ -15,4 +15,4 @@ execute if score fire_sale powerup_order matches 0 run scoreboard players operat
 stopsound @a ambient zbk:drops.fire_sale
 function zbk:combat/powerups/fire_sale/sound
 
-execute as @a run function zbk:dispatch/voice_event_fire_sale
+execute as @a run function zbk:combat/powerups/fire_sale/events/voice_event_fire_sale

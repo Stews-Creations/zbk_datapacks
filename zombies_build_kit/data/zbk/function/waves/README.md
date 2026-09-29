@@ -12,6 +12,9 @@ Owns round progression, enemy counts and scaling, spawn markers, zombie spawning
 | `markers/` | Zombie and dog marker placement and visualization |
 | `spawning/` | Enemy selection, creation, accounting, and spawn presentation |
 | `special_rounds/dog/` | Dog-round scheduling, effects, and marker reward handling |
+| `audio/`, `events/` | Round cues, round/enemy-spawn notifications, and wave extension dispatch |
+
+Dog-round sounds and character callouts belong to `special_rounds/dog/audio/`, with their request dispatch in the neighboring `events/` folder. Public event tags retain their existing IDs.
 
 ## Lifecycle
 
@@ -45,4 +48,8 @@ Hole animations crawl for 60 ticks (3 seconds). Wall animations use bounded clim
 
 ## Add-on integration
 
-Round start/end notifications publish the current round and round type. Pending custom enemies can reserve round completion through the API. Panzer scheduling belongs to Core and is disabled when no Panzer spawner markers exist. See the [Core API contract](../../../../../README.md#core-api-100).
+Round start/end notifications publish the current round and round type. Run `zbk:waves/management/enemies/register` as a map-owned enemy to count it toward round completion, and `unregister` as that entity to remove its membership without awarding a kill. Run `zbk:waves/management/enemies/reserve` as a pending-spawn marker to hold round completion, then `release` as that marker when the spawn is fulfilled or cancelled. Panzer scheduling belongs to the base pack and is disabled when no Panzer spawner markers exist. See the [base pack integration contract](../../../../../README.md#base-pack-integration).
+
+## Authoring and spawn helpers
+
+`build_kit/spawners/` owns spawner configuration, immunity editing, batch operations, and test spawning. Dog and zombie Build Manager handlers live there; Panzer's handler belongs to `bosses/panzer/build_kit/`. Zombie spawning separates `pacing/` and `cleanup/`; hole and wall spawn variants keep directional creation helpers in `directions/`.

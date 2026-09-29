@@ -14,7 +14,7 @@ scoreboard players set @e[type=marker,tag=barrier_w3_repairing] bw3_break_timer 
 execute as @e[type=marker,tag=barrier_w3_repairing] at @s run function zbk:map_elements/barrier_w3/player/repair_passenger
 
 # ===== CALCULATE POINT LIMIT =====
-execute as @s run function zbk:dispatch/voice_event_rebuild_barrier
+execute as @s run function zbk:map_elements/barrier/events/voice_event_rebuild_barrier
 scoreboard players operation #temp bw3_state = #global wave.round
 scoreboard players set #five bw3_state 5
 scoreboard players operation #temp bw3_state *= #five bw3_state
@@ -25,7 +25,7 @@ execute if entity @s[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text"
 # ===== AWARD POINTS IF UNDER LIMIT =====
 execute if score @s barrier_point_repairs < #temp bw3_state run scoreboard players add @s player_points 10
 execute if score @s barrier_point_repairs < #temp bw3_state run scoreboard players add @s barrier_point_repairs 1
-execute if score @s barrier_point_repairs < #temp bw3_state run function zbk:sounds/play/cash
+execute if score @s barrier_point_repairs < #temp bw3_state run function zbk:player/points/audio/cash
 execute if score @s barrier_point_repairs < #temp bw3_state run title @s actionbar [{"text":"Barrier Repaired! +10 Points","color":"green"}]
 
 # ===== NO POINTS IF AT/OVER LIMIT =====

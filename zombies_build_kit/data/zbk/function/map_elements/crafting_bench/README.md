@@ -1,6 +1,6 @@
 # Crafting Bench locations
 
-The shared `zbk:workbench` asset is fitted to a local 3-block width, 1.95-block model height, and 1-block depth, with its floor at the marker and its front facing the placer. The model leaves 0.05 blocks of clearance within the 2-block-tall placement area to avoid ceiling clipping. Benches sit square with the block grid and keep these local dimensions. The item display uses fixed full brightness. Three adjacent 1-block interaction cubes form a combined 3-block-wide, 1-block-tall, 1-block-deep hitbox across the upper half (1 to 2 blocks above the marker). The row follows the snapped bench facing. Interactions use `response:true` and a repeatable click advancement that runs as the actual clicking player. There is no per-tick click polling. A ready recipe starts hold-to-build on right-click. Build feedback uses the progress display and sound, with no chat messages. With no ready recipe, the click goes to normal weapon input without a denial message; ammunition and cooldown rules remain in Combat. Spectators and Build Stick users do not activate recipes; downed players route to weapon input.
+The shared `zbk:map_elements/workbench` asset is fitted to a local 3-block width, 1.95-block model height, and 1-block depth, with its floor at the marker and its front facing the placer. The model leaves 0.05 blocks of clearance within the 2-block-tall placement area to avoid ceiling clipping. Benches sit square with the block grid and keep these local dimensions. The item display uses fixed full brightness. Three adjacent 1-block interaction cubes form a combined 3-block-wide, 1-block-tall, 1-block-deep hitbox across the upper half (1 to 2 blocks above the marker). The row follows the snapped bench facing. Interactions use `response:true` and a repeatable click advancement that runs as the actual clicking player. There is no per-tick click polling. A ready recipe starts hold-to-build on right-click. Build feedback uses the progress display and sound, with no chat messages. With no ready recipe, the click goes to normal weapon input without a denial message; ammunition and cooldown rules remain in Combat. Spectators and Build Stick users do not activate recipes; downed players route to weapon input.
 
 ## Public commands and scope
 
@@ -44,3 +44,7 @@ The bench model and shield preview use `view_range:0.5f` when spawned or reconst
 Progress-display selectors are restricted to the dimension of each dispatch with `distance=0..`. Each loaded progress display is updated once per tick across the three vanilla dimensions; player build progression retains its existing single shared player pass.
 
 Once-per-second marker maintenance also uses dimension-local selectors, so each loaded bench is reconciled once per interval rather than once per dimension dispatch. Runtime reconstruction and readiness behavior remain unchanged.
+
+## Authoring ownership
+
+Feature-specific editor functions and Build Manager handlers live inside the owning gameplay feature's `build_kit/` folder. The shared Build Manager only owns tool input, pending selection, and routing; each feature preserves its own dialog context and cleanup order.

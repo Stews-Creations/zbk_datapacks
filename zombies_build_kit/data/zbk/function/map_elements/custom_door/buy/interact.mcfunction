@@ -15,7 +15,7 @@ execute store result score #cd_buy_uid global run scoreboard players get @e[type
 
 # Check if player is holding build manager stick — open config dialog
 execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] as @e[type=marker,tag=custom_door_sign] if score @s cd_sign_uid = #cd_buy_uid global run tag @s add open_dialog
-execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run function zbk:build_kit/management/custom_door_sign/dialogs/open_config_dialog
+execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run function zbk:map_elements/custom_door/build_kit/sign/dialogs/open_config_dialog
 execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run return 1
 
 # Otherwise, try to buy

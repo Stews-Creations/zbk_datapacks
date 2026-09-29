@@ -72,3 +72,6 @@ scoreboard objectives add wunderfizz_perk dummy "Wunderfizz Current Perk"
 scoreboard objectives add wunderfizz_uses dummy "Wunderfizz Use Counter"
 scoreboard objectives add wunderfizz_id dummy "Wunderfizz Location ID"
 scoreboard objectives add wunderfizz_ready dummy "Wunderfizz Ready State"
+
+scoreboard objectives add pm_v2_id dummy
+scoreboard objectives add pm_v2_select dummy

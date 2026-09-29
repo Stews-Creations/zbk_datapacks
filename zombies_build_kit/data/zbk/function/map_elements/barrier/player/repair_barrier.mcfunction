@@ -27,7 +27,7 @@ execute as @e[type=marker,tag=barrier_repairing] at @s run function zbk:map_elem
 
 # ===== CALCULATE POINT LIMIT =====
 # Store round number in temp scoreboard
-execute as @s run function zbk:dispatch/voice_event_rebuild_barrier
+execute as @s run function zbk:map_elements/barrier/events/voice_event_rebuild_barrier
 scoreboard players operation #temp barrier_state = #global wave.round
 # Multiply by 5 to get limit
 scoreboard players set #five barrier_state 5
@@ -40,7 +40,7 @@ execute if entity @s[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text"
 # Check if player is under their personal point limit
 execute if score @s barrier_point_repairs < #temp barrier_state run scoreboard players add @s player_points 10
 execute if score @s barrier_point_repairs < #temp barrier_state run scoreboard players add @s barrier_point_repairs 1
-execute if score @s barrier_point_repairs < #temp barrier_state run function zbk:sounds/play/cash
+execute if score @s barrier_point_repairs < #temp barrier_state run function zbk:player/points/audio/cash
 execute if score @s barrier_point_repairs < #temp barrier_state run title @s actionbar [{"text":"Barrier Repaired! +10 Points","color":"green"}]
 execute if score @s barrier_point_repairs < #temp barrier_state if entity @s[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text":"[Barrier Debug] ","color":"gold"},{"text":"Points awarded! New total repairs: ","color":"green"},{"score":{"name":"@s","objective":"barrier_point_repairs"},"color":"yellow"}]
 

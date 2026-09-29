@@ -1,1 +1,1 @@
-function zbk:sounds/play/drops_nuke
+function zbk:combat/powerups/nuke/audio/drops_nuke

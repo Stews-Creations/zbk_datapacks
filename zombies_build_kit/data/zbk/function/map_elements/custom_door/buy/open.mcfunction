@@ -82,14 +82,14 @@ execute store result storage zbk:temp fa_fl.sx int 1 run scoreboard players get 
 execute store result storage zbk:temp fa_fl.sz int 1 run scoreboard players get #cd_storage_z global
 execute store result storage zbk:temp fa_fl.ex int 1 run scoreboard players get #cd_storage_end_x global
 execute store result storage zbk:temp fa_fl.ez int 1 run scoreboard players get #cd_storage_end_z global
-function zbk:build_kit/management/custom_door/highlight/forceload_add with storage zbk:temp fa_fl
+function zbk:map_elements/custom_door/build_kit/door/highlight/forceload_add with storage zbk:temp fa_fl
 
 # Scan zone block-by-block, only setting to air where storage has a non-air block
 scoreboard players operation #cd_loop_y global = #cd_min_y global
-function zbk:map_elements/custom_door/animations/fill_air_scan_y
+function zbk:map_elements/custom_door/animations/clearing/fill_air_scan_y
 
 # Remove forceload
-function zbk:build_kit/management/custom_door/highlight/forceload_remove with storage zbk:temp fa_fl
+function zbk:map_elements/custom_door/build_kit/door/highlight/forceload_remove with storage zbk:temp fa_fl
 
 # Tag and kill block_displays in zone
 scoreboard players operation #cd_size_x global = #cd_max_x global
@@ -108,7 +108,7 @@ execute store result storage zbk:temp bd_anim.dx int 1 run scoreboard players ge
 execute store result storage zbk:temp bd_anim.dy int 1 run scoreboard players get #cd_size_y global
 execute store result storage zbk:temp bd_anim.dz int 1 run scoreboard players get #cd_size_z global
 execute store result storage zbk:temp bd_anim.door_id int 1 run scoreboard players get #cd_sign_id global
-function zbk:map_elements/custom_door/animations/tag_block_displays with storage zbk:temp bd_anim
+function zbk:map_elements/custom_door/animations/layers/tag_block_displays with storage zbk:temp bd_anim
 
 # Kill tagged block_displays and item_displays
 execute as @e[type=block_display,tag=cd_anim_bd] if score @s custom_door_id = #cd_sign_id global run kill @s

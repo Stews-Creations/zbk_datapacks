@@ -5,4 +5,4 @@ execute if score #pool_roll temp matches 2 run scoreboard players set #gun_cycle
 execute if score #pool_roll temp matches 3 run scoreboard players set #gun_cycle temp 36
 execute if score #pool_roll temp matches 4 run scoreboard players set #gun_cycle temp 37
 execute if score #pool_roll temp matches 5 run scoreboard players set #gun_cycle temp 38
-execute as @e[type=item_display,tag=mystery_box_gun,distance=..5,limit=1,sort=nearest] at @s run function zbk:map_elements/mystery_box/guns/display_selected_gun
+execute as @e[type=item_display,tag=mystery_box_gun,distance=..5,limit=1,sort=nearest] at @s run function zbk:map_elements/mystery_box/guns/display/display_selected_gun

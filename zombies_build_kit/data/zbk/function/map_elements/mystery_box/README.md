@@ -17,3 +17,7 @@ Gameplay uses the directional buy, close, spawn, empty, and teddy-bear animation
 ## Display range
 
 `display/configure_rendering` sets item-display passengers of the generated box carriers to `view_range:0.35f`. All four directional spawn wrappers apply it after creation, and `initialize` reapplies it to loaded boxes on reload or reset. The effective distance depends on the client entity-distance settings; 0.35 is a range multiplier, not a distance in blocks. Price and claim text passengers use `view_range:0.5f`. `display/restore_text_rendering` enforces that label range each tick, so existing boxes saved with zero range recover when their chunks load. Generated transforms still hide labels during inactive and spinning stages; block displays retain their own ranges. Generated animation files remain unchanged.
+
+## Responsibility folders
+
+Weapon selection, display, inventory delivery, and cycling live in matching subfolders of `guns/`. Location indexing, selection, and lifecycle live under `locations/`. The module's `build_kit/` folder owns marker configuration, deletion, and Build Manager dispatch.

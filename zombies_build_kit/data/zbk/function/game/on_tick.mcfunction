@@ -6,10 +6,7 @@
 # Runs every game tick for game state management
 
 # Detect spawn point marker placement
-function zbk:game/management/spawn_point/place_marker
+function zbk:game/spawn_points/markers/place_marker
 
 # Detect worldspawn marker placement
-function zbk:game/management/worldspawn/place_marker
-
-# Detect spawn menu marker placement
-function zbk:game/management/spawn_menu/place_marker
+function zbk:game/lobby/markers/place_marker

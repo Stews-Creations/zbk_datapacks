@@ -10,4 +10,4 @@ $execute if score #shell_reload stats matches 1 run scoreboard players add @s re
 $execute if score @s perk_speed matches 1.. run scoreboard players operation @s reload_timer_$(slot) /= #2 stats
 function zbk:combat/weapons/reload_audio/start with storage zbk:bo3 profile
 
-function zbk:dispatch/voice_event_reload
+function zbk:combat/weapons/events/voice_event_reload

@@ -13,4 +13,4 @@ scoreboard players operation @s perk_stamina = @s perk_order
 # Play jingle
 execute as @s run function zbk:map_elements/perks/stamina_up/sound
 
-execute as @s run function zbk:dispatch/voice_event_perk_pickup
+execute as @s run function zbk:map_elements/perks/events/voice_event_perk_pickup

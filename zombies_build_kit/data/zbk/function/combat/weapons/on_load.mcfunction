@@ -8,7 +8,7 @@
 
 # ===== WEAPON CONFIGURATION =====
 # Load weapon stats database
-function zbk:combat/weapons/management/gun_stats
+function zbk:combat/weapons/profiles/gun_stats
 
 # Initialize knife damage system
 function zbk:combat/weapons/knife/on_load
@@ -36,7 +36,7 @@ scoreboard objectives add grenade_sub_step dummy
 scoreboard objectives add crawler_id dummy
 
 # ===== PLAYER GUN STATS TRACKING =====
-# Core scoreboards
+# The base pack scoreboards
 scoreboard objectives add gun_id dummy
 scoreboard objectives add grenade_ammo dummy
 scoreboard objectives add max_grenade_ammo dummy

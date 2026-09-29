@@ -1,5 +1,0 @@
-# === MACRO DIALOG - SHOW POWERED DOOR ZONE DIALOG ===
-# This is a macro function - the $ at the start of the dialog command marks it as a macro
-# Variables: zones (array of zone numbers)
-
-$dialog show @s {type:"minecraft:multi_action",title:"Configure Powered Door",body:[{type:"minecraft:plain_message",contents:[{text:"Active Zones: ",color:"gray"},{text:"$(zones)",color:"yellow",bold:true},{text:"\n\nPowered doors open automatically when power is turned on.\n\nConfigure which zones this door unlocks.",color:"white"}]}],inputs:[{type:"minecraft:number_range",key:"zone",label:"Zone Selection",start:0,end:32,initial:0,step:1}],actions:[{label:"Add Zone",action:{type:"dynamic/run_command",template:"function zbk:build_kit/management/powered_door/apply_add_zone {zone:\u0024(zone)}"}},{label:"Remove Zone",action:{type:"dynamic/run_command",template:"function zbk:build_kit/management/powered_door/apply_remove_zone {zone:\u0024(zone)}"}},{label:"Delete",action:{type:"minecraft:run_command",command:"/function zbk:build_kit/management/powered_door/delete_marker"}},{label:"Back",action:{type:"minecraft:show_dialog",dialog:"zbk:build_kit"}}],exit_action:{label:"Close"}}

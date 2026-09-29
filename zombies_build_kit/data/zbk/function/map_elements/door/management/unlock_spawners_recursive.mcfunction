@@ -15,13 +15,13 @@ execute as @e[type=marker,tag=zombie_spawner] run function zbk:map_elements/door
 # Unlock all dog spawners with this zone
 execute as @e[type=marker,tag=dog_spawner] run function zbk:map_elements/door/management/check_and_unlock_spawner
 
-function zbk:dispatch/extension/map_elements/door/management/unlock_spawners_recursive/1
+function zbk:map_elements/door/events/extension/management/unlock_spawners_recursive
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Fire zone_unlocked signals for this zone
 function zbk:map_elements/game_signals/runtime/fire_zone_unlocked
 execute store result storage zbk:state zone_args.zone int 1 run scoreboard players get #zone_to_unlock global
-function zbk:zones/notify with storage zbk:state zone_args
+function zbk:map_elements/door/management/notify_zone_unlocked with storage zbk:state zone_args
 
 # Feedback message (debug only)
 execute if score #zone_to_unlock global matches 0 as @a[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text":"[ZONES] ","color":"yellow"},{"text":"Zone 0 unlocked (was already unlocked)","color":"gray"}]

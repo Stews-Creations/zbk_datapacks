@@ -17,5 +17,5 @@ scoreboard players set #is_explosive stats 0
 particle minecraft:electric_spark ~ ~1 ~ 0.3 0.6 0.3 0.15 8 force
 # Slowness VII reduces normal walking speed to zero; refreshed every 0.5 seconds.
 effect give @s minecraft:slowness 1 6 true
-function zbk:api/combat/weapons/mechanics/raycast/collide
+function zbk:combat/weapons/mechanics/raycast/collide
 tag @s remove raycast_hit

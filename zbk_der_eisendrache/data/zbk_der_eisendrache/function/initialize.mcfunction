@@ -12,4 +12,4 @@ function zbk_der_eisendrache:rocket_test_launch/initialize
 execute unless score #rocket_skip_reset global matches 1 run function zbk_der_eisendrache:rocket/management/delete
 execute unless score #rocket_skip_reset global matches 1 run function zbk_der_eisendrache:rocket/management/apply_map_selection
 scoreboard players set #rocket_skip_reset global 0
-function zbk_der_eisendrache:sounds/music/stop_ambient
+function zbk_der_eisendrache:game/audio/music/stop_ambient

@@ -26,7 +26,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:custom_start_round"
+        "dialog": "zbk:build_kit/game_management/custom_start_round"
       }
     },
     {
@@ -97,7 +97,7 @@
       "tooltip": "Settings -> Skin Customization -> Main Hand: Left. Open setup and per-player HUD/effect alignment.",
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:swap_hands"
+        "dialog": "zbk:player_tools/swap_hands"
       }
     }
   ],

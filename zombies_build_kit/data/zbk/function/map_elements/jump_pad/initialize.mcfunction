@@ -13,8 +13,8 @@ execute as @e[type=marker,tag=jump_pad,tag=jp_start] run tag @s add jp_locked
 execute as @e[type=marker,tag=jump_pad,tag=jp_start] if data entity @s data{require_unlock:0} run tag @s remove jp_locked
 
 # Set lamp states immediately and schedule a delayed retry to catch unloaded chunks
-function zbk:map_elements/jump_pad/management/set_lamps
-schedule function zbk:map_elements/jump_pad/management/set_lamps 5t
+function zbk:map_elements/jump_pad/display/set_lamps
+schedule function zbk:map_elements/jump_pad/display/set_lamps 5t
 
 # Reset timers
 scoreboard players reset @e[type=marker,tag=jump_pad,tag=jp_start] jump_pad_cooldown

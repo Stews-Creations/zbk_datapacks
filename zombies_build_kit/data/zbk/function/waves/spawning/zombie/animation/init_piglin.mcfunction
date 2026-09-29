@@ -17,4 +17,4 @@ execute if entity @e[type=mannequin,tag=wz_converting,tag=immune_nuke] run tag @
 execute if entity @e[type=mannequin,tag=wz_converting,tag=immune_melee] run tag @s add immune_melee
 return 1
 
-function zbk:dispatch/enemy_spawned
+function zbk:waves/events/enemy_spawned

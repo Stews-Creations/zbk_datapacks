@@ -8,18 +8,18 @@
 # This file orchestrates all module load functions
 
 # ===== STARTUP MESSAGE =====
-execute as @a run function zbk:load_message
+execute as @a run function zbk:global/startup/load_message
 
 # ===== GLOBAL INITIALIZATION =====
 # Initialize global systems first (gamerules, scoreboards, teams)
-function zbk:on_load
+function zbk:global/startup/on_load
 function zbk:global/on_load
 
 # ===== MODULE LOAD FUNCTIONS =====
 # Call all module load functions to initialize scoreboards and systems
 function zbk:game/on_load
 function zbk:player/on_load
-function zbk:sounds/voice/on_load
+function zbk:player/voice/on_load
 function zbk:combat/on_load
 function zbk:behavior/on_load
 function zbk:waves/on_load
@@ -40,4 +40,4 @@ function zbk:game/initialize
 function zbk:map_elements/blocks/management/reload
 
 # ===== WORLD SPAWN FUNCTIONS =====
-schedule function zbk:scheduled_tp 10t
+schedule function zbk:game/lobby/teleport_all 10t

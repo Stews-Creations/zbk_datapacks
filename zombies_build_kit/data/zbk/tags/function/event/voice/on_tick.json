@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "zbk:player/voice/on_tick"
+  ]
+}

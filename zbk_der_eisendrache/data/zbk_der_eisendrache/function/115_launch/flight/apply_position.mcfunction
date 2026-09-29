@@ -14,4 +14,4 @@ execute store result storage zbk:temp jump_arc_pos.y double 0.001 run scoreboard
 execute store result storage zbk:temp jump_arc_pos.z double 0.001 run scoreboard players get @s arc_pos_z
 
 # Teleport armor stand vehicle (player rides along)
-execute as @e[type=armor_stand,tag=115_launch_vehicle] if score @s id = #current_player_id arc_calc run function zbk:api/map_elements/jump_pad/management/tp_arc with storage zbk:temp jump_arc_pos
+execute as @e[type=armor_stand,tag=115_launch_vehicle] if score @s id = #current_player_id arc_calc run function zbk:map_elements/jump_pad/movement/tp_arc with storage zbk:temp jump_arc_pos

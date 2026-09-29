@@ -1,7 +1,7 @@
 # Build fixed-width HUD slots for the current player. Each render consumes this
 # shared scratch storage synchronously before the next player is processed.
 
-# Nine perk positions, filled left-to-right by acquisition order.
+# Nine perk positions, indexed by acquisition order; renderers place the first nearest center.
 data merge storage zbk:hud {args:{perk_1:"\uE044",perk_2:"\uE044",perk_3:"\uE044",perk_4:"\uE044",perk_5:"\uE044",perk_6:"\uE044",perk_7:"\uE044",perk_8:"\uE044",perk_9:"\uE044"}}
 execute store result storage zbk:hud args.perk_slot int 1 run scoreboard players get @s perk_jugg
 data modify storage zbk:hud args.perk_glyph set value "\uE030"

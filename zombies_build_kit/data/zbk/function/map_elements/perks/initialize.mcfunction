@@ -1,3 +1,5 @@
+execute as @e[type=marker,tag=pm_v2_upgrade] at @s run function zbk:map_elements/perks/machines/legacy/upgrade
+function zbk:map_elements/perks/management/restore_structures
 # === INITIALIZE PERKS ===
 # Purpose: Set perk system to default values
 # Called from on_load.mcfunction and game reset
@@ -16,7 +18,7 @@ execute as @a run scoreboard players set @s perk_count 0
 execute as @a run scoreboard players set @s perk_order 0
 execute as @a run scoreboard players set @s revive_buys 0
 execute as @a run clear @s potion
-execute as @a run function zbk:combat/weapons/management/remove_mule_gun
+execute as @a run function zbk:combat/weapons/inventory/remove_mule_gun
 
 # Reset Quick Revive price display based on game mode
 # Set default to co-op mode (2) if not set, then update display
@@ -50,6 +52,14 @@ function zbk:map_elements/perks/wunderfizz/location_manager/init_system
 
 # Respawn UI for all existing wunderfizz markers
 tag @e[type=marker,tag=wunderfizz] remove wunderfizz_ui_spawned
-execute as @e[type=marker,tag=wunderfizz] at @s run function zbk:map_elements/perks/wunderfizz/spawning/spawn_ui
+execute as @e[type=marker,tag=wunderfizz,tag=!pm_v2] at @s run function zbk:map_elements/perks/wunderfizz/spawning/spawn_ui
 
 function zbk:debug/info {f:"PERK",m:"Perk system initialized"}
+
+# New and legacy placements coexist; only v2 markers rebuild model cabinets.
+tag @e[type=marker,tag=perk_machine,tag=!pm_v2] add perk_machine_legacy
+tag @e[type=marker,tag=wunderfizz,tag=!pm_v2] add perk_machine_legacy
+scoreboard players add #next pm_v2_id 0
+execute as @e[type=marker,scores={pm_v2_id=1..}] run scoreboard players operation #next pm_v2_id > @s pm_v2_id
+kill @e[tag=pm_v2_runtime]
+execute as @e[type=marker,tag=pm_v2] at @s run function zbk:map_elements/perks/machines/lifecycle/rebuild

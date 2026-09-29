@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Player Block Marker",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Marker Type: Player Block\n\nThis marker defines where players get teleported when\nthey enter a light level 5 or 6 blocking zone.\n\nPlayers touching the block zone will be moved to\nthe nearest player_block marker."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Delete Marker",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "/function zbk:behavior/areas/player_block/build_kit/markers/delete_marker"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back to Barriers",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/barriers/barriers"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "pause": false
+}

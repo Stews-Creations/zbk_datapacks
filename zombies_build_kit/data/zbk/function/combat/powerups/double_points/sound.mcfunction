@@ -1,1 +1,1 @@
-function zbk:sounds/play/drops_double_points
+function zbk:combat/powerups/double_points/audio/drops_double_points

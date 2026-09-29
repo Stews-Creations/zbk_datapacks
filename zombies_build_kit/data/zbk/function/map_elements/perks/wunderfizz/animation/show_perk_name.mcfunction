@@ -3,19 +3,29 @@
 
 # Summon text display based on current perk value
 # Juggernog (0)
-execute if score @s wunderfizz_perk matches 0 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name"],text:[{"text":"Juggernog","color":"red","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+execute if score @s wunderfizz_perk matches 0 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Juggernog","color":"red","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
 
 # Speed Cola (1)
-execute if score @s wunderfizz_perk matches 1 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name"],text:[{"text":"Speed Cola","color":"green","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+execute if score @s wunderfizz_perk matches 1 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Speed Cola","color":"green","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
 
 # Double Tap (2)
-execute if score @s wunderfizz_perk matches 2 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name"],text:[{"text":"Double Tap","color":"gold","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+execute if score @s wunderfizz_perk matches 2 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Double Tap","color":"gold","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
 
 # Stamina Up (3)
-execute if score @s wunderfizz_perk matches 3 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name"],text:[{"text":"Stamina Up","color":"gold","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+execute if score @s wunderfizz_perk matches 3 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Stamina Up","color":"gold","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
 
 # Quick Revive (4)
-execute if score @s wunderfizz_perk matches 4 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name"],text:[{"text":"Quick Revive","color":"aqua","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+execute if score @s wunderfizz_perk matches 4 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Quick Revive","color":"aqua","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
 
 # Mule Kick (5)
-execute if score @s wunderfizz_perk matches 5 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name"],text:[{"text":"Mule Kick","color":"dark_green","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+execute if score @s wunderfizz_perk matches 5 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Mule Kick","color":"dark_green","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+
+# Match the centered price label when the bottle is ready to claim.
+execute if entity @s[tag=pm_v2] rotated as @s run tp @e[type=text_display,tag=pm_v2_preview] ^ ^-0.75 ^0.0875
+execute if entity @s[tag=pm_v2] run data merge entity @e[type=text_display,tag=pm_v2_preview,limit=1] {billboard:"fixed",view_range:0.0390625f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.5f,0.5f,0.5f]}}
+execute if entity @s[tag=pm_v2] run data modify entity @e[type=text_display,tag=pm_v2_preview,limit=1] Rotation set from entity @s Rotation
+execute if entity @s[tag=pm_v2] as @e[type=text_display,tag=pm_v2_preview] at @s run rotate @s ~180 ~
+
+execute if entity @s[tag=pm_v2] run tag @e[tag=pm_v2_preview] add pm_v2_runtime
+execute if entity @s[tag=pm_v2] run scoreboard players operation @e[tag=pm_v2_preview] pm_v2_id = @s pm_v2_id
+tag @e[tag=pm_v2_preview] remove pm_v2_preview

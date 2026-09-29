@@ -7,5 +7,5 @@ execute if items entity @s weapon.mainhand *[custom_data~{rocket_shield_prototyp
 execute if items entity @s weapon.offhand *[custom_data~{death_machine:true}] run return run function zbk:combat/powerups/death_machine/on_use
 execute if items entity @s weapon.offhand minecraft:ghast_tear[custom_data~{bo3:true}] run return run function zbk:combat/weapons/guns/bo3/input/use
 execute if items entity @s weapon.offhand *[custom_data~{gun_id:7}] run return run function zbk:combat/weapons/guns/ray_gun/fire
-function zbk:dispatch/extension/combat/weapons/mechanics/input/interaction_use/1
+function zbk:combat/weapons/events/extension/mechanics/input/interaction_use
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value

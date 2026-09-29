@@ -11,5 +11,5 @@ scoreboard players set #visible zr_state 0
 execute as @a[gamemode=adventure,team=!downed] at @s anchored eyes positioned ^ ^ ^ run function zbk:behavior/relocation/zombie/visibility/start
 tag @s remove zr_subject
 execute if score #visible zr_state matches 1 run return run function zbk:behavior/relocation/zombie/remember
-function zbk:behavior/relocation/refund_zombie
+function zbk:behavior/relocation/refunds/refund_zombie
 function zbk:debug/info {f:"WAVE",m:"Recovered one stranded zombie and refunded its slot"}

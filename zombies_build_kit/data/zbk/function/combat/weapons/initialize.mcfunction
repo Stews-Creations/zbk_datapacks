@@ -1,4 +1,4 @@
-function zbk:dispatch/extension/combat/weapons/initialize/1
+function zbk:combat/weapons/events/extension/initialize/before_reset
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 function zbk:combat/weapons/special_equipment/rocket_shield/initialize
 
@@ -8,11 +8,11 @@ function zbk:combat/weapons/special_equipment/rocket_shield/initialize
 # Purpose: Reset all weapon state for @s and give starting pistol.
 # Called from:
 #   - player/setup/setup_player (full player init / late join)
-#   - player/down_system/on_death (weapon-only reset on bleedout)
+#   - player/down_system/lifecycle/on_death (weapon-only reset on bleedout)
 # ===================================
 
 # ===== WEAPON SYSTEM =====
-# Core tracking
+# The base pack tracking
 scoreboard players set @s active_weapon 0
 scoreboard players set @s weapon_count 0
 # Bleed-out and full player setup remove the Bowie Knife upgrade. Downs/revives do not call this initializer.
@@ -63,7 +63,7 @@ scoreboard players set @s element_3 0
 # Semi-auto trigger locks
 scoreboard players reset @s pistol_trigger_lock
 scoreboard players reset @s ray_gun_trigger_lock
-function zbk:dispatch/extension/combat/weapons/initialize/2
+function zbk:combat/weapons/events/extension/initialize/after_slot_reset
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 scoreboard players reset @s rainbow_rifle_trigger_lock
 scoreboard players reset @s melee_timer
@@ -80,14 +80,14 @@ scoreboard players reset @s special_equipment_use_lock
 
 # ===== REVOKE WEAPON ADVANCEMENTS =====
 advancement revoke @s only zbk:ray_gun
-function zbk:dispatch/extension/combat/weapons/initialize/3
+function zbk:combat/weapons/events/extension/initialize/after_ray_gun_revoke
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 advancement revoke @s only zbk:death_machine
 advancement revoke @s only zbk:trip_mine
 
 # Revoke cooldown advancements
 advancement revoke @s only zbk:ray_gun_cooldown
-function zbk:dispatch/extension/combat/weapons/initialize/4
+function zbk:combat/weapons/events/extension/initialize/before_starting_weapon
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # ===== GIVE STARTING WEAPON =====

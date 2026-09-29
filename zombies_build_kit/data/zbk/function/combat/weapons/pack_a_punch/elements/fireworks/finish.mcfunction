@@ -11,7 +11,7 @@ execute as @a if score @s id = #fw_kill_shooter stats run function zbk:player/po
 
 # Drop loot at victim position
 scoreboard players operation #map_killer temp = #fw_kill_shooter stats
-execute at @s run function zbk:enemy/killed
+execute at @s run function zbk:combat/enemies/lifecycle/killed
 loot spawn ~ ~ ~ loot entities/zombified_piglin
 
 # Finale: trigger zombie spawns ONE big multi-color firework explosion at the kill moment

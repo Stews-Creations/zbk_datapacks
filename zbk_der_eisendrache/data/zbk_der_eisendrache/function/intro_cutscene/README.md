@@ -1,18 +1,18 @@
 # Der Eisendrache intro cutscene
 
-This module owns the DE opening video, camera handoff, and deferred game-start ticket. Core owns game state and validates the eventual resume request.
+This module owns the DE opening video, camera handoff, and deferred game-start ticket. The base pack owns game state and validates the eventual resume request.
 
 ## Start requirements
 
-Core API 1.0.0 must have selected this provider. The rocket must be rebuilt and an armor stand tagged `intro_cutscene` must exist. The `before_game_start` listener blocks an unready rocket, skips the intro for an immediate or resumed start, and otherwise requests deferral when the camera exists. A missing camera allows Core to continue without the DE intro.
+The base pack must have selected this provider. The rocket must be rebuilt and an armor stand tagged `intro_cutscene` must exist. The `before_game_start` listener blocks an unready rocket, skips the intro for an immediate or resumed start, and otherwise requests deferral when the camera exists. A missing camera allows the base pack to continue without the DE intro.
 
-The `game_start_deferred` listener copies Core's owner, token, and generation ticket before starting playback. Players spectate the persistent camera while `#global cutscene_active` is `5`.
+The `game_start_deferred` listener copies the base pack's owner, token, and generation ticket before starting playback. Players spectate the persistent camera while `#global cutscene_active` is `5`.
 
 ## Completion and cleanup
 
-The `cutscene_tick` listener waits for playback to finish. `management/finish` schedules a resume outside the event dispatch, once per ticket. Core rechecks readiness and accepts the ticket at most once. Reset and reload cancel the local callback and invalidate pending starts. An inactive provider cannot resume a game.
+The `cutscene_tick` listener waits for playback to finish. `management/finish` schedules a resume outside the event dispatch, once per ticket. The base pack rechecks readiness and accepts the ticket at most once. Reset and reload cancel the local callback and invalidate pending starts. An inactive provider cannot resume a game.
 
-The `cutscene_stop` listener remains available after provider deactivation while state `5` or the local video flag identifies an owned playback session. It stops the video, audio, stopwatch, and delayed camera handoff. Core's shared cleanup restores player state and removes temporary cameras; the placed `intro_cutscene` armor stand is preserved.
+The `cutscene_stop` listener remains available after provider deactivation while state `5` or the local video flag identifies an owned playback session. It stops the video, audio, stopwatch, and delayed camera handoff. The base pack's shared cleanup restores player state and removes temporary cameras; the placed `intro_cutscene` armor stand is preserved.
 
 ## Generated playback
 

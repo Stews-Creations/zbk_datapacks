@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "zbk:player/health/audio/voice/trigger/take_damage"
+  ]
+}

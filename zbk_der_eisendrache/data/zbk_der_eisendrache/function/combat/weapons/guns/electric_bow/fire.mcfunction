@@ -39,4 +39,4 @@ scoreboard players set @s bow_charge_time 0
 scoreboard players set @s electric_bow_trigger_lock 2
 
 # No-ammo voice callout (only triggers when both clip and reserve are empty)
-function zbk:api/sounds/voice/try_no_ammo with storage zbk:config
+function zbk:combat/weapons/events/voice_try_no_ammo with storage zbk:config

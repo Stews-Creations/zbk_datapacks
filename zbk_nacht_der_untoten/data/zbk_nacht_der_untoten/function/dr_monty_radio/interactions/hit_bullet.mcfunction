@@ -1,0 +1,3 @@
+function zbk_nacht_der_untoten:barrel_easter_egg/audio/stop
+function zbk_nacht_der_untoten:dr_monty_radio/audio/stop_music
+function zbk_nacht_der_untoten:dr_monty_radio/audio/play_music

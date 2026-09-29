@@ -20,6 +20,6 @@
   },
   "zbk": {
     "version": "1.0.0",
-    "api": 10000
+    "compatibility": 30000
   }
 }

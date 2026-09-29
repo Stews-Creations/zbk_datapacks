@@ -1,1 +1,0 @@
-function zbk:dispatch/sound_voice_no_ammo

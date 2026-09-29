@@ -11,7 +11,7 @@ execute as @a if score @s id = #tw_kill_shooter stats run function zbk:player/po
 
 # Drop loot at victim position (mid-air — items will fall)
 scoreboard players operation #map_killer temp = #tw_kill_shooter stats
-execute at @s run function zbk:enemy/killed
+execute at @s run function zbk:combat/enemies/lifecycle/killed
 loot spawn ~ ~ ~ loot entities/zombified_piglin
 
 # Death effect — thunder crack + spark burst

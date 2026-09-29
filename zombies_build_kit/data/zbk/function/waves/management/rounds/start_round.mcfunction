@@ -43,7 +43,7 @@ scoreboard players set #global wave.spawn_delay_timer 0
 function zbk:map_elements/barrier/management/reset_repair_limits
 
 # Round 2: Upgrade grenade capacity to 4 and give 2 grenades
-execute if score #global wave.round matches 2 run function zbk:combat/weapons/grenade/increase_max_grenades
+execute if score #global wave.round matches 2 run function zbk:combat/weapons/grenade/inventory/increase_max_grenades
 
 # Check if this is a dog round
 function zbk:waves/special_rounds/dog/check_round
@@ -53,11 +53,11 @@ function zbk:waves/special_rounds/panzer/check_round
 # Display round title to players
 execute if score #global wave.is_dog_round matches 0 run title @a title [{"text":"Round ","color":"gold"},{"score":{"name":"#global","objective":"wave.round"},"color":"yellow"}]
 execute if score #global wave.is_dog_round matches 1 run title @a title [{"text":"Dog Round","color":"red"}]
-execute if score #global wave.is_dog_round matches 1 as @a at @s run function zbk:sounds/play/dog_start
+execute if score #global wave.is_dog_round matches 1 as @a at @s run function zbk:waves/special_rounds/dog/audio/dog_start
 
 
 # Set countdown timer (100 ticks = 5 seconds)
-execute if score #global wave.is_dog_round matches 1 as @a at @s run function zbk:dispatch/voice_event_dog
+execute if score #global wave.is_dog_round matches 1 as @a at @s run function zbk:waves/special_rounds/dog/events/voice_event_dog
 scoreboard players set #global wave.countdown 100
 
 # Set state to countdown
@@ -66,4 +66,4 @@ scoreboard players set #global wave.is_active 1
 # Debug logging for zombie rounds
 execute if score #global wave.is_dog_round matches 0 run tellraw @a[tag=debug] [{"text":"[Debug] ","color":"gray"},{"text":"Total Zombies: ","color":"white"},{"score":{"name":"#global","objective":"wave.spawn_count"},"color":"yellow"},{"text":" | Burst Size: ","color":"white"},{"score":{"name":"#global","objective":"wave.burst_size"},"color":"aqua"},{"text":" | Delay: ","color":"white"},{"score":{"name":"#global","objective":"wave.spawn_delay"},"color":"green"},{"text":" ticks","color":"green"}]
 
-function zbk:dispatch/round_start
+function zbk:waves/events/round_start

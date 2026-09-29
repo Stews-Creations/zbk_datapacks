@@ -33,7 +33,7 @@ execute as @e[type=marker,tag=teleporter,tag=tp_end] at @s run function zbk:map_
 execute as @e[type=marker,tag=teleporter,tag=tp_auto_return] at @s run function zbk:map_elements/teleporter/purchasing/update_auto_return_display
 
 # Set up end marker displays based on two-way setting
-execute as @e[type=marker,tag=teleporter,tag=tp_start] run function zbk:map_elements/teleporter/management/setup_end_display
+execute as @e[type=marker,tag=teleporter,tag=tp_start] run function zbk:map_elements/teleporter/display/setup_end_display
 
 # Confirmation message (debug only)
 function zbk:debug/info {f:"TELE",m:"Teleporter system initialized"}

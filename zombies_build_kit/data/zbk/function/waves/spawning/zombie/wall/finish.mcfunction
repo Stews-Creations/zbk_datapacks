@@ -1,6 +1,6 @@
 # Confirm a live mannequin and usable two-block exit before conversion.
 execute store result score #health wz_state run data get entity @s Health 100
-execute if score #health wz_state matches ..0 run return run function zbk:waves/spawning/zombie/discard_mannequin
+execute if score #health wz_state matches ..0 run return run function zbk:waves/spawning/zombie/cleanup/discard_mannequin
 scoreboard players set #failure_reason wz_state 4
 execute unless block ~ ~ ~ #zbk:spawn_exit_passable run return run function zbk:waves/spawning/zombie/animation/fail
 execute unless block ~ ~1 ~ #zbk:spawn_exit_passable run return run function zbk:waves/spawning/zombie/animation/fail

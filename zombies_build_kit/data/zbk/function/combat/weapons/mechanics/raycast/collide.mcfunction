@@ -7,15 +7,7 @@ execute if entity @s[tag=solo_down_decoy] run return fail
 execute if entity @s[tag=turned_zombie] run return fail
 
 # Stop walking immediately on a full-charge direct hit, respecting elemental immunity.
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/collide/1
-execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
-
-# Spawn the charged electric storm at the first valid enemy before lethal damage.
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/collide/2
-execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
-
-# The first valid quick-shot enemy leaves one orb; the direct shot still pierces.
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/collide/3
+function zbk:combat/weapons/events/extension/mechanics/raycast/collide/before_core_damage
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Tag mob so it knows it was hit by this raycast loop
@@ -48,10 +40,10 @@ execute if entity @s[distance=1.65..] run particle minecraft:block{block_state:{
 # Tag for headshot kill tracking
 execute if entity @s[distance=1.65..] run tag @s add headshot_hit
 
-# Core damage
+# The base pack damage
 execute store result score #health stats run data get entity @s Health
 execute unless score #gun_id stats matches 20..46 unless score #is_explosive stats matches 1 run execute store result entity @s Health float 1.0 run scoreboard players operation #health stats -= #damage stats
-execute unless score #gun_id stats matches 20..46 if score #is_explosive stats matches 1 run function zbk:combat/weapons/effects/explosive/direct_damage
+execute unless score #gun_id stats matches 20..46 if score #is_explosive stats matches 1 run function zbk:combat/weapons/effects/explosive/damage/direct_damage
 
 execute if score #gun_id stats matches 20..46 run function zbk:combat/weapons/guns/bo3/combat/damage
 
@@ -75,7 +67,7 @@ execute unless score #gun_id stats matches 20..46 if score #is_explosive stats m
 # Trigger explosion at hit position (splash damage or crawler conversion based on hit height)
 execute if score #is_explosive stats matches 1 unless score #gun_id stats matches 20..46 run function zbk:combat/weapons/effects/explosive/entity_explosion
 execute if score #is_explosive stats matches 1 if score #gun_id stats matches 20..46 run function zbk:combat/weapons/guns/bo3/combat/explosion
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/collide/4
+function zbk:combat/weapons/events/extension/mechanics/raycast/collide/after_core_explosion
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 execute if score #is_explosive stats matches 1 if score #gun_id stats matches 5 run playsound minecraft:entity.generic.explode master @a[distance=..20] ~ ~ ~ 0.6 1.4
 
@@ -94,25 +86,25 @@ execute if entity @s[type=wolf] run data modify entity @s AngryAt set from stora
 
 # Give points for kill
 execute store result score #health stats run data get entity @s Health 100
-execute if score #health stats matches ..0 if entity @s[tag=crawler_ai] run execute as @a if score @s id = #player stats run function zbk:dispatch/voice_event_crawler_kill
-execute if score #health stats matches ..0 unless entity @s[tag=crawler_ai] unless entity @s[tag=headshot_hit] run execute as @a if score @s id = #player stats run function zbk:dispatch/voice_event_kill
+execute if score #health stats matches ..0 if entity @s[tag=crawler_ai] run execute as @a if score @s id = #player stats run function zbk:combat/enemies/events/voice_event_crawler_kill
+execute if score #health stats matches ..0 unless entity @s[tag=crawler_ai] unless entity @s[tag=headshot_hit] run execute as @a if score @s id = #player stats run function zbk:combat/enemies/events/voice_event_kill
 execute if score #health stats matches ..0 run execute as @a if score @s id = #player stats run function zbk:player/points/add_kill_points
 
 # Remove paired crawler display on kill
 execute if score #health stats matches ..0 if entity @s[tag=crawler_ai] run function zbk:behavior/crawler/remove_paired_display
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/collide/5
+function zbk:combat/weapons/events/extension/mechanics/raycast/collide/before_headshot_tracking
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Track headshot kills
 execute if score #health stats matches ..0 if entity @s[tag=headshot_hit] as @a if score @s id = #player stats run scoreboard players add @s stat_headshots 1
-execute if score #health stats matches ..0 unless entity @s[tag=crawler_ai] if entity @s[tag=headshot_hit] as @a if score @s id = #player stats run function zbk:dispatch/voice_event_headshot
+execute if score #health stats matches ..0 unless entity @s[tag=crawler_ai] if entity @s[tag=headshot_hit] as @a if score @s id = #player stats run function zbk:combat/enemies/events/voice_event_headshot
 tag @s remove headshot_hit
 
 execute if score #health stats matches ..0 run scoreboard players operation #map_killer temp = #player stats
-execute if score #health stats matches ..0 run execute at @s run function zbk:enemy/killed
+execute if score #health stats matches ..0 run execute at @s run function zbk:combat/enemies/lifecycle/killed
 execute if score #health stats matches ..0 run execute if entity @s[type=zombified_piglin] run loot spawn ~ ~ ~ loot entities/zombified_piglin
 execute if score #health stats matches ..0 run execute if entity @s[type=wolf] run loot spawn ~ ~ ~ loot entities/wolf
 
 # Conversion is last: the adult's removal must not award a second kill or soul.
 # Direct targets already took impact damage; never apply another splash hit here.
-execute unless score #gun_id stats matches 20..46 if score #is_explosive stats matches 1 if entity @s[distance=..1,type=zombified_piglin,nbt={IsBaby:0b}] if score #health stats matches 1.. run function zbk:combat/weapons/effects/explosive/direct_survivor
+execute unless score #gun_id stats matches 20..46 if score #is_explosive stats matches 1 if entity @s[distance=..1,type=zombified_piglin,nbt={IsBaby:0b}] if score #health stats matches 1.. run function zbk:combat/weapons/effects/explosive/damage/direct_survivor

@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Sniper Rifles",
+  "external_title": "Sniper Rifles",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Choose a gun to equip."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Drakon (43)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_bo3 set 43"
+      }
+    },
+    {
+      "label": {
+        "text": "Locus (44)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_bo3 set 44"
+      }
+    },
+    {
+      "label": {
+        "text": "SVG-100 (45)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_bo3 set 45"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

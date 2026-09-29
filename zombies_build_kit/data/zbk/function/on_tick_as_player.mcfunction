@@ -15,4 +15,4 @@ function zbk:map_elements/on_tick_as_player
 function zbk:build_kit/on_tick_as_player
 function zbk:game/on_tick_as_player
 
-execute if score #ready zbk.api matches 1 run function zbk:dispatch/player_tick
+execute if score #ready zbk.lifecycle matches 1 run function zbk:player/events/player_tick

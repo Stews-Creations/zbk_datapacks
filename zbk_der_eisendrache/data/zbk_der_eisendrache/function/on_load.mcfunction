@@ -6,5 +6,6 @@ function zbk_der_eisendrache:anti_gravity/on_load
 function zbk_der_eisendrache:map_pack_a_punch/on_load
 function zbk_der_eisendrache:tram/on_load
 function zbk_der_eisendrache:quest/on_load
-function zbk_der_eisendrache:sounds/on_load
+function zbk_der_eisendrache:player/voice/on_load
+function zbk_der_eisendrache:game/audio/music/initialize
 scoreboard objectives add character dummy

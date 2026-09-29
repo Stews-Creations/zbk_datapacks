@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Game Management",
+  "external_title": "Game Management",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Setup Guide:\n1. Place spawn points for game start and round respawns.\n2. Place a worldspawn marker for game over.\n3. Place the spawn menu for Start Game, Cutscene, Music, and Help Book."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Spawn Point Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_spawn_point set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Worldspawn Marker Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_worldspawn set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Spawn Menu Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_spawn_menu_v2 set 1"
+      }
+    },
+    {
+      "label": " ",
+      "action": {
+        "type": "run_command",
+        "command": ""
+      }
+    },
+    {
+      "label": {
+        "text": "<- Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

@@ -1,0 +1,5 @@
+data modify storage zbk:events stack append value {context:{event:"extension/build_kit/management/build_manager/dispatch/1",request:1b,blocked:0b,handled:0b,args:{}}}
+execute if entity @e[tag=build_manager_target,tag=panzer_spawner] run function zbk:bosses/panzer/build_kit/dispatch
+function #zbk:event/extension/build_kit/management/build_manager/dispatch/after_spawner_tools
+data modify storage zbk:events result set from storage zbk:events stack[-1].context
+data remove storage zbk:events stack[-1]

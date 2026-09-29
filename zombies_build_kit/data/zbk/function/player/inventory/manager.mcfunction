@@ -18,4 +18,4 @@ function zbk:player/inventory/equipment/clear_reload_bar
 function zbk:player/actionbar/reload/tick
 function zbk:player/inventory/special_equipment
 
-function zbk:dispatch/inventory_update
+function zbk:player/inventory/events/inventory_update

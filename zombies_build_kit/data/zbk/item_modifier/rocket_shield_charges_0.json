@@ -1,6 +1,6 @@
 {
   "function": "minecraft:set_components",
   "components": {
-    "minecraft:item_model": "zbk:rocket_shield/shield"
+    "minecraft:item_model": "zbk:special_equipment/rocket_shield/shield"
   }
 }

@@ -6,7 +6,7 @@
 # Dependencies: combat/powerups/on_load.mcfunction
 # ===================================
 
-function zbk:dispatch/extension/combat/powerups/on_tick_as_player/1
+function zbk:combat/powerups/events/extension/on_tick_as_player
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Death Machine: per-player timer countdown, cleanup at expiry.

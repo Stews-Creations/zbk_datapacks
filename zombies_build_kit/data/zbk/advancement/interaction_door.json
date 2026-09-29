@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "zbk:map_elements/door/purchasable/interact"
+    "function": "zbk:map_elements/door/purchasable/purchasing/interact"
   }
 }

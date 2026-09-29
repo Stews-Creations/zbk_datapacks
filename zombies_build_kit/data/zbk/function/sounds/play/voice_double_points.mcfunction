@@ -1,1 +1,0 @@
-function zbk:dispatch/sound_voice_double_points

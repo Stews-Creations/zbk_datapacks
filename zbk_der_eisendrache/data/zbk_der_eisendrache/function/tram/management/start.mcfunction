@@ -15,7 +15,7 @@ execute as @e[type=block_display,tag=tram_route_display,scores={tram_auto_start=
 scoreboard players add @e[type=block_display,tag=tram_route_display,scores={tram_auto_start=1,tram_delay_timer=0..}] tram_delay_timer 10
 
 # Debug message
-function zbk:api/debug/info {f:"TRAM",m:"Tram started"}
+function zbk:debug/info {f:"TRAM",m:"Tram started"}
 
 # Start the countdown/movement loop only when at least one configured tram exists.
 execute if entity @e[type=block_display,tag=tram_route_display,scores={tram_delay_timer=0..}] run schedule function zbk_der_eisendrache:tram/route/move_loop 1t replace

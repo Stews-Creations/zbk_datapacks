@@ -1,0 +1,71 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Doors",
+  "external_title": "Doors",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Configure purchasable and power-activated doors\n\nNote: Use Build Stick to set price and configure spawn zones"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Purchasable Doors →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/doors/purchasable_doors"
+      }
+    },
+    {
+      "label": {
+        "text": "Powered Doors →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/doors/powered_doors"
+      }
+    },
+    {
+      "label": {
+        "text": "Custom Doors →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/doors/custom_doors"
+      }
+    },
+    {
+      "label": {
+        "text": "Reset All Doors",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger reset_doors set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

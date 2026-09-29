@@ -8,5 +8,5 @@ execute store result score #now cb_stamp run time query gametime
 scoreboard players set #clicked cb_target 0
 function zbk:map_elements/crafting_bench/interactions/find_clicked with storage zbk:crafting_bench click
 execute unless score #clicked cb_target matches 1.. run return 0
-execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run return run function zbk:build_kit/management/buildables/open_clicked_bench
+execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run return run function zbk:map_elements/crafting_bench/build_kit/open_clicked_bench
 function zbk:map_elements/crafting_bench/interactions/pulse

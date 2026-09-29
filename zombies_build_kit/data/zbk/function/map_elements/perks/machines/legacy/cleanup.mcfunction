@@ -1,0 +1,39 @@
+# Called at the persistent placement marker before deleting its runtime.
+execute if entity @s[tag=pm_native] run return 0
+# Missing old orientation: do not guess which neighboring blocks belong to it.
+execute unless score @s playerYaw matches -180..180 run return 0
+execute if entity @s[tag=perk_juggernog] if score @s playerYaw matches -45..45 align xyz run function zbk:map_elements/perks/machines/legacy/juggernog/south
+execute if entity @s[tag=perk_juggernog] if score @s playerYaw matches 45..135 align xyz run function zbk:map_elements/perks/machines/legacy/juggernog/west
+execute if entity @s[tag=perk_juggernog] if score @s playerYaw matches 135..180 align xyz run function zbk:map_elements/perks/machines/legacy/juggernog/north
+execute if entity @s[tag=perk_juggernog] if score @s playerYaw matches -180..-135 align xyz run function zbk:map_elements/perks/machines/legacy/juggernog/north
+execute if entity @s[tag=perk_juggernog] if score @s playerYaw matches -135..-45 align xyz run function zbk:map_elements/perks/machines/legacy/juggernog/east
+execute if entity @s[tag=perk_quick_revive] if score @s playerYaw matches -45..45 align xyz run function zbk:map_elements/perks/machines/legacy/quick_revive/south
+execute if entity @s[tag=perk_quick_revive] if score @s playerYaw matches 45..135 align xyz run function zbk:map_elements/perks/machines/legacy/quick_revive/west
+execute if entity @s[tag=perk_quick_revive] if score @s playerYaw matches 135..180 align xyz run function zbk:map_elements/perks/machines/legacy/quick_revive/north
+execute if entity @s[tag=perk_quick_revive] if score @s playerYaw matches -180..-135 align xyz run function zbk:map_elements/perks/machines/legacy/quick_revive/north
+execute if entity @s[tag=perk_quick_revive] if score @s playerYaw matches -135..-45 align xyz run function zbk:map_elements/perks/machines/legacy/quick_revive/east
+execute if entity @s[tag=perk_speed_cola] if score @s playerYaw matches -45..45 align xyz run function zbk:map_elements/perks/machines/legacy/speed_cola/south
+execute if entity @s[tag=perk_speed_cola] if score @s playerYaw matches 45..135 align xyz run function zbk:map_elements/perks/machines/legacy/speed_cola/west
+execute if entity @s[tag=perk_speed_cola] if score @s playerYaw matches 135..180 align xyz run function zbk:map_elements/perks/machines/legacy/speed_cola/north
+execute if entity @s[tag=perk_speed_cola] if score @s playerYaw matches -180..-135 align xyz run function zbk:map_elements/perks/machines/legacy/speed_cola/north
+execute if entity @s[tag=perk_speed_cola] if score @s playerYaw matches -135..-45 align xyz run function zbk:map_elements/perks/machines/legacy/speed_cola/east
+execute if entity @s[tag=perk_double_tap] if score @s playerYaw matches -45..45 align xyz run function zbk:map_elements/perks/machines/legacy/double_tap/south
+execute if entity @s[tag=perk_double_tap] if score @s playerYaw matches 45..135 align xyz run function zbk:map_elements/perks/machines/legacy/double_tap/west
+execute if entity @s[tag=perk_double_tap] if score @s playerYaw matches 135..180 align xyz run function zbk:map_elements/perks/machines/legacy/double_tap/north
+execute if entity @s[tag=perk_double_tap] if score @s playerYaw matches -180..-135 align xyz run function zbk:map_elements/perks/machines/legacy/double_tap/north
+execute if entity @s[tag=perk_double_tap] if score @s playerYaw matches -135..-45 align xyz run function zbk:map_elements/perks/machines/legacy/double_tap/east
+execute if entity @s[tag=perk_stamina_up] if score @s playerYaw matches -45..45 align xyz run function zbk:map_elements/perks/machines/legacy/stamina_up/south
+execute if entity @s[tag=perk_stamina_up] if score @s playerYaw matches 45..135 align xyz run function zbk:map_elements/perks/machines/legacy/stamina_up/west
+execute if entity @s[tag=perk_stamina_up] if score @s playerYaw matches 135..180 align xyz run function zbk:map_elements/perks/machines/legacy/stamina_up/north
+execute if entity @s[tag=perk_stamina_up] if score @s playerYaw matches -180..-135 align xyz run function zbk:map_elements/perks/machines/legacy/stamina_up/north
+execute if entity @s[tag=perk_stamina_up] if score @s playerYaw matches -135..-45 align xyz run function zbk:map_elements/perks/machines/legacy/stamina_up/east
+execute if entity @s[tag=perk_mule_kick] if score @s playerYaw matches -45..45 align xyz run function zbk:map_elements/perks/machines/legacy/mule_kick/south
+execute if entity @s[tag=perk_mule_kick] if score @s playerYaw matches 45..135 align xyz run function zbk:map_elements/perks/machines/legacy/mule_kick/west
+execute if entity @s[tag=perk_mule_kick] if score @s playerYaw matches 135..180 align xyz run function zbk:map_elements/perks/machines/legacy/mule_kick/north
+execute if entity @s[tag=perk_mule_kick] if score @s playerYaw matches -180..-135 align xyz run function zbk:map_elements/perks/machines/legacy/mule_kick/north
+execute if entity @s[tag=perk_mule_kick] if score @s playerYaw matches -135..-45 align xyz run function zbk:map_elements/perks/machines/legacy/mule_kick/east
+execute if entity @s[tag=wunderfizz] if score @s playerYaw matches -45..45 align xyz run function zbk:map_elements/perks/machines/legacy/wunderfizz/south
+execute if entity @s[tag=wunderfizz] if score @s playerYaw matches 45..135 align xyz run function zbk:map_elements/perks/machines/legacy/wunderfizz/west
+execute if entity @s[tag=wunderfizz] if score @s playerYaw matches 135..180 align xyz run function zbk:map_elements/perks/machines/legacy/wunderfizz/north
+execute if entity @s[tag=wunderfizz] if score @s playerYaw matches -180..-135 align xyz run function zbk:map_elements/perks/machines/legacy/wunderfizz/north
+execute if entity @s[tag=wunderfizz] if score @s playerYaw matches -135..-45 align xyz run function zbk:map_elements/perks/machines/legacy/wunderfizz/east

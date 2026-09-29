@@ -1,0 +1,18 @@
+# Generated from tools/legacy_perk_layouts.json; coordinates relative to aligned marker.
+execute positioned ~1.0625 ~2.3125 ~0.5625 run kill @e[type=text_display,tag=!pm_runtime,tag=!pm_v2_runtime,distance=..0.15,nbt={text:{text:"Mule Kick"}}]
+execute positioned ~1.1875 ~0.0625 ~0.3125 run kill @e[type=marker,tag=!pm_runtime,tag=!pm_v2_runtime,distance=..0.15,tag=mule_bonus]
+execute if block ~ ~ ~-1 minecraft:green_wool run setblock ~ ~ ~-1 air
+execute if block ~ ~ ~ minecraft:green_wool run setblock ~ ~ ~ air
+execute if block ~ ~ ~1 minecraft:green_wool run setblock ~ ~ ~1 air
+execute if block ~ ~1 ~-1 minecraft:white_terracotta run setblock ~ ~1 ~-1 air
+execute if block ~ ~1 ~ minecraft:white_terracotta run setblock ~ ~1 ~ air
+execute if block ~ ~1 ~1 minecraft:white_terracotta run setblock ~ ~1 ~1 air
+execute if block ~ ~2 ~ minecraft:crimson_planks run setblock ~ ~2 ~ air
+execute if block ~ ~3 ~ minecraft:ochre_froglight run setblock ~ ~3 ~ air
+execute if block ~1 ~ ~-1 minecraft:warped_button run setblock ~1 ~ ~-1 air
+execute if block ~1 ~ ~1 minecraft:warped_trapdoor run setblock ~1 ~ ~1 air
+execute if block ~1 ~1 ~ minecraft:warped_button run setblock ~1 ~1 ~ air
+execute if block ~1 ~1 ~1 minecraft:warped_trapdoor run setblock ~1 ~1 ~1 air
+execute if block ~ ~2 ~-1 minecraft:crimson_stairs run setblock ~ ~2 ~-1 air
+execute if block ~ ~2 ~1 minecraft:crimson_stairs run setblock ~ ~2 ~1 air
+execute if block ~1 ~1 ~-1 minecraft:warped_wall_sign run setblock ~1 ~1 ~-1 air

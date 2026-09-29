@@ -9,7 +9,7 @@ execute if entity @s[team=!downed] if score global double_points matches 1 run s
 scoreboard players add @s stat_kills 1
 
 # Decrement powerup drop gate (only if above 0)
-function zbk:dispatch/voice_event_kill
+function zbk:combat/enemies/events/voice_event_kill
 execute if score #global drop_req_kills matches 1.. run scoreboard players remove #global drop_req_kills 1
 execute if score #global drop_req_kills matches 1.. as @a[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text":"[DROP] ","color":"aqua"},{"text":"Req kills: ","color":"green"},{"score":{"name":"#global","objective":"drop_req_kills"},"color":"yellow"}]
 

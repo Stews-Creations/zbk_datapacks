@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Zombie Block Marker",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Marker Type: Zombie Block\n\nThis marker defines where zombies get teleported when\nthey enter a light level 6 blocking zone.\n\nZombies touching the block zone will be moved to\nthe nearest zombie_block marker."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Delete Marker",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "/function zbk:behavior/areas/zombie_barrier_block/build_kit/markers/delete_marker"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back to Barriers",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/barriers/barriers"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "pause": false
+}

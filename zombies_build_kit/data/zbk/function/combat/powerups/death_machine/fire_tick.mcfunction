@@ -24,7 +24,7 @@ playsound zbk:guns.light_machine_gun ambient @a[distance=..16] ~ ~ ~ 2 1.5 1
 scoreboard players set @s dm_firing 4
 
 # Muzzle cosmetic
-function zbk:combat/weapons/effects/particles/muzzle_smoke {x:0.3,y:-0.1,z:0.5,mode:"force"}
+function zbk:combat/weapons/effects/particles/muzzle_smoke {x:0.1,y:-0.2,z:0.5,mode:"force"}
 
 # Tag prevents shooter from being hit by their own raycast
 tag @s add raycasting
@@ -36,7 +36,6 @@ execute at @s anchored eyes positioned ^ ^ ^ rotated as @s run function zbk:comb
 
 # Cleanup
 tag @e[tag=raycast_hit] remove raycast_hit
-tag @e[type=interaction,tag=menu_raycast_hit] remove menu_raycast_hit
 tag @e[type=interaction,tag=menu_v2_raycast_hit] remove menu_v2_raycast_hit
 tag @s remove raycasting
 scoreboard players reset @s raycast_distance

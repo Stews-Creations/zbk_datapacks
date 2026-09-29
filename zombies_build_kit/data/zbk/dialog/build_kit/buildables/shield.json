@@ -1,0 +1,98 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Rocket Shield",
+  "external_title": "Rocket Shield",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Part eggs place candidate locations; one per part is selected on reset. Give All Shield Parts marks all three collected for the team. Refill restores three boosts and repairs your shield."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Shield Plate Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger buildables_action set 2"
+      }
+    },
+    {
+      "label": {
+        "text": "Shield Mechanism Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger buildables_action set 3"
+      }
+    },
+    {
+      "label": {
+        "text": "Shield Rocket Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger buildables_action set 4"
+      }
+    },
+    {
+      "label": {
+        "text": "Give All Shield Parts",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger buildables_action set 8"
+      }
+    },
+    {
+      "label": {
+        "text": "Give Shield",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger buildables_action set 5"
+      }
+    },
+    {
+      "label": {
+        "text": "Refill Shield",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger buildables_action set 6"
+      }
+    },
+    {
+      "label": {
+        "text": "Remove Shield",
+        "color": "red"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger buildables_action set 7"
+      }
+    },
+    {
+      "label": {
+        "text": "<- Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/buildables/buildables"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": "Close"
+  },
+  "columns": 2,
+  "pause": false
+}

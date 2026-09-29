@@ -1,6 +1,6 @@
 function zbk:debug/info {f:"DROP",m:"Insta Kill spawned"}
 
-summon item_display ~ ~0.5 ~ {Tags:[pickup_item, insta_kill],item:{id:"minecraft:slime_ball",count:1,components:{"minecraft:item_model":"zbk:insta_kill"}},item_display:"fixed",brightness:{block:15,sky:15}}
+summon item_display ~ ~0.5 ~ {Tags:[pickup_item, insta_kill],item:{id:"minecraft:slime_ball",count:1,components:{"minecraft:item_model":"zbk:powerups/insta_kill"}},item_display:"fixed",brightness:{block:15,sky:15}}
 
 # Post-spawn: increment round drop count and reset kill gate
 scoreboard players add #global drop_round_drops 1

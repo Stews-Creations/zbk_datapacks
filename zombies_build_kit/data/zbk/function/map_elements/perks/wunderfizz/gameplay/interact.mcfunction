@@ -13,7 +13,7 @@ execute if entity @s[team=downed] run return fail
 
 # Check if player is holding build manager stick - open config dialog instead
 execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] at @s run tag @e[type=marker,tag=wunderfizz,distance=..5,limit=1,sort=nearest] add open_dialog
-execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run function zbk:build_kit/management/wunderfizz/open_dialog
+execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run function zbk:map_elements/perks/wunderfizz/build_kit/dialogs/open_dialog
 execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run return 1
 
 # Check if nearest wunderfizz is in claim phase, cycling, or idle

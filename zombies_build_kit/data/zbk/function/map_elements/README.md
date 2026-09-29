@@ -25,9 +25,15 @@ Owns reusable world features that builders place or configure. Each module owns 
 
 Submodules implement only the hooks they need.
 
+Each placed feature owns cues under `audio/`, event dispatch under `events/`, and editor functions and Build Manager handlers under `build_kit/`. Editors separate settings, dialogs, marker deletion, and link-ID helpers. The current `spawn_menu_v2/` also owns lobby music; the deprecated menu is removed.
+
 ## Marker contract
 
-Persistent markers and their scores or data are the source of truth. Runtime models, text, interactions, and effects are reconstructed from those markers by `initialize`. Deleting or relinking a marker must clean up or synchronize its derived entities. Build Kit authoring functions belong under `build_kit/management/<feature>`; runtime behavior remains in the owning module.
+Persistent markers and their scores or data are the source of truth. Runtime models, text, interactions, and effects are reconstructed from those markers by `initialize`. Deleting or relinking a marker must clean up or synchronize its derived entities. Authoring and runtime share the owning feature module, with editor-specific work in its `build_kit/` folder.
+
+## Zone unlocks
+
+Door management owns zone unlocking and its notifications. `door/management/notify_zone_unlocked` records each unlocked zone and dispatches the zone-unlocked event once per reset generation. Waves owns spawning from the unlocked spawners.
 
 ## Crafting Bench placement
 

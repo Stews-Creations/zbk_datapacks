@@ -1,0 +1,1 @@
+function zbk:combat/powerups/insta_kill/events/sound_voice_insta_kill

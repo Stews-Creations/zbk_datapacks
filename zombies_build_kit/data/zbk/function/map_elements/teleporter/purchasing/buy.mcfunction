@@ -59,4 +59,4 @@ execute at @s store result score @e[type=marker,tag=teleporter,tag=tp_start,sort
 execute at @s if score @e[type=marker,tag=teleporter,tag=tp_start,sort=nearest,limit=1] teleporter_duration matches 0 run scoreboard players set @e[type=marker,tag=teleporter,tag=tp_start,sort=nearest,limit=1] teleporter_duration 100
 
 # Play activation sound to everyone in the departure pad's teleport radius.
-execute at @s as @e[type=marker,tag=teleporter,tag=tp_start,sort=nearest,limit=1] at @s run function zbk:map_elements/teleporter/management/play_activation_sound
+execute at @s as @e[type=marker,tag=teleporter,tag=tp_start,sort=nearest,limit=1] at @s run function zbk:map_elements/teleporter/audio/play_activation_sound

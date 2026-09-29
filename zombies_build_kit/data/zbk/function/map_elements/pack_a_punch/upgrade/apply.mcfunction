@@ -28,7 +28,7 @@ execute if score #pap_tier stats matches ..0 run scoreboard players remove @s pl
 $execute if score #pap_tier stats matches ..0 run scoreboard players set @s pap_pending_slot $(slot)
 execute if score #pap_tier stats matches ..0 run scoreboard players set @s pap_pending_tier 1
 execute if score #pap_tier stats matches ..0 run function zbk:map_elements/pack_a_punch/management/lose_gun
-function zbk:dispatch/extension/map_elements/pack_a_punch/upgrade/apply/1
+function zbk:map_elements/pack_a_punch/events/extension/upgrade/apply/after_base_upgrade
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 execute if score #pap_tier stats matches ..0 at @s run playsound zbk:pack_a_punch.upgrade ambient @s ~ ~ ~ 0.5 1 1
 execute if score #pap_tier stats matches ..0 run function zbk:map_elements/pack_a_punch/cycle/on_buy
@@ -42,7 +42,7 @@ execute if score #pap_tier stats matches 1.. run scoreboard players remove @s pl
 $execute if score #pap_tier stats matches 1.. run scoreboard players set @s pap_pending_slot $(slot)
 execute if score #pap_tier stats matches 1.. run scoreboard players set @s pap_pending_tier 2
 execute if score #pap_tier stats matches 1.. run function zbk:map_elements/pack_a_punch/management/lose_gun
-function zbk:dispatch/extension/map_elements/pack_a_punch/upgrade/apply/2
+function zbk:map_elements/pack_a_punch/events/extension/upgrade/apply/after_tiered_upgrade
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 execute if score #pap_tier stats matches 1.. at @s run playsound zbk:pack_a_punch.upgrade ambient @s ~ ~ ~ 0.5 1 1
 execute if score #pap_tier stats matches 1.. run function zbk:map_elements/pack_a_punch/cycle/on_buy

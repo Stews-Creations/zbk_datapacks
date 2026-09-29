@@ -12,7 +12,7 @@
 # Detect and setup newly placed spawn markers (always run for building)
 function zbk:waves/markers/zombie/place
 function zbk:waves/markers/dog/place
-function zbk:dispatch/extension/waves/on_tick/1
+function zbk:waves/events/extension/on_tick
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Show spawn marker particles if enabled (always run for building)

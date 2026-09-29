@@ -1,26 +1,10 @@
-function zbk:dispatch/interaction_hit
+function zbk:combat/weapons/events/interaction_hit
 execute if data storage zbk:events result{blocked:1b} run return 0
 # Returns 1 only when an interaction consumes the shot. Caller remains the shooter.
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/interactions/1
-execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
-
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/interactions/2
-execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
-
-# Check for disco interaction hit (explosive weapons only, stops raycast)
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/interactions/3
+function zbk:combat/weapons/events/extension/mechanics/raycast/interactions/before_core_interactions
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 execute if score #is_explosive stats matches 1 if entity @e[type=interaction,tag=disco_interaction,distance=..1] run return 1
 
-# Check for menu interaction hit (lobby only, does not stop raycast, only triggers once per bullet)
-execute if score #global game_active matches 0 as @e[type=interaction,tag=menu_interaction_start,tag=!menu_raycast_hit,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run function zbk:build_kit/spawn_menu/handlers/on_start_game_click
-execute if score #global game_active matches 0 as @e[type=interaction,tag=menu_interaction_skip_cutscene,tag=!menu_raycast_hit,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run function zbk:build_kit/spawn_menu/handlers/on_skip_cutscene_click
-execute if score #global game_active matches 0 as @e[type=interaction,tag=menu_interaction_build,tag=!menu_raycast_hit,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run function zbk:build_kit/spawn_menu/handlers/on_build_kit_click
-execute if score #global game_active matches 0 as @e[type=interaction,tag=menu_interaction_music,tag=!menu_raycast_hit,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run function zbk:build_kit/spawn_menu/handlers/on_menu_music_click
-execute if score #global game_active matches 0 as @e[type=interaction,tag=menu_interaction_start,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run tag @s add menu_raycast_hit
-execute if score #global game_active matches 0 as @e[type=interaction,tag=menu_interaction_skip_cutscene,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run tag @s add menu_raycast_hit
-execute if score #global game_active matches 0 as @e[type=interaction,tag=menu_interaction_build,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run tag @s add menu_raycast_hit
-execute if score #global game_active matches 0 as @e[type=interaction,tag=menu_interaction_music,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run tag @s add menu_raycast_hit
 
 # Check for Spawn Menu V2 interaction hits (lobby only).
 execute if score #global game_active matches 0 as @e[type=interaction,tag=spawn_menu_v2_interaction_start,tag=!menu_v2_raycast_hit,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run function zbk:map_elements/spawn_menu_v2/interactions/on_start_shot

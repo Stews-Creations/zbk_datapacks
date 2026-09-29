@@ -12,6 +12,10 @@ Owns player identity, setup, health, down and revive state, points, inventory en
 | `actionbar/`, `xpbar/` | HUD rendering and presentation state |
 | `points/`, `stats/` | Score awards and combat records |
 | `settings/` | Per-player display preferences |
+| `voice/` | Shared character assignment and callout cooldowns |
+| `events/` and feature-local `events/` | Player lifecycle and operation notifications |
+
+Points, health, and down/revive features own their cues and voice callouts under their own `audio/` folders. Other gameplay callouts live with the module that triggers them; all use the [shared character voice state](voice/README.md).
 
 ## Lifecycle and ownership
 
@@ -27,6 +31,8 @@ Native hotbar selection drives weapon cycling and the Adventure-mode HUD highlig
 
 The actionbar HUD layers ammunition, grenades, equipment, timed powerups, perks, and the current round. It reads Combat's ammunition and reload state; points remain in the native sidebar. The [resource pack](https://github.com/Stews-Creations/zbk_resourcepacks) supplies the custom fonts and HUD artwork.
 
+Perks appear in acquisition order from the center outward for either gun hand: left-to-right when the gun is left, and right-to-left when the gun is right.
+
 Reload progress appears beneath the ammunition display. It follows Combat's reload timer, flashes after a successful transfer, and clears when the reload is cancelled, the weapon changes, the gun is hidden, or the player leaves Adventure mode.
 
 The Rocket Shield module owns collected-part state. Player renders its indicators in the configured HUD slots and restores moved or duplicated indicators through the shared maintenance hook.
@@ -37,4 +43,8 @@ Players choose Main Hand Left or Main Hand Right in Minecraft's client settings.
 
 ## Add-on integration
 
-Core emits player down, revive, and respawn notifications after the corresponding state transition. Map listeners use the supplied executor and actor ID; shared player lifecycle remains owned here. See the [Core API contract](../../../../../README.md#core-api-100).
+The base pack emits player down, revive, and respawn notifications after the corresponding state transition. Map listeners use the supplied executor and actor ID; shared player lifecycle remains owned here. See the [base pack integration contract](../../../../../README.md#base-pack-integration).
+
+## Feature subfolders
+
+`down_system/lifecycle/` owns down/death/revive transitions and reset; `revive/`, `decoys/`, `effects/`, and `bossbar/` hold their specific responsibilities. `inventory/melee/` reconstructs melee items, and `inventory/cleanup/` clears ground items. HUD preparation separates `actionbar/prepare/ammo/` and `actionbar/prepare/round/`; statistics snapshot helpers live in `stats/capture/`.

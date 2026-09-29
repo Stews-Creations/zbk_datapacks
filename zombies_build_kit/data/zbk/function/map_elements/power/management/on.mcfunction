@@ -15,7 +15,7 @@ execute as @e[type=marker,tag=power_marker] at @s run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 
 function zbk:map_elements/blocks/management/set_lit
 
 # Sounds
-function zbk:sounds/play/power_on
+function zbk:map_elements/power/audio/power_on
 execute as @e[type=marker,tag=power_marker] at @s run playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 1 1.2
 execute as @e[type=marker,tag=power_marker] at @s run playsound minecraft:item.trident.thunder master @a ~ ~ ~ 1 0.9
 
@@ -23,7 +23,7 @@ execute as @e[type=marker,tag=power_marker] at @s run playsound minecraft:item.t
 function zbk:debug/event {f:"POWER",m:"Power activated!"}
 
 # Open all powered doors (delegate to door module)
-execute as @e[type=marker,tag=door_powered] at @s run function zbk:map_elements/door/powered/open
+execute as @e[type=marker,tag=door_powered] at @s run function zbk:map_elements/door/powered/management/open
 
 # Open all custom power doors
 execute as @e[type=marker,tag=custom_door_1,scores={custom_door_power=1}] run function zbk:map_elements/custom_door/management/power_open
@@ -31,4 +31,4 @@ execute as @e[type=marker,tag=custom_door_1,scores={custom_door_power=1}] run fu
 # Fire power on signals
 function zbk:map_elements/game_signals/runtime/fire_power_on
 
-function zbk:dispatch/power_on
+function zbk:map_elements/power/events/power_on

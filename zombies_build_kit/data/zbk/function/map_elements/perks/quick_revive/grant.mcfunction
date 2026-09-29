@@ -13,4 +13,4 @@ scoreboard players operation @s perk_revive = @s perk_order
 # Play jingle
 execute as @s run function zbk:map_elements/perks/quick_revive/sound
 
-execute as @s run function zbk:dispatch/voice_event_perk_pickup
+execute as @s run function zbk:map_elements/perks/events/voice_event_perk_pickup

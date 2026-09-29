@@ -34,4 +34,4 @@ kill @e[tag=quest_dragon_soul_mannequin]
 kill @e[tag=quest_dragon_bow]
 kill @e[tag=quest_dragon_bow_interaction]
 
-function zbk:api/debug/info {f:"QUEST",m:"3-head dragon quest system initialized"}
+function zbk:debug/info {f:"QUEST",m:"3-head dragon quest system initialized"}

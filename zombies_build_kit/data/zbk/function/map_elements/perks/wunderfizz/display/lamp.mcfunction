@@ -1,3 +1,4 @@
+execute if entity @s[tag=pm_v2] run return run function zbk:map_elements/perks/machines/display/wunderfizz_power
 # Context: selected Wunderfizz marker at its position.
 # Powered inactive locations keep the previous no-write behavior; power-off explicitly extinguishes the lamp.
 

@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function": "zbk:build_kit/management/build_manager/build_manager_cooldown"
+    "function": "zbk:build_kit/tools/build_manager/cooldown"
   }
 }

@@ -9,7 +9,8 @@ Owns gameplay-mob behavior, area restrictions, crawler cleanup, and enemy reloca
 | `ai/` | Piglin and wolf attributes, targeting, and movement behavior |
 | `areas/` | Player-block and zombie-barrier marker systems |
 | `crawler/` | Crawler pairing and periodic cleanup |
-| `relocation/` | Recovery of enemies that become stuck or leave valid play areas |
+| `relocation/` | Recovery grouped into anchors, refunds, Panzer recovery, and zombie sampling |
+| `events/extension/` | Relocation extension dispatch for map integrations |
 
 ## Lifecycle
 
@@ -59,7 +60,7 @@ Do not put spawning, weapon damage, or wave progression in this module.
 
 ## Marker lookup phases
 
-Relocation anchors refresh each local spawner's zone through `relocation/refresh_zone` in one selection per spawner type. Destination selection and refund phases still follow all zone refreshes; anchor expiry, scratch-tag cleanup, and reset behavior are unchanged.
+Relocation anchors refresh each local spawner's zone through `relocation/anchors/refresh_zone` in one selection per spawner type. Destination selection and refund phases still follow all zone refreshes; anchor expiry, scratch-tag cleanup, and reset behavior are unchanged.
 
 ## Shield-owner melee
 
@@ -68,3 +69,7 @@ The shared piglin/wolf loops call [Combat shield protection](../combat/weapons/s
 ## Grounded enemy fall protection
 
 Piglin and wolf behavior checks the native `zbk:behavior/grounded` entity predicate before resetting `fall_distance`. Airborne enemies retain the existing per-tick reset; grounded enemies skip the redundant entity NBT write. The predicate reads the native ground flag rather than matching serialized entity NBT. Targeting, movement speed, hellhound fire and shield routing remain at their existing phases.
+
+## Area authoring
+
+Player-block and zombie-barrier editors and Build Manager handlers live in their respective `areas/<feature>/build_kit/` folders. Shared marker placement and gameplay behavior retain their existing lifecycle phases.

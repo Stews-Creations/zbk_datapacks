@@ -29,3 +29,7 @@ The [Carpenter powerup](../../combat/powerups/README.md) restores both this modu
 `zombie/tick` combines each barrier's zombie detection and break-timer update. The separate player-repair pass still runs after all barriers have processed breaking, preserving shared player cooldown and nearest-barrier selection. Initialization, board state, and interaction timing are unchanged.
 
 Visible boards and repair prompts restore `view_range:0.5f` directly; hidden states retain zero. This respects the shared display cap without requiring repeated maintenance reads.
+
+## Authoring ownership
+
+Feature-specific editor functions and Build Manager handlers live inside the owning gameplay feature's `build_kit/` folder. The shared Build Manager only owns tool input, pending selection, and routing; each feature preserves its own dialog context and cleanup order.

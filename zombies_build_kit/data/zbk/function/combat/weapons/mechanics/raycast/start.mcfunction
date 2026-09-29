@@ -46,7 +46,7 @@ execute if entity @s[team=downed] if score #gun_id stats matches 7 run scoreboar
 execute if score #gun_id stats matches 7 run scoreboard players set #element stats 0
 
 # Charged electric shots stop at their first enemy; quick shots still pierce.
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/start/1
+function zbk:combat/weapons/events/extension/mechanics/raycast/start/after_gun_profile
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Set active player
@@ -60,13 +60,12 @@ scoreboard players set @s raycast_distance 0
 scoreboard players set #ray_limit stats 1000
 execute if score #gun_id stats matches 2 run scoreboard players set #ray_limit stats 100
 execute if score #gun_id stats matches 9 run scoreboard players set #ray_limit stats 100
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/start/fallback_0
+function zbk:combat/weapons/events/extension/mechanics/raycast/start/before_default
 
 execute if score #gun_id stats matches 20..46 at @s anchored eyes positioned ^ ^ ^ rotated as @s run function zbk:combat/weapons/guns/bo3/combat/profile with storage zbk:bo3 profile
 
 # Both loops return directly from their last sample; clean up once per shot.
 tag @e[tag=raycast_hit] remove raycast_hit
-tag @e[type=interaction,tag=menu_raycast_hit] remove menu_raycast_hit
 tag @e[type=interaction,tag=menu_v2_raycast_hit] remove menu_v2_raycast_hit
 
 # Remove raycasting tag after completion

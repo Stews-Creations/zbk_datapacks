@@ -9,4 +9,4 @@ tag @s remove de_storm_restore_no_ai
 tag @s remove de_storm_restore_no_gravity
 scoreboard players reset @s de_storm_link
 scoreboard players reset @s de_storm_life
-execute if entity @s[type=iron_golem,tag=panzer_ai,tag=!panzer_dying] unless entity @s[nbt={Health:0.0f}] run function zbk:api/bosses/panzer/model/animations/paired/walk
+execute if entity @s[type=iron_golem,tag=panzer_ai,tag=!panzer_dying] unless entity @s[nbt={Health:0.0f}] run function zbk:bosses/panzer/model/animations/paired/walk

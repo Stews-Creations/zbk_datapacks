@@ -12,7 +12,7 @@ function zbk:behavior/areas/zombie_barrier_block/place_zombie_block_marker
 function zbk:behavior/areas/player_block/place_player_block_marker
 
 # ===== ENEMY RELOCATION =====
-execute as @e[type=marker,tag=enemy_relocation_anchor] at @s run function zbk:behavior/relocation/process_anchor
+execute as @e[type=marker,tag=enemy_relocation_anchor] at @s run function zbk:behavior/relocation/anchors/process_anchor
 
 # Shield routing reuses the enemy loops; resolve owner availability once per tick.
 execute store success score #rs_guard_active temp if entity @a[scores={rs_owned=1,rs_durability=1..}]

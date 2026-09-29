@@ -5,5 +5,5 @@
 # Executed as the exact new piglin; the caller owns accounting and stats.
 data merge entity @s {IsBaby:0b,Tags:["wave_zombie","wave_enemy","wz_created"],AngerTime:1000,PersistenceRequired:1b,equipment:{mainhand:{id:"minecraft:golden_sword",count:1,components:{"minecraft:attack_range":{max_reach:0.75,mob_factor:1.0},"minecraft:item_model":"zbk:empty"}}},drop_chances:{mainhand:0.0f},attributes:[{id:"minecraft:follow_range",base:256}]}
 function zbk:waves/spawning/zombie/creation/from_marker
-function zbk:dispatch/enemy_spawned
+function zbk:waves/events/enemy_spawned
 return 1

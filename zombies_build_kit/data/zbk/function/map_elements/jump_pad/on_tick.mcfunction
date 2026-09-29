@@ -14,17 +14,17 @@
 function zbk:map_elements/jump_pad/unlocking/check_end_markers
 
 # Run move function for all active jump arc tracking markers
-execute as @e[type=marker,tag=jump_arc] at @s run function zbk:map_elements/jump_pad/management/move
+execute as @e[type=marker,tag=jump_arc] at @s run function zbk:map_elements/jump_pad/movement/move
 
 # ===== LAUNCH WINDOW MANAGEMENT (2 seconds after purchase) =====
 # Decrement launch timer
 execute as @e[type=marker,tag=jump_pad,tag=jp_start,scores={jump_pad_launch_timer=1..}] run scoreboard players remove @s jump_pad_launch_timer 1
 
 # Call start function for each player in range (start function handles tagging and spawning)
-execute as @e[type=marker,tag=jump_pad,tag=jp_start,scores={jump_pad_launch_timer=1..}] at @s as @a[distance=..1.75] run function zbk:map_elements/jump_pad/management/start
+execute as @e[type=marker,tag=jump_pad,tag=jp_start,scores={jump_pad_launch_timer=1..}] at @s as @a[distance=..1.75] run function zbk:map_elements/jump_pad/lifecycle/start
 
 # When launch window expires (timer reaches 0)
-execute as @e[type=marker,tag=jump_pad,tag=jp_start,scores={jump_pad_launch_timer=0}] at @s run function zbk:map_elements/jump_pad/management/expire_window
+execute as @e[type=marker,tag=jump_pad,tag=jp_start,scores={jump_pad_launch_timer=0}] at @s run function zbk:map_elements/jump_pad/lifecycle/expire_window
 # Read cooldown from data.cooldown (seconds × 20 = ticks), fallback to 2400 ticks if unset
 
 # ===== COOLDOWN MANAGEMENT =====
@@ -32,4 +32,4 @@ execute as @e[type=marker,tag=jump_pad,tag=jp_start,scores={jump_pad_launch_time
 execute as @e[type=marker,tag=jump_pad,tag=jp_start,tag=purchased,scores={jump_pad_cooldown=1..}] run scoreboard players remove @s jump_pad_cooldown 1
 
 # When cooldown reaches 0, reset the jump pad
-execute as @e[type=marker,tag=jump_pad,tag=jp_start,tag=purchased,scores={jump_pad_cooldown=0}] at @s run function zbk:map_elements/jump_pad/management/reset_single
+execute as @e[type=marker,tag=jump_pad,tag=jp_start,tag=purchased,scores={jump_pad_cooldown=0}] at @s run function zbk:map_elements/jump_pad/lifecycle/reset_single

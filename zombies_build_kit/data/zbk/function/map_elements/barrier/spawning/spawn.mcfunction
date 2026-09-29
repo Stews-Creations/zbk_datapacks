@@ -12,17 +12,17 @@ execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s run execute
 
 # ===== PLACE BARRIER STRUCTURE (DIRECTIONAL) =====
 # Facing South (yaw between -45° and 45°)
-execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches -45..45 run place template minecraft:zombies/barrier ~-1 ~ ~1 counterclockwise_90
+execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches -45..45 run place template zbk:barriers/barrier ~-1 ~ ~1 counterclockwise_90
 
 # Facing West (yaw between 45° and 135°)
-execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches 45..135 run place template minecraft:zombies/barrier ~-1 ~ ~-1 none
+execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches 45..135 run place template zbk:barriers/barrier ~-1 ~ ~-1 none
 
 # Facing North (yaw between 135..180 or -180..-135)
-execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches 135..180 run place template minecraft:zombies/barrier ~1 ~ ~-1 clockwise_90
-execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches -180..-135 run place template minecraft:zombies/barrier ~1 ~ ~-1 clockwise_90
+execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches 135..180 run place template zbk:barriers/barrier ~1 ~ ~-1 clockwise_90
+execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches -180..-135 run place template zbk:barriers/barrier ~1 ~ ~-1 clockwise_90
 
 # Facing East (yaw between -135..-45)
-execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches -135..-45 run place template minecraft:zombies/barrier ~1 ~ ~1 180
+execute as @e[type=minecraft:silverfish,name="Barrier Marker"] at @s if score @p playerYaw matches -135..-45 run place template zbk:barriers/barrier ~1 ~ ~1 180
 
 # ===== CREATE BARRIER MARKER =====
 # Summon marker entity at spawn egg location

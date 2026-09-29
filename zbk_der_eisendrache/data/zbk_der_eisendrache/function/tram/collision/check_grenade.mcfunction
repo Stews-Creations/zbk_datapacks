@@ -7,6 +7,6 @@ tag @s remove tram_collision_hit
 execute as @e[type=minecraft:block_display,tag=tram_route_display,sort=nearest,limit=1] at @s run function zbk_der_eisendrache:tram/collision/check_shell
 
 # Restore grenade position before using the standard explosion lifecycle.
-execute if entity @s[tag=tram_collision_hit] at @s run function zbk:api/combat/weapons/grenade/explode
+execute if entity @s[tag=tram_collision_hit] at @s run function zbk:combat/weapons/grenade/effects/explode
 tag @s remove tram_collision_probe
 tag @s remove tram_collision_hit

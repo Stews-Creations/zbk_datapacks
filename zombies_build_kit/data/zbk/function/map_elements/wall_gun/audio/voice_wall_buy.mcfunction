@@ -1,0 +1,1 @@
+function zbk:map_elements/wall_gun/events/sound_voice_wall_buy

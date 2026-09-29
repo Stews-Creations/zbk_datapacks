@@ -23,5 +23,5 @@ function zbk:game/on_tick
 # Routine per-player hooks share this loop; feature-local loops retain their required phase order
 execute as @a at @s run function zbk:on_tick_as_player
 
-execute if score #ready zbk.api matches 1 run function zbk:dispatch/tick
-execute as @e[tag=wave_enemy,tag=!zbk.kill_reported,nbt={Health:0.0f}] at @s run function zbk:enemy/native_death
+execute if score #ready zbk.lifecycle matches 1 run function zbk:global/events/tick
+execute as @e[tag=wave_enemy,tag=!zbk.kill_reported,nbt={Health:0.0f}] at @s run function zbk:combat/enemies/lifecycle/native_death

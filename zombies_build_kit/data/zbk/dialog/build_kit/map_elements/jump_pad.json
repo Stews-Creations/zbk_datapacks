@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Jump Pad",
+  "external_title": "Jump Pad",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Setup Guide:\n1. Place Start marker where jump begins\n2. Place Peak marker at desired arc HEIGHT\n3. Place End marker where jump ends\n4. Use Build Stick to link markers (right click near them)"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Place Start Marker",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/jump_pad/spawning/spawn_start"
+      }
+    },
+    {
+      "label": {
+        "text": "Place Peak Marker",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/jump_pad/spawning/spawn_peak"
+      }
+    },
+    {
+      "label": {
+        "text": "Place End Marker",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/jump_pad/spawning/spawn_end"
+      }
+    },
+    {
+      "label": " ",
+      "action": {
+        "type": "run_command",
+        "command": ""
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

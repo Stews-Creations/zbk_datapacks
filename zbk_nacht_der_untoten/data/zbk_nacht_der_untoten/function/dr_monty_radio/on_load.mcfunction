@@ -1,0 +1,1 @@
+scoreboard objectives add give_nacht_radio trigger

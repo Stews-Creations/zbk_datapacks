@@ -30,7 +30,7 @@ execute store result storage zbk:temp bd_anim.dx int 1 run scoreboard players ge
 execute store result storage zbk:temp bd_anim.dy int 1 run scoreboard players get #cd_size_y global
 execute store result storage zbk:temp bd_anim.dz int 1 run scoreboard players get #cd_size_z global
 execute store result storage zbk:temp bd_anim.door_id int 1 run scoreboard players get #cd_sign_id global
-function zbk:map_elements/custom_door/animations/tag_block_displays with storage zbk:temp bd_anim
+function zbk:map_elements/custom_door/animations/layers/tag_block_displays with storage zbk:temp bd_anim
 
 # Start animation timer at 0
 scoreboard players set @s cd_sign_anim 0

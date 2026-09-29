@@ -1,1 +1,0 @@
-$return run function zbk:combat/weapons/mechanics/raycast/start {damage:"$(damage)",explosive_damage:"$(explosive_damage)",explosive_radius:"$(explosive_radius)",id:"$(id)",is_explosive:"$(is_explosive)",is_piercing:"$(is_piercing)",spread_radius:"$(spread_radius)",trail_spacing:"$(trail_spacing)"}

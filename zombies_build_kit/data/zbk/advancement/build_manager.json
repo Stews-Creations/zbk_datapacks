@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "zbk:build_kit/management/build_manager/build_manager_fire"
+    "function": "zbk:build_kit/tools/build_manager/fire"
   }
 }

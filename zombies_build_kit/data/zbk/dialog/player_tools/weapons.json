@@ -1,0 +1,111 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Weapons",
+  "external_title": "Weapons",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Choose a weapon category."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Pistols",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons/pistols"
+      }
+    },
+    {
+      "label": {
+        "text": "SMGs",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons/smgs"
+      }
+    },
+    {
+      "label": {
+        "text": "Assault Rifles",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons/assault_rifles"
+      }
+    },
+    {
+      "label": {
+        "text": "LMGs",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons/lmgs"
+      }
+    },
+    {
+      "label": {
+        "text": "Shotguns",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons/shotguns"
+      }
+    },
+    {
+      "label": {
+        "text": "Sniper Rifles",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons/snipers"
+      }
+    },
+    {
+      "label": {
+        "text": "Launchers",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons/launchers"
+      }
+    },
+    {
+      "label": {
+        "text": "Wonder Weapons",
+        "color": "light_purple"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons/wonder_weapons"
+      }
+    },
+    {
+      "label": {
+        "text": "\u2190 Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

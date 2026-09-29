@@ -9,7 +9,7 @@
 scoreboard players set global fire_sale 0
 scoreboard players set global double_points 0
 scoreboard players set global insta_kill 0
-function zbk:dispatch/extension/combat/powerups/initialize/1
+function zbk:combat/powerups/events/extension/initialize
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Death Machine is per-player; run its cleanup on anyone currently carrying it.

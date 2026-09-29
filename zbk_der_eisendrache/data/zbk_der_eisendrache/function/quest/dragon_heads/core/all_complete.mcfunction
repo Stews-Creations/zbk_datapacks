@@ -8,7 +8,7 @@ scoreboard players set #all_dragons_complete dragon_heads_complete 1
 execute as @e[tag=quest_dragon_head] at @s run playsound zbk_der_eisendrache:dragon.dragon_end master @a ~ ~ ~ 0.5 1
 
 # Debug message
-function zbk:api/debug/event {f:"QUEST",m:"ALL 3 DRAGON HEADS COMPLETE!"}
+function zbk:debug/event {f:"QUEST",m:"ALL 3 DRAGON HEADS COMPLETE!"}
 
 # Notify all players
 tellraw @a[tag=debug] [{"text":"","color":"gold"},{"text":"All Dragon Heads have been completed!","color":"green","bold":true}]

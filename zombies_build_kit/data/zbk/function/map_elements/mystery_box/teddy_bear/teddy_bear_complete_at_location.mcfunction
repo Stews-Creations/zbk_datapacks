@@ -22,7 +22,7 @@ scoreboard players set @s mystery_box_last_anim 1
 scoreboard players set @s mystery_box_pending_empty 1
 
 # === STEP 3: Select new location and spawn box there ===
-function zbk:map_elements/mystery_box/location_manager/select_new_location_after_teddy
+function zbk:map_elements/mystery_box/locations/selection/select_new_location_after_teddy
 
 # DEBUG: Log state at end
 execute as @a[tag=debug,scores={debug_level=4..}] run tellraw @s [{"text":"[MB-DEBUG] teddy_complete_at_loc END: ","color":"aqua"},{"text":"ready=","color":"gray"},{"score":{"name":"@s","objective":"mystery_box_ready"},"color":"yellow"},{"text":" active=","color":"gray"},{"score":{"name":"@s","objective":"mystery_box_active"},"color":"yellow"},{"text":" pending_empty=","color":"gray"},{"score":{"name":"@s","objective":"mystery_box_pending_empty"},"color":"yellow"}]

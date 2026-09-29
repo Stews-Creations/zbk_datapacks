@@ -1,0 +1,1 @@
+function zbk:map_elements/barrier/events/sound_voice_rebuild_barrier

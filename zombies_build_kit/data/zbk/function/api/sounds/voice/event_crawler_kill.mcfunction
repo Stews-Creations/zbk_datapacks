@@ -1,1 +1,0 @@
-function zbk:dispatch/voice_event_crawler_kill

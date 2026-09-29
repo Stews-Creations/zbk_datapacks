@@ -8,6 +8,10 @@ Each kind uses one item selection and a native item check for spawning, diagnost
 
 ## Ownership
 
-Per-powerup folders own spawning, pickup, activation, sound behavior, timers, and activation-order scores. `spawning/` owns shared candidate gating. The [Player actionbar](../../player/README.md#mirrored-actionbar-hud) reads activation scores for timed-powerup display. Player inventory and ammunition capacities remain owned by Player and Combat. Carpenter delegates barrier reconstruction to the [barrier module](../../map_elements/barrier/README.md).
+Per-powerup folders own spawning, pickup, activation, sound behavior, timers, and activation-order scores. `spawning/` owns shared candidate gating. The [Player actionbar](../../player/README.md#hud) reads activation scores for timed-powerup display. Player inventory and ammunition capacities remain owned by Player and Combat. Carpenter delegates barrier reconstruction to the [barrier module](../../map_elements/barrier/README.md).
 
 Powerup drop sounds use shared `zbk:drops.*` events. Max Ammo also refills charges on an existing owned Rocket Shield without repairing durability or granting a replacement.
+
+## Add-on drops
+
+Call `zbk:combat/powerups/spawning/can_spawn` to query the shared drop gate: it returns 1 when a candidate is allowed and 0 otherwise, without changing state. After successfully creating a pickup, call `zbk:combat/powerups/spawning/record_spawn` once to increment the round drop count and require another 30 kills before the next candidate. Keep the query, creation, and recording synchronous so another candidate cannot reuse the same allowance.

@@ -17,5 +17,5 @@ item replace entity @s weapon.offhand with minecraft:air
 execute if score @s gun_1 matches 1.. run scoreboard players set @s active_weapon 0
 execute unless score @s gun_1 matches 1.. if score @s gun_2 matches 1.. run scoreboard players set @s active_weapon 1
 execute unless score @s gun_1 matches 1.. unless score @s gun_2 matches 1.. if score @s gun_3 matches 1.. if score @s perk_mule matches 1.. run scoreboard players set @s active_weapon 2
-execute at @s run function zbk:api/player/inventory/weapons
+execute at @s run function zbk:player/inventory/weapons
 execute at @s run playsound zbk_der_eisendrache:der_eisendrache.quest.bows.electric.ritual_bow_place master @s ~ ~ ~ 1 1

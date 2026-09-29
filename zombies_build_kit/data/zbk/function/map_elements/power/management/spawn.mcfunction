@@ -5,17 +5,17 @@
 execute as @e[type=minecraft:bat,name="Power Switch"] at @s run execute as @p[distance=..50,sort=nearest] store result score @s playerYaw run data get entity @s Rotation[0] 1
 
 # Facing South (yaw between -45 and 45)
-execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches -45..45 run place template minecraft:zombies/power ~ ~ ~ counterclockwise_90
+execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches -45..45 run place template zbk:power/power ~ ~ ~ counterclockwise_90
 
 # Facing West (yaw between 45 and 135)
-execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches 45..135 run place template minecraft:zombies/power ~ ~ ~ none
+execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches 45..135 run place template zbk:power/power ~ ~ ~ none
 
 # Facing North (yaw between 135..180 or -180..-135)
-execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches 135..180 run place template minecraft:zombies/power ~ ~ ~ clockwise_90
-execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches -180..-135 run place template minecraft:zombies/power ~ ~ ~ clockwise_90
+execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches 135..180 run place template zbk:power/power ~ ~ ~ clockwise_90
+execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches -180..-135 run place template zbk:power/power ~ ~ ~ clockwise_90
 
 # Facing East (yaw between -135..-45)
-execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches -135..-45 run place template minecraft:zombies/power ~ ~ ~ 180
+execute as @e[type=minecraft:bat,name="Power Switch"] at @s if score @p playerYaw matches -135..-45 run place template zbk:power/power ~ ~ ~ 180
 
 # Tag template marker as runtime-only (gameplay) so Build Manager ignores it
 execute as @e[type=minecraft:bat,name="Power Switch"] at @s run tag @e[type=marker,tag=power_marker,distance=..5,limit=1,sort=nearest] add power_runtime_marker
