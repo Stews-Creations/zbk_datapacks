@@ -52,12 +52,7 @@ logs/
 *.tmp
 
 # Validation environments and build output
-/tools/*
-!/tools/package_pack.py
-!/tools/validate_structures.py
-!/tools/generate_legacy_perk_cleanup.py
-!/tools/legacy_perk_layouts.json
-!/tools/test_perk_machines.py
+/tools/
 .venv/
 __pycache__/
 *.py[cod]
