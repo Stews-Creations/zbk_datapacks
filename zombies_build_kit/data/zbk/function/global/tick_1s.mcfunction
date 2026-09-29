@@ -29,4 +29,4 @@ function zbk:global/rendering/maintenance
 # ===== RE-SCHEDULE =====
 schedule function zbk:global/tick_1s 20t
 
-execute if score #ready zbk.api matches 1 run function zbk:dispatch/maintenance
+execute if score #ready zbk.lifecycle matches 1 run function zbk:global/events/maintenance

@@ -71,3 +71,7 @@ Only complete faces covered by opaque axis-aligned cuboids are removed; partiall
 exposed faces, transparent surfaces, and arbitrary rotations are retained.
 Exterior coordinates, UVs, bounds, and runtime transforms are preserved. These
 geometry-only updates apply with F3+T without rebuilding runtime entities.
+
+## Authoring ownership
+
+Feature-specific editor functions and Build Manager handlers live inside the owning gameplay feature's `build_kit/` folder. The shared Build Manager only owns tool input, pending selection, and routing; each feature preserves its own dialog context and cleanup order.

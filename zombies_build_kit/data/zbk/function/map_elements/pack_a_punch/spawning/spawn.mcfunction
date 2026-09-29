@@ -10,22 +10,22 @@ execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s run execute a
 
 # Facing South (yaw between -45 and 45) - Player looking south
 execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -45..45 run summon marker ~ ~ ~ {Tags:["pack_a_punch","pack_a_punch_south"]}
-execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -45..45 run place template zbk:pack_a_punch ~-1 ~ ~ none
+execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -45..45 run place template zbk:pack_a_punch/pack_a_punch ~-1 ~ ~ none
 
 # Facing West (yaw between 46 and 135) - Player looking west
 execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches 46..135 run summon marker ~ ~ ~ {Tags:["pack_a_punch","pack_a_punch_west"]}
-execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches 46..135 run place template zbk:pack_a_punch ~ ~ ~-1 clockwise_90
+execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches 46..135 run place template zbk:pack_a_punch/pack_a_punch ~ ~ ~-1 clockwise_90
 
 # Facing North (yaw between 136..180 or -180..-136) - Player looking north
 # Two ranges because Minecraft yaw wraps at ±180 — both ends represent "looking north".
 execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches 136..180 run summon marker ~ ~ ~ {Tags:["pack_a_punch","pack_a_punch_north"]}
-execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches 136..180 run place template zbk:pack_a_punch ~1 ~ ~ 180
+execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches 136..180 run place template zbk:pack_a_punch/pack_a_punch ~1 ~ ~ 180
 execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -180..-136 run summon marker ~ ~ ~ {Tags:["pack_a_punch","pack_a_punch_north"]}
-execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -180..-136 run place template zbk:pack_a_punch ~1 ~ ~ 180
+execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -180..-136 run place template zbk:pack_a_punch/pack_a_punch ~1 ~ ~ 180
 
 # Facing East (yaw between -135..-46) - Player looking east
 execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -135..-46 run summon marker ~ ~ ~ {Tags:["pack_a_punch","pack_a_punch_east"]}
-execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -135..-46 run place template zbk:pack_a_punch ~ ~ ~1 counterclockwise_90
+execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] at @s if score @p playerYaw matches -135..-46 run place template zbk:pack_a_punch/pack_a_punch ~ ~ ~1 counterclockwise_90
 
 # Cleanup - kill the bat so it only runs once
 execute as @e[type=minecraft:bat,name="Pack a Punch Marker"] run kill @s

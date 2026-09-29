@@ -15,4 +15,4 @@ scoreboard players set @s perk_order 0
 
 # Clear perk items
 clear @s potion
-function zbk:combat/weapons/management/remove_mule_gun
+function zbk:combat/weapons/inventory/remove_mule_gun

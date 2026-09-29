@@ -59,3 +59,7 @@ function zbk:map_elements/rocket_shield/management/give_all_parts
 Run the static checks in the repository guide for validation. Test candidate selection, collection, reset, deletion, and chunk reload in an isolated Minecraft 26.2 world. Player clicks, proximity rendering, and inventory appearance require client inspection.
 
 Dimension-dispatched candidate registration, runtime maintenance, prompt updates, and interaction checks restrict their entity selectors to the current dimension with `distance=0..`. Each loaded entity is processed once per intended interval across the three vanilla dimensions. Prompt and interaction handling remain per tick; maintenance remains once per second.
+
+## Authoring ownership
+
+Feature-specific editor functions and Build Manager handlers live inside the owning gameplay feature's `build_kit/` folder. The shared Build Manager only owns tool input, pending selection, and routing; each feature preserves its own dialog context and cleanup order.

@@ -10,4 +10,4 @@ scoreboard players reset @s de_eb_slot
 scoreboard players reset @s de_eb_tier
 scoreboard players reset @s de_eb_elem
 scoreboard players reset @s de_eb_ammo
-execute at @s run function zbk:api/player/inventory/weapons
+execute at @s run function zbk:player/inventory/weapons

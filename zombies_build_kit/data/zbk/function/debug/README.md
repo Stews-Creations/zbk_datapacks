@@ -1,8 +1,8 @@
 # Debug Module
 
-Provides the shared debug-message API used by all gameplay modules. Messages are sent only to players with the `debug` tag whose `debug_level` meets the required threshold.
+Provides the shared debug-message functions used by all gameplay modules. Messages are sent only to players with the `debug` tag whose `debug_level` meets the required threshold.
 
-## Public API
+## Functions
 
 These one-line utility functions intentionally remain at the module root:
 
@@ -21,7 +21,7 @@ Direct developer diagnostics such as `pap_icon_test` may remain at the root beca
 
 `function zbk:debug/pap_icon_test` previews the Pack-a-Punch and element glyphs from the shared `zbk:hud` actionbar font.
 
-Do not use unconditional `tellraw @a` for routine diagnostics; route messages through this API.
+Do not use unconditional `tellraw @a` for routine diagnostics; route messages through these functions.
 
 ## Full HUD test
 

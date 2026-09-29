@@ -28,4 +28,4 @@ execute as @e[type=marker,distance=..5,tag=pack_a_punch,limit=1,sort=nearest] ru
 # the original gun id to @s pap_pending_gun_id — copy it to the scratch fake-player score
 # that gun_spawn reads when picking the item_model.
 scoreboard players operation #pap_gun_id stats = @s pap_pending_gun_id
-execute as @e[type=marker,distance=..5,tag=pack_a_punch,limit=1,sort=nearest] at @s run function zbk:presentation/pack_a_punch_gun_spawn
+execute as @e[type=marker,distance=..5,tag=pack_a_punch,limit=1,sort=nearest] at @s run function zbk:map_elements/pack_a_punch/presentation/gun_spawn

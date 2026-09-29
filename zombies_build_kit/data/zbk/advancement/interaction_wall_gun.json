@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "zbk:map_elements/wall_gun/gameplay/interact"
+    "function": "zbk:map_elements/wall_gun/purchasing/interact"
   }
 }

@@ -23,5 +23,5 @@ function zbk:combat/powerups/max_ammo/sound
 
 
 # Shield charges refill independently of durability.
-execute as @a run function zbk:dispatch/voice_event_max_ammo
+execute as @a run function zbk:combat/powerups/max_ammo/events/voice_event_max_ammo
 execute as @a[team=!downed] run function zbk:combat/weapons/special_equipment/rocket_shield/management/refill_charges

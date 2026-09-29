@@ -10,4 +10,4 @@ execute if entity @s[nbt={NoAI:1b}] run tag @s add de_storm_restore_no_ai
 execute if entity @s[nbt={NoGravity:1b}] run tag @s add de_storm_restore_no_gravity
 tag @s add zbk.enemy_stunned
 data merge entity @s {NoAI:1b,NoGravity:1b,Motion:[0.0d,0.0d,0.0d],fall_distance:0.0f}
-execute if entity @s[type=iron_golem,tag=panzer_ai] run function zbk:api/bosses/panzer/attacks/shared/stun
+execute if entity @s[type=iron_golem,tag=panzer_ai] run function zbk:bosses/panzer/attacks/shared/stun

@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function": "zbk:build_kit/management/mob_immunity_tool/cooldown"
+    "function": "zbk:build_kit/tools/mob_immunity/cooldown"
   }
 }

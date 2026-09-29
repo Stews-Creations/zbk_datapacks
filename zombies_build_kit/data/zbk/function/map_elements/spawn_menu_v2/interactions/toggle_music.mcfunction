@@ -15,9 +15,9 @@ tag @e[type=marker,tag=spawn_menu_v2_marker] remove spawn_menu_v2_turn_on
 
 execute as @e[type=text_display,tag=spawn_menu_v2_option_music] run function zbk:map_elements/spawn_menu_v2/display/refresh_music
 
-execute if entity @e[type=marker,tag=spawn_menu_v2_marker,scores={spawn_menu_v2_music=0}] run function zbk:sounds/play/music_menu_stop
+execute if entity @e[type=marker,tag=spawn_menu_v2_marker,scores={spawn_menu_v2_music=0}] run function zbk:map_elements/spawn_menu_v2/audio/music_menu_stop
 execute if entity @e[type=marker,tag=spawn_menu_v2_marker,scores={spawn_menu_v2_music=0}] run scoreboard players set #menu_music_timer global 0
-execute if entity @e[type=marker,tag=spawn_menu_v2_marker,scores={spawn_menu_v2_music=1}] as @e[type=text_display,tag=spawn_menu_v2_title,limit=1] at @s run function zbk:sounds/play/music_menu
+execute if entity @e[type=marker,tag=spawn_menu_v2_marker,scores={spawn_menu_v2_music=1}] as @e[type=text_display,tag=spawn_menu_v2_title,limit=1] at @s run function zbk:map_elements/spawn_menu_v2/audio/music_menu
 execute if entity @e[type=marker,tag=spawn_menu_v2_marker,scores={spawn_menu_v2_music=1}] run scoreboard players set #menu_music_timer global 0
 
 execute if entity @e[type=marker,tag=spawn_menu_v2_marker,scores={spawn_menu_v2_music=1}] run tellraw @s [{"text":"[Spawn Menu] ","color":"gold"},{"text":"Menu music enabled","color":"green"}]

@@ -1,6 +1,6 @@
 function zbk:debug/info {f:"DROP",m:"Double Points spawned"}
 
-summon item_display ~ ~0.5 ~ {Tags:[pickup_item, double_points],item:{id:"minecraft:slime_ball",count:1,components:{"minecraft:item_model":"zbk:double_points"}},item_display:"fixed",brightness:{block:15,sky:15}}
+summon item_display ~ ~0.5 ~ {Tags:[pickup_item, double_points],item:{id:"minecraft:slime_ball",count:1,components:{"minecraft:item_model":"zbk:powerups/double_points"}},item_display:"fixed",brightness:{block:15,sky:15}}
 
 # Post-spawn: increment round drop count and reset kill gate
 scoreboard players add #global drop_round_drops 1

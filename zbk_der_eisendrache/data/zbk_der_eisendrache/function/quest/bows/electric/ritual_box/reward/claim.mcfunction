@@ -14,5 +14,5 @@ scoreboard players reset @s de_eb_ammo
 scoreboard players set #phase de_eb_state 5
 scoreboard players set #buyer de_eb_owner 0
 function zbk_der_eisendrache:quest/bows/electric/ritual_box/management/refresh
-execute at @s run function zbk:api/player/inventory/weapons
+execute at @s run function zbk:player/inventory/weapons
 execute at @s run playsound zbk_der_eisendrache:der_eisendrache.quest.bows.electric.bow_pickup master @s ~ ~ ~ 1 1

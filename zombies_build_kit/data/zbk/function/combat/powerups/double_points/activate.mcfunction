@@ -12,4 +12,4 @@ execute if score double_points powerup_order matches 0 run scoreboard players op
 
 function zbk:combat/powerups/double_points/sound
 
-execute as @a run function zbk:dispatch/voice_event_double_points
+execute as @a run function zbk:combat/powerups/double_points/events/voice_event_double_points

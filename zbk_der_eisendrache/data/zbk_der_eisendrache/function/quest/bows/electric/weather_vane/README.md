@@ -18,7 +18,7 @@ Resource assets live in `assets/zbk_der_eisendrache/`. The vane items are `zbk_d
 
 ## Placement and testing
 
-Core selects this add-on through its registration API. This quest is authored in the overworld; keep the vane, wall and arrow placements loaded while testing or editing them.
+The base pack selects this add-on through its registration function. This quest is authored in the overworld; keep the vane, wall and arrow placements loaded while testing or editing them.
 
 An existing vane placement can be reused after `/reload`. To place one for the first time, stand where its mounting foot belongs; horizontal facing becomes its saved heading:
 

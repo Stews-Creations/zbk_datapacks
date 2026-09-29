@@ -3,4 +3,4 @@
 # ===================================
 # Runs every game tick for each player (called from execute as @a at @s)
 
-function zbk:dispatch/voice_on_tick_as_player
+function zbk:player/voice/events/voice_on_tick_as_player

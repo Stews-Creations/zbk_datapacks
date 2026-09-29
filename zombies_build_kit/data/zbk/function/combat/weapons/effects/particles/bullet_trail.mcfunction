@@ -14,4 +14,4 @@ execute if score #gun_id stats matches 7 if score #temp raycast_distance matches
 # Display flame_thrower particles
 execute if score #gun_id stats matches 2 if score #temp raycast_distance matches 0 if score @s raycast_distance matches 10.. run function zbk:combat/weapons/effects/particles/flame_trail
 
-function zbk:dispatch/extension/combat/weapons/effects/particles/bullet_trail/fallback_0
+function zbk:combat/weapons/events/extension/effects/particles/bullet_trail/before_default

@@ -26,7 +26,7 @@
 # - wave.spd_fasts: Precise count of fast zombies left this round
 # ===================================
 
-# Core wave tracking
+# The base pack wave tracking
 scoreboard objectives add wave.round dummy
 scoreboard objectives add wave.spawn_count dummy
 scoreboard objectives add wave.spawned dummy

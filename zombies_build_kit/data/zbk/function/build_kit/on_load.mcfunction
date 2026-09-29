@@ -36,8 +36,6 @@ scoreboard players set #highlight_zone global -1
 scoreboard objectives add toggle_gun trigger
 scoreboard objectives add hide_gun dummy
 
-# Reset spawn menu interactions
-function zbk:build_kit/spawn_menu/handlers/reset_interactions
 
 # Initialize per-player defaults and trigger enables
 execute as @a run function zbk:build_kit/initialize

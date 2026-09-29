@@ -1,4 +1,4 @@
-function zbk:dispatch/extension/player/swap_weapon/cycle/1
+function zbk:player/events/extension/swap_weapon/cycle/before_active_weapon_cleanup
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # ===================================
@@ -26,7 +26,7 @@ execute if score @s active_weapon matches 2 run scoreboard players set @s reload
 # Clear all trigger locks when switching weapons (prevents stuck guns)
 scoreboard players reset @s pistol_trigger_lock
 scoreboard players reset @s ray_gun_trigger_lock
-function zbk:dispatch/extension/player/swap_weapon/cycle/2
+function zbk:player/events/extension/swap_weapon/cycle/after_trigger_reset
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 scoreboard players reset @s rainbow_rifle_trigger_lock
 

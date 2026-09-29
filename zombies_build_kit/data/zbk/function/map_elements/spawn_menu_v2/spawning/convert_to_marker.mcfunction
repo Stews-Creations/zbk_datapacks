@@ -1,10 +1,9 @@
 # Convert the placed bat into the authoritative v2 marker.
 # @s = placed Spawn Menu V2 bat
 
-# Only one spawn menu may exist. Explicit placement replaces either version.
-function zbk:sounds/play/music_menu_stop
-kill @e[tag=spawn_menu]
-kill @e[type=marker,tag=spawn_menu_marker]
+# Only one current menu may exist. Retire any loaded deprecated menu first.
+function zbk:map_elements/spawn_menu_v2/audio/music_menu_stop
+function zbk:map_elements/spawn_menu_v2/migration/remove_legacy
 function zbk:map_elements/spawn_menu_v2/management/delete
 
 summon marker ~ ~ ~ {Tags:["spawn_menu_v2_marker"]}

@@ -24,7 +24,7 @@ execute unless score #check_jp_id jump_pad_id matches 1.. run tellraw @s [{"text
 execute unless score #check_jp_id jump_pad_id matches 1.. run return fail
 
 
-function zbk:dispatch/before_jump_pad_purchase
+function zbk:map_elements/jump_pad/events/before_jump_pad_purchase
 execute if data storage zbk:events result{blocked:1b} run return 0
 
 # Store the jump pad price from the nearest marker's data.name
@@ -47,6 +47,6 @@ execute as @e[type=text_display,tag=jump_pad_text_display,sort=nearest,limit=1] 
 execute as @e[type=marker,tag=jump_pad,tag=jp_start,tag=!purchased,sort=nearest,limit=1] run scoreboard players set @s jump_pad_launch_timer 40
 
 # Force launch the purchaser immediately
-function zbk:map_elements/jump_pad/management/start
+function zbk:map_elements/jump_pad/lifecycle/start
 
 # Note: Cooldown will be set when launch timer expires (handled in on_tick)

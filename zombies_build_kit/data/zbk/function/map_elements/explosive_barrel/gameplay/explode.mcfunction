@@ -31,4 +31,4 @@ execute as @e[type=zombified_piglin,distance=..7,tag=!immune_explosives] at @s r
 # Damage wolves in 7 blocks (200 flat damage, insta-kill if powerup active)
 execute as @e[type=wolf,distance=..7,tag=!immune_explosives] at @s run function zbk:map_elements/explosive_barrel/gameplay/damage_wolves
 
-function zbk:dispatch/barrel_exploded
+function zbk:map_elements/explosive_barrel/events/barrel_exploded

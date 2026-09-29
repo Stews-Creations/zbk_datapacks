@@ -8,13 +8,13 @@
 
 # ===== FRAME PLACEMENT DETECTION =====
 # Detect and process placement of door glow item frame entities
-execute as @e[type=minecraft:glow_item_frame,name="Door Marker"] at @s run function zbk:map_elements/door/purchasable/spawn_from_frame
-execute as @e[type=minecraft:glow_item_frame,name="Gate Door Marker"] at @s run function zbk:map_elements/door/purchasable/spawn_from_frame_gate
-execute as @e[type=minecraft:glow_item_frame,name="Jump Spot Marker"] at @s run function zbk:map_elements/door/purchasable/spawn_from_frame_jump_spot
-execute as @e[type=minecraft:glow_item_frame,name="Powered Door Marker"] at @s run function zbk:map_elements/door/powered/spawn_from_frame
-execute as @e[type=minecraft:glow_item_frame,name="Powered Stairs Door Marker"] at @s run function zbk:map_elements/door/powered/spawn_from_frame_stairs
-execute as @e[type=minecraft:glow_item_frame,name="Powered Power Room Door Marker"] at @s run function zbk:map_elements/door/powered/spawn_from_frame_power_room
-execute as @e[type=minecraft:glow_item_frame,name="Powered Church Door Marker"] at @s run function zbk:map_elements/door/powered/spawn_from_frame_church
+execute as @e[type=minecraft:glow_item_frame,name="Door Marker"] at @s run function zbk:map_elements/door/purchasable/spawning/spawn_from_frame
+execute as @e[type=minecraft:glow_item_frame,name="Gate Door Marker"] at @s run function zbk:map_elements/door/purchasable/spawning/spawn_from_frame_gate
+execute as @e[type=minecraft:glow_item_frame,name="Jump Spot Marker"] at @s run function zbk:map_elements/door/purchasable/spawning/spawn_from_frame_jump_spot
+execute as @e[type=minecraft:glow_item_frame,name="Powered Door Marker"] at @s run function zbk:map_elements/door/powered/spawning/spawn_from_frame
+execute as @e[type=minecraft:glow_item_frame,name="Powered Stairs Door Marker"] at @s run function zbk:map_elements/door/powered/spawning/spawn_from_frame_stairs
+execute as @e[type=minecraft:glow_item_frame,name="Powered Power Room Door Marker"] at @s run function zbk:map_elements/door/powered/spawning/spawn_from_frame_power_room
+execute as @e[type=minecraft:glow_item_frame,name="Powered Church Door Marker"] at @s run function zbk:map_elements/door/powered/spawning/spawn_from_frame_church
 
 # ===== DOOR ANIMATION TIMERS =====
 # Increment animation timer for doors with active timers

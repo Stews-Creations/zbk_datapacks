@@ -21,4 +21,4 @@ scoreboard players set @s ray_gun_trigger_lock 2
 
 # No-ammo voice callout (only triggers when both clip and reserve are empty)
 
-function zbk:dispatch/voice_try_no_ammo
+function zbk:combat/weapons/events/voice_try_no_ammo

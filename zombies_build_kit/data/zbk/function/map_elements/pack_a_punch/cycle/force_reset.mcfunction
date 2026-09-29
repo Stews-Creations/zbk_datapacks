@@ -1,7 +1,7 @@
 # Force-reset one Pack-a-Punch marker after an interrupted or stale buy cycle.
 # Context: @s = the PaP marker, at @s.
 
-function zbk:dispatch/extension/map_elements/pack_a_punch/cycle/force_reset/1
+function zbk:map_elements/pack_a_punch/events/extension/cycle/force_reset
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 execute as @e[type=text_display,distance=..3,tag=pack_a_punch_purchase_text,limit=1,sort=nearest] run data modify entity @s text set value [{"text":"Purchase","color":"gold","bold":true}]

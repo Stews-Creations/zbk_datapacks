@@ -13,7 +13,7 @@ execute if entity @s[team=downed] run return fail
 
 # Check if player is holding build manager stick
 execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] at @s if entity @e[type=marker,tag=teleporter,distance=..5,limit=1,sort=nearest] run tag @e[type=marker,tag=teleporter,distance=..5,limit=1,sort=nearest] add open_dialog
-execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run function zbk:build_kit/management/teleporter/dialogs/open_config_dialog
+execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run function zbk:map_elements/teleporter/build_kit/dialogs/open_config_dialog
 execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run return 1
 
 # Check if near a START marker - forward teleport

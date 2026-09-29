@@ -6,5 +6,5 @@ execute if score @s wz_speed matches 1 run scoreboard players add #global wave.s
 execute if score @s wz_speed matches 2 run scoreboard players add #global wave.spd_normals 1
 execute if score @s wz_speed matches 3 run scoreboard players add #global wave.spd_fasts 1
 scoreboard players reset @s wz_speed
-function zbk:behavior/relocation/refund_spawn_slot
+function zbk:behavior/relocation/refunds/refund_spawn_slot
 return 1

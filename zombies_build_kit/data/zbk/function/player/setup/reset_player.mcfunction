@@ -52,7 +52,7 @@ scoreboard players reset * reload_timer_3
 # Trigger locks
 scoreboard players reset * pistol_trigger_lock
 scoreboard players reset * ray_gun_trigger_lock
-function zbk:dispatch/extension/player/setup/reset_player/1
+function zbk:player/events/extension/setup/reset_player
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 scoreboard players reset * rainbow_rifle_trigger_lock
 scoreboard players reset * melee_timer

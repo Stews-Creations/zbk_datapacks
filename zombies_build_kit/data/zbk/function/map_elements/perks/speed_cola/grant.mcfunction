@@ -13,4 +13,4 @@ scoreboard players operation @s perk_speed = @s perk_order
 # Play jingle
 execute as @s run function zbk:map_elements/perks/speed_cola/sound
 
-execute as @s run function zbk:dispatch/voice_event_perk_pickup
+execute as @s run function zbk:map_elements/perks/events/voice_event_perk_pickup

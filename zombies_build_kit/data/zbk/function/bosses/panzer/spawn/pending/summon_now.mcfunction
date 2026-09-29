@@ -15,6 +15,6 @@ execute if score #panzer_relocation_health relocation_health matches 1.. as @e[t
 scoreboard players set @e[type=minecraft:iron_golem,tag=new_panzer,distance=..16,sort=nearest,limit=1] panzer_attack_cooldown 45
 scoreboard players set @e[type=minecraft:iron_golem,tag=new_panzer,distance=..16,sort=nearest,limit=1] panzer_attack_timer 0
 execute as @e[type=minecraft:iron_golem,tag=new_panzer,distance=..16,sort=nearest,limit=1] at @s run function zbk:bosses/panzer/model/spawn/rig
-execute as @e[type=minecraft:iron_golem,tag=new_panzer,distance=..16,sort=nearest,limit=1] at @s run function zbk:dispatch/enemy_spawned
+execute as @e[type=minecraft:iron_golem,tag=new_panzer,distance=..16,sort=nearest,limit=1] at @s run function zbk:waves/events/enemy_spawned
 tag @e[type=minecraft:iron_golem,tag=new_panzer,distance=..16,sort=nearest,limit=1] remove new_panzer
 kill @s

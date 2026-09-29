@@ -9,7 +9,7 @@ advancement revoke @s only zbk:interaction_pack_a_punch
 execute if entity @s[team=downed] run return fail
 
 # Build manager stick -> open PaP config dialog instead of buying.
-execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run return run function zbk:build_kit/management/pack_a_punch/open_dialog_with_tag
+execute if items entity @s weapon.mainhand *[custom_data~{build_manager:true}] run return run function zbk:map_elements/pack_a_punch/build_kit/dialogs/open_dialog_with_tag
 
 # Claim window: try this before pap_busy so a stale busy tag cannot block a valid claim.
 execute if entity @e[type=marker,distance=..5,tag=pack_a_punch,tag=pap_claim_ready,limit=1] run return run function zbk:map_elements/pack_a_punch/management/claim

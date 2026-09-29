@@ -11,7 +11,7 @@
 
 # ===== POWERUP TIMERS =====
 # Handle powerup duration countdowns and cleanup
-function zbk:combat/powerups/timers
+function zbk:combat/powerups/management/timers
 
 # ===== POWERUP SPAWNING =====
 # Select each item kind once, in the established priority order.
@@ -29,7 +29,7 @@ execute as @e[type=item] if items entity @s contents minecraft:wither_skeleton_s
 # Rotate Pickup
 execute as @e[type=item_display,tag=pickup_item] at @s run tp @s ~ ~ ~ ~-2 ~
 
-function zbk:dispatch/extension/combat/powerups/on_tick/1
+function zbk:combat/powerups/events/extension/on_tick/before_pickup_checks
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # ===== POWERUP PICKUP DETECTION =====
@@ -42,7 +42,7 @@ execute as @e[type=minecraft:item_display,tag=fire_sale] at @s if entity @p[dx=1
 execute as @e[type=minecraft:item_display,tag=carpenter] at @s if entity @p[dx=1,dy=1,dz=1] run function zbk:combat/powerups/carpenter/pickup
 # Death Machine pickup runs AS the picker (activate is per-player and needs @s = player).
 execute as @e[type=minecraft:item_display,tag=death_machine] at @s as @p[dx=1,dy=1,dz=1] run function zbk:combat/powerups/death_machine/pickup
-function zbk:dispatch/extension/combat/powerups/on_tick/2
+function zbk:combat/powerups/events/extension/on_tick/before_expiration
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 # ===== POWERUP TIMER ASSIGNMENT =====
 # Add powerup timer

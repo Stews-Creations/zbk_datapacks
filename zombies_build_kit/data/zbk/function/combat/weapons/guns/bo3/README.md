@@ -60,7 +60,7 @@ function zbk:combat/weapons/guns/kuda/give/main
 function zbk:combat/weapons/guns/xm53/give/main
 ```
 
-Smart assignment fills slots 1 and 2, then slot 3 with Mule Kick, and otherwise replaces the active weapon. Inventory IDs 20-46 are fixed and must not be renumbered. The model resource key is `zbk:bo3/<slug>`; ID 23 is `zbk:bo3/kuda`.
+Smart assignment fills slots 1 and 2, then slot 3 with Mule Kick, and otherwise replaces the active weapon. Inventory IDs 20-46 are fixed and must not be renumbered. The model resource key is `zbk:guns/<type>/<slug>`; ID 23 is `zbk:guns/submachine_guns/kuda`.
 
 | Retired ID | Replacement ID | Replacement |
 | --- | --- | --- |

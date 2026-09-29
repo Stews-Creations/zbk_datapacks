@@ -16,7 +16,7 @@ The `tram_call_console` marker is persistent configuration. `call_console/initia
 
 ## Display and lamps
 
-The body is one baked `zbk_der_eisendrache:props/tram_console` item model containing a compact faceted circular/oval panel, metal rim, two indicator lamps, a low stepped pedestal, and a compact square hand wheel with four connected spokes and a raised hub. The wheel sits on the lower metal section beneath the black display area and shares the panel's subtle 10-degree upward tilt. An angled text display sits just above the black surface and uses the same physical presentation angle. The body, two lamps, and status text ride an invisible `tram_call_console_root` display and use maximum block and sky brightness so nearby or overlapping blocks do not darken them.
+The body is one baked `zbk_der_eisendrache:props/tram/tram_console` item model containing a compact faceted circular/oval panel, metal rim, two indicator lamps, a low stepped pedestal, and a compact square hand wheel with four connected spokes and a raised hub. The wheel sits on the lower metal section beneath the black display area and shares the panel's subtle 10-degree upward tilt. An angled text display sits just above the black surface and uses the same physical presentation angle. The body, two lamps, and status text ride an invisible `tram_call_console_root` display and use maximum block and sky brightness so nearby or overlapping blocks do not darken them.
 
 The left and right full-bright lamps are separate model pieces. For the current behavior contract, the left lamp defaults to redstone and the right to emerald. The sibling Easter egg temporarily changes both lamps during its flicker sequence.
 

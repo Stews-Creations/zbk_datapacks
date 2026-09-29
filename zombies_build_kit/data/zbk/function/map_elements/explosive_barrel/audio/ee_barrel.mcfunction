@@ -1,0 +1,1 @@
+function zbk:map_elements/explosive_barrel/events/sound_ee_barrel

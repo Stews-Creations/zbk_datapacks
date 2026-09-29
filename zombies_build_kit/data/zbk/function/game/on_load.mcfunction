@@ -7,7 +7,6 @@
 # Book trigger scoreboards
 scoreboard objectives add give_spawn_point trigger
 scoreboard objectives add give_worldspawn trigger
-scoreboard objectives add give_spawn_menu trigger
 scoreboard objectives add start_game trigger
 scoreboard objectives add reset_game trigger
 scoreboard objectives add start_no_cutscene trigger

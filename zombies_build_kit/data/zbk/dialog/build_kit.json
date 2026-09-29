@@ -16,7 +16,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:map_elements"
+        "dialog": "zbk:build_kit/map_elements"
       }
     },
     {
@@ -26,7 +26,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:buildables"
+        "dialog": "zbk:build_kit/buildables/buildables"
       }
     },
     {
@@ -36,7 +36,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:build_manager"
+        "dialog": "zbk:build_kit/build_manager"
       }
     },
     {
@@ -46,7 +46,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:cutscenes"
+        "dialog": "zbk:build_kit/cutscenes/cutscenes"
       }
     },
     {
@@ -56,7 +56,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:recommended_gamerules"
+        "dialog": "zbk:build_kit/recommended_gamerules"
       }
     },
     {
@@ -92,7 +92,7 @@
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk:api/map_tools_open"
+        "command": "function zbk:build_kit/events/map_tools_open"
       }
     }
   ]

@@ -29,7 +29,6 @@ scoreboard players enable @s delete_trap
 # Game triggers (can't call game/enable_triggers -- would be recursive)
 scoreboard players enable @s give_spawn_point
 scoreboard players enable @s give_worldspawn
-scoreboard players enable @s give_spawn_menu
 scoreboard players enable @s give_spawn_menu_v2
 scoreboard players enable @s start_game
 scoreboard players enable @s start_no_cutscene
@@ -39,7 +38,7 @@ scoreboard players enable @s stop_no_cutscene
 scoreboard players set @s barrier_repair_cooldown 0
 
 # ===== DOWN SYSTEM RESET =====
-function zbk:player/down_system/reset
+function zbk:player/down_system/lifecycle/reset
 
 # ===== PER-PLAYER STATE RESET =====
 # These modules have per-player state that needs resetting for @s

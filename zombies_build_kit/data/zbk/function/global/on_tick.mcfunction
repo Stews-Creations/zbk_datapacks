@@ -9,4 +9,4 @@
 scoreboard players add #tick tick 1
 execute if score #tick tick matches 100 run scoreboard players set #tick tick 0
 
-function zbk:dispatch/voice_on_tick
+function zbk:player/voice/events/voice_on_tick

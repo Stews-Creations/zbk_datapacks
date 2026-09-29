@@ -12,4 +12,4 @@ function zbk:map_elements/barrier_w3/initialize
 execute as @e[type=marker,tag=barrier] at @s run playsound minecraft:block.wood.place master @a ~ ~ ~ 1 1
 execute as @e[type=marker,tag=barrier_w3] at @s run playsound minecraft:block.wood.place master @a ~ ~ ~ 1 1
 
-execute as @a run function zbk:dispatch/voice_event_carpenter
+execute as @a run function zbk:combat/powerups/carpenter/events/voice_event_carpenter

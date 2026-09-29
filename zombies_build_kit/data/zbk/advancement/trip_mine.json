@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "zbk:combat/weapons/special_equipment/trip_mine/place_trip_mine"
+    "function": "zbk:combat/weapons/special_equipment/trip_mine/spawning/place_trip_mine"
   }
 }

@@ -1,0 +1,191 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Map Elements",
+  "external_title": "Map Elements",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Configure interactive map elements that players can use"
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Doors →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/doors/doors"
+      }
+    },
+    {
+      "label": {
+        "text": "Barriers →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/barriers/barriers"
+      }
+    },
+    {
+      "label": {
+        "text": "Traps →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/traps"
+      }
+    },
+    {
+      "label": {
+        "text": "Jump Pads →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/jump_pad"
+      }
+    },
+    {
+      "label": {
+        "text": "Mystery Box →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/mystery_box/mystery_box"
+      }
+    },
+    {
+      "label": {
+        "text": "Perks →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/perks/perks_spawn"
+      }
+    },
+    {
+      "label": {
+        "text": "Spawn →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/game_management"
+      }
+    },
+    {
+      "label": {
+        "text": "Power Panels →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/power_panels"
+      }
+    },
+    {
+      "label": {
+        "text": "Blocks →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/blocks/blocks"
+      }
+    },
+    {
+      "label": {
+        "text": "Explosive Barrel →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/explosive_barrel/explosive_barrel"
+      }
+    },
+    {
+      "label": {
+        "text": "Game Signals →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/game_signals"
+      }
+    },
+    {
+      "label": {
+        "text": "Mob Spawners →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/spawners/zombie_control"
+      }
+    },
+    {
+      "label": {
+        "text": "Pack a Punch →",
+        "color": "gold"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/pack_a_punch_spawn"
+      }
+    },
+    {
+      "label": {
+        "text": "Teleporter",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_tp_start_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Radio",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_radio_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Wall Gun",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_wall_gun_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

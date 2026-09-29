@@ -2,7 +2,7 @@
 
 scoreboard players set #wall_spawn_health temp 1
 execute store result score #wall_spawn_health temp run data get entity @s Health 100
-execute if score #wall_spawn_health temp matches ..0 run function zbk:waves/spawning/zombie/discard_mannequin
+execute if score #wall_spawn_health temp matches ..0 run function zbk:waves/spawning/zombie/cleanup/discard_mannequin
 execute if score #wall_spawn_health temp matches ..0 run return 0
 
 execute store result score #animation_ok wz_state run function zbk:waves/spawning/zombie/animation/guard

@@ -13,4 +13,4 @@ kill @e[type=zombified_piglin,tag=!immune_nuke]
 
 function zbk:combat/powerups/nuke/sound
 
-execute as @a run function zbk:dispatch/voice_event_nuke
+execute as @a run function zbk:combat/powerups/nuke/events/voice_event_nuke

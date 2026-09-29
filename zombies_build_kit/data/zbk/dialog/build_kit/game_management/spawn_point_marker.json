@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Spawn Point Marker",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Marker Type: Spawn Point\n\nThis marker defines a player spawn location.\nMultiple spawn points can be placed on the map.\nPlayers are distributed evenly across all spawn\npoints in round-robin order when the game starts\nor after respawning."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "← Back to Game Management",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/game_management"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "pause": false
+}

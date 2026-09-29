@@ -61,7 +61,7 @@ execute store result score @e[tag=tp_temp_match,limit=1] teleporter_duration run
 execute if score @e[tag=tp_temp_match,limit=1] teleporter_duration matches 0 run scoreboard players set @e[tag=tp_temp_match,limit=1] teleporter_duration 100
 
 # Use the linked start marker's radius, centered on the departure end pad.
-execute at @s as @e[tag=tp_temp_match,limit=1] at @e[type=marker,tag=teleporter,tag=tp_end,distance=..1.75,sort=nearest,limit=1] run function zbk:map_elements/teleporter/management/play_activation_sound
+execute at @s as @e[tag=tp_temp_match,limit=1] at @e[type=marker,tag=teleporter,tag=tp_end,distance=..1.75,sort=nearest,limit=1] run function zbk:map_elements/teleporter/audio/play_activation_sound
 
 # Clean up temp tag
 tag @e[tag=tp_temp_match] remove tp_temp_match

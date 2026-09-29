@@ -1,0 +1,71 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Wall Buy - Shotguns",
+  "external_title": "Shotguns",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Select a weapon to set this wall buy."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "KRM-262",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:39}"
+      }
+    },
+    {
+      "label": {
+        "text": "205 Brecci",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:40}"
+      }
+    },
+    {
+      "label": {
+        "text": "Haymaker 12",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:41}"
+      }
+    },
+    {
+      "label": {
+        "text": "Argus",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:42}"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/wall_gun/weapons"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

@@ -1,1 +1,1 @@
-function zbk:sounds/play/drops_carpenter
+function zbk:combat/powerups/carpenter/audio/drops_carpenter

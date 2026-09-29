@@ -3,7 +3,7 @@
 # Player forfeited the claim — revert this machine to purchase phase and clear pending state.
 
 # Revert this machine's text
-function zbk:dispatch/extension/map_elements/pack_a_punch/cycle/claim_timeout/1
+function zbk:map_elements/pack_a_punch/events/extension/cycle/claim_timeout
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 execute as @e[type=text_display,distance=..3,tag=pack_a_punch_purchase_text,limit=1,sort=nearest] run data modify entity @s text set value [{"text":"Purchase","color":"gold","bold":true}]
 tag @s remove pap_claim_ready

@@ -1,0 +1,91 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Wall Buy - Assault Rifles",
+  "external_title": "Assault Rifles",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Select a weapon to set this wall buy."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "KN-44",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:28}"
+      }
+    },
+    {
+      "label": {
+        "text": "HVK-30",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:29}"
+      }
+    },
+    {
+      "label": {
+        "text": "ICR-1",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:30}"
+      }
+    },
+    {
+      "label": {
+        "text": "Man-O-War",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:31}"
+      }
+    },
+    {
+      "label": {
+        "text": "Sheiva",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:32}"
+      }
+    },
+    {
+      "label": {
+        "text": "M8A7",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:33}"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/wall_gun/weapons"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

@@ -1,0 +1,1 @@
+execute summon minecraft:marker run function zbk_nacht_der_untoten:dr_monty_radio/spawning/configure

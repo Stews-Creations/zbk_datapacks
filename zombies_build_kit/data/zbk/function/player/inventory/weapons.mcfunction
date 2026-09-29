@@ -10,8 +10,8 @@ function zbk:combat/weapons/guns/bo3/input/sync
 # Give the owned knife in hotbar slot 3 if its canonical item is not present.
 # Store and give must happen together per player to avoid shared storage conflicts
 # Skip if gun is hidden (building mode)
-execute unless score @s hide_gun matches 1.. if score @s bowie_knife matches 1.. unless items entity @s hotbar.3 minecraft:netherite_hoe[custom_data~{bowie_knife:true}] run function zbk:player/inventory/give_bowie_knife_wrapper
-execute unless score @s hide_gun matches 1.. unless score @s bowie_knife matches 1.. unless items entity @s hotbar.3 minecraft:netherite_hoe[custom_data~{knife:true,bowie_knife:false}] run function zbk:player/inventory/give_knife_wrapper
+execute unless score @s hide_gun matches 1.. if score @s bowie_knife matches 1.. unless items entity @s hotbar.3 minecraft:netherite_hoe[custom_data~{bowie_knife:true}] run function zbk:player/inventory/melee/give_bowie_knife_wrapper
+execute unless score @s hide_gun matches 1.. unless score @s bowie_knife matches 1.. unless items entity @s hotbar.3 minecraft:netherite_hoe[custom_data~{knife:true,bowie_knife:false}] run function zbk:player/inventory/melee/give_knife_wrapper
 
 # === FORCE ACTIVE WEAPON IN OFFHAND ===
 # Based on active_weapon score (1=gun_1, 2=gun_2, 3=gun_3), display weapon based on gun_X score

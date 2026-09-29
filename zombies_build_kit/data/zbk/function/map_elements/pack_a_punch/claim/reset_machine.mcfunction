@@ -8,7 +8,7 @@
 # and the on_tick safety net auto-resets pap_anim at 281.
 
 # Remove claim_ready so further clicks route to buy (not re-claim).
-function zbk:dispatch/extension/map_elements/pack_a_punch/claim/reset_machine/1
+function zbk:map_elements/pack_a_punch/events/extension/claim/reset_machine
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 tag @s remove pap_claim_ready
 

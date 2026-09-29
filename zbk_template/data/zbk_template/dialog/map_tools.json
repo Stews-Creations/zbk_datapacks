@@ -5,7 +5,7 @@
   "body": [
     {
       "type": "minecraft:plain_message",
-      "contents": "Executable API examples. All demonstrations are opt-in; ordinary play is unchanged until you enable a sample or place its marker."
+      "contents": "Executable core functions examples. All demonstrations are opt-in; ordinary play is unchanged until you enable a sample or place its marker."
     }
   ],
   "actions": [
@@ -41,32 +41,32 @@
     },
     {
       "label": {
-        "text": "Call public power API",
+        "text": "Call public power core functions",
         "color": "yellow"
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk:api/power/activate"
+        "command": "function zbk:map_elements/power/management/on"
       }
     },
     {
       "label": {
-        "text": "Unlock zone 1 with public API",
+        "text": "Unlock zone 1 with public core functions",
         "color": "yellow"
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk:api/zones/unlock {zone:1}"
+        "command": "function zbk:map_elements/door/management/unlock_zone {zone:1}"
       }
     },
     {
       "label": {
-        "text": "Reset game with public API",
+        "text": "Reset game with public core functions",
         "color": "red"
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk:api/game/reset"
+        "command": "function zbk:game/reset/request"
       }
     },
     {

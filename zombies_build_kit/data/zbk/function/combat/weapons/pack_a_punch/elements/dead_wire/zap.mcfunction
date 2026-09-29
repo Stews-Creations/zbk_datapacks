@@ -10,7 +10,7 @@ execute as @a if score @s id = #shooter_id stats run function zbk:player/points/
 
 # Drop loot
 scoreboard players operation #map_killer temp = #shooter_id stats
-execute at @s run function zbk:enemy/killed
+execute at @s run function zbk:combat/enemies/lifecycle/killed
 loot spawn ~ ~ ~ loot entities/zombified_piglin
 
 # Electric death burst

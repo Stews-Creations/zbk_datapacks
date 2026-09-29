@@ -1,0 +1,1 @@
+function zbk:map_elements/perks/events/sound_voice_perk_pickup

@@ -1,0 +1,1 @@
+function zbk:map_elements/mystery_box/events/sound_voice_box_gun

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Launchers",
+  "external_title": "Launchers",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Choose a gun to equip."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "XM-53 (46)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_bo3 set 46"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:player_tools/weapons"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

@@ -51,8 +51,8 @@ scoreboard players set #cd_anim_style global 1
 execute if entity @e[tag=cd_sign_corner] store result score #cd_anim_style global run scoreboard players get @e[tag=cd_sign_corner,limit=1] custom_door_anim
 
 # Route to correct animation
-execute if score #cd_anim_style global matches 1 run function zbk:map_elements/custom_door/animations/up
-execute if score #cd_anim_style global matches 2 run function zbk:map_elements/custom_door/animations/down
+execute if score #cd_anim_style global matches 1 run function zbk:map_elements/custom_door/animations/layers/up
+execute if score #cd_anim_style global matches 2 run function zbk:map_elements/custom_door/animations/layers/down
 
 # Piston sound each step
 playsound minecraft:block.piston.extend master @a ~ ~ ~ 1 1.2

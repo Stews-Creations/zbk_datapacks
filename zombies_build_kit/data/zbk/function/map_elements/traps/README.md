@@ -7,3 +7,7 @@ Owns reusable linked electric-trap corners, purchase controls, collision-volume 
 Runtime keeps active damage and cooldown phases separate across traps. The inactive gate does not suppress placement. Coordinate helpers may switch executor to the linked corner while retaining the first corner's origin; both particles and damage consume the same resolved bounds.
 
 The current particle implementation is reached through `electric/particles/core/spawn_grid`. Unused archived particle functions with stale references are removed; historical implementations remain in version history. Build Kit marker editing belongs to the [authoring module](../../build_kit/README.md). Follow the [function architecture](../../README.md) for temporary state and lifecycle changes.
+
+## Authoring ownership
+
+Feature-specific editor functions and Build Manager handlers live inside the owning gameplay feature's `build_kit/` folder. The shared Build Manager only owns tool input, pending selection, and routing; each feature preserves its own dialog context and cleanup order.

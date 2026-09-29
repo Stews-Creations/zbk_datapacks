@@ -14,7 +14,7 @@ execute as @a if score @s id = #pap_buyer_temp stats if score @s pap_pending_slo
 execute as @a if score @s id = #pap_buyer_temp stats if score @s pap_pending_slot matches 1..3 run scoreboard players reset @s pap_pending_slot
 execute as @a if score @s id = #pap_buyer_temp stats if score @s pap_pending_tier matches 1..2 run scoreboard players reset @s pap_pending_tier
 execute as @a if score @s id = #pap_buyer_temp stats if score @s pap_pending_gun_id matches 1.. run scoreboard players reset @s pap_pending_gun_id
-execute as @a[tag=map_pap_restore_inventory] run function zbk:api/player/inventory/weapons
+execute as @a[tag=map_pap_restore_inventory] run function zbk:player/inventory/weapons
 tag @a remove map_pap_restore_inventory
 
 function zbk_der_eisendrache:map_pack_a_punch/machine/model/delete_nearest

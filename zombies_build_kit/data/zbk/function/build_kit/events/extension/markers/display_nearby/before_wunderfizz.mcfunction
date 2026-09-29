@@ -1,0 +1,4 @@
+data modify storage zbk:events stack append value {context:{event:"extension/build_kit/markers/display_nearby/2",request:1b,blocked:0b,handled:0b,args:{}}}
+function #zbk:event/extension/build_kit/markers/display_nearby/before_wunderfizz
+data modify storage zbk:events result set from storage zbk:events stack[-1].context
+data remove storage zbk:events stack[-1]

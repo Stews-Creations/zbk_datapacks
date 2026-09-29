@@ -24,6 +24,6 @@ tag @e[tag=mystery_box_root,type=block_display] add animation_pause
 function zbk:map_elements/mystery_box/management/cleanup_animation_tags
 
 # Reset mystery box location IDs and initialize (after 2 tick delay to ensure animations stopped)
-execute if entity @e[tag=mystery_box_location,type=marker] run schedule function zbk:map_elements/mystery_box/location_manager/reset_ids 2t
+execute if entity @e[tag=mystery_box_location,type=marker] run schedule function zbk:map_elements/mystery_box/locations/index/reset_ids 2t
 
 function zbk:debug/info {f:"BOX",m:"Mystery box system initialized"}

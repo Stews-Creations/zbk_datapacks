@@ -29,10 +29,10 @@ function zbk:player/health/health_manager
 
 # ===== DOWN SYSTEM =====
 # Detect low health and down players (only during active game)
-execute if score #global game_active matches 1.. if entity @s[scores={health=0..20},team=!downed] run function zbk:player/down_system/on_down
+execute if score #global game_active matches 1.. if entity @s[scores={health=0..20},team=!downed] run function zbk:player/down_system/lifecycle/on_down
 
 # Run downed player effects and countdown (only during active game)
-execute if score #global game_active matches 1.. if entity @s[team=downed] at @s run function zbk:player/down_system/while_down
+execute if score #global game_active matches 1.. if entity @s[team=downed] at @s run function zbk:player/down_system/lifecycle/while_down
 
 # ===== ACTIONBAR DISPLAY =====
 # Clear once when leaving Adventure; do not repeatedly erase builder messages.

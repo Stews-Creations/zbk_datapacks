@@ -27,3 +27,7 @@ Continuous floating-door particles are sent only to players within 22.4 blocks o
 Each tick marks the nearest eligible door corner for every player holding the Build Manager. It then processes nearby corners followed by already-active corners that are no longer nearby. All players' proximity tags remain available until both passes finish, preserving linked-pair highlighting while either corner is near a builder and clearing stale highlights after builders leave or switch items. Idle, unhighlighted corners no longer invoke the per-corner helper. Gameplay opening and floating effects retain their timing.
 
 Builder proximity uses a direct main-hand check for a stick with `build_manager:true`. It is recomputed every tick before linked-door highlight decisions.
+
+## Editor and animation folders
+
+`build_kit/door/` and `build_kit/sign/` own their respective editors and Build Manager handlers. Animation block clearing lives in `animations/clearing/`; layer movement lives in `animations/layers/`. Highlighting, saved-zone storage, and scratch-state ordering remain owned by the corresponding editor operations.

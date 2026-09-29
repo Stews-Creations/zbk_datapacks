@@ -1,0 +1,81 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Wall Buy - SMGs",
+  "external_title": "SMGs",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Select a weapon to set this wall buy."
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Kuda",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:23}"
+      }
+    },
+    {
+      "label": {
+        "text": "VMP",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:24}"
+      }
+    },
+    {
+      "label": {
+        "text": "Vesper",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:25}"
+      }
+    },
+    {
+      "label": {
+        "text": "Weevil",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:26}"
+      }
+    },
+    {
+      "label": {
+        "text": "Pharo",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "function zbk:map_elements/wall_gun/build_kit/settings/apply_gun_id {gun_id:27}"
+      }
+    },
+    {
+      "label": {
+        "text": "Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit/map_elements/wall_gun/weapons"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "zbk:build_kit/management/mob_immunity_tool/right_click"
+    "function": "zbk:build_kit/tools/mob_immunity/right_click"
   }
 }

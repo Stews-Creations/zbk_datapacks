@@ -16,7 +16,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:points"
+        "dialog": "zbk:player_tools/points"
       }
     },
     {
@@ -26,7 +26,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:perks_grant"
+        "dialog": "zbk:player_tools/perks_grant"
       }
     },
     {
@@ -36,7 +36,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:powerups"
+        "dialog": "zbk:player_tools/powerups"
       }
     },
     {
@@ -46,7 +46,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:special_equipment"
+        "dialog": "zbk:player_tools/special_equipment"
       }
     },
     {
@@ -56,7 +56,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:weapons"
+        "dialog": "zbk:player_tools/weapons"
       }
     },
     {
@@ -66,7 +66,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:pack_a_punch"
+        "dialog": "zbk:player_tools/pack_a_punch"
       }
     },
     {
@@ -76,7 +76,7 @@
       },
       "action": {
         "type": "show_dialog",
-        "dialog": "zbk:debug_settings"
+        "dialog": "zbk:player_tools/debug_settings"
       }
     },
     {
@@ -106,7 +106,7 @@
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk:build_kit/management/build_mode/disable_lobby_tp"
+        "command": "function zbk:build_kit/settings/build_mode/disable_lobby_tp"
       }
     },
     {
@@ -116,7 +116,7 @@
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk:build_kit/management/build_mode/toggle_tp"
+        "command": "function zbk:build_kit/settings/build_mode/toggle_tp"
       }
     },
     {
@@ -126,7 +126,7 @@
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk:build_kit/management/build_mode/show_player_settings"
+        "command": "function zbk:build_kit/settings/build_mode/show_player_settings"
       }
     },
     {

@@ -1,1 +1,0 @@
-function zbk:dispatch/voice_try_no_ammo

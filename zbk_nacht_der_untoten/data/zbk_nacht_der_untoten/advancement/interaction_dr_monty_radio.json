@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "zbk_nacht_der_untoten:radio/gameplay/interact"
+    "function": "zbk_nacht_der_untoten:dr_monty_radio/interactions/interact"
   }
 }

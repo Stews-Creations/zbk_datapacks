@@ -14,4 +14,4 @@ effect give @a strength infinite 255 true
 
 function zbk:combat/powerups/insta_kill/sound
 
-execute as @a run function zbk:dispatch/voice_event_insta_kill
+execute as @a run function zbk:combat/powerups/insta_kill/events/voice_event_insta_kill

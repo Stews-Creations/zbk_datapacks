@@ -17,7 +17,7 @@ execute as @s if score #gun_id stats matches 2 run function zbk:combat/weapons/e
 execute as @s if score #gun_id stats matches 7 run function zbk:combat/weapons/effects/particles/bullet_trail
 
 # Show purple trail for PaP'd regular guns (bullet_trail guards against trail_spacing=0)
-function zbk:dispatch/extension/combat/weapons/mechanics/raycast/raycast/fallback_0
+function zbk:combat/weapons/events/extension/mechanics/raycast/raycast/before_default
 
 # Range expiry is silent. Tail-return avoids repeated cleanup on the way back,
 # leaving command budget for ammo, cooldowns and the semi-auto trigger lock.

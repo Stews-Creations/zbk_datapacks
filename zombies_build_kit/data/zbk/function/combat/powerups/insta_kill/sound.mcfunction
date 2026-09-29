@@ -1,1 +1,1 @@
-function zbk:sounds/play/drops_insta_kill
+function zbk:combat/powerups/insta_kill/audio/drops_insta_kill

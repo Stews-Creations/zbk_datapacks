@@ -16,7 +16,7 @@ A refill uses the regular ammo price for an unpacked gun and the Pack-a-Punch am
 
 Gun wall labels show the weapon name, purchase price, regular ammo price, and PaP ammo price to all players, without requiring the debug tag. Each label snapshots its own marker prices when rebuilt. Grenades, Monkey Bombs, and Trip Mines use only the regular ammo price and do not show a PaP line; Bowie Knife has no ammo price line.
 
-Existing markers without `data.pap_ammo_price` receive the 4,500-point default when initialized, configured, or used. Newly loaded older markers are reconciled every 20 ticks (1 second) through the shared maintenance hook and then schedule display reconstruction for the following tick. Initialization, configuration, and purchases still validate immediately. Existing purchase and regular ammo prices remain unchanged, and configured PaP prices persist through reconstruction. Price-default maintenance lives under `marker/`; Build Kit applies the setting through `function zbk:build_kit/management/wall_gun/apply_pap_ammo_price {pap_ammo_price:4500}`.
+Existing markers without `data.pap_ammo_price` receive the 4,500-point default when initialized, configured, or used. Newly loaded older markers are reconciled every 20 ticks (1 second) through the shared maintenance hook and then schedule display reconstruction for the following tick. Initialization, configuration, and purchases still validate immediately. Existing purchase and regular ammo prices remain unchanged, and configured PaP prices persist through reconstruction. Price-default maintenance lives under `marker/`; Build Kit applies the setting through `function zbk:map_elements/wall_gun/build_kit/settings/apply_pap_ammo_price {pap_ammo_price:4500}`.
 
 ## Bowie Knife
 
@@ -32,7 +32,7 @@ On purchase, the Bowie Knife replaces the player's starter knife in hotbar slot 
 - `marker/maintenance`, called by `global/tick_1s`, selects loaded wall markers once per 20 ticks (1 second) and checks their saved ID and price configuration. It replaces the repeated per-ID searches formerly performed every tick.
 - `enable_triggers` enables the Wall Gun spawn-egg trigger for a player.
 
-Gameplay purchase behavior lives under `gameplay/`, display creation under `display/`, Wall Gun-specific name routing under `lookup/`, and marker creation under `spawning/`. Build Kit configuration is owned by `build_kit/management/wall_gun/`. The Wall Gun lookup handles ID `16` locally and delegates only other IDs to the conventional weapon-name lookup, keeping the Bowie Knife entirely outside Mystery Box configuration and selection.
+Gameplay purchase behavior lives under `purchasing/`, ammunition refills under `ammo/`, display creation under `display/`, Wall Gun-specific name routing under `lookup/`, and marker creation under `spawning/`. Feature-local `build_kit/` owns configuration and Build Manager dispatch. The Wall Gun lookup handles ID `16` locally and delegates only other IDs to the conventional weapon-name lookup, keeping the Bowie Knife entirely outside Mystery Box configuration and selection.
 
 All wall-gun chat messages require the recipient to have the `debug` tag, including purchases, ammo refills, insufficient-points notices, already-owned notices, and Build Kit configuration messages. Existing diagnostic level filters still apply where configured.
 
@@ -48,7 +48,7 @@ hitboxes, prices, and marker configuration are unchanged. Run
 `function zbk:map_elements/wall_gun/initialize` to rebuild loaded walls with
 these settings, or use `/reload` outside an active game.
 
-BO3 wall weapons use generated `zbk:wall/bo3/` model variants. They preserve
+BO3 wall weapons use generated `zbk:wall/guns/<type>/` model variants. They preserve
 textures, transforms, and exterior detail while removing faces completely hidden
 by opaque, unrotated cuboids. Rotated pieces are retained conservatively. Held
 weapons continue to use their existing models. Generated model authoring sources are maintained outside this repository. Install the matching resource

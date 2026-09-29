@@ -32,7 +32,7 @@ The command returns without changing state unless Der Eisendrache is active.
 
 The rocket uses one `rocket_body` item display on the original invisible
 `rocket_root` controller. All original visible geometry, including the former
-root cube, is baked into `zbk_der_eisendrache:props/rocket`. Reconstruction is synchronous;
+root cube, is baked into `zbk_der_eisendrache:props/rocket/rocket`. Reconstruction is synchronous;
 there is no passenger batch schedule or build-progress objective. The readiness
 gate still checks that the rocket exists before game start.
 

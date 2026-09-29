@@ -4,7 +4,7 @@
 execute if score @s is_reloading_3 matches 1 run return fail
 
 # Trigger reload if magazine empty
-execute if score @s ammo_3 matches ..0 if score @s reserve_ammo_3 matches 1.. run function zbk:combat/weapons/management/reload_slot_3
+execute if score @s ammo_3 matches ..0 if score @s reserve_ammo_3 matches 1.. run function zbk:combat/weapons/reload/reload_slot_3
 execute if score @s ammo_3 matches ..0 run return fail
 
 playsound zbk:guns.raygun ambient @a[distance=..10] ~ ~ ~ 2 1 1

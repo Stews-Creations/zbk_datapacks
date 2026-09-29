@@ -14,7 +14,7 @@ execute if entity @e[type=minecraft:bat,name="Mystery Box Location"] run functio
 
 # ===== MYSTERY BOX SYSTEM =====
 # Handle gun spinning based on speed tags
-function zbk:map_elements/mystery_box/guns/tick_spin
+function zbk:map_elements/mystery_box/guns/display/tick_spin
 
 # Run animation effects (smoke only - lightning is now instant)
 execute as @e[type=marker,tag=mystery_box_smoke_effect] at @s run function mystery_box:effects/smoke_tick

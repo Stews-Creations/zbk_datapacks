@@ -74,7 +74,7 @@ execute as @e[type=block_display,tag=cd_door_bd] if score @s custom_door_id = #c
 execute as @e[type=item_display,tag=cd_door_id] if score @s custom_door_id = #cd_sign_id global run kill @s
 
 # Clone from storage back to overworld
-function zbk:build_kit/management/custom_door/zone/load_execute with storage zbk:temp load_zone
+function zbk:map_elements/custom_door/build_kit/door/zone/load_execute with storage zbk:temp load_zone
 
 # Restore saved block_displays
 data modify storage zbk:temp restore_bds set from entity @e[tag=cd_restore_corner,limit=1] data.saved_block_displays

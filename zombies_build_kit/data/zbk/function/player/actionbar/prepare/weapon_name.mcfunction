@@ -10,11 +10,11 @@ execute if score @s active_weapon matches 1 run scoreboard players operation #pa
 execute if score @s active_weapon matches 2 run scoreboard players operation #pap_tier temp = @s tier_3
 execute if score #gun_id temp matches 20..46 run function zbk:combat/weapons/guns/bo3/registry/name
 execute if score #gun_id temp matches 7 run data modify storage zbk:temp gun_name set value "RAY GUN"
-function zbk:dispatch/extension/player/actionbar/prepare/weapon_name/1
+function zbk:player/events/extension/actionbar/prepare/weapon_name/after_base_name
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 execute if score #pap_tier temp matches 1.. if score #gun_id temp matches 20..46 run function zbk:combat/weapons/guns/bo3/registry/name_pap
 execute if score #pap_tier temp matches 1.. if score #gun_id temp matches 7 run data modify storage zbk:temp gun_name set from storage zbk:weapons guns.ray_gun.pap_name
-function zbk:dispatch/extension/player/actionbar/prepare/weapon_name/2
+function zbk:player/events/extension/actionbar/prepare/weapon_name/after_upgrade_name
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 execute if entity @s[tag=death_machine_active] run data modify storage zbk:temp gun_name set value "DEATH MACHINE"
 data modify storage zbk:hud args.weapon_name set from storage zbk:temp gun_name

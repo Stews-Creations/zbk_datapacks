@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Build Manager",
+  "external_title": "Build Manager",
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Use the zone slider to highlight markers in a specific zone (-1 = off).\n\nClick 'Update Particles' to show/update the particle highlights."
+    }
+  ],
+  "inputs": [
+    {
+      "type": "number_range",
+      "key": "zone",
+      "label": "Zone Highlight",
+      "start": -1,
+      "end": 32,
+      "initial": -1,
+      "step": 1
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Update Particles",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "dynamic/run_command",
+        "template": "function zbk:build_kit/zones/show_zone_particles {zone:$(zone)}"
+      }
+    },
+    {
+      "label": {
+        "text": "Toggle Spawn Particles",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger toggle_spawn_markers set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "← Back",
+        "color": "white"
+      },
+      "action": {
+        "type": "show_dialog",
+        "dialog": "zbk:build_kit"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Close",
+      "color": "white"
+    }
+  },
+  "columns": 2,
+  "pause": false
+}

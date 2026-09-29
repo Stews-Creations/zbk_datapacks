@@ -7,18 +7,23 @@
 # Runs every game tick for perk system
 
 # ===== SPAWN EGG DETECTION =====
+execute as @e[type=marker,tag=pm_v2_upgrade] at @s run function zbk:map_elements/perks/machines/legacy/upgrade
 # Detect and process placement of perk spawn egg entities (bat markers)
-execute if entity @e[type=minecraft:bat,name=Juggernog] run function zbk:map_elements/perks/juggernog/spawn
-execute if entity @e[type=minecraft:bat,name="Stamina Up"] run function zbk:map_elements/perks/stamina_up/spawn
-execute if entity @e[type=minecraft:bat,name="Speed Cola"] run function zbk:map_elements/perks/speed_cola/spawn
-execute if entity @e[type=minecraft:bat,name="Double Tap"] run function zbk:map_elements/perks/double_tap/spawn
-execute if entity @e[type=minecraft:bat,name="Quick Revive"] run function zbk:map_elements/perks/quick_revive/spawn
-execute if entity @e[type=minecraft:bat,name="Mule Kick"] run function zbk:map_elements/perks/mule_kick/spawn
-execute if entity @e[type=minecraft:bat,name="Der Wunderfizz"] run function zbk:map_elements/perks/wunderfizz/spawning/spawn
+function zbk:map_elements/perks/juggernog/spawn
+function zbk:map_elements/perks/stamina_up/spawn
+function zbk:map_elements/perks/speed_cola/spawn
+function zbk:map_elements/perks/double_tap/spawn
+function zbk:map_elements/perks/quick_revive/spawn
+function zbk:map_elements/perks/mule_kick/spawn
+function zbk:map_elements/perks/wunderfizz/spawning/spawn
 
 # ===== WUNDERFIZZ UI SPAWNING =====
 # Spawn UI for any wunderfizz markers that don't have it yet
 execute as @e[type=marker,tag=wunderfizz,tag=!wunderfizz_ui_spawned] at @s run function zbk:map_elements/perks/wunderfizz/spawning/spawn_ui
+
+# v2 interactions are consumed once; legacy sign purchases remain available.
+execute as @e[type=marker,tag=pm_v2,tag=!pm_v2_ready] at @s run function zbk:map_elements/perks/machines/lifecycle/rebuild
+execute as @e[type=interaction,tag=pm_v2_interaction] if data entity @s interaction run function zbk:map_elements/perks/machines/interaction/read
 
 # ===== PERK SYSTEMS =====
 # Apply active perk effects to players
@@ -47,4 +52,4 @@ execute as @e[type=marker,tag=wunderfizz,tag=!wunderfizz_active_location] at @s 
 execute as @e[type=marker,tag=wunderfizz] at @s run function zbk:map_elements/perks/wunderfizz/display/lamp
 # Turn lamp off when power is off or not at active location
 
-execute as @e[type=marker,tag=wunderfizz,tag=!wunderfizz_active_location] at @s run setblock ~ ~1 ~ redstone_lamp[lit=false]
+execute as @e[type=marker,tag=wunderfizz,tag=!pm_v2,tag=!wunderfizz_active_location] at @s run setblock ~ ~1 ~ redstone_lamp[lit=false]

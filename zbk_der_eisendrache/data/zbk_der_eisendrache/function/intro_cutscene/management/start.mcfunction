@@ -27,4 +27,4 @@ scoreboard players set #global cutscene_active 5
 function zbk_der_eisendrache:intro_cutscene/video/play
 
 # Fire cutscene start game signals.
-function zbk:api/map_elements/game_signals/runtime/fire_cutscene_start
+function zbk:map_elements/game_signals/runtime/fire_cutscene_start

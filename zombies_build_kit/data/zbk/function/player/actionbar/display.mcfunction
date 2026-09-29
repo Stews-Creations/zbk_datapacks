@@ -32,7 +32,7 @@ execute if entity @s[scores={active_weapon=2,reserve_ammo_3=10..99}] run data mo
 execute if entity @s[scores={active_weapon=2,reserve_ammo_3=100..999}] run data modify storage zbk:hud args.reserve_pad set value " "
 execute if entity @s[scores={active_weapon=2,reserve_ammo_3=1000..9999}] run data modify storage zbk:hud args.reserve_pad set value ""
 
-function zbk:player/actionbar/prepare/ammo_color with storage zbk:hud args
+function zbk:player/actionbar/prepare/ammo/ammo_color with storage zbk:hud args
 
 # Ammo colors: ivory normally, yellow at <=20%, red empty, gray reloading.
 execute if entity @s[scores={active_weapon=0,ammo_1=0}] run data modify storage zbk:hud args.ammo_color set value "red"
@@ -42,14 +42,14 @@ execute if entity @s[scores={active_weapon=0,is_reloading_1=1}] run data merge s
 execute if entity @s[scores={active_weapon=1,is_reloading_2=1}] run data merge storage zbk:hud {args:{ammo_color:"gray"}}
 execute if entity @s[scores={active_weapon=2,is_reloading_3=1}] run data merge storage zbk:hud {args:{ammo_color:"gray"}}
 
-function zbk:player/actionbar/prepare/ammo_layout
+function zbk:player/actionbar/prepare/ammo/ammo_layout
 
-execute if entity @s[scores={active_weapon=0,max_reserve_1=0}] run function zbk:player/actionbar/prepare/ammo_no_reserve with storage zbk:hud args
-execute if entity @s[scores={active_weapon=1,max_reserve_2=0}] run function zbk:player/actionbar/prepare/ammo_no_reserve with storage zbk:hud args
-execute if entity @s[scores={active_weapon=2,max_reserve_3=0}] run function zbk:player/actionbar/prepare/ammo_no_reserve with storage zbk:hud args
-execute if entity @s[scores={active_weapon=0,max_reserve_1=1..}] run function zbk:player/actionbar/prepare/ammo_with_reserve with storage zbk:hud args
-execute if entity @s[scores={active_weapon=1,max_reserve_2=1..}] run function zbk:player/actionbar/prepare/ammo_with_reserve with storage zbk:hud args
-execute if entity @s[scores={active_weapon=2,max_reserve_3=1..}] run function zbk:player/actionbar/prepare/ammo_with_reserve with storage zbk:hud args
+execute if entity @s[scores={active_weapon=0,max_reserve_1=0}] run function zbk:player/actionbar/prepare/ammo/ammo_no_reserve with storage zbk:hud args
+execute if entity @s[scores={active_weapon=1,max_reserve_2=0}] run function zbk:player/actionbar/prepare/ammo/ammo_no_reserve with storage zbk:hud args
+execute if entity @s[scores={active_weapon=2,max_reserve_3=0}] run function zbk:player/actionbar/prepare/ammo/ammo_no_reserve with storage zbk:hud args
+execute if entity @s[scores={active_weapon=0,max_reserve_1=1..}] run function zbk:player/actionbar/prepare/ammo/ammo_with_reserve with storage zbk:hud args
+execute if entity @s[scores={active_weapon=1,max_reserve_2=1..}] run function zbk:player/actionbar/prepare/ammo/ammo_with_reserve with storage zbk:hud args
+execute if entity @s[scores={active_weapon=2,max_reserve_3=1..}] run function zbk:player/actionbar/prepare/ammo/ammo_with_reserve with storage zbk:hud args
 
 # One grenade icon and a count; selection still uses the existing drop-key control.
 data modify storage zbk:hud args.grenades set value "\uE001"
@@ -83,6 +83,6 @@ execute if data storage zbk:hud args{pap_icon:"\uE015"} run data modify storage 
 function zbk:player/actionbar/reload/prepare
 function zbk:player/actionbar/prepare/equipment
 function zbk:player/actionbar/prepare/weapon_name
-function zbk:player/actionbar/prepare/round
+function zbk:player/actionbar/prepare/round/round
 execute if score @s gun_side matches 2 run return run function zbk:player/actionbar/render_right with storage zbk:hud args
 function zbk:player/actionbar/render with storage zbk:hud args

@@ -63,7 +63,7 @@ execute if entity @s[tag=zombie_spawner] run particle minecraft:happy_villager ~
 # Dog Spawner - Red
 execute if entity @s[tag=dog_spawner] run particle minecraft:dust{color:[1.0,0.2,0.2],scale:1.0} ~ ~1 ~ 0.1 0.3 0.1 0 3 normal @a[tag=zbk_marker_viewer]
 
-function zbk:dispatch/extension/build_kit/markers/display_nearby/1
+function zbk:build_kit/events/extension/markers/display_nearby/after_spawner_particles
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Door - Yellow
@@ -94,10 +94,7 @@ execute if entity @s[tag=boards_spawn] run particle minecraft:dust{color:[1.0,0.
 execute if entity @s[tag=mystery_box_location] run particle minecraft:dust{color:[0.8,0.2,1.0],scale:1.0} ~ ~1 ~ 0.1 0.3 0.1 0 3 normal @a[tag=zbk_marker_viewer]
 
 # Map Pack-a-Punch Location - Pale Purple
-function zbk:dispatch/extension/build_kit/markers/display_nearby/2
-execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
-
-function zbk:dispatch/extension/build_kit/markers/display_nearby/3
+function zbk:build_kit/events/extension/markers/display_nearby/before_wunderfizz
 execute if data storage zbk:events result{handled:1b} run return run data get storage zbk:events result.return_value
 
 # Wunderfizz - Cyan
@@ -122,7 +119,6 @@ execute if entity @s[tag=perk_machine] run particle minecraft:dust{color:[0.7,0.
 execute if entity @s[tag=spawn_point_marker] run particle minecraft:dust{color:[1.0,0.0,1.0],scale:1.5} ~ ~1 ~ 0.1 0.3 0.1 0 3 normal @a[tag=zbk_marker_viewer]
 
 # Spawn Menu - Yellow/Gold (larger)
-execute if entity @s[tag=spawn_menu_marker] run particle minecraft:dust{color:[1.0,0.85,0.0],scale:1.5} ~ ~1 ~ 0.1 0.3 0.1 0 3 normal @a[tag=zbk_marker_viewer]
 
 # Spawn Menu V2 - Green/Gold (larger)
 execute if entity @s[tag=spawn_menu_v2_marker] run particle minecraft:dust{color:[0.6,1.0,0.2],scale:1.5} ~ ~1 ~ 0.1 0.3 0.1 0 3 normal @a[tag=zbk_marker_viewer]

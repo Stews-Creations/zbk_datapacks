@@ -26,7 +26,7 @@
       },
       "action": {
         "type": "run_command",
-        "command": "function zbk_nacht_der_untoten:radio/management/delete_radio"
+        "command": "function zbk_nacht_der_untoten:dr_monty_radio/management/delete_radio"
       }
     },
     {

@@ -10,7 +10,7 @@ execute as @e[type=marker,tag=wunderfizz] if score @s wunderfizz_id = #wunderfiz
 execute as @e[type=marker,tag=wunderfizz] if score @s wunderfizz_id = #wunderfizz_current_location wunderfizz_id run scoreboard players set @s wunderfizz_uses 0
 
 # Turn off lamp at old location
-execute as @e[type=marker,tag=wunderfizz] if score @s wunderfizz_id = #wunderfizz_current_location wunderfizz_id at @s run setblock ~ ~1 ~ redstone_lamp[lit=false]
+execute as @e[type=marker,tag=wunderfizz,tag=!pm_v2] if score @s wunderfizz_id = #wunderfizz_current_location wunderfizz_id at @s run setblock ~ ~1 ~ redstone_lamp[lit=false]
 
 # Hide text at old location
 execute as @e[type=marker,tag=wunderfizz] if score @s wunderfizz_id = #wunderfizz_current_location wunderfizz_id at @s run data modify entity @e[type=text_display,tag=wunderfizz_text_display,distance=..2,limit=1] text set value [{"text":""}]
