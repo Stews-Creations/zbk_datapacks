@@ -20,6 +20,7 @@
 # - wave.health_base: Base health modifier (constant: 20)
 # - wave.is_active: 0=waiting, 1=spawning, 2=round active
 # - wave.countdown: Countdown timer before spawn (100 ticks = 5 seconds)
+# - wave.round_flash: Remaining ticks of the HUD round-change animation (80 = 4 seconds)
 # Speed system
 # - wave.spd_walkers: Precise count of walkers left this round
 # - wave.spd_normals: Precise count of normal zombies left this round
@@ -51,6 +52,7 @@ scoreboard objectives add wall_spawn_health dummy
 # System state
 scoreboard objectives add wave.is_active dummy
 scoreboard objectives add wave.countdown dummy
+scoreboard objectives add wave.round_flash dummy
 scoreboard objectives add wave.show_markers dummy
 
 # Speed pools

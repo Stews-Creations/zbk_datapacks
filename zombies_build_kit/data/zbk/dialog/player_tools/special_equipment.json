@@ -31,6 +31,16 @@
     },
     {
       "label": {
+        "text": "Shield (Give / Refill)",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_rocket_shield set 1"
+      }
+    },
+    {
+      "label": {
         "text": "← Back",
         "color": "white"
       },

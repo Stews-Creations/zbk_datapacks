@@ -17,6 +17,7 @@ scoreboard players enable @s give_rainbow_rifle
 scoreboard players enable @s give_ray_gun
 scoreboard players enable @s give_monkey_bomb
 scoreboard players enable @s give_trip_mine
+scoreboard players enable @s give_rocket_shield
 
 
 

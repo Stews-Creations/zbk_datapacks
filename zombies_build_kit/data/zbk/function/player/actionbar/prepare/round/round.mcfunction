@@ -1,5 +1,7 @@
 # Shared glyph cache; final placement is computed separately for each player.
-execute unless score #hud_round temp = #global wave.round run function zbk:player/actionbar/prepare/round/round_build
+# round_flash picks the round to show and its color (round-change animation).
+function zbk:player/actionbar/prepare/round/round_flash
+execute unless score #hud_round temp = #round_shown temp run function zbk:player/actionbar/prepare/round/round_build
 execute unless data storage zbk:hud round{layout:8} run function zbk:player/actionbar/prepare/round/round_build
 data modify storage zbk:hud args.round_text set from storage zbk:hud round.text
 execute store result score #round_width temp run data get storage zbk:hud round.width

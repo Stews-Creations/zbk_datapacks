@@ -275,6 +275,11 @@ execute as @a[scores={give_trip_mine=1..}] run function zbk:combat/weapons/speci
 scoreboard players enable @a[scores={give_trip_mine=1..}] give_trip_mine
 scoreboard players set @a[scores={give_trip_mine=1..}] give_trip_mine 0
 
+# Give or refill Rocket Shield
+execute as @a[scores={give_rocket_shield=1..}] run function zbk:combat/weapons/special_equipment/rocket_shield/management/give_or_refill
+scoreboard players enable @a[scores={give_rocket_shield=1..}] give_rocket_shield
+scoreboard players set @a[scores={give_rocket_shield=1..}] give_rocket_shield 0
+
 # ===== BARRIER SYSTEM =====
 # Give Barrier Marker spawn egg
 execute as @a[scores={give_barrier_marker=1..}] run function zbk:map_elements/barrier/spawning/give_barrier_marker

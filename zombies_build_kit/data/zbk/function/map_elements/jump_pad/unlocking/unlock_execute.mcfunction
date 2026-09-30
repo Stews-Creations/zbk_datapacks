@@ -19,8 +19,7 @@ execute store result score #unlock_jp_id jump_pad_id run scoreboard players get 
 execute as @e[type=marker,tag=jp_end] if score @s jump_pad_id = #unlock_jp_id jump_pad_id at @s run function zbk:map_elements/jump_pad/unlocking/light_lamps
 
 # Play sound at END marker (where player is standing)
-execute as @e[type=marker,tag=jp_end] if score @s jump_pad_id = #unlock_jp_id jump_pad_id at @s run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 1 1
-execute as @e[type=marker,tag=jp_end] if score @s jump_pad_id = #unlock_jp_id jump_pad_id at @s run playsound zbk:jump_pads.launch_pad_on master @a ~ ~ ~ 0.3 1
+execute as @e[type=marker,tag=jp_end] if score @s jump_pad_id = #unlock_jp_id jump_pad_id at @s run function zbk:map_elements/jump_pad/audio/jump_pad_unlocked
 
 # Notify players
 tellraw @a[tag=debug] [{"text":"[JUMP PAD] ","color":"aqua"},{"text":"Jump pad unlocked!","color":"green"}]

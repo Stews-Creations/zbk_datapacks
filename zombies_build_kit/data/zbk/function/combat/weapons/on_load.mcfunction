@@ -146,6 +146,7 @@ scoreboard objectives add give_rainbow_rifle trigger
 scoreboard objectives add give_ray_gun trigger
 scoreboard objectives add give_monkey_bomb trigger
 scoreboard objectives add give_trip_mine trigger
+scoreboard objectives add give_rocket_shield trigger
 
 
 

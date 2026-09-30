@@ -1,6 +1,5 @@
 data modify storage zbk:hud round set value {text:"",width:0,layout:8}
-scoreboard players set #hud_round temp 0
-execute if score #global wave.round matches 0.. run scoreboard players operation #hud_round temp = #global wave.round
+scoreboard players operation #hud_round temp = #round_shown temp
 scoreboard players set #round_width temp 0
 execute if score #hud_round temp matches 1 run data modify storage zbk:hud round.text set value "\uE080"
 execute if score #hud_round temp matches 2 run data modify storage zbk:hud round.text set value "\uE081"

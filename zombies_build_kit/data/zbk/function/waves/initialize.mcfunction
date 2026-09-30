@@ -46,6 +46,7 @@ scoreboard players set #global wave.dog_interval_add 0
 # Reset state
 scoreboard players set #global wave.is_active 0
 scoreboard players set #global wave.countdown 0
+scoreboard players set #global wave.round_flash 0
 
 # Clear any pending scheduled round starts (prevents phantom rounds after game over)
 schedule clear zbk:waves/management/rounds/start_round

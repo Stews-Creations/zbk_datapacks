@@ -30,6 +30,8 @@ Dog markers are checked every tick with native item predicates. Eligibility uses
 
 `wave.is_active` uses `0` for waiting, `1` for countdown, `2` for spawning, and `3` for waiting for remaining kills. Positive configuration values persist across reload; `initialize` resets runtime state.
 
+`start_round` sets `wave.round_flash` to 80 and `on_tick` counts it down; Player's actionbar HUD reads it to animate the round counter. No screen title is shown on round change.
+
 ## Zombie selection and pacing
 
 Persistent `zombie_spawner` markers supply `data.zone`, `data.mode`, and optional immunity flags. Zone 0 starts unlocked; doors unlock other zones. Modes are 0 for standard, 1-4 for hole east/south/west/north, and 5-8 for wall east/south/west/north. Missing or invalid modes are excluded with a debug diagnostic.

@@ -33,6 +33,8 @@ The actionbar HUD layers ammunition, grenades, equipment, timed powerups, perks,
 
 Perks appear in acquisition order from the center outward for either gun hand: left-to-right when the gun is left, and right-to-left when the gun is right.
 
+The round counter animates on every round change instead of a screen title. The previous round pulses bright red and fades out, then the new round fades in, holds bright, and settles over four seconds. Rounds 1-5 draw their tally marks in one at a time. Dog rounds use a deeper blood red and keep the counter dimmed until the round ends. Waves owns the `wave.round_flash` timer; `actionbar/prepare/round/round_flash` maps it to the displayed round and color.
+
 Reload progress appears beneath the ammunition display. It follows Combat's reload timer, flashes after a successful transfer, and clears when the reload is cancelled, the weapon changes, the gun is hidden, or the player leaves Adventure mode.
 
 The Rocket Shield module owns collected-part state. Player renders its indicators in the configured HUD slots and restores moved or duplicated indicators through the shared maintenance hook.

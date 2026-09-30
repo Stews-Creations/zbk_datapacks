@@ -50,9 +50,8 @@ function zbk:waves/special_rounds/dog/check_round
 function zbk:waves/special_rounds/panzer/check_round
 
 
-# Display round title to players
-execute if score #global wave.is_dog_round matches 0 run title @a title [{"text":"Round ","color":"gold"},{"score":{"name":"#global","objective":"wave.round"},"color":"yellow"}]
-execute if score #global wave.is_dog_round matches 1 run title @a title [{"text":"Dog Round","color":"red"}]
+# Start the HUD round counter animation (player/actionbar/prepare/round/round_flash)
+scoreboard players set #global wave.round_flash 80
 execute if score #global wave.is_dog_round matches 1 as @a at @s run function zbk:waves/special_rounds/dog/audio/dog_start
 
 

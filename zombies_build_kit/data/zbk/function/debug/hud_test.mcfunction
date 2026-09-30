@@ -28,7 +28,8 @@ function zbk:combat/powerups/insta_kill/activate
 function zbk:combat/powerups/double_points/activate
 function zbk:combat/powerups/fire_sale/activate
 scoreboard players set #global wave.round 5
+scoreboard players set #global wave.round_flash 80
 function zbk:player/inventory/weapons
 function zbk:player/actionbar/display
 function zbk:player/xpbar/display
-tellraw @s {"text":"[HUD Test] Four perks, active gun packed, timed powerups active, round 5.","color":"gold"}
+tellraw @s {"text":"[HUD Test] Four perks, active gun packed, timed powerups active, round 5 with the round-change animation.","color":"gold"}

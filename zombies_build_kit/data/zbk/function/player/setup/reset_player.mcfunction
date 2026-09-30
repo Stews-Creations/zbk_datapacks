@@ -130,3 +130,6 @@ scoreboard players set @a give_monkey_bomb 0
 
 scoreboard players reset @a give_trip_mine
 scoreboard players set @a give_trip_mine 0
+
+scoreboard players reset @a give_rocket_shield
+scoreboard players set @a give_rocket_shield 0

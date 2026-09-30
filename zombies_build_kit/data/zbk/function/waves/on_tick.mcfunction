@@ -27,5 +27,8 @@ execute as @e[type=mannequin,tag=wall_cleanup_mannequin] at @s run function zbk:
 execute as @e[type=mannequin,tag=hole_zombie] at @s run function zbk:waves/spawning/zombie/hole/tick
 execute as @e[type=mannequin,tag=wall_zombie] at @s run function zbk:waves/spawning/zombie/wall/tick
 
+# Advance the HUD round-change animation timer
+execute if score #global wave.round_flash matches 1.. run scoreboard players remove #global wave.round_flash 1
+
 # Only run wave logic when game is active
 execute if score #global game_active matches 1 run function zbk:waves/management/tick_active

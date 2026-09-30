@@ -14,3 +14,5 @@ Owns reusable linked jump pads, purchases, movement arcs, runtime vehicles, and 
 | `audio/`, `events/` | Callouts, purchase requests, and cue dispatch |
 
 Keep movement and completion calls in their existing execution context. The purchase request can be blocked before payment and activation; marker settings remain authoritative when runtime state is rebuilt.
+
+When a pad unlocks, `audio/jump_pad_unlocked` requests `sound/jump_pad_unlocked` (context `jump_pad_id`) as the END marker at its position. A map provider can block the request and play its own unlock cue; otherwise the base pack plays the pad-activated callout, and launch-pad sounds.

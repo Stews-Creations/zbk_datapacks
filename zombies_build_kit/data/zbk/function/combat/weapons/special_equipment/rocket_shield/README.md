@@ -16,6 +16,10 @@ Give All Shield Parts now calls the [shared part system](../../../../map_element
 
 The shield bash, melee finisher, flame effects, charge icons, and held/stowed models support Survival, Creative, and Adventure. Creative uses the same three-charge limit. Entering Spectator cancels an active bash and removes the stowed cosmetic; spectators cannot attack or use equipment. Downed players remain ineligible in every mode. Dog-round pumpkin variants use the same rules.
 
+## Player Tools
+
+Player Tools > Special Equipment > Shield (Give / Refill) sets the `give_rocket_shield` trigger. It refills an owned slot-6 shield (durability and three boosts) or gives a new one, using `management/give_or_refill`.
+
 ## Temporary commands
 
 As a Survival-, Creative-, or Adventure-mode player, run:

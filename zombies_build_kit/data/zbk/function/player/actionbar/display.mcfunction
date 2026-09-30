@@ -12,32 +12,18 @@ execute if score @s active_weapon matches 0 run data merge storage zbk:hud {args
 execute if score @s active_weapon matches 1 run data merge storage zbk:hud {args:{ammo_objective:"ammo_2",max_ammo_objective:"max_ammo_2",reserve_objective:"reserve_ammo_2"}}
 execute if score @s active_weapon matches 2 run data merge storage zbk:hud {args:{ammo_objective:"ammo_3",max_ammo_objective:"max_ammo_3",reserve_objective:"reserve_ammo_3"}}
 
-# Pad both values to four monospaced digits. Supported HUD range: 0-9999.
-execute if entity @s[scores={active_weapon=0,ammo_1=10..99}] run data modify storage zbk:hud args.ammo_pad set value "  "
-execute if entity @s[scores={active_weapon=0,ammo_1=100..999}] run data modify storage zbk:hud args.ammo_pad set value " "
-execute if entity @s[scores={active_weapon=0,ammo_1=1000..9999}] run data modify storage zbk:hud args.ammo_pad set value ""
-execute if entity @s[scores={active_weapon=1,ammo_2=10..99}] run data modify storage zbk:hud args.ammo_pad set value "  "
-execute if entity @s[scores={active_weapon=1,ammo_2=100..999}] run data modify storage zbk:hud args.ammo_pad set value " "
-execute if entity @s[scores={active_weapon=1,ammo_2=1000..9999}] run data modify storage zbk:hud args.ammo_pad set value ""
-execute if entity @s[scores={active_weapon=2,ammo_3=10..99}] run data modify storage zbk:hud args.ammo_pad set value "  "
-execute if entity @s[scores={active_weapon=2,ammo_3=100..999}] run data modify storage zbk:hud args.ammo_pad set value " "
-execute if entity @s[scores={active_weapon=2,ammo_3=1000..9999}] run data modify storage zbk:hud args.ammo_pad set value ""
-execute if entity @s[scores={active_weapon=0,reserve_ammo_1=10..99}] run data modify storage zbk:hud args.reserve_pad set value "  "
-execute if entity @s[scores={active_weapon=0,reserve_ammo_1=100..999}] run data modify storage zbk:hud args.reserve_pad set value " "
-execute if entity @s[scores={active_weapon=0,reserve_ammo_1=1000..9999}] run data modify storage zbk:hud args.reserve_pad set value ""
-execute if entity @s[scores={active_weapon=1,reserve_ammo_2=10..99}] run data modify storage zbk:hud args.reserve_pad set value "  "
-execute if entity @s[scores={active_weapon=1,reserve_ammo_2=100..999}] run data modify storage zbk:hud args.reserve_pad set value " "
-execute if entity @s[scores={active_weapon=1,reserve_ammo_2=1000..9999}] run data modify storage zbk:hud args.reserve_pad set value ""
-execute if entity @s[scores={active_weapon=2,reserve_ammo_3=10..99}] run data modify storage zbk:hud args.reserve_pad set value "  "
-execute if entity @s[scores={active_weapon=2,reserve_ammo_3=100..999}] run data modify storage zbk:hud args.reserve_pad set value " "
-execute if entity @s[scores={active_weapon=2,reserve_ammo_3=1000..9999}] run data modify storage zbk:hud args.reserve_pad set value ""
+function zbk:player/actionbar/prepare/ammo/ammo_fetch with storage zbk:hud args
 
-function zbk:player/actionbar/prepare/ammo/ammo_color with storage zbk:hud args
+# Pad both values to four monospaced digits. Supported HUD range: 0-9999.
+execute if score #hud_ammo temp matches 10..99 run data modify storage zbk:hud args.ammo_pad set value "  "
+execute if score #hud_ammo temp matches 100..999 run data modify storage zbk:hud args.ammo_pad set value " "
+execute if score #hud_ammo temp matches 1000.. run data modify storage zbk:hud args.ammo_pad set value ""
+execute if score #hud_reserve temp matches 10..99 run data modify storage zbk:hud args.reserve_pad set value "  "
+execute if score #hud_reserve temp matches 100..999 run data modify storage zbk:hud args.reserve_pad set value " "
+execute if score #hud_reserve temp matches 1000.. run data modify storage zbk:hud args.reserve_pad set value ""
 
 # Ammo colors: ivory normally, yellow at <=20%, red empty, gray reloading.
-execute if entity @s[scores={active_weapon=0,ammo_1=0}] run data modify storage zbk:hud args.ammo_color set value "red"
-execute if entity @s[scores={active_weapon=1,ammo_2=0}] run data modify storage zbk:hud args.ammo_color set value "red"
-execute if entity @s[scores={active_weapon=2,ammo_3=0}] run data modify storage zbk:hud args.ammo_color set value "red"
+execute if score #hud_ammo temp matches 0 run data modify storage zbk:hud args.ammo_color set value "red"
 execute if entity @s[scores={active_weapon=0,is_reloading_1=1}] run data merge storage zbk:hud {args:{ammo_color:"gray"}}
 execute if entity @s[scores={active_weapon=1,is_reloading_2=1}] run data merge storage zbk:hud {args:{ammo_color:"gray"}}
 execute if entity @s[scores={active_weapon=2,is_reloading_3=1}] run data merge storage zbk:hud {args:{ammo_color:"gray"}}

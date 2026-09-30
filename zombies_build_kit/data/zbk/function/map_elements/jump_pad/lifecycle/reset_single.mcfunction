@@ -18,7 +18,6 @@ execute as @e[type=text_display,tag=jump_pad_text_display,distance=..2,limit=1] 
 
 # Visual/audio feedback
 particle minecraft:happy_villager ~ ~1 ~ 0.3 0.5 0.3 0 10 force
-playsound minecraft:block.beacon.activate master @a ~ ~ ~ 0.5 1.5
 
 # Debug message
 execute as @a[tag=debug,scores={debug_level=4..},distance=..20] run tellraw @s [{"text":"[Jump Pad] ","color":"gold"},{"text":"Cooldown complete - jump pad ready!","color":"green"}]
