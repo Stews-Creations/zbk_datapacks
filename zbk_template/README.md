@@ -4,7 +4,7 @@ An executable developer reference for map add-ons targeting ZBK base pack compat
 
 ## Install and test
 
-1. Install ZBK base pack 1.0.0 and `zbk_template.zip` in a disposable Minecraft Java 26.2 world.
+1. Install the matching ZBK base pack release and `zbk_template.zip` in a disposable Minecraft Java 26.2 world.
 2. Run `/reload`; the base pack registers the template and reports a conflict if another map provider is installed.
 3. Use the base pack's Map Tools page to open ZBK Template Tools. Place the sample marker to test persistent marker reconstruction. Toggle the start-block or deferred-start example only when you want to exercise those request hooks.
 4. Run `/function zbk:game/reset/request` or use the dialog reset button to see the reset listener clear and rebuild runtime displays. Test the template without the base pack separately: the template must remain inactive.
@@ -21,8 +21,7 @@ Every `.mcfunction` begins with a comment explaining its caller and purpose. Fol
 
 | File | Purpose |
 | --- | --- |
-| `pack.mcmeta` | Declares Minecraft 26.2 pack compatibility and the template release version. |
-| `VERSION` | Plain-text release version; keep it aligned with `pack.mcmeta`. |
+| `pack.mcmeta` | Declares Minecraft 26.2 pack compatibility; its `${version}` placeholder is stamped from the release tag when packaged, alongside a generated `VERSION` file. |
 | `data/minecraft/tags/function/load.json` | Calls `zbk_template:on_load` on datapack load and `/reload`. |
 | `data/zbk_template/dialog/map_tools.json` | Defines the builder dialog and its opt-in sample buttons. |
 | `data/zbk/tags/function/event/startup/register.json` | Subscribes the provider registration handler. |

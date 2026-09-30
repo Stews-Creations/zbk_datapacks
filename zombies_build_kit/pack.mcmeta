@@ -8,10 +8,10 @@
       107,
       1
     ],
-    "description": "Zombies Build Kit 1.0.0 | Minecraft 26.2"
+    "description": "Zombies Build Kit ${version} | Minecraft 26.2"
   },
   "zbk": {
-    "version": "1.0.0",
+    "version": "${version}",
     "compatibility": 30000
   }
 }

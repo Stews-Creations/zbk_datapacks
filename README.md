@@ -6,7 +6,7 @@ The base pack bundles shared structure templates in `zombies_build_kit/data/zbk/
 
 ## Packs
 
-All packs start at version `1.0.0` and target Minecraft Java 26.2.
+All packs target Minecraft Java 26.2. Pack versions are not stored in the repository; packaging stamps them from the release tag (see [Releases](#releases)).
 
 | Pack | Purpose |
 | --- | --- |
@@ -191,7 +191,7 @@ Before publishing, parse functions with Mecha against Minecraft 26.2, parse JSON
 | [Build datapacks](.github/workflows/build-datapacks.yml) | On every push, or manually | Packages and inspects `zombies_build_kit` and `zbk_template`, then uploads each ZIP as a workflow artifact. These are development builds. |
 | [Release datapacks](.github/workflows/release-datapacks.yml) | Manually from `main` | Publishes a GitHub release with `zombies_build_kit-<tag>.zip` and `zbk_template-<tag>.zip`. |
 
-To publish a release, set the version in each pack's `VERSION` file and `pack.mcmeta`, merge to `main`, then run **Release datapacks** with the matching tag, such as `v1.0.0`. The workflow stops if the tag and a pack version differ. Running it with an existing tag rebuilds that revision.
+To publish a release, merge to `main`, then run **Release datapacks** with a `vMAJOR.MINOR.PATCH` tag such as `v1.0.1`. Each tracked `pack.mcmeta` carries the `${version}` placeholder; the packaging script replaces it with the tag's version and writes a matching `VERSION` file into each ZIP, so no version is edited in the repository. Builds without a tag are versioned `0.0.0-dev`. Running the workflow with an existing tag rebuilds that revision.
 
 Each ZIP has `pack.mcmeta` at its root and installs by copying it into a world's `datapacks/` folder. It contains the pack metadata, the functions, JSON, and structure templates under `data/`, and the `LICENSES/` folder. Documentation and development files are left out.
 
