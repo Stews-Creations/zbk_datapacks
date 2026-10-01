@@ -5,6 +5,7 @@ Owns reusable opening and ending cutscene orchestration for placed Build Kit cut
 ## Runtime Contract
 
 - `cutscene_start_timed` and reusable pan-camera markers remain the source of truth for generic opening cutscenes.
+- Opening and ending cameras attach players after a five-tick spawn delay, then reapply spectator attachment every tick so detaching cannot leave players flying freely. Players tagged `disable_tp` are exempt. Attachment stops when the matching cutscene ends or its camera is removed; stop/reset clears scheduled attachment callbacks.
 - Generic game-over flows set title timing to `10` ticks fade-in, `70` ticks visible, and `20` ticks fade-out (`5 seconds` total), so timing left by another title-based effect cannot keep the game-over title on screen.
 
 ## Public Commands

@@ -31,7 +31,7 @@ The XM-53 travels approximately 3 blocks per tick, checks terrain and enemies ev
 
 Reloads distinguish a partially loaded magazine from an empty one. Speed Cola halves reload time. KRM loads individual shells and allows a fresh trigger to interrupt once a shell is available. PaP I and II apply the registered magazine/reserve limits and refill both pools; PaP II continues to assign the existing ammo elements. Max Ammo and wall refills use those same slot capacities. MR6 PaP tracks 12 combined rounds (6 per pistol) while retaining the approved single-gun model with glint and its upgraded name.
 
-Downed players prefer an owned Ray Gun, then an owned MR6. The temporary MR6 fallback has a separate 8-round magazine and 80-round reserve, so firing it does not consume another owned weapon's ammunition.
+Downed players prefer an owned Ray Gun. In solo with Quick Revive, players without a Ray Gun receive temporary Death & Taxes (upgraded MR6) with explosive rounds, a 12-round magazine and 50-round reserve, even if they own an MR6. Other downed players use an owned MR6 or a temporary base MR6 with an 8-round magazine and 80-round reserve. Temporary pistols use separate ammunition and do not change owned weapons or their upgrades; the normal loadout returns after revival.
 
 ## Firing audio
 

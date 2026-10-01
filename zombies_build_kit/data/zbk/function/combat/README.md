@@ -43,7 +43,7 @@ The conventional gun roster and Ray Gun use the shared reload flow. Weapon profi
 
 The Rocket Shield is an optional slot-6 item with boost, melee, durability, and back-display behavior. Monkey Bombs own their decoy and detonation lifecycle. Trip Mines own placement, arming, and explosion behavior. Powerups own their drop eligibility, pickup, timers, and activation effects.
 
-Grenades use shared throw and explosion paths. The throw consumes ammunition when the projectile is created; impact or the flight limit resolves the explosion. Entities tagged `combat_ignore` are excluded from shared gun raycast collision.
+Grenades use shared throw and explosion paths. Downed players cannot throw hand grenades in solo or co-op; blocked attempts consume no ammunition. Throwing becomes available again after revival. The throw consumes ammunition when the projectile is created; impact or the flight limit resolves the explosion. Entities tagged `combat_ignore` are excluded from shared gun raycast collision.
 
 ## Feature subfolders
 

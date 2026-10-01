@@ -6,6 +6,9 @@
 # Dependencies: spawn_grenade.mcfunction
 # ===================================
 
+# Downed players cannot throw hand grenades in solo or co-op.
+execute if entity @s[team=downed] run return 0
+
 # Spawn the grenade using shared logic
 function zbk:combat/weapons/grenade/spawning/spawn_grenade
 
