@@ -7,16 +7,16 @@ execute if score #rs_foot_height temp matches ..-1 run scoreboard players add #r
 execute rotated ~ 0 positioned ^ ^ ^0.3 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/try_move
 execute if score @s rs_step_moved matches 1 run return 0
 scoreboard players set #rs_thin_floor temp 0
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0 ~ ~0 if block ~ ~ ~ minecraft:snow run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0 ~ ~0 if block ~ ~ ~ #minecraft:trapdoors[open=false,half=bottom] run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~-0.3 ~ ~-0.3 if block ~ ~ ~ minecraft:snow run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~-0.3 ~ ~-0.3 if block ~ ~ ~ #minecraft:trapdoors[open=false,half=bottom] run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~-0.3 ~ ~0.3 if block ~ ~ ~ minecraft:snow run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~-0.3 ~ ~0.3 if block ~ ~ ~ #minecraft:trapdoors[open=false,half=bottom] run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0.3 ~ ~-0.3 if block ~ ~ ~ minecraft:snow run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0.3 ~ ~-0.3 if block ~ ~ ~ #minecraft:trapdoors[open=false,half=bottom] run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0.3 ~ ~0.3 if block ~ ~ ~ minecraft:snow run scoreboard players set #rs_thin_floor temp 1
-execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0.3 ~ ~0.3 if block ~ ~ ~ #minecraft:trapdoors[open=false,half=bottom] run scoreboard players set #rs_thin_floor temp 1
+scoreboard players set #rs_full_step temp 0
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0 ~ ~0 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~-0.299 ~ ~-0.299 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~-0.299 ~ ~0.299 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0.299 ~ ~-0.299 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0.299 ~ ~0.299 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~-0.299 ~ ~0 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0.299 ~ ~0 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0 ~ ~-0.299 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
+execute rotated ~ 0 positioned ^ ^ ^0.3 positioned ~0 ~ ~0.299 run function zbk:combat/weapons/special_equipment/rocket_shield/movement/step_surface
 scoreboard players set #rs_foot_height temp 125
 execute if score #rs_thin_floor temp matches 1 rotated ~ 0 positioned ^ ^ ^0.3 align y positioned ~ ~0.125 ~ run function zbk:combat/weapons/special_equipment/rocket_shield/movement/try_move
 execute if score @s rs_step_moved matches 1 run return 0
@@ -41,11 +41,6 @@ execute if score @s rs_step_moved matches 1 run return 0
 scoreboard players set #rs_foot_height temp 875
 execute if score #rs_thin_floor temp matches 1 rotated ~ 0 positioned ^ ^ ^0.3 align y positioned ~ ~0.875 ~ run function zbk:combat/weapons/special_equipment/rocket_shield/movement/try_move
 execute if score @s rs_step_moved matches 1 run return 0
-# Full top surfaces retain the existing one-block step with complete clearance.
+# Full step surfaces are detected across the same footprint as clearance.
 scoreboard players set #rs_foot_height temp 0
-execute rotated ~ 0 positioned ^ ^ ^0.3 align y if block ~ ~ ~ #minecraft:slabs positioned ~ ~1 ~ run function zbk:combat/weapons/special_equipment/rocket_shield/movement/try_move
-execute if score @s rs_step_moved matches 1 run return 0
-execute rotated ~ 0 positioned ^ ^ ^0.3 align y if block ~ ~ ~ #minecraft:stairs positioned ~ ~1 ~ run function zbk:combat/weapons/special_equipment/rocket_shield/movement/try_move
-execute if score @s rs_step_moved matches 1 run return 0
-execute rotated ~ 0 positioned ^ ^ ^0.3 align y if block ~ ~ ~ #minecraft:trapdoors[open=false,half=top] positioned ~ ~1 ~ run function zbk:combat/weapons/special_equipment/rocket_shield/movement/try_move
-execute if score @s rs_step_moved matches 1 run return 0
+execute if score #rs_full_step temp matches 1 rotated ~ 0 positioned ^ ^ ^0.3 align y positioned ~ ~1 ~ run function zbk:combat/weapons/special_equipment/rocket_shield/movement/try_move
