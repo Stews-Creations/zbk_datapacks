@@ -4,6 +4,18 @@ The `zombies_build_kit` datapack supplies shared Zombies Build Kit gameplay and 
 
 The base pack bundles shared structure templates in `zombies_build_kit/data/zbk/structure/`, grouped by category and using IDs such as `zbk:barriers/barrier`. Pack-a-Punch templates live in the `pack_a_punch/` category. No separate structures download or world-folder installation is required.
 
+## Development branches
+
+Use `develop` for ongoing work across multiple features. Commit and push feature work to `develop`; keep `main` as the reviewed release source. Local world datapack links and resource-pack builds can use the development checkout without changing published dependency pins.
+
+When a feature batch is ready:
+
+1. Validate the matching datapack and resource-pack revisions, then merge `develop` into `main` in each changed component and push `main`.
+2. Update the world manifests and root workspace submodule pins to the tested commits on `main`, then commit and push those repositories.
+3. Run the affected release workflows from `main` using new version tags. Return to `develop` and bring in any changes made on `main` before starting the next batch.
+
+Do not advance world manifests or root workspace pins for routine development commits. A modified submodule entry in the root working tree is expected while its checkout is ahead of the recorded release pin.
+
 ## Packs
 
 All packs target Minecraft Java 26.2. Pack versions are not stored in the repository; packaging stamps them from the release tag (see [Releases](#releases)).
