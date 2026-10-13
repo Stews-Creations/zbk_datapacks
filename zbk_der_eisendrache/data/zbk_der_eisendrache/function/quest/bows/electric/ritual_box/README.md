@@ -19,7 +19,7 @@ When the fifteenth soul fills the ritual box and its phase becomes charged, `zbk
 
 At successful bow deposit, the start of the beam/effects phase also plays `zbk_der_eisendrache:der_eisendrache.quest.bows.electric.bow_upgrade` once at the ritual marker for every player within 10 blocks. The resource pack uses a mono Ogg Vorbis conversion of `zmb_bow_upgrade.flac` for positional playback. It does not repeat during the animation or presentation reconstruction. The depositing player still receives the separate private placement cue.
 
-Successful upgraded-bow collection plays `zbk_der_eisendrache:der_eisendrache.quest.bows.electric.bow_pickup` once only to the player receiving the weapon, after the bow is assigned to a valid weapon slot. The stereo Ogg Vorbis cue is converted from `zmb_bow_pickup.flac` and stays with its listener. Rejected claims, including no free weapon slot, do not play it. No vanilla completion chime plays.
+When the 100-tick beam animation finishes and the electric bow becomes available to pick up, `zbk_der_eisendrache:der_eisendrache.quest.bows.electric.bow_pickup` plays once only to the player who deposited the original bow, if they are online. The stereo Ogg Vorbis cue is converted from `zmb_bow_pickup.flac` and stays with its listener. Collecting the weapon, rejected claims and presentation reconstruction do not replay it. No vanilla completion chime plays.
 
 ## Placement and test commands
 
