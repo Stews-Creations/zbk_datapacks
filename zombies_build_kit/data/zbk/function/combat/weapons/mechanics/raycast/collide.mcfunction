@@ -22,6 +22,9 @@ scoreboard players set #element_handled stats 0
 execute unless entity @s[tag=bo3_shell_hit] store result score #element_handled stats run function zbk:combat/weapons/pack_a_punch/elements/dispatch
 execute if score #element_handled stats matches 1 run return 0
 
+# Resolve natural and Deadshot headshots before damage and blood effects.
+function zbk:combat/weapons/mechanics/raycast/classify_hit
+
 # --- Handle Damage ---
 
 # Get initial mob health; keep an independent snapshot across splash victims.
@@ -34,11 +37,9 @@ execute if score global insta_kill matches 1 run execute store result entity @s 
 execute unless score #gun_id stats matches 20..46 unless score #gun_id stats matches 7 run execute if score #tier stats matches 1.. run scoreboard players operation #damage stats *= #2 stats
 
 # Headshot bonus damage (applied in addition to core damage on line 26 = 2x total)
-execute unless score #gun_id stats matches 20..46 unless score #is_explosive stats matches 1 if entity @s[distance=1.65..] run execute store result entity @s Health float 1.0 run scoreboard players operation #health stats -= #damage stats
-# Headshot effect
-execute if entity @s[distance=1.65..] run particle minecraft:block{block_state:{Name:"minecraft:redstone_block"}} ~ ~ ~ 0.5 0.5 0.5 2 30
-# Tag for headshot kill tracking
-execute if entity @s[distance=1.65..] run tag @s add headshot_hit
+execute unless score #gun_id stats matches 20..46 unless score #is_explosive stats matches 1 if entity @s[tag=headshot_hit] run execute store result entity @s Health float 1.0 run scoreboard players operation #health stats -= #damage stats
+# Headshot blood appears at the target's head, including promoted body/leg hits.
+execute if entity @s[tag=headshot_hit] at @s anchored eyes positioned ^ ^ ^ run particle minecraft:block{block_state:{Name:"minecraft:redstone_block"}} ~ ~ ~ 0.5 0.5 0.5 2 30
 
 # The base pack damage
 execute store result score #health stats run data get entity @s Health
@@ -48,10 +49,10 @@ execute unless score #gun_id stats matches 20..46 if score #is_explosive stats m
 execute if score #gun_id stats matches 20..46 run function zbk:combat/weapons/guns/bo3/combat/damage
 
 # Bodyshot effect
-execute if entity @s[distance=1..1.65] run particle minecraft:block{block_state:{Name:"minecraft:redstone_block"}} ~ ~ ~ 0.5 0.5 0.5 2 30
+execute unless entity @s[tag=headshot_hit] if entity @s[distance=1..1.65] run particle minecraft:block{block_state:{Name:"minecraft:redstone_block"}} ~ ~ ~ 0.5 0.5 0.5 2 30
 
 # Leg shot effect
-execute if entity @s[distance=..1] run particle minecraft:block{block_state:{Name:"minecraft:redstone_block"}} ~ ~ ~ 0.5 0.5 0.5 2 30
+execute unless entity @s[tag=headshot_hit] if entity @s[distance=..1] run particle minecraft:block{block_state:{Name:"minecraft:redstone_block"}} ~ ~ ~ 0.5 0.5 0.5 2 30
 
 # --- Handle burn effect ---
 

@@ -35,15 +35,17 @@ Adult-to-crawler conversion transfers the existing zombie's counted round slot a
 
 Shared blasts reject already-dead targets, combat-ignored entities, turned zombies, decoys, and explosive-immune enemies. Damage resolves before crawler conversion. Insta-Kill remains lethal, and the per-blast victim selection prevents a newly created crawler from being hit again by the same blast.
 
+Deadshot ownership is read from the shooter matching the ray's player ID for each victim. Non-explosive gun hits use the headshot classification regardless of impact height, with the existing legacy or per-weapon head damage multiplier, kill statistics, and head-position blood. Shotgun damage division, range falloff, immunity, and element consumption retain their existing rules. Natural explosive head hits retain their original behavior; Deadshot never promotes explosive body or leg hits.
+
 ## Reload audio
 
-The conventional gun roster and Ray Gun use the shared reload flow. Weapon profiles own normal reload timing; Speed Cola applies the existing timer adjustment. Slot-specific audio is stopped when reload completes, the weapon is replaced, or firing cancels the reload. Background reloads continue when the player changes active slots.
+The conventional gun roster and Ray Gun use the shared reload flow. Weapon profiles own normal reload timing; Speed Cola applies the existing timer adjustment. Slot-specific audio is stopped when reload completes, the weapon is replaced, or firing cancels the reload. Background reloads continue when the player changes active slots. Successful reload starts invoke Electric Cherry once, using that slot's pre-reload ammo and current capacity; shell insertions and completions do not retrigger it. Electric Cherry uses the same nonlethal stun strength as Dead Wire, with its own blue-outline ownership and cleanup.
 
 ## Equipment
 
 The Rocket Shield is an optional slot-6 item with boost, melee, durability, and back-display behavior. Monkey Bombs own their decoy and detonation lifecycle. Trip Mines own placement, arming, and explosion behavior. Powerups own their drop eligibility, pickup, timers, and activation effects.
 
-Grenades use shared throw and explosion paths. Downed players cannot throw hand grenades in solo or co-op; blocked attempts consume no ammunition. Throwing becomes available again after revival. The throw consumes ammunition when the projectile is created; impact or the flight limit resolves the explosion. Entities tagged `combat_ignore` are excluded from shared gun raycast collision.
+Grenades use shared throw and explosion paths. Downed players cannot throw hand grenades in solo or co-op; blocked attempts consume no ammunition. Throwing becomes available again after revival. The throw consumes ammunition when the projectile is created; impact or the flight limit resolves the explosion. Widow's Wine switches hand grenades to sticky web grenades with a 40-tick contact fuse and a web wave after their explosion; its defensive burst consumes the same ammunition. Webbed kills can drop a one-charge blue spider pickup through the guarded enemy death lifecycle. The knife enchantment dispatches exact-victim web hits, and its separate damage multiplier applies only while a knife is held. The [perk module](../map_elements/perks/README.md) owns timing, restraint, refill, and pickup rules. Entities tagged `combat_ignore` are excluded from shared gun raycast collision.
 
 ## Feature subfolders
 

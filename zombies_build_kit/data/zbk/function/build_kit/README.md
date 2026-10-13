@@ -37,6 +37,8 @@ Build Kit > Buildables provides Crafting Bench and Rocket Shield controls. Shiel
 
 Player Tools > Weapons provides the conventional weapon categories and the Ray Gun. Conventional weapons use the combat weapon-slot assignment flow. Bows and map-specific weapon pages are not part of this core interface. Wall-buy weapon selection is separate: it updates the selected marker and does not give the weapon to the builder. Bowie Knife remains an available wall-buy option.
 
+Player Tools > Perks - Grant and Perk Items offer all nine perk types. Grants reject duplicates and stop at four owned perks. Deadshot Daiquiri promotes non-explosive gun hits to headshots. Electric Cherry stuns nearby zombies on reload and on going down; Widow's Wine provides HUD ownership only.
+
 ## Map-element configuration
 
 The Build Kit dialogs expose reusable doors, barriers, traps, jump pads, mystery-box locations, perks, spawn points, signals, power, teleporters, radios, wall guns, and other core markers. Map-specific Pack-a-Punch set pieces, tram controls, and quest editors are excluded. The Pack-a-Punch editor places and deletes the ordinary machine; weapon packing and elemental effects remain available from Player Tools.

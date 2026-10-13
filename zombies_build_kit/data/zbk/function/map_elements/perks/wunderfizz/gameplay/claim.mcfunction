@@ -1,3 +1,6 @@
+execute if score @s perk_count matches 4.. run tellraw @s {"text":"You already have 4 perks!","color":"red"}
+execute if score @s perk_count matches 4.. run return fail
+
 # ===================================
 # WUNDERFIZZ - CLAIM PERK EARLY
 # ===================================

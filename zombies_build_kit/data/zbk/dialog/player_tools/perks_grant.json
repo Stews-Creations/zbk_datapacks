@@ -5,7 +5,7 @@
   "body": [
     {
       "type": "minecraft:plain_message",
-      "contents": "Grant perks directly to players for testing"
+      "contents": "Grant up to four perks. Deadshot, Electric Cherry, and Widow's Wine show on the HUD but have no gameplay effects yet."
     }
   ],
   "actions": [
@@ -67,6 +67,36 @@
       "action": {
         "type": "run_command",
         "command": "trigger give_mule set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Deadshot Daiquiri",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_deadshot set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Electric Cherry",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_cherry set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Widow's Wine",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_widows set 1"
       }
     },
     {

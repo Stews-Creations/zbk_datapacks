@@ -22,6 +22,16 @@ execute store result storage zbk:hud args.perk_slot int 1 run scoreboard players
 data modify storage zbk:hud args.perk_glyph set value "\uE035"
 execute if score @s perk_mule matches 1..9 run function zbk:player/actionbar/prepare/perk with storage zbk:hud args
 
+execute store result storage zbk:hud args.perk_slot int 1 run scoreboard players get @s perk_deadshot
+data modify storage zbk:hud args.perk_glyph set value "\uE036"
+execute if score @s perk_deadshot matches 1..9 run function zbk:player/actionbar/prepare/perk with storage zbk:hud args
+execute store result storage zbk:hud args.perk_slot int 1 run scoreboard players get @s perk_cherry
+data modify storage zbk:hud args.perk_glyph set value "\uE037"
+execute if score @s perk_cherry matches 1..9 run function zbk:player/actionbar/prepare/perk with storage zbk:hud args
+execute store result storage zbk:hud args.perk_slot int 1 run scoreboard players get @s perk_widows
+data modify storage zbk:hud args.perk_glyph set value "\uE038"
+execute if score @s perk_widows matches 1..9 run function zbk:player/actionbar/prepare/perk with storage zbk:hud args
+
 # Three powerup slots remain centered as a group. One icon uses the middle
 # slot; two straddle center; three use all slots in activation order.
 data merge storage zbk:hud {args:{powerup_1:"\uE043",powerup_2:"\uE043",powerup_3:"\uE043"}}

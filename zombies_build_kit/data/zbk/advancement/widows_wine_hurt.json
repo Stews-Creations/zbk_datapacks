@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "zombie_hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "source_entity": {
+            "minecraft:entity_type": "minecraft:zombified_piglin"
+          },
+          "taken": {
+            "min": 0.01
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "zbk:map_elements/perks/widows_wine/effects/on_hurt"
+  }
+}

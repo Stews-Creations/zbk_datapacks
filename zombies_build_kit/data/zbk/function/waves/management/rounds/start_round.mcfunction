@@ -45,6 +45,9 @@ function zbk:map_elements/barrier/management/reset_repair_limits
 # Round 2: Upgrade grenade capacity to 4 and give 2 grenades
 execute if score #global wave.round matches 2 run function zbk:combat/weapons/grenade/inventory/increase_max_grenades
 
+# The legacy round-2 upgrade already grants two; avoid doubling that refill.
+execute unless score #global wave.round matches 2 as @a[scores={perk_widows=1..}] run function zbk:map_elements/perks/widows_wine/inventory/round_refill
+
 # Check if this is a dog round
 function zbk:waves/special_rounds/dog/check_round
 function zbk:waves/special_rounds/panzer/check_round

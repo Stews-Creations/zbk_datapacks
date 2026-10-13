@@ -1,3 +1,5 @@
+function zbk:map_elements/perks/electric_cherry/effects/down
+
 # Cancel crafting immediately on entering the downed flow.
 execute if entity @s[tag=cb_building] run function zbk:map_elements/crafting_bench/build/cancel
 # Cancel Death Machine if it was active when the player went down

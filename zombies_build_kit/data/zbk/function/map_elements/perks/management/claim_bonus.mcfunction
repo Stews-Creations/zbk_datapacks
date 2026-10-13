@@ -1,14 +1,8 @@
-# === CLAIM PERK BONUS ===
-# Gives 100 points to the nearest sneaking player and marks this perk's bonus as claimed
-
-# Add 100 points to the nearest sneaking player
-scoreboard players add @p[predicate=zbk:is_sneaking] player_points 100
-
-# Play cash sound for the player who claimed the bonus
-execute as @p[predicate=zbk:is_sneaking] at @s run function zbk:player/points/audio/cash
-
-# Remove the bonus_available tag so it can't be claimed again
+# Standalone legacy bonus marker, executed as and at the marker.
+execute unless entity @s[type=marker,tag=perk_bonus] run return 0
+execute if score @s pm_bonus_epoch = #current perk_epoch run return 0
+execute unless entity @p[predicate=zbk:is_sneaking,gamemode=adventure,team=!downed,distance=..2] run return 0
 tag @s remove bonus_available
-
-# Notify all players
-function zbk:debug/info {f:"PERK",m:"Perk bonus claimed! +100 points"}
+scoreboard players operation @s pm_bonus_epoch = #current perk_epoch
+scoreboard players add @p[predicate=zbk:is_sneaking,gamemode=adventure,team=!downed,distance=..2] player_points 100
+execute as @p[predicate=zbk:is_sneaking,gamemode=adventure,team=!downed,distance=..2] at @s run function zbk:player/points/audio/cash

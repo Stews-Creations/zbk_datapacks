@@ -20,3 +20,10 @@ scoreboard players enable @s give_revive_egg
 scoreboard players enable @s give_mule
 scoreboard players enable @s give_mule_egg
 scoreboard players enable @s give_wunderfizz_egg
+scoreboard players enable @s give_deadshot_egg
+scoreboard players enable @s give_widows_wine_egg
+scoreboard players enable @s give_electric_cherry_egg
+
+scoreboard players enable @s give_deadshot
+scoreboard players enable @s give_cherry
+scoreboard players enable @s give_widows

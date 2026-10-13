@@ -1,3 +1,11 @@
+# Advance before cleanup so unloaded claims and pickups become stale too.
+scoreboard players add #current perk_epoch 1
+execute as @e[tag=ww_webbed] run function zbk:map_elements/perks/widows_wine/web/clear
+kill @e[tag=ww_web_visual]
+kill @e[tag=ww_spider]
+execute as @e[tag=widows_grenade] run function zbk:map_elements/perks/widows_wine/grenade/cleanup
+execute as @a run function zbk:map_elements/perks/widows_wine/effects/clear_knife
+execute as @e[tag=cherry_stunned] run function zbk:map_elements/perks/electric_cherry/effects/restore
 execute as @e[type=marker,tag=pm_v2_upgrade] at @s run function zbk:map_elements/perks/machines/legacy/upgrade
 function zbk:map_elements/perks/management/restore_structures
 # === INITIALIZE PERKS ===
@@ -6,6 +14,7 @@ function zbk:map_elements/perks/management/restore_structures
 
 # Reset perk bonuses (make all bonuses claimable again)
 tag @e[type=marker,tag=perk_bonus] add bonus_available
+tag @e[type=marker,tag=pm_v2] remove pm_bonus_claimed
 
 # Clear all player perks
 execute as @a run scoreboard players set @s perk_jugg 0
@@ -14,6 +23,9 @@ execute as @a run scoreboard players set @s perk_speed 0
 execute as @a run scoreboard players set @s perk_doubletap 0
 execute as @a run scoreboard players set @s perk_revive 0
 execute as @a run scoreboard players set @s perk_mule 0
+execute as @a run scoreboard players set @s perk_deadshot 0
+execute as @a run scoreboard players set @s perk_cherry 0
+execute as @a run scoreboard players set @s perk_widows 0
 execute as @a run scoreboard players set @s perk_count 0
 execute as @a run scoreboard players set @s perk_order 0
 execute as @a run scoreboard players set @s revive_buys 0

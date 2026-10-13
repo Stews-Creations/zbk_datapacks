@@ -6,3 +6,6 @@ execute if entity @e[type=marker,tag=pm_v2_selected,tag=perk_speed_cola] run ret
 execute if entity @e[type=marker,tag=pm_v2_selected,tag=perk_double_tap] run return run function zbk:map_elements/perks/double_tap/buy
 execute if entity @e[type=marker,tag=pm_v2_selected,tag=perk_quick_revive] run return run function zbk:map_elements/perks/quick_revive/buy
 execute if entity @e[type=marker,tag=pm_v2_selected,tag=perk_mule_kick] run return run function zbk:map_elements/perks/mule_kick/buy
+execute if entity @e[type=marker,tag=pm_v2_selected,tag=perk_deadshot] run return run function zbk:map_elements/perks/deadshot/buy
+execute if entity @e[type=marker,tag=pm_v2_selected,tag=perk_widows_wine] run return run function zbk:map_elements/perks/widows_wine/buy
+execute if entity @e[type=marker,tag=pm_v2_selected,tag=perk_electric_cherry] run return run function zbk:map_elements/perks/electric_cherry/buy

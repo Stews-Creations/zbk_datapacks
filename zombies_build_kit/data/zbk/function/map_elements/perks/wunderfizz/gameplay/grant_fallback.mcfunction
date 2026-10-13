@@ -1,3 +1,5 @@
+execute if score @s perk_count matches 4.. run return fail
+
 # Fallback perk grant - tries each perk until one is granted
 # Called when the randomly selected perk was already owned
 # Uses return to stop after granting one perk
@@ -25,3 +27,15 @@ execute if score @s perk_revive matches 0 run return run function zbk:map_elemen
 # Try Mule Kick
 execute if score @s perk_mule matches 0 run tag @s add perk_granted
 execute if score @s perk_mule matches 0 run return run function zbk:map_elements/perks/mule_kick/grant
+
+# Try Deadshot Daiquiri
+execute if score @s perk_deadshot matches 0 run tag @s add perk_granted
+execute if score @s perk_deadshot matches 0 run return run function zbk:map_elements/perks/deadshot/grant
+
+# Try Electric Cherry
+execute if score @s perk_cherry matches 0 run tag @s add perk_granted
+execute if score @s perk_cherry matches 0 run return run function zbk:map_elements/perks/electric_cherry/grant
+
+# Try Widow's Wine
+execute if score @s perk_widows matches 0 run tag @s add perk_granted
+execute if score @s perk_widows matches 0 run return run function zbk:map_elements/perks/widows_wine/grant

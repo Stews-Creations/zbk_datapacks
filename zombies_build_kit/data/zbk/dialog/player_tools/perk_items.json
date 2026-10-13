@@ -5,7 +5,7 @@
   "body": [
     {
       "type": "minecraft:plain_message",
-      "contents": "Grant perks to players or spawn perk machines"
+      "contents": "Grant up to four perks. Deadshot, Electric Cherry, and Widow's Wine show on the HUD but have no gameplay effects yet."
     }
   ],
   "actions": [
@@ -67,6 +67,36 @@
       "action": {
         "type": "run_command",
         "command": "trigger give_double_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Deadshot Daiquiri - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_deadshot set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Electric Cherry - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_cherry set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Widow's Wine - Grant",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_widows set 1"
       }
     },
     {
@@ -137,6 +167,36 @@
       "action": {
         "type": "run_command",
         "command": "trigger give_wunderfizz_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Deadshot Daiquiri - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_deadshot_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Widow's Wine - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_widows_wine_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Electric Cherry - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_electric_cherry_egg set 1"
       }
     },
     {

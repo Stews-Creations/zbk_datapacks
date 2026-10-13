@@ -12,3 +12,5 @@ scoreboard players remove @s knife.damage 8
 # Set base attack damage to adjusted value
 execute store result storage zbk:temp apply_damage double 1 run scoreboard players get @s knife.damage
 function zbk:combat/weapons/knife/apply_damage_macro with storage zbk:temp
+
+function zbk:map_elements/perks/widows_wine/effects/knife_bonus

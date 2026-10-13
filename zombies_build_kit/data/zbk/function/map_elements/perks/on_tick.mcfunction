@@ -1,3 +1,4 @@
+execute as @e[tag=cherry_stunned] at @s run function zbk:map_elements/perks/electric_cherry/effects/tick
 # Claim countdown and lamp updates may reuse their selected machine.
 # Keep cycling, claims, and global location transitions in their established phases.
 
@@ -15,6 +16,9 @@ function zbk:map_elements/perks/speed_cola/spawn
 function zbk:map_elements/perks/double_tap/spawn
 function zbk:map_elements/perks/quick_revive/spawn
 function zbk:map_elements/perks/mule_kick/spawn
+function zbk:map_elements/perks/deadshot/spawn
+function zbk:map_elements/perks/widows_wine/spawn
+function zbk:map_elements/perks/electric_cherry/spawn
 function zbk:map_elements/perks/wunderfizz/spawning/spawn
 
 # ===== WUNDERFIZZ UI SPAWNING =====
@@ -53,3 +57,7 @@ execute as @e[type=marker,tag=wunderfizz] at @s run function zbk:map_elements/pe
 # Turn lamp off when power is off or not at active location
 
 execute as @e[type=marker,tag=wunderfizz,tag=!pm_v2,tag=!wunderfizz_active_location] at @s run setblock ~ ~1 ~ redstone_lamp[lit=false]
+
+execute as @e[tag=ww_webbed] at @s run function zbk:map_elements/perks/widows_wine/web/tick
+execute as @e[tag=ww_web_visual] run function zbk:map_elements/perks/widows_wine/web/visual_tick
+execute as @e[tag=ww_spider] at @s run function zbk:map_elements/perks/widows_wine/drops/tick

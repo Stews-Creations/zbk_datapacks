@@ -1,3 +1,8 @@
+# Shared four-perk cap and duplicate protection for every acquisition route.
+execute if score @s perk_revive matches 1.. run return fail
+execute if score @s perk_count matches 4.. run tellraw @s {"text":"You already have 4 perks!","color":"red"}
+execute if score @s perk_count matches 4.. run return fail
+
 # === GRANT QUICK REVIVE PERK ===
 # Grants the perk (point deduction handled by buy_solo/buy_coop.mcfunction)
 
@@ -14,3 +19,5 @@ scoreboard players operation @s perk_revive = @s perk_order
 execute as @s run function zbk:map_elements/perks/quick_revive/sound
 
 execute as @s run function zbk:map_elements/perks/events/voice_event_perk_pickup
+
+return 1

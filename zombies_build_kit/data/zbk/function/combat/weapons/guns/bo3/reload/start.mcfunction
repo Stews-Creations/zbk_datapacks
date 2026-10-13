@@ -11,3 +11,5 @@ $execute if score @s perk_speed matches 1.. run scoreboard players operation @s 
 function zbk:combat/weapons/reload_audio/start with storage zbk:bo3 profile
 
 function zbk:combat/weapons/events/voice_event_reload
+
+$function zbk:map_elements/perks/electric_cherry/effects/reload {slot:$(slot)}

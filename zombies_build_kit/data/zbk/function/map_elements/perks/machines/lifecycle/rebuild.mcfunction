@@ -12,6 +12,9 @@ execute if entity @s[tag=perk_speed_cola] run function zbk:map_elements/perks/ma
 execute if entity @s[tag=perk_double_tap] run function zbk:map_elements/perks/machines/display/double_tap
 execute if entity @s[tag=perk_quick_revive] run function zbk:map_elements/perks/machines/display/quick_revive
 execute if entity @s[tag=perk_mule_kick] run function zbk:map_elements/perks/machines/display/mule_kick
+execute if entity @s[tag=perk_deadshot] run function zbk:map_elements/perks/machines/display/deadshot
+execute if entity @s[tag=perk_widows_wine] run function zbk:map_elements/perks/machines/display/widows_wine
+execute if entity @s[tag=perk_electric_cherry] run function zbk:map_elements/perks/machines/display/electric_cherry
 execute if entity @s[tag=wunderfizz] run function zbk:map_elements/perks/machines/display/wunderfizz
 scoreboard players operation @e[tag=pm_v2_child] pm_v2_id = @s pm_v2_id
 tag @e[tag=pm_v2_child] remove pm_v2_child

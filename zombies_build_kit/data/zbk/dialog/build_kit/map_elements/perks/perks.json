@@ -141,6 +141,36 @@
     },
     {
       "label": {
+        "text": "Deadshot Daiquiri - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_deadshot_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Widow's Wine - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_widows_wine_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Electric Cherry - Spawn Egg",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_electric_cherry_egg set 1"
+      }
+    },
+    {
+      "label": {
         "text": "Clear All Perks",
         "color": "red"
       },

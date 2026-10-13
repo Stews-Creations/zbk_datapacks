@@ -80,10 +80,33 @@
       }
     },
     {
-      "label": " ",
+      "label": {
+        "text": "Deadshot Daiquiri",
+        "color": "aqua"
+      },
       "action": {
         "type": "run_command",
-        "command": ""
+        "command": "trigger give_deadshot_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Widow's Wine",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_widows_wine_egg set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "Electric Cherry",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "run_command",
+        "command": "trigger give_electric_cherry_egg set 1"
       }
     },
     {

@@ -1,0 +1,1 @@
+give @s minecraft:bat_spawn_egg[custom_name={text:"Electric Cherry",italic:false,color:"gold"},entity_data={id:"minecraft:bat",Tags:["perk_egg_electric_cherry"],NoAI:true,Silent:true,Invulnerable:true}] 1

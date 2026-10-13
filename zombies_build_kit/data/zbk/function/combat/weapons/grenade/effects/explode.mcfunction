@@ -24,8 +24,11 @@ execute as @a[distance=..5] at @s run function zbk:combat/weapons/grenade/damage
 scoreboard players set #explosive_damage stats 50
 scoreboard players set #blast_raygun stats 0
 scoreboard players set #blast_crawlers stats 1
+execute if entity @s[tag=widows_grenade] run scoreboard players set #blast_crawlers stats 0
 scoreboard players set #blast_kill_bonus stats 40
 execute as @e[type=!#zbk:not_mob,type=!player,distance=..5,tag=!combat_ignore,tag=!immune_explosives,tag=!turned_zombie,tag=!monkey_bomb_decoy,tag=!solo_down_decoy] at @s run function zbk:combat/weapons/effects/explosive/damage/apply_splash_damage
+
+execute if entity @s[tag=widows_grenade] at @s run function zbk:map_elements/perks/widows_wine/web/wave
 
 # Trigger explosive barrels in blast radius (instant explode)
 execute as @e[type=marker,tag=explosive_barrel,tag=!explosive_barrel_exploded,distance=..7] at @s run function zbk:map_elements/explosive_barrel/gameplay/explode

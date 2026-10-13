@@ -12,9 +12,13 @@ function zbk:combat/weapons/grenade/physics/move_by_velocity with storage zbk:te
 
 # Check solid block collision at new position
 function zbk:combat/weapons/grenade/events/grenade_step
+execute if entity @s[tag=widows_grenade] at @s unless block ~ ~ ~ #zbk:raycast_pass run function zbk:map_elements/perks/widows_wine/grenade/stick_block
+execute if entity @s[tag=ww_stuck] run return 0
 execute at @s unless block ~ ~ ~ #zbk:raycast_pass run function zbk:combat/weapons/grenade/effects/explode
 
 # Check mob hitbox collision (any living mob except excluded types)
+execute if entity @s[tag=!exploded,tag=widows_grenade] at @s positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=!#zbk:not_mob,type=!player,tag=!combat_ignore,tag=!immune_explosives,tag=!monkey_bomb_decoy,tag=!solo_down_decoy,tag=!turned_zombie,dx=0,dy=0,dz=0] run function zbk:map_elements/perks/widows_wine/grenade/stick_mob
+execute if entity @s[tag=ww_stuck] run return 0
 execute if entity @s[tag=!exploded] at @s positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=!#zbk:not_mob,type=!player,tag=!combat_ignore,tag=!immune_explosives,tag=!monkey_bomb_decoy,tag=!solo_down_decoy,tag=!turned_zombie,dx=0,dy=0,dz=0] run function zbk:combat/weapons/grenade/effects/explode
 
 # Check disco interaction collision

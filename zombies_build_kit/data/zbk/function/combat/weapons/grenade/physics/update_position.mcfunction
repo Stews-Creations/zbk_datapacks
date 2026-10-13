@@ -1,3 +1,4 @@
+execute if entity @s[tag=ww_stuck] run return run function zbk:map_elements/perks/widows_wine/grenade/stuck_tick
 # ===================================
 # UPDATE GRENADE POSITION
 # ===================================
@@ -14,6 +15,8 @@ execute store result storage zbk:temp motion.z double 0.00002 run scoreboard pla
 # Initialize sub-step counter and run 5 sub-steps (each checks block/zombie/disco collisions)
 scoreboard players set @s grenade_sub_step 5
 function zbk:combat/weapons/grenade/physics/sub_step
+
+execute if entity @s[tag=ww_stuck] run return run function zbk:map_elements/perks/widows_wine/grenade/stuck_tick
 
 # Stop processing if grenade exploded during sub-stepping
 execute if entity @s[tag=exploded] run return fail

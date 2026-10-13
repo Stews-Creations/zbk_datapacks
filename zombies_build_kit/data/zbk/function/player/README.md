@@ -21,6 +21,8 @@ Points, health, and down/revive features own their cues and voice callouts under
 
 `setup/setup_player` is safe for one player at a time. It runs on first join, return after reload, game reset, and manual recovery without resetting other players or module-global state. The `dp_version` objective detects players who were offline during `/reload`.
 
+Entering the downed state triggers an owned Electric Cherry full-radius stun before assigning the downed team.
+
 Combat owns weapon state, ammunition, reload timing, and damage. Player reconstructs canonical inventory items from that state and handles player setup, slot presentation, points, and HUD rendering. See the [Combat module](../combat/README.md).
 
 ## Inventory
@@ -31,7 +33,9 @@ Native hotbar selection drives weapon cycling and the Adventure-mode HUD highlig
 
 The actionbar HUD layers ammunition, grenades, equipment, timed powerups, perks, and the current round. It reads Combat's ammunition and reload state; points remain in the native sidebar. The [resource pack](https://github.com/Stews-Creations/zbk_resourcepacks) supplies the custom fonts and HUD artwork.
 
-Perks appear in acquisition order from the center outward for either gun hand: left-to-right when the gun is left, and right-to-left when the gun is right.
+The HUD recognizes nine perks, including Deadshot Daiquiri, Electric Cherry, and Widow's Wine; the acquisition limit remains four. Perks appear in acquisition order from the center outward for either gun hand: left-to-right when the gun is left, and right-to-left when the gun is right.
+
+Widow's Wine replaces the grenade HUD icon with its red webbed grenade while owned, in either gun-hand layout. The Widow icon is 60% larger, with compensated spacing to keep the grenade count fixed. Zero charges dim the icon; losing the perk restores the ordinary full/empty grenade icon. The shared grenade count and controls stay the same.
 
 The round counter animates on every round change instead of a screen title. The previous round pulses bright red and fades out, then the new round fades in, holds bright, and settles over four seconds. Rounds 1-5 draw their tally marks in one at a time. Dog rounds use a deeper blood red and keep the counter dimmed until the round ends. Waves owns the `wave.round_flash` timer; `actionbar/prepare/round/round_flash` maps it to the displayed round and color.
 

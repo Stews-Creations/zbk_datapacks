@@ -37,9 +37,7 @@ execute if entity @s[scores={active_weapon=0,max_reserve_1=1..}] run function zb
 execute if entity @s[scores={active_weapon=1,max_reserve_2=1..}] run function zbk:player/actionbar/prepare/ammo/ammo_with_reserve with storage zbk:hud args
 execute if entity @s[scores={active_weapon=2,max_reserve_3=1..}] run function zbk:player/actionbar/prepare/ammo/ammo_with_reserve with storage zbk:hud args
 
-# One grenade icon and a count; selection still uses the existing drop-key control.
-data modify storage zbk:hud args.grenades set value "\uE001"
-execute if score @s grenade_ammo matches ..0 run data modify storage zbk:hud args.grenades set value "\uE002"
+function zbk:player/actionbar/prepare/grenade
 
 # Pack-a-Punch and alternate-ammo icon for the active weapon.
 execute if entity @s[scores={active_weapon=0,tier_1=2,element_1=1}] run data modify storage zbk:hud args.pap_icon set value "\uE011"

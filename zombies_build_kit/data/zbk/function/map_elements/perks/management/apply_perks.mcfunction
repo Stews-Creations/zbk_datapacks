@@ -21,5 +21,4 @@ execute as @a if score @s perk_revive matches 1.. run effect give @s minecraft:r
 execute as @a unless score @s perk_revive matches 1.. run effect clear @s minecraft:regeneration
 
 # === PERK BONUS DETECTION ===
-# Check if any sneaking player is near an available bonus marker
-execute as @a[predicate=zbk:is_sneaking] at @s as @e[type=marker,tag=perk_bonus,tag=bonus_available,distance=..2] run function zbk:map_elements/perks/management/claim_bonus
+function zbk:map_elements/perks/management/check_bonuses

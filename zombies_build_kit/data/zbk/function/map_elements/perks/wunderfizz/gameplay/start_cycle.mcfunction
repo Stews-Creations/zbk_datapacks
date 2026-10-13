@@ -14,8 +14,8 @@ tag @e[type=marker,tag=wunderfizz_active] add wunderfizz_cycling
 # Initialize cycle timer (60 ticks = 3 seconds)
 scoreboard players set @e[type=marker,tag=wunderfizz_active] wunderfizz_timer 60
 
-# Initialize random starting perk (0-5)
-execute store result score @e[type=marker,tag=wunderfizz_active,limit=1] wunderfizz_perk run random value 0..5
+# Initialize random starting perk (0-8)
+execute store result score @e[type=marker,tag=wunderfizz_active,limit=1] wunderfizz_perk run random value 0..8
 
 # Play activation sound
 execute at @e[type=marker,tag=wunderfizz_active] run playsound zbk:wonderfizz.rand_perk_mach_start master @a ~ ~ ~ 0.5 1

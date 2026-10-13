@@ -106,6 +106,24 @@ execute as @a[scores={give_wunderfizz_egg=1..}] run function zbk:map_elements/pe
 scoreboard players enable @a[scores={give_wunderfizz_egg=1..}] give_wunderfizz_egg
 scoreboard players set @a[scores={give_wunderfizz_egg=1..}] give_wunderfizz_egg 0
 
+# ----- Deadshot Daiquiri -----
+# Give Deadshot Daiquiri spawn egg
+execute as @a[scores={give_deadshot_egg=1..}] run function zbk:map_elements/perks/deadshot/build_kit/spawn_egg
+scoreboard players enable @a[scores={give_deadshot_egg=1..}] give_deadshot_egg
+scoreboard players set @a[scores={give_deadshot_egg=1..}] give_deadshot_egg 0
+
+# ----- Widow's Wine -----
+# Give Widow's Wine spawn egg
+execute as @a[scores={give_widows_wine_egg=1..}] run function zbk:map_elements/perks/widows_wine/build_kit/spawn_egg
+scoreboard players enable @a[scores={give_widows_wine_egg=1..}] give_widows_wine_egg
+scoreboard players set @a[scores={give_widows_wine_egg=1..}] give_widows_wine_egg 0
+
+# ----- Electric Cherry -----
+# Give Electric Cherry spawn egg
+execute as @a[scores={give_electric_cherry_egg=1..}] run function zbk:map_elements/perks/electric_cherry/build_kit/spawn_egg
+scoreboard players enable @a[scores={give_electric_cherry_egg=1..}] give_electric_cherry_egg
+scoreboard players set @a[scores={give_electric_cherry_egg=1..}] give_electric_cherry_egg 0
+
 # ===== POWER SYSTEM =====
 # Force power ON
 execute as @a[scores={turn_power_on=1..}] run function zbk:map_elements/power/management/on
@@ -590,3 +608,18 @@ scoreboard players enable @a give_bo3
 
 scoreboard players enable @a[scores={give_panzer_marker=1..}] give_panzer_marker
 scoreboard players set @a[scores={give_panzer_marker=1..}] give_panzer_marker 0
+
+# Deadshot Daiquiri: non-explosive gun headshots.
+execute as @a[scores={give_deadshot=1..}] at @s run function zbk:map_elements/perks/deadshot/grant
+scoreboard players enable @a[scores={give_deadshot=1..}] give_deadshot
+scoreboard players set @a[scores={give_deadshot=1..}] give_deadshot 0
+
+# Electric Cherry: reload and downed stun waves.
+execute as @a[scores={give_cherry=1..}] at @s run function zbk:map_elements/perks/electric_cherry/grant
+scoreboard players enable @a[scores={give_cherry=1..}] give_cherry
+scoreboard players set @a[scores={give_cherry=1..}] give_cherry 0
+
+# Widow's Wine: ownership only, with no gameplay effect.
+execute as @a[scores={give_widows=1..}] at @s run function zbk:map_elements/perks/widows_wine/grant
+scoreboard players enable @a[scores={give_widows=1..}] give_widows
+scoreboard players set @a[scores={give_widows=1..}] give_widows 0

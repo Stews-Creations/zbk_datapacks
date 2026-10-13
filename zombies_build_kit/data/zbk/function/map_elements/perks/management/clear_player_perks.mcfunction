@@ -1,3 +1,4 @@
+function zbk:map_elements/perks/widows_wine/effects/clear_knife
 # === CLEAR PLAYER PERKS ===
 # Purpose: Clear all perks for the executing player
 # Called when a player is revived from being downed
@@ -10,6 +11,9 @@ scoreboard players set @s perk_speed 0
 scoreboard players set @s perk_doubletap 0
 scoreboard players set @s perk_revive 0
 scoreboard players set @s perk_mule 0
+scoreboard players set @s perk_deadshot 0
+scoreboard players set @s perk_cherry 0
+scoreboard players set @s perk_widows 0
 scoreboard players set @s perk_count 0
 scoreboard players set @s perk_order 0
 

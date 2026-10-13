@@ -20,6 +20,13 @@ execute if score @s wunderfizz_perk matches 4 run summon text_display ~ ~ ~ {Tag
 # Mule Kick (5)
 execute if score @s wunderfizz_perk matches 5 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Mule Kick","color":"dark_green","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
 
+# Additional perks (6-8)
+execute if score @s wunderfizz_perk matches 6 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Deadshot Daiquiri","color":"gray","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+
+execute if score @s wunderfizz_perk matches 7 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Electric Cherry","color":"aqua","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+
+execute if score @s wunderfizz_perk matches 8 run summon text_display ~ ~ ~ {Tags:["wunderfizz_perk_name","pm_v2_preview"],text:[{"text":"Widow's Wine","color":"dark_red","bold":true}],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[0.5f,0.5f,0.5f]},billboard:"center",background:0}
+
 # Match the centered price label when the bottle is ready to claim.
 execute if entity @s[tag=pm_v2] rotated as @s run tp @e[type=text_display,tag=pm_v2_preview] ^ ^-0.75 ^0.0875
 execute if entity @s[tag=pm_v2] run data merge entity @e[type=text_display,tag=pm_v2_preview,limit=1] {billboard:"fixed",view_range:0.0390625f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.5f,0.5f,0.5f]}}

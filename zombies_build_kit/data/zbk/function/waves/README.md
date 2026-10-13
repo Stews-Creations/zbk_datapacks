@@ -32,6 +32,8 @@ Dog markers are checked every tick with native item predicates. Eligibility uses
 
 `start_round` sets `wave.round_flash` to 80 and `on_tick` counts it down; Player's actionbar HUD reads it to animate the round counter. No screen title is shown on round change.
 
+Round start refills two hand grenades for Widow's Wine owners, capped at four. Round 2 uses the existing global two-grenade capacity upgrade once; other rounds call the perk's refill action.
+
 ## Zombie selection and pacing
 
 Persistent `zombie_spawner` markers supply `data.zone`, `data.mode`, and optional immunity flags. Zone 0 starts unlocked; doors unlock other zones. Modes are 0 for standard, 1-4 for hole east/south/west/north, and 5-8 for wall east/south/west/north. Missing or invalid modes are excluded with a debug diagnostic.

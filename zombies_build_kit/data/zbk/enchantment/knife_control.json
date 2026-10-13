@@ -27,6 +27,16 @@
           "value": -1
         }
       }
+    ],
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "zbk:map_elements/perks/widows_wine/effects/knife_hit"
+        }
+      }
     ]
   }
 }

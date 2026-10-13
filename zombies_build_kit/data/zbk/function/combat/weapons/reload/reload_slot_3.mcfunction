@@ -1,3 +1,6 @@
+execute unless score @s reserve_ammo_3 matches 1.. run return 0
+execute if score @s ammo_3 >= @s max_ammo_3 run return 0
+execute if score @s is_reloading_3 matches 1 run return 0
 execute if score @s gun_3 matches 20..46 run return run function zbk:combat/weapons/guns/bo3/reload/slot_3
 # ===================================
 # START RELOAD - SLOT 3
@@ -42,3 +45,5 @@ execute if score @s gun_3 matches 7 if score @s is_reloading_3 matches 1 run fun
 execute unless score @s gun_3 matches 7 at @s run playsound minecraft:block.iron_door.open player @s ~ ~ ~ 2.0 1.5
 
 execute if score @s is_reloading_3 matches 1 run function zbk:combat/weapons/events/voice_event_reload
+
+execute if score @s is_reloading_3 matches 1 run function zbk:map_elements/perks/electric_cherry/effects/reload {slot:3}
